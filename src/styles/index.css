@@ -1,0 +1,94 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+/* ul {
+    @apply list-disc;
+    margin: 10;
+    padding: 10;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+ol, ul {
+    list-style: disc;
+    margin: auto !important;
+    padding: revert !important;
+}
+
+.home-container {
+    background-color: #3414FC;
+    height: 662px;
+}
+
+.border-gradient {
+    padding: 3px;
+    border-radius:100%;
+    border:3px solid transparent;
+    background:linear-gradient(180deg, #00CCFF, #0087FF);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.backdrop-filter {
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.timeline-dot {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: -39px;
+    background-color: #0087FF;
+    border: 1px solid #00CCFF;
+    top: 26px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@variants firefox {
+    .bg-opacity-95 {
+        --bg-opacity: 0.95;
+    }
+}
+
+.bg-home {
+    @apply bg-gradient-to-b from-blue-light to-blue-medium;
+}
+
+.bg-home.dark-theme {
+    @apply bg-gradient-to-b from-blue-light to-blue-dark;
+}
+
+.img-light {
+    @apply block;
+}
+
+.img-light.dark-theme {
+    @apply hidden;
+}
+
+
+.img-dark {
+    @apply hidden;
+}
+
+.img-dark.dark-theme {
+    @apply block;
+}

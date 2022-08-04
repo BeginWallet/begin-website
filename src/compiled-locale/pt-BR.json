@@ -1,0 +1,408 @@
+{
+  "about.body": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "B58 Finance"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " é uma carteira de multi recursos descentralizada construída sobre o Cardano Blockchain. Isso proporciona aos nossos serviços a infra-estrutura operacional de um sistema financeiro."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "E nos permite disponibilizar recursos para que você seja seu próprio banco, usando a comunicação Peer-to-Peer sem necessidade de intermediários."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Nosso objetivo é trazer a próxima geração de carteiras digital para você e fornecer a mesma experiência disponível hoje, usando bancos digitais tradicionais e remover a complexidade do mundo blockchain."
+    }
+  ],
+  "about.title": [
+    {
+      "type": 0,
+      "value": "Sobre o B58 Finance ser desenvolvido usando Cardano"
+    }
+  ],
+  "artavatar.img.description": [
+    {
+      "type": 0,
+      "value": "Arte gerada por IA"
+    }
+  ],
+  "features.accessible": [
+    {
+      "type": 0,
+      "value": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
+    }
+  ],
+  "features.accessible.title": [
+    {
+      "type": 0,
+      "value": "Acessível"
+    }
+  ],
+  "features.innovative": [
+    {
+      "type": 0,
+      "value": "Os recursos incluídos na Carteira B58 são inovadores e intuitivos"
+    }
+  ],
+  "features.innovative.title": [
+    {
+      "type": 0,
+      "value": "Inovador"
+    }
+  ],
+  "features.secure": [
+    {
+      "type": 0,
+      "value": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
+    }
+  ],
+  "features.secure.title": [
+    {
+      "type": 0,
+      "value": "Seguro"
+    }
+  ],
+  "features.title": [
+    {
+      "type": 0,
+      "value": "Nunca foi tão fácil usar o DeFi"
+    }
+  ],
+  "footer.btn.download": [
+    {
+      "type": 0,
+      "value": "Em breve"
+    }
+  ],
+  "footer.contact": [
+    {
+      "type": 0,
+      "value": "Contato"
+    }
+  ],
+  "footer.social": [
+    {
+      "type": 0,
+      "value": "Redes Sociais"
+    }
+  ],
+  "home.body": [
+    {
+      "type": 0,
+      "value": "Com B58 você pode coletar, ganhar, enviar e participar do nosso mundo digital em crescimento."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Onde você pode fazer parte de um mundo financeiro descentralizado. No lugar onde você é bem-vindo na Carteira B58 e tem controle de suas finanças."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Obtenha acesso a pagamentos globais onde transações são sem fronteiras e baixas e usando com amigos e familiares ou com o seu negócio."
+    }
+  ],
+  "home.btn.download": [
+    {
+      "type": 0,
+      "value": "Em breve"
+    }
+  ],
+  "home.btn.whitepaper": [
+    {
+      "type": 0,
+      "value": "Especificação"
+    }
+  ],
+  "home.title": [
+    {
+      "type": 0,
+      "value": "A carteira de criptomoedas Web3, com DeFi feita para você"
+    }
+  ],
+  "menu.features": [
+    {
+      "type": 0,
+      "value": "Recursos"
+    }
+  ],
+  "menu.support": [
+    {
+      "type": 0,
+      "value": "Suporte"
+    }
+  ],
+  "menu.team": [
+    {
+      "type": 0,
+      "value": "Equipe"
+    }
+  ],
+  "menu.whitepaper": [
+    {
+      "type": 0,
+      "value": "Especificação"
+    }
+  ],
+  "mission.title": [
+    {
+      "type": 0,
+      "value": "A Missão B58"
+    }
+  ],
+  "more.abbr": [
+    {
+      "type": 0,
+      "value": "Non-Fungible Tokens"
+    }
+  ],
+  "more.body": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Cartão QR personalizado"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " que permite que você se expresse pela seleção de temas disponíveis."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Conta de poupança"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " pronta e fácil de usar onde você ganha recompensas e pode reivindicá-las a cada 5 dias ou construir seu plano de aposentadoria com isso."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Biblioteca Colecionável"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " onde você pode ver toda a sua "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "NFT"
+        }
+      ],
+      "type": 8,
+      "value": "babbr"
+    },
+    {
+      "type": 0,
+      "value": " e Tokens em um só lugar."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "tokens nativos do Cardano"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " podem ser transacionados através da carteira B58."
+    }
+  ],
+  "more.title": [
+    {
+      "type": 0,
+      "value": "Tudo que você pode fazer com finanças descentralizadas"
+    }
+  ],
+  "page.description": [
+    {
+      "type": 0,
+      "value": "Com B58 você pode coletar, ganhar, enviar e participar de nosso mundo digital em crescimento. Onde todos são bem-vindos na Carteira B58 do DeFi no Cardano, você tem o controle de suas finanças."
+    }
+  ],
+  "page.title": [
+    {
+      "type": 0,
+      "value": "Carteira B58 - Carteira de criptomoedas Web3, DeFi construída para você no Cardano"
+    }
+  ],
+  "team.body": [
+    {
+      "type": 0,
+      "value": "A nossa equipe está contruindo essa plataforma para nós mesmos usarmos, o que resulta em um produto de alta qualidade para você também usar."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Estamos comprometidos em entregar o melhor em desenvolvimento de software, trazendo uma grande esperiência em Enterprise Software, Cloud Engineer e Cyber Security."
+    }
+  ],
+  "team.description.flavio": [
+    {
+      "type": 0,
+      "value": "Mais de 20 anos de experiência em Desenvolvimento de Backend, trabalhando em ferramentas empresariais para Fabricação e Finanças."
+    }
+  ],
+  "team.description.francis": [
+    {
+      "type": 0,
+      "value": "Mais de 20 anos de experiência no domínio do desenvolvimento de software, trabalhando em projectos na África, Américas e Europa."
+    }
+  ],
+  "team.description.gabriel": [
+    {
+      "type": 0,
+      "value": "Mais de 11 anos de experiência em Desenvolvimento de Software e Especialização em Mobile, oferecendo soluções multiplataforma."
+    }
+  ],
+  "team.description.nick": [
+    {
+      "type": 0,
+      "value": "UX Designer com experiência em Motion Design e Design Gráfico e entusiasta Crypto."
+    }
+  ],
+  "team.role.advisor": [
+    {
+      "type": 0,
+      "value": "Conselheiro"
+    }
+  ],
+  "team.role.cofounder": [
+    {
+      "type": 0,
+      "value": "Co-Fundador"
+    }
+  ],
+  "team.role.designer": [
+    {
+      "type": 0,
+      "value": "Designer"
+    }
+  ],
+  "team.role.developer": [
+    {
+      "type": 0,
+      "value": "Desenvolvedor"
+    }
+  ],
+  "team.title": [
+    {
+      "type": 0,
+      "value": "Nós somos a Equipe que está desenvolvendo essa plataforma para você"
+    }
+  ],
+  "wallet.abbr": [
+    {
+      "type": 0,
+      "value": "Non-Fungible Tokens"
+    }
+  ],
+  "wallet.body": [
+    {
+      "type": 0,
+      "value": "Nossa missão é entregar a próxima geração de carteiras de "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Cardano"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " para você."
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Com um processo de integração fácil e seguro, que o guia em todas as partes importantes da B58"
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "Nós também estamos comprometidos para construir os recursos de que a "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "comunidade do Cardano"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " precisa."
+    }
+  ]
+}

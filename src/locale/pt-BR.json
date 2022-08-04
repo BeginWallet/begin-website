@@ -1,0 +1,119 @@
+{
+  "about.body": {
+    "defaultMessage": "<b>B58 Finance</b> é uma carteira de multi recursos descentralizada construída sobre o Cardano Blockchain. Isso proporciona aos nossos serviços a infra-estrutura operacional de um sistema financeiro.{br}E nos permite disponibilizar recursos para que você seja seu próprio banco, usando a comunicação Peer-to-Peer sem necessidade de intermediários.{br}Nosso objetivo é trazer a próxima geração de carteiras digital para você e fornecer a mesma experiência disponível hoje, usando bancos digitais tradicionais e remover a complexidade do mundo blockchain."
+  },
+  "about.title": {
+    "defaultMessage": "Sobre o B58 Finance ser desenvolvido usando Cardano"
+  },
+  "artavatar.img.description": {
+    "defaultMessage": "Arte gerada por IA"
+  },
+  "features.accessible": {
+    "defaultMessage": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
+  },
+  "features.accessible.title": {
+    "defaultMessage": "Acessível"
+  },
+  "features.innovative": {
+    "defaultMessage": "Os recursos incluídos na Carteira B58 são inovadores e intuitivos"
+  },
+  "features.innovative.title": {
+    "defaultMessage": "Inovador"
+  },
+  "features.secure": {
+    "defaultMessage": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
+  },
+  "features.secure.title": {
+    "defaultMessage": "Seguro"
+  },
+  "features.title": {
+    "defaultMessage": "Nunca foi tão fácil usar o DeFi"
+  },
+  "footer.btn.download": {
+    "defaultMessage": "Em breve"
+  },
+  "footer.contact": {
+    "defaultMessage": "Contato"
+  },
+  "footer.social": {
+    "defaultMessage": "Redes Sociais"
+  },
+  "home.body": {
+    "defaultMessage": "Com B58 você pode coletar, ganhar, enviar e participar do nosso mundo digital em crescimento.{br}Onde você pode fazer parte de um mundo financeiro descentralizado. No lugar onde você é bem-vindo na Carteira B58 e tem controle de suas finanças.{br}Obtenha acesso a pagamentos globais onde transações são sem fronteiras e baixas e usando com amigos e familiares ou com o seu negócio."
+  },
+  "home.btn.download": {
+    "defaultMessage": "Em breve"
+  },
+  "home.btn.whitepaper": {
+    "defaultMessage": "Especificação"
+  },
+  "home.title": {
+    "defaultMessage": "A carteira de criptomoedas Web3, com DeFi feita para você"
+  },
+  "menu.features": {
+    "defaultMessage": "Recursos"
+  },
+  "menu.support": {
+    "defaultMessage": "Suporte"
+  },
+  "menu.team": {
+    "defaultMessage": "Equipe"
+  },
+  "menu.whitepaper": {
+    "defaultMessage": "Especificação"
+  },
+  "mission.title": {
+    "defaultMessage": "A Missão B58"
+  },
+  "more.abbr": {
+    "defaultMessage": "Non-Fungible Tokens"
+  },
+  "more.body": {
+    "defaultMessage": "<b>Cartão QR personalizado</b> que permite que você se expresse pela seleção de temas disponíveis.{br}<b>Conta de poupança</b> pronta e fácil de usar onde você ganha recompensas e pode reivindicá-las a cada 5 dias ou construir seu plano de aposentadoria com isso.{br}<b>Biblioteca Colecionável</b> onde você pode ver toda a sua <babbr>NFT</babbr> e Tokens em um só lugar.{br}<b>tokens nativos do Cardano</b> podem ser transacionados através da carteira B58."
+  },
+  "more.title": {
+    "defaultMessage": "Tudo que você pode fazer com finanças descentralizadas"
+  },
+  "page.description": {
+    "defaultMessage": "Com B58 você pode coletar, ganhar, enviar e participar de nosso mundo digital em crescimento. Onde todos são bem-vindos na Carteira B58 do DeFi no Cardano, você tem o controle de suas finanças."
+  },
+  "page.title": {
+    "defaultMessage": "Carteira B58 - Carteira de criptomoedas Web3, DeFi construída para você no Cardano"
+  },
+  "team.body": {
+    "defaultMessage": "A nossa equipe está contruindo essa plataforma para nós mesmos usarmos, o que resulta em um produto de alta qualidade para você também usar.{br}Estamos comprometidos em entregar o melhor em desenvolvimento de software, trazendo uma grande esperiência em Enterprise Software, Cloud Engineer e Cyber Security."
+  },
+  "team.description.flavio": {
+    "defaultMessage": "Mais de 20 anos de experiência em Desenvolvimento de Backend, trabalhando em ferramentas empresariais para Fabricação e Finanças."
+  },
+  "team.description.francis": {
+    "defaultMessage": "Mais de 20 anos de experiência no domínio do desenvolvimento de software, trabalhando em projectos na África, Américas e Europa."
+  },
+  "team.description.gabriel": {
+    "defaultMessage": "Mais de 11 anos de experiência em Desenvolvimento de Software e Especialização em Mobile, oferecendo soluções multiplataforma."
+  },
+  "team.description.nick": {
+    "defaultMessage": "UX Designer com experiência em Motion Design e Design Gráfico e entusiasta Crypto."
+  },
+  "team.role.advisor": {
+    "defaultMessage": "Conselheiro"
+  },
+  "team.role.cofounder": {
+    "defaultMessage": "Co-Fundador"
+  },
+  "team.role.designer": {
+    "defaultMessage": "Designer"
+  },
+  "team.role.developer": {
+    "defaultMessage": "Desenvolvedor"
+  },
+  "team.title": {
+    "defaultMessage": "Nós somos a Equipe que está desenvolvendo essa plataforma para você"
+  },
+  "wallet.abbr": {
+    "defaultMessage": "Non-Fungible Tokens"
+  },
+  "wallet.body": {
+    "defaultMessage": "Nossa missão é entregar a próxima geração de carteiras de <b>Cardano</b> para você.{br}Com um processo de integração fácil e seguro, que o guia em todas as partes importantes da B58{br}Nós também estamos comprometidos para construir os recursos de que a <b>comunidade do Cardano</b> precisa."
+  }
+}
