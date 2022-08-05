@@ -3,11 +3,6 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
-    fontSize: {
-      'xl': '1.25rem',
-      '2xl': '1.75rem',
-      '4xl': '2.5rem',
-    },
     extend: {
       screens: {
         light: { raw: "(prefers-color-scheme: light)" },
@@ -45,6 +40,9 @@ module.exports = {
       },
       fontSize: {
         'sm': '0.875rem',
+        'xl': '1.25rem',
+        '2xl': '1.75rem',
+        '4xl': '2.5rem',
         '5xl': '2.5rem',
         '6xl': '3.0rem',
         '7xl': '4.5rem',
