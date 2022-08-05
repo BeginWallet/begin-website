@@ -41,10 +41,10 @@ const Features = () => {
 
   return (
     <section id="features" className="pt-24 lg:pt-20 lg:-mt-20">
-      <div className="p-2 lg:p-6 mt-22 lg:mt-48 flex flex-col flex-wrap justify-center w-full">
+      <div className="p-2 lg:p-6 lg:pt-10 mt-22 lg:mt-48 flex flex-col flex-wrap justify-center w-full">
         <div className='p-4 lg:p-12 mb-6 flex flex-col lg:flex-row dark:bg-blue-over light:bg-white rounded-2xl w-full' style={{minHeight: '405px'}}>
           <div className='flex-grow'>
-          <h2 className='lg:w-6/12 lg:text-4xl text-2xl'>{f(messages.featuresWalletTitle)}</h2>
+          <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>{f(messages.featuresWalletTitle)}</h2>
           <p className='lg:text-xl lg:w-3/6 font-light'>{f(messages.featuresWallet)}</p>
           </div>
           <div className='mx-auto w-10/12 lg:w-auto text-center order-first lg:order-2'>
@@ -76,7 +76,7 @@ const Features = () => {
 
         <div className='p-4 lg:p-12 mb-6 flex flex-col lg:flex-row dark:bg-blue-over light:bg-white rounded-2xl w-full' style={{minHeight: '405px'}}>
           <div className='flex-grow'>
-          <h2 className='lg:w-6/12 lg:text-4xl text-2xl'>{f(messages.featuresStakeTitle)}</h2>
+          <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>{f(messages.featuresStakeTitle)}</h2>
           <p className='lg:text-xl lg:w-3/6 font-light'>{f(messages.featuresStake)}</p>
           </div>
           <div className='mx-auto w-10/12 lg:w-auto text-center order-first lg:order-2'>
@@ -108,7 +108,7 @@ const Features = () => {
 
         <div className='p-4 lg:p-12 flex flex-col lg:flex-row dark:bg-blue-over light:bg-white rounded-2xl w-full' style={{minHeight: '405px'}}>
           <div className='flex-grow'>
-          <h2 className='lg:w-6/12 lg:text-4xl text-2xl'>{f(messages.featuresDefiTitle)}</h2>
+          <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>{f(messages.featuresDefiTitle)}</h2>
           <p className='lg:text-xl lg:w-3/6 font-light'>{f(messages.featuresDefi)}</p>
           </div>
           <div className='mx-auto w-10/12 lg:w-auto text-center order-first lg:order-2'>

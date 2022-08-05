@@ -97,10 +97,22 @@
       "value": "Get in touch"
     }
   ],
+  "footer.discord": [
+    {
+      "type": 0,
+      "value": "Join the community"
+    }
+  ],
   "footer.social": [
     {
       "type": 0,
       "value": "Social Medias"
+    }
+  ],
+  "footer.twitter": [
+    {
+      "type": 0,
+      "value": "Follow for updates"
     }
   ],
   "home.body": [
@@ -135,6 +147,40 @@
     {
       "type": 0,
       "value": "Whitepaper"
+    }
+  ],
+  "home.text": [
+    {
+      "type": 0,
+      "value": "It's time to "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "begin"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " your "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "web3"
+        }
+      ],
+      "type": 8,
+      "value": "pixel"
+    },
+    {
+      "type": 0,
+      "value": " journey"
     }
   ],
   "home.title": [

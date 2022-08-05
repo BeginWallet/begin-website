@@ -35,8 +35,14 @@
   "footer.contact": {
     "defaultMessage": "Get in touch"
   },
+  "footer.discord": {
+    "defaultMessage": "Join the community"
+  },
   "footer.social": {
     "defaultMessage": "Social Medias"
+  },
+  "footer.twitter": {
+    "defaultMessage": "Follow for updates"
   },
   "home.body": {
     "defaultMessage": "With B58 you can collect, earn, send, and participate in our growing digital world.{br}Where you can be part of a decentralized financial world. In place where you're welcome on Begin Wallet, and have control of your finances.{br}Get access to global payments where transactions are borderless and low fees using it with friends and family or your business."
@@ -46,6 +52,9 @@
   },
   "home.btn.whitepaper": {
     "defaultMessage": "Whitepaper"
+  },
+  "home.text": {
+    "defaultMessage": "It's time to <b>begin</b> your <pixel>web3</pixel> journey"
   },
   "home.title": {
     "defaultMessage": "The Web3, DeFi crypto wallet built for you"

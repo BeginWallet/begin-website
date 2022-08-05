@@ -35,8 +35,14 @@
   "footer.contact": {
     "defaultMessage": "Entre em contato"
   },
+  "footer.discord": {
+    "defaultMessage": "Participe da comunidade"
+  },
   "footer.social": {
     "defaultMessage": "Redes Sociais"
+  },
+  "footer.twitter": {
+    "defaultMessage": "Siga nossas novidades"
   },
   "home.body": {
     "defaultMessage": "Com Begin carteira de criptomoedas você pode colecionar, ganhar, enviar e participar do nosso mundo digital em crescimento.{br}Onde você pode fazer parte de um mundo financeiro descentralizado. No lugar onde você é bem-vindo na Carteira Begin e tem controle de suas finanças.{br}Obtenha acesso a pagamentos globais onde transações são sem fronteiras e baixas e usando com amigos e familiares ou com o seu negócio."
@@ -46,6 +52,9 @@
   },
   "home.btn.whitepaper": {
     "defaultMessage": "Especificação"
+  },
+  "home.text": {
+    "defaultMessage": "É hora de <b>begin</b> sua jornada <pixel>web3</pixel>"
   },
   "home.title": {
     "defaultMessage": "A carteira de criptomoedas Web3, NFTs, Ada e DeFi feita para você"

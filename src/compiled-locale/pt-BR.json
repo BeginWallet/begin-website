@@ -97,10 +97,22 @@
       "value": "Entre em contato"
     }
   ],
+  "footer.discord": [
+    {
+      "type": 0,
+      "value": "Participe da comunidade"
+    }
+  ],
   "footer.social": [
     {
       "type": 0,
       "value": "Redes Sociais"
+    }
+  ],
+  "footer.twitter": [
+    {
+      "type": 0,
+      "value": "Siga nossas novidades"
     }
   ],
   "home.body": [
@@ -135,6 +147,36 @@
     {
       "type": 0,
       "value": "Especificação"
+    }
+  ],
+  "home.text": [
+    {
+      "type": 0,
+      "value": "É hora de "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "begin"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " sua jornada "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "web3"
+        }
+      ],
+      "type": 8,
+      "value": "pixel"
     }
   ],
   "home.title": [
