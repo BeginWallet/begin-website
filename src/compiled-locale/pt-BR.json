@@ -4,7 +4,7 @@
       "children": [
         {
           "type": 0,
-          "value": "B58 Finance"
+          "value": "Begin"
         }
       ],
       "type": 8,
@@ -34,7 +34,7 @@
   "about.title": [
     {
       "type": 0,
-      "value": "Sobre o B58 Finance ser desenvolvido usando Cardano"
+      "value": "Sobre o Begin Wallet ser desenvolvido usando Cardano"
     }
   ],
   "artavatar.img.description": [
@@ -43,40 +43,28 @@
       "value": "Arte gerada por IA"
     }
   ],
-  "features.accessible": [
+  "features.defi": [
     {
       "type": 0,
-      "value": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
+      "value": "Begin abre as portas do mundo DeFi para você, desde swap de Token Nativos diretamente na carteira, até colecionar NFTs. Obtenha mais do vibrante mundo DeFi no Cardano com DEXs, marketplaces de NFT e muito mais."
     }
   ],
-  "features.accessible.title": [
+  "features.defi.title": [
     {
       "type": 0,
-      "value": "Acessível"
+      "value": "Explore o mundo DeFi"
     }
   ],
-  "features.innovative": [
+  "features.stake": [
     {
       "type": 0,
-      "value": "Os recursos incluídos na Carteira B58 são inovadores e intuitivos"
+      "value": "Ganhe até 5% de retorno investindo seu ADA e tenha controle total sobre ele. Ajudando a proteger a rede do Cardano. Você também está completamente livre para sacar e movê-lo a qualquer momento."
     }
   ],
-  "features.innovative.title": [
+  "features.stake.title": [
     {
       "type": 0,
-      "value": "Inovador"
-    }
-  ],
-  "features.secure": [
-    {
-      "type": 0,
-      "value": "Carteira B58 foi construída para todos, seja você um especialista ou um iniciante em criptomoedas"
-    }
-  ],
-  "features.secure.title": [
-    {
-      "type": 0,
-      "value": "Seguro"
+      "value": "Stake e ganhe ADA passivamente"
     }
   ],
   "features.title": [
@@ -85,16 +73,28 @@
       "value": "Nunca foi tão fácil usar o DeFi"
     }
   ],
+  "features.wallet": [
+    {
+      "type": 0,
+      "value": "Begin é próxima geração de carteiras de criptomoedas no Cardano, que permite que você entre na nova era financeira. Desfrute de um processo fácil que guia você passo a passo na criação da sua carteira. Bem-vindo!"
+    }
+  ],
+  "features.wallet.title": [
+    {
+      "type": 0,
+      "value": "Sua nova carteira no Cardano"
+    }
+  ],
   "footer.btn.download": [
     {
       "type": 0,
-      "value": "Em breve"
+      "value": "Begin Wallet - Disponível em breve"
     }
   ],
   "footer.contact": [
     {
       "type": 0,
-      "value": "Contato"
+      "value": "Entre em contato"
     }
   ],
   "footer.social": [
@@ -106,7 +106,7 @@
   "home.body": [
     {
       "type": 0,
-      "value": "Com B58 você pode coletar, ganhar, enviar e participar do nosso mundo digital em crescimento."
+      "value": "Com Begin carteira de criptomoedas você pode colecionar, ganhar, enviar e participar do nosso mundo digital em crescimento."
     },
     {
       "type": 1,
@@ -114,7 +114,7 @@
     },
     {
       "type": 0,
-      "value": "Onde você pode fazer parte de um mundo financeiro descentralizado. No lugar onde você é bem-vindo na Carteira B58 e tem controle de suas finanças."
+      "value": "Onde você pode fazer parte de um mundo financeiro descentralizado. No lugar onde você é bem-vindo na Carteira Begin e tem controle de suas finanças."
     },
     {
       "type": 1,
@@ -140,7 +140,13 @@
   "home.title": [
     {
       "type": 0,
-      "value": "A carteira de criptomoedas Web3, com DeFi feita para você"
+      "value": "A carteira de criptomoedas Web3, NFTs, Ada e DeFi feita para você"
+    }
+  ],
+  "menu.download": [
+    {
+      "type": 0,
+      "value": "Baixar"
     }
   ],
   "menu.features": [
@@ -170,7 +176,7 @@
   "mission.title": [
     {
       "type": 0,
-      "value": "A Missão B58"
+      "value": "A Missão da Begin"
     }
   ],
   "more.abbr": [
@@ -272,13 +278,13 @@
   "page.description": [
     {
       "type": 0,
-      "value": "Com B58 você pode coletar, ganhar, enviar e participar de nosso mundo digital em crescimento. Onde todos são bem-vindos na Carteira B58 do DeFi no Cardano, você tem o controle de suas finanças."
+      "value": "Com Begin você pode colecionar NFTs, ganhar renda passiva, enviar ADA e participar de nosso mundo digital em crescimento. Onde todos são bem-vindos na Carteira de criptomoedas Begin DeFi no Cardano, você tem o controle de suas finanças."
     }
   ],
   "page.title": [
     {
       "type": 0,
-      "value": "Carteira B58 - Carteira de criptomoedas Web3, DeFi construída para você no Cardano"
+      "value": "Begin Carteira de Criptomoedas - Web3, NFTs e carteira Crypto no Cardano ADA"
     }
   ],
   "team.body": [
@@ -380,7 +386,7 @@
     },
     {
       "type": 0,
-      "value": "Com um processo de integração fácil e seguro, que o guia em todas as partes importantes da B58"
+      "value": "Com um processo de integração fácil e seguro, que o guia em todas as partes importantes da Begin"
     },
     {
       "type": 1,
