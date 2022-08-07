@@ -35,10 +35,10 @@ const Home = () => {
       <section className="container mx-auto">
         <div className="home-container w-full flex flex-col items-center pt-16 lg:pt-32">
           <div className="p-6 pb-0 lg:w-5/12 text-center">
-            <p className='lead-text text-4xl lg:text-7xl'>
+            <p className='lead-text text-white text-3xl lg:text-7xl'>
               {f(messages.homeText, {
                 b: (chunk) => <strong>{chunk}</strong>,
-                pixel: (chunk) => <span className='pixel text-5xl lg:text-8xl'>{chunk}</span>,
+                pixel: (chunk) => <span className='pixel text-4xl lg:text-8xl'>{chunk}</span>,
               })}
             </p>
           </div>
