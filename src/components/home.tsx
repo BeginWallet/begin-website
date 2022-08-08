@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div id="home">
-      <section className="container mx-auto">
+      <section className="mx-auto">
         <div className="home-container w-full flex flex-col items-center pt-16 lg:pt-32">
           <div className="p-6 pb-0 lg:w-5/12 text-center">
             <p className='lead-text text-white text-3xl lg:text-7xl'>

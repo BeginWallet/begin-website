@@ -41,7 +41,7 @@ const Features = () => {
 
   return (
     <section id="features" className="pt-24 lg:pt-20 lg:-mt-20">
-      <div className="p-2 lg:p-6 lg:pt-10 mt-22 lg:mt-48 flex flex-col flex-wrap justify-center w-full">
+      <div className="p-2 pt-6 lg:p-6 lg:pt-10 mt-22 lg:mt-48 flex flex-col flex-wrap justify-center w-full">
         <div className='p-4 lg:p-12 mb-6 flex flex-col lg:flex-row dark:bg-blue-over light:bg-white rounded-2xl w-full' style={{minHeight: '405px'}}>
           <div className='flex-grow'>
           <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>{f(messages.featuresWalletTitle)}</h2>

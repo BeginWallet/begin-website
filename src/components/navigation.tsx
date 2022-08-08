@@ -86,7 +86,7 @@ const Navigation = () => {
       <div className="flex flex-wrap container px-5 p-2 lg:p-6 mx-auto flex items-center justify-between">
         <div className="flex items-center flex-shrink-0 text-white lg:w-40">
           <a href="#home" title="Home" onClick={() => navbarOpen ? setNavbarOpen(false) : false}>
-            <img src="/images/logo.svg" alt="Begin Wallet Logo" className={ navbar ? "h-6 md:h-8 float-left transition duration-500 transform" : "pt-1 h-8 md:h-10 float-left transition duration-500 transform"} />
+            <img src="/images/logo.svg" alt="Begin Wallet Logo" className={ (navbar ? "h-4 md:h-6 float-left" : "pt-1 h-8 md:h-10 float-left") + " transition-all transform duration-300 easy-in-out"} />
           </a>
         </div>
         <div className={"flex-grow" + (navbarOpen ? " block" : " hidden")}>

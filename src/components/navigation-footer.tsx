@@ -4,7 +4,7 @@ const NavigationFooter = () => {
   return (
     <nav>
       <div className="px-5 p-6 mx-auto flex flex-col justify-between">
-        <div className="flex flex-shrink-0 p-2 justify-center">
+        <div className="flex flex-shrink-0 p-4 justify-center">
           <a href="#home" title="Begin Wallet">
             <svg width="48" height="48" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23.7342 14.908C22.3376 16.3087 20.5093 17.1974 18.545 17.4301C18.5664 15.527 18.027 13.6597 16.9941 12.0611C17.5167 12.1382 18.05 12.0935 18.5524 11.9304C19.0548 11.7673 19.5127 11.4903 19.8903 11.121C21.2557 9.78667 21.2371 7.55941 19.8875 6.20976L17.4933 3.81562L21.3072 0L23.7328 2.42594C26.3191 5.01233 26.9648 8.80436 25.6695 11.9932C25.2261 13.0846 24.568 14.0758 23.7342 14.908Z" fill="currentColor" />
