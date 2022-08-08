@@ -117,7 +117,7 @@ const Footer = () => {
                 {f(messages.footerBtnDownload)}
               </a>
               <p className="text-lg mt-10 text-center">
-                <a href="mailto:contact@b58.finance" className="underline hover:text-blue-light">{f(messages.footerContact)}</a>
+                <a href="mailto:web3@begin.is" className="underline hover:text-blue-light">{f(messages.footerContact)}</a>
               </p>
             </div>
           </div>
