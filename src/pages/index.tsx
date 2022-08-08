@@ -52,11 +52,11 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>{f(messages.pageTitle)}</title>
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@B58Wallet" />
+          <meta name="twitter:site" content="@BeginWallet" />
           <meta name="twitter:title" content={f(messages.pageTitle)} />
           <meta name="twitter:description" content={`${f(messages.pageDescription)}`} />
           {/* TODO: Change cover page */}
-          <meta name="twitter:image" content="https://b58wallet.com/images/cover.jpeg" />
+          <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
