@@ -11,12 +11,28 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import { defineMessages } from 'react-intl'
+import f from "../../lib/translate";
+import { GA_TRACKING_ID } from '../../lib/gtag'
+import Navigation from '../../components/navigation'
 
 type Props = {
   post: PostType
   morePosts: PostType[]
   preview?: boolean
 }
+
+const messages = defineMessages({
+  pageTitle: {
+      id: 'page.title',
+      defaultMessage: 'Begin Wallet - Web3, NFTs and Crypto wallet on Cardano ADA'
+  },
+  pageDescription: {
+      id: 'page.description',
+      defaultMessage: 'With Begin you can collect NFTs, earn yeld, send, and participate in our growing digital world. ' +
+          'Where everyone is welcome on Begin DeFi Wallet on Cardano, that you are in control of your finances.'
+  }
+})
 
 const Post = ({ post, morePosts, preview }: Props) => {
   const router = useRouter()
@@ -25,23 +41,39 @@ const Post = ({ post, morePosts, preview }: Props) => {
   }
   return (
     <Layout preview={preview}>
+      <Navigation />
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="pt-16 lg:pt-32 p-4 lg:p-12">
               <Head>
-                <title>B58 Finance - Multi Feature DeFi Wallet on Cardano</title>
+                <title>{f(messages.pageTitle) + " | " + post.title}</title>
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@B58Finance" />
-                <meta name="twitter:title" content={"B58 Finance - Multi Feature DeFi Wallet on Cardano | " + post.title} />
+                <meta name="twitter:site" content="@BeginWallet" />
+                <meta name="twitter:title" content={f(messages.pageTitle) + " | " + post.title} />
                 <meta name="twitter:description" content={post.excerpt} />
-                <meta name="twitter:image" content={"https://b58.finance" + post.ogImage.url} />
+                <meta name="twitter:image" content={"https://begin.is" + post.ogImage.url} />
                 <meta property="og:image" content={post.ogImage.url} />
-                <meta property="og:title" content={"B58 Finance - Multi Feature DeFi Wallet on Cardano | " + post.title} />
+                <meta property="og:title" content={f(messages.pageTitle) + " | " + post.title} />
                 <meta property="og:description" content={post.excerpt} />
+                <script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                    />
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+                        }}
+                    />
               </Head>
               <PostHeader
                 title={post.title}
