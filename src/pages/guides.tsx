@@ -71,7 +71,7 @@ export default function Help({ allPosts }: Props) {
         <Navigation />
         <Container>
           <section id="features" className="mx-auto">
-            <div className='pt-16 lg:pt-32 p-4 lg:p-12'>
+            <div className='pt-16 lg:pt-32 p-6 lg:p-12'>
               <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>User Guides</h2>
               {heroPost.title !== undefined && (
                 <HeroPost
