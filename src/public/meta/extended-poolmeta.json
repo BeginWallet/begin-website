@@ -7,27 +7,27 @@
         "meta_hash": "b3cb4427c86c8026ae1b02d4d1d29175"
     },
     "info": {
-        "url_png_icon_64x64": "https://b58.finance/images/logo-64x64.png",
-        "url_png_logo": "https://b58.finance/images/logo.png",
+        "url_png_icon_64x64": "https://begin.is/images/logo_begin_pfp_64.png",
+        "url_png_logo": "https://begin.is/images/logo_begin_pfp_512.png",
         "location": "Dublin, Ireland",
         "social": {
-            "twitter_handle": "B58Finance",
+            "twitter_handle": "BeginWallet",
             "telegram_handle": "",
-            "facebook_handle": "B58-Finance-101392108885946",
+            "facebook_handle": "beginwallet",
             "youtube_handle": "",
             "twitch_handle": "",
             "discord_handle": "https://discord.gg/AaqPTSdrhu",
             "github_handle": "B58Finance",
             "reddit_handle": "https://www.reddit.com/r/B58Finance/",
-            "instagram_handle": "b58finance"
+            "instagram_handle": "beginwallet"
         },
         "company": {
-            "name": "B58 Finance"
+            "name": "B58 Labs Inc."
         },
         "about": {
             "me": "Our main missing is to contribute with Cardano's blockchain, by staking our rewards and our delagator's ADA, to garantee the security of the network.",
             "server": "Our infrastructure is powered by AWS Cloud, with 2 nodes running 24/7 and 365 days. we aim to have 99.9% availability time.",
-            "company": "B58 Finance is a DeFi that will connect you with DApps and provide the easiest way of being part of a new financial world."
+            "company": "Begin is a DeFi wallet that will connect you with DApps and provide the easiest way of being part of a new financial world."
         }
     }
 }
