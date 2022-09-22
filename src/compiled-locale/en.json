@@ -195,6 +195,12 @@
       "value": "Download"
     }
   ],
+  "menu.guides": [
+    {
+      "type": 0,
+      "value": "User Guides"
+    }
+  ],
   "menu.features": [
     {
       "type": 0,

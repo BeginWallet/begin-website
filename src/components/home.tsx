@@ -43,7 +43,7 @@ const Home = () => {
             </p>
           </div>
           <div className='flex flex-col lg:flex-row w-11/12 justify-center p-6'>
-            <a href="#" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center">
+            <a href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml" target="_blank" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center">
                 Install for Chrome
             </a>
             <a href="#" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:ml-4 lg:mr-4 lg:w-34 justify-center inline-flex items-center">

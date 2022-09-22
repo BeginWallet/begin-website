@@ -23,6 +23,10 @@ const messages = defineMessages({
   download: {
     id: 'menu.download',
     defaultMessage: 'Download'
+  },
+  guides: {
+    id: 'menu.guides',
+    defaultMessage: 'User Guides'
   }
 })
 
@@ -37,9 +41,9 @@ const Menu = ( {hover, onClick}: Props ) => {
     <a href="#features" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.features)}
     </a>
-    {/* <a href="#team" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 dark:text-white mr-4 hover:"+hover}>
-      {f(messages.team)}
-    </a> */}
+    <a href="/guides" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+      {f(messages.guides)}
+    </a>
     <a href="https://discord.gg/QQVPuYBZHg" target="_blank" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.support)}
     </a>

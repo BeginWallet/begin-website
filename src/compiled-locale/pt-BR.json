@@ -191,6 +191,12 @@
       "value": "Baixar"
     }
   ],
+  "menu.guides": [
+    {
+      "type": 0,
+      "value": "Guia do Usuário"
+    }
+  ],
   "menu.features": [
     {
       "type": 0,
