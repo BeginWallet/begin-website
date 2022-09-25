@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
   footerBtnDownload: {
     id: 'footer.btn.download',
-    defaultMessage: 'Begin Wallet - Available Soon'
+    defaultMessage: 'Install Begin Wallet Now'
   },
   footerContact: {
     id: 'footer.contact',
@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
           <div className="flex-grow justify-center items-center p-2 w-full lg:w-1/3">
             <div className="flex flex-col justify-center">
-              <a href="#" role="button" className="border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center py-4 px-6 rounded-xl">
+              <a href="#download" role="button" className="border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center py-4 px-6 rounded-xl">
                 {f(messages.footerBtnDownload)}
               </a>
               <p className="text-lg mt-10 text-center">

@@ -34,7 +34,7 @@ const Home = () => {
     <div id="home">
       <section className="mx-auto">
         <div className="home-container w-full flex flex-col items-center pt-16 lg:pt-32">
-          <div className="p-6 pb-0 lg:w-5/12 text-center">
+          <div id="download" className="p-6 pb-0 lg:w-5/12 text-center">
             <p className='lead-text text-white text-3xl lg:text-7xl'>
               {f(messages.homeText, {
                 b: (chunk) => <strong>{chunk}</strong>,
@@ -46,12 +46,15 @@ const Home = () => {
             <a href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml" target="_blank" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center">
                 Install for Chrome
             </a>
-            <a href="#" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:ml-4 lg:mr-4 lg:w-34 justify-center inline-flex items-center">
+            <a href="#" role="button" className="opacity-50 cursor-not-allowed bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:ml-4 lg:mr-4 lg:w-34 justify-center inline-flex items-center">
             <img src='/images/google_store.svg' className='inline-flex' />
             </a>
-            <a href="#" role="button" className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center">
+            <a href="#" role="button" className=" opacity-50 cursor-not-allowed bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center">
               <img src='/images/apple_store.svg' className='inline-flex' />
             </a>
+          </div>
+          <div className='text-white'>
+            <p>Mobile iOS and Android coming soon.</p>
           </div>
           <div className='p-6 pt-0 text-center'>
             <img src="/images/wallet_light.png"
