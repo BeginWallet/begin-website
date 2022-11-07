@@ -53,9 +53,6 @@ const Home = () => {
               <img src='/images/apple_store.svg' className='inline-flex' />
             </a>
           </div>
-          <div className='text-white'>
-            <p>Mobile iOS and Android coming soon.</p>
-          </div>
           <div className='p-6 pt-0 text-center'>
             <img src="/images/wallet_light.png"
               className='img-light dark:hidden light:show lg:w-3/6 w-auto mx-auto'
