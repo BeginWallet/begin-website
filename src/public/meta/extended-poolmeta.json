@@ -1,12 +1,5 @@
 {
     "verification": "9a80790fec1ddb5ab1",
-    "itn": {
-        "owner": "",
-        "witness": ""
-    },
-    "adapools": {
-        "meta_hash": "b3cb4427c86c8026ae1b02d4d1d29175"
-    },
     "info": {
         "url_png_icon_64x64": "https://begin.is/images/logo_begin_pfp_64.png",
         "url_png_logo": "https://begin.is/images/logo_begin_pfp_512.png",
