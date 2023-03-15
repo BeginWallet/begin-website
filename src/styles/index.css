@@ -117,7 +117,8 @@ ol, ul {
 
 .video-header,
 .video-header video,
-.video-header .viewport-header {
+.video-header .viewport-header, 
+.video-header .viewport-header-mobile {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -128,15 +129,16 @@ ol, ul {
 .video-header video {
     background: #3414FC;
     object-fit: cover;
+    filter: brightness(0.5);
 }
 
-.video-header .viewport-header {
+.viewport-header, .viewport-header-mobile {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.viewport-header h1 {
+.viewport-header h1, .viewport-header-mobile h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 1vw;
@@ -149,6 +151,22 @@ ol, ul {
     display: block;
     font-size: 10vw;
     letter-spacing: -0.6rem;
+}
+
+.nft-title h1 {
+    text-transform: uppercase;
+    display: block;
+    /* font-size: 5vw; */
+    /* letter-spacing: -0.6rem; */
+    font-weight: bold;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.viewport-header-mobile h1 span {
+    display: block;
+    font-size: 10vw;
+    letter-spacing: -0.1rem;
 }
 
 .swiper {
@@ -182,7 +200,10 @@ ol, ul {
   }
 
 .og-style {
-    background: conic-gradient(from 168.78deg at 50% 50%, #000000 -24.37deg, #FFFFFF 8.99deg, #000000 51.43deg, #FFFFFF 95.62deg, #000000 144.37deg, #FFFFFF 191.25deg, #000000 230.62deg, #FFFFFF 281.25deg, #000000 335.63deg, #FFFFFF 368.99deg), conic-gradient(from 168.78deg at 50% 50%, #000000 -24.37deg, #FFFFFF 8.99deg, #000000 51.43deg, #FFFFFF 95.62deg, #000000 144.37deg, #FFFFFF 191.25deg, #000000 230.62deg, #FFFFFF 281.25deg, #000000 335.63deg, #FFFFFF 368.99deg), radial-gradient(95.75% 95.75% at 5.75% 4.25%, #2AD0CA 0%, #E1F664 20%, #FEB0FE 40%, #ABB3FC 60%, #58C4F6 80%, #58C4F6 100%)
+    background: 
+    conic-gradient(from 168.78deg at 50% 50%, #000000 -24.37deg, #FFFFFF 8.99deg, #000000 51.43deg, #FFFFFF 95.62deg, #000000 144.37deg, #FFFFFF 191.25deg, #000000 230.62deg, #FFFFFF 281.25deg, #000000 335.63deg, #FFFFFF 368.99deg), 
+    conic-gradient(from 168.78deg at 50% 50%, #000000 -24.37deg, #FFFFFF 8.99deg, #000000 51.43deg, #FFFFFF 95.62deg, #000000 144.37deg, #FFFFFF 191.25deg, #000000 230.62deg, #FFFFFF 281.25deg, #000000 335.63deg, #FFFFFF 368.99deg), 
+    radial-gradient(95.75% 95.75% at 5.75% 4.25%, #2AD0CA 0%, #E1F664 20%, #FEB0FE 40%, #ABB3FC 60%, #58C4F6 80%, #58C4F6 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     ;
     background-blend-mode:screen, difference, normal;

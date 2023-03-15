@@ -93,9 +93,9 @@ export default function Nft({ allPosts }: Props) {
             playsInline={true}
             muted={true}
             controls={false}
-            data-autoplay=''
+            data-autoplay=""
           ></video>
-          <div className="viewport-header">
+          <div className="lg:viewport-header viewport-header-mobile">
             <h1>
               Digital <br /> Collectibles
               <span>Begin NYC</span>
@@ -105,7 +105,7 @@ export default function Nft({ allPosts }: Props) {
             className="flex items-center justify-center"
             style={{ marginTop: "72vh" }}
           >
-            <div className="flex-0 lg:w-4/12 w-8/12 ">
+            <div className="flex-0 lg:w-4/12 w-75p ">
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
@@ -147,29 +147,54 @@ export default function Nft({ allPosts }: Props) {
                   </>
                 )}
               </Swiper>
-
-              <div>
+              <div className="p-4">
+              {activeIndex === 0 && (
+                <div>
+                  <h3>Begin NYC SOL 3D BW</h3>
+                  <p>Statue of Liberty in 3D with black & white paint</p>
+                </div>
+              )}
+              {activeIndex === 1 && (
+                <div>
+                  <h3>Begin NYC SOL Comics</h3>
+                  <p>Statue of Liberty in comics style</p>
+                </div>
+              )}
+              {activeIndex === 2 && (
+                <div>
+                  <h3>Begin NYC SOL Mona</h3>
+                  <p>Statue of Liberty paiting with Mona Lisa's face</p>
+                </div>
+              )}
+              {activeIndex === 3 && (
+                <div>
+                  <h3>Begin NYC SOL Noun</h3>
+                  <p>Statue of Liberty with Noun Glass</p>
+                </div>
+              )}
+            </div>
+              {/* <div>
                 <div className="flex pt-6">
-                  <div className="flex-1">
+                  <div className="flex-1 p-2">
                     <a
                       onClick={() => setCollection(0)}
                       role="button"
-                      className="og-style p-4 border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center rounded-xl"
+                      className="og-style flex justify-center p-4 border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center rounded-xl"
                     >
                       OG Collection
                     </a>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 p-2">
                     <a
                       onClick={() => setCollection(1)}
                       role="button"
-                      className="p-4 border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center rounded-xl"
+                      className="flex justify-center p-4 border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center rounded-xl"
                     >
                       Standard Collection
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </header>
@@ -181,37 +206,31 @@ export default function Nft({ allPosts }: Props) {
           <section
             id="nfts"
             className="mx-auto"
-            style={{ marginTop: "100vh", paddingTop: "40vh" }}
+            style={{ marginTop: "100vh", paddingTop: "45vh" }}
           >
-            {activeIndex === 0 && (
-              <div>
-                <h3>Begin NYC SOL 3D BW</h3>
-                <p>Statue of Liberty in 3D with black & white paint</p>
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
+              <div className="flex-1 nft-title text-left">
+                <h1 className="lg:text-9xl text-6xl og-style">
+                  Begin OG Collection
+                </h1>
               </div>
-            )}
-            {activeIndex === 1 && (
-              <div>
-                <h3>Begin NYC SOL Comics</h3>
-                <p>Statue of Liberty in comics style</p>
+              <div className="flex flex-1 items-center">
+                <div className="flex flex-col">
+                  <h2 className='lg:text-4xl text-2xl pb-6'>
+                    Register NOW with <strong>Begin Wallet</strong> to became OG member!
+                  </h2>
+                  <a
+                    href="#download"
+                    role="button"
+                    className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
+                  >
+                    Connect with Begin
+                  </a>
+                </div>
               </div>
-            )}
-            {activeIndex === 2 && (
-              <div>
-                <h3>Begin NYC SOL Mona</h3>
-                <p>Statue of Liberty paiting with Mona Lisa's face</p>
-              </div>
-            )}
-            {activeIndex === 3 && (
-              <div>
-                <h3>Begin NYC SOL Noun</h3>
-                <p>Statue of Liberty with Noun Glass</p>
-              </div>
-            )}
+            </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col-reverse">
               <div className="flex-1 px-4">
-                <h1 className="lg:w-6/12 lg:text-5xl text-2xl text-bold">
-                  #BEGINNFT #NFTNYC2023
-                </h1>
                 <p>
                   Welcome to our first #NFT drop and we're celebrating the
                   Cardano community together with NFT.NYC.
@@ -227,16 +246,7 @@ export default function Nft({ allPosts }: Props) {
                   exclusive dashboard.
                 </p>
                 <br />
-                <p>Register with your Begin Wallet to become an OG member.</p>
-                <div className="flex pt-6">
-                  <a
-                    href="#download"
-                    role="button"
-                    className="p-4 border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center rounded-xl"
-                  >
-                    Connect with Begin
-                  </a>
-                </div>
+                <p></p>
               </div>
               <div className="flex-1">
                 <div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
