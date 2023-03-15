@@ -101,79 +101,90 @@ export default function Nft({ allPosts }: Props) {
               <span>Begin NYC</span>
             </h1>
           </div>
-          <div
-            className="flex items-center justify-center"
-            style={{ marginTop: "72vh" }}
+        </header>
+
+        {/* <main>
+  [[[https://codepen.io/chriscoyier/pen/VbqzER]]]
+</main> */}
+        <Container>
+          <section
+            id="nfts"
+            className="mx-auto"
+            style={{ marginTop: "100vh" }}
           >
-            <div className="flex-0 lg:w-4/12 w-75p ">
-              <Swiper
-                effect={"cards"}
-                grabCursor={true}
-                pagination={false}
-                navigation={true}
-                modules={[EffectCards, Pagination, NavSwiper]}
-                className="mySwiper"
-                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-              >
-                {collection === 0 ? (
-                  <>
-                    <SwiperSlide>
-                      <img src="/nft/collections/og_sol_bg.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/og_sol_comics.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/og_sol_mona.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/og_sol_noun.png" />
-                    </SwiperSlide>
-                  </>
-                ) : (
-                  <>
-                    <SwiperSlide>
-                      <img src="/nft/collections/sol_bg.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/sol_comics.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/sol_mona.png" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="/nft/collections/sol_noun.png" />
-                    </SwiperSlide>
-                  </>
-                )}
-              </Swiper>
-              <div className="p-4">
-              {activeIndex === 0 && (
-                <div>
-                  <h3>Begin NYC SOL 3D BW</h3>
-                  <p>Statue of Liberty in 3D with black & white paint</p>
+            <div
+              className="flex items-center justify-center"
+              style={{ marginTop: "-30vh" }}
+            >
+              <div className="flex-0 lg:w-4/12 w-75p text-center">
+                <Swiper
+                  effect={"cards"}
+                  grabCursor={true}
+                  pagination={false}
+                  navigation={true}
+                  modules={[EffectCards, Pagination, NavSwiper]}
+                  className="mySwiper"
+                  onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                >
+                  {collection === 0 ? (
+                    <>
+                      <SwiperSlide>
+                        <img src="/nft/collections/og_sol_bg.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/og_sol_comics.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/og_sol_mona.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/og_sol_noun.png" />
+                      </SwiperSlide>
+                    </>
+                  ) : (
+                    <>
+                      <SwiperSlide>
+                        <img src="/nft/collections/sol_bg.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/sol_comics.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/sol_mona.png" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <img src="/nft/collections/sol_noun.png" />
+                      </SwiperSlide>
+                    </>
+                  )}
+                </Swiper>
+                <div className="p-4">
+                  {activeIndex === 0 && (
+                    <div>
+                      <h3>Begin NYC SOL 3D BW</h3>
+                      <p>Statue of Liberty in 3D with black & white paint</p>
+                    </div>
+                  )}
+                  {activeIndex === 1 && (
+                    <div>
+                      <h3>Begin NYC SOL Comics</h3>
+                      <p>Statue of Liberty in comics style</p>
+                    </div>
+                  )}
+                  {activeIndex === 2 && (
+                    <div>
+                      <h3>Begin NYC SOL Mona</h3>
+                      <p>Statue of Liberty paiting with Mona Lisa's face</p>
+                    </div>
+                  )}
+                  {activeIndex === 3 && (
+                    <div>
+                      <h3>Begin NYC SOL Noun</h3>
+                      <p>Statue of Liberty with Noun Glass</p>
+                    </div>
+                  )}
                 </div>
-              )}
-              {activeIndex === 1 && (
-                <div>
-                  <h3>Begin NYC SOL Comics</h3>
-                  <p>Statue of Liberty in comics style</p>
-                </div>
-              )}
-              {activeIndex === 2 && (
-                <div>
-                  <h3>Begin NYC SOL Mona</h3>
-                  <p>Statue of Liberty paiting with Mona Lisa's face</p>
-                </div>
-              )}
-              {activeIndex === 3 && (
-                <div>
-                  <h3>Begin NYC SOL Noun</h3>
-                  <p>Statue of Liberty with Noun Glass</p>
-                </div>
-              )}
-            </div>
-              {/* <div>
+                {/* <div>
                 <div className="flex pt-6">
                   <div className="flex-1 p-2">
                     <a
@@ -195,19 +206,8 @@ export default function Nft({ allPosts }: Props) {
                   </div>
                 </div>
               </div> */}
+              </div>
             </div>
-          </div>
-        </header>
-
-        {/* <main>
-  [[[https://codepen.io/chriscoyier/pen/VbqzER]]]
-</main> */}
-        <Container>
-          <section
-            id="nfts"
-            className="mx-auto"
-            style={{ marginTop: "100vh", paddingTop: "45vh" }}
-          >
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
               <div className="flex-1 nft-title text-left">
                 <h1 className="lg:text-9xl text-6xl og-style">
@@ -216,8 +216,9 @@ export default function Nft({ allPosts }: Props) {
               </div>
               <div className="flex flex-1 items-center">
                 <div className="flex flex-col">
-                  <h2 className='lg:text-4xl text-2xl pb-6'>
-                    Register NOW with <strong>Begin Wallet</strong> to became OG member!
+                  <h2 className="lg:text-4xl text-2xl pb-6">
+                    Register NOW with <strong>Begin Wallet</strong> to became OG
+                    member!
                   </h2>
                   <a
                     href="#download"
@@ -268,7 +269,7 @@ export default function Nft({ allPosts }: Props) {
               )}
               {morePosts.length > 0 && <MoreStories posts={morePosts} baseURL='/guides/' />} */}
             </div>
-            <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
+            <div className="pt-16 lg:pt-16 p-6 lg:p-12 flex lg:flex-row flex-col">
               <div className="flex-1">
                 <div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
                   <img
