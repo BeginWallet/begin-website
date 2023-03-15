@@ -103,7 +103,7 @@ export default function Nft({ allPosts }: Props) {
             className="flex items-center justify-center"
             style={{ marginTop: "72vh" }}
           >
-            <div className="flex-0 lg:w-4/12 w-3/5 ">
+            <div className="flex-0 lg:w-4/12 w-10/12 ">
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
