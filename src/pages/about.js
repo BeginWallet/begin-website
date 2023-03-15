@@ -6,9 +6,9 @@ export default function About() {
       <div>
         Back to{' '}
         <Link href="/" as={process.env.BACKEND_URL + '/'}>
-          <a>Home</a>
+          Home
         </Link>
       </div>
     </div>
-  )
+  );
 }

@@ -21,14 +21,18 @@ const CoverImage = ({ title, src, baseURL, slug }: Props) => {
   return (
     <div className={ slug ? "-mx-5 sm:mx-0" : "mx-0"}>
       {slug ? (
-        <Link as={baseURL.concat(slug)} href={baseURL.concat("[slug]")}>
-          <a aria-label={title}>{image}</a>
+        <Link
+          href={baseURL.concat(slug)}
+          // as={baseURL.concat(slug)}
+          // href={baseURL.concat("[slug]")}
+          aria-label={title}>
+          {image}
         </Link>
       ) : (
         image
       )}
     </div>
-  )
+  );
 }
 
 export default CoverImage

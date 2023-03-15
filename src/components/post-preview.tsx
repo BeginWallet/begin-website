@@ -29,8 +29,12 @@ const PostPreview = ({
         <CoverImage slug={slug} title={title} src={coverImage} baseURL={baseURL}/>
       </div>
       <h3 className="text-2xl mb-3 leading-snug">
-        <Link as={baseURL.concat(slug)} href={baseURL.concat("[slug]")}>
-          <a className="hover:underline">{title}</a>
+        <Link
+          href={baseURL.concat(slug)}
+          // as={baseURL.concat(slug)}
+          // href={baseURL.concat("[slug]")}
+          className="hover:underline">
+          {title}
         </Link>
       </h3>
       <div className="text-lg mb-4">
@@ -39,7 +43,7 @@ const PostPreview = ({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       {/* <Avatar name={author.name} picture={author.picture} /> */}
     </div>
-  )
+  );
 }
 
 export default PostPreview

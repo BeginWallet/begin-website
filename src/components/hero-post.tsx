@@ -31,8 +31,11 @@ const HeroPost = ({
       <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-2xl lg:text-3xl leading-tight">
-            <Link as={baseURL.concat(slug)} href={baseURL.concat("[slug]")}>
-              <a className="hover:underline">{title}</a>
+            <Link
+              href={baseURL.concat(slug)}
+              // href={baseURL.concat("[slug]")}
+              className="hover:underline">
+              {title}
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
@@ -45,7 +48,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default HeroPost
