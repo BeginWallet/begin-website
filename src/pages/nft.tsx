@@ -93,6 +93,7 @@ export default function Nft({ allPosts }: Props) {
             playsInline={true}
             muted={true}
             controls={false}
+            data-autoplay=''
           ></video>
           <div className="viewport-header">
             <h1>
