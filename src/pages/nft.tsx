@@ -59,13 +59,13 @@ export default function Nft({ allPosts }: Props) {
           {/* TODO: Change cover page */}
           <meta
             name="twitter:image"
-            content="https://begin.is/images/cover.jpeg"
+            content="https://begin.is/nft/cover_nft.jpg"
           />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
           />
-          <meta property="og:image" content="/images/cover.jpeg" />
+          <meta property="og:image" content="/nft/cover_nft.jpg" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -161,25 +161,25 @@ export default function Nft({ allPosts }: Props) {
                 <div className="p-4">
                   {activeIndex === 0 && (
                     <div>
-                      <h3>Begin NYC SOL 3D BW</h3>
+                      <h3 className='text-2xl'>Begin NYC SOL 3D BW</h3>
                       <p>Statue of Liberty in 3D with black & white paint</p>
                     </div>
                   )}
                   {activeIndex === 1 && (
                     <div>
-                      <h3>Begin NYC SOL Comics</h3>
+                      <h3 className='text-2xl'>Begin NYC SOL Comics</h3>
                       <p>Statue of Liberty in comics style</p>
                     </div>
                   )}
                   {activeIndex === 2 && (
                     <div>
-                      <h3>Begin NYC SOL Mona</h3>
+                      <h3 className='text-2xl'>Begin NYC SOL Mona</h3>
                       <p>Statue of Liberty paiting with Mona Lisa's face</p>
                     </div>
                   )}
                   {activeIndex === 3 && (
                     <div>
-                      <h3>Begin NYC SOL Noun</h3>
+                      <h3 className='text-2xl'>Begin NYC SOL Noun</h3>
                       <p>Statue of Liberty with Noun Glass</p>
                     </div>
                   )}
@@ -210,7 +210,7 @@ export default function Nft({ allPosts }: Props) {
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
               <div className="flex-1 nft-title text-left">
-                <h1 className="lg:text-9xl text-6xl og-style">
+                <h1 className="lg:text-9xl text-6xl">
                   Begin OG Collection
                 </h1>
               </div>

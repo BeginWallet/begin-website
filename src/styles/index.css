@@ -159,8 +159,8 @@ ol, ul {
     /* font-size: 5vw; */
     /* letter-spacing: -0.6rem; */
     font-weight: bold;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .viewport-header-mobile h1 span {
