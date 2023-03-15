@@ -88,9 +88,9 @@ export default function Nft({ allPosts }: Props) {
         <header className="video-header">
           <video
             src="/nft/new_york_top.mp4"
-            autoPlay
-            loop
-            playsInline
+            autoPlay={true}
+            loop={true}
+            playsInline={true}
             muted={true}
           ></video>
           <div className="viewport-header">
@@ -103,7 +103,7 @@ export default function Nft({ allPosts }: Props) {
             className="flex items-center justify-center"
             style={{ marginTop: "72vh" }}
           >
-            <div className="flex-0 lg:w-4/12 w-9/12 ">
+            <div className="flex-0 lg:w-4/12 w-8/12 ">
               <Swiper
                 effect={"cards"}
                 grabCursor={true}
