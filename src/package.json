@@ -13,7 +13,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^3.8.0",
+    "@netlify/plugin-nextjs": "^4.32.2",
     "apexcharts": "^3.25.0",
     "caniuse-lite": "^1.0.30001464",
     "chalk": "^4.1.0",
