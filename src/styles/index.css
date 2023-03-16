@@ -208,6 +208,10 @@ ol, ul {
     ;
     background-blend-mode:screen, difference, normal;
 }
+
+.items-center {
+    align-items: center;
+}
 /* main {
     background: white;
     position: relative;
