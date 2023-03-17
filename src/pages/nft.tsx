@@ -303,14 +303,14 @@ export default function Nft({ allPosts }: Props) {
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12">
               <div className="flex lg:flex-row flex-col">
-                <div className="flex-1 p-6 m-4 bg-blue-over rounded-2xl">
+                <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
                     OG
                   </h1>
-                  <div className="p-6 text-xl">
-                    <p>Here's what you get from OG member</p>
+                  <div className="lg:p-6 p-4 lg:text-xl">
+                    <p>Here's what you get as an OG member</p>
                     <br />
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -325,7 +325,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       Exclusive OG Begin Bagde FREE
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -340,7 +340,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       2x Giveaway Entry Next Drop
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -356,7 +356,7 @@ export default function Nft({ allPosts }: Props) {
                       10% Discount On In-app Swap Fee <br />
                       *Not Accumulative
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -371,7 +371,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       NYC NFT AirDrop Giveaway Entry
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -395,14 +395,14 @@ export default function Nft({ allPosts }: Props) {
                     50 ADA
                   </a>
                 </div>
-                <div className="flex-1 p-6 m-4 bg-blue-over rounded-2xl">
+                <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
                     STANDARD
                   </h1>
-                  <div className="p-6 text-xl">
-                    <p>Here's what you get from Standard member</p>
+                  <div className="lg:p-6 p-4 lg:text-xl">
+                    <p>Here's what you get as a Standard member</p>
                     <br />
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -417,7 +417,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       Exclusive Beginner Bagde FREE
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 32 32"
@@ -432,7 +432,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       2x Giveaway Entry Next Drop
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -448,7 +448,7 @@ export default function Nft({ allPosts }: Props) {
                       10% Discount On In-app Swap Fee <br />
                       *Not Accumulative
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -463,7 +463,7 @@ export default function Nft({ allPosts }: Props) {
                       </svg>
                       NYC NFT AirDrop Giveaway Entry
                     </p>
-                    <p className="flex items-center h-16">
+                    <p className="flex items-center pb-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -543,10 +543,10 @@ export default function Nft({ allPosts }: Props) {
                   Begin Badges are FREE to claim, which will be a way for to get
                   recognized in our community.
                 </p>
-                <div className="p-6 pl-0 text-xl">
+                <div className="lg:p-6 pl-0 lg:text-xl">
                   <p>Unclock your BADGES</p>
                   <br />
-                  <p className="flex items-center h-16">
+                  <p className="flex items-center pb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
@@ -562,7 +562,7 @@ export default function Nft({ allPosts }: Props) {
                     OG Begin <br />
                     Holder of any Begin OG NFT collection
                   </p>
-                  <p className="flex items-center h-16">
+                  <p className="flex items-center pb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
@@ -578,7 +578,7 @@ export default function Nft({ allPosts }: Props) {
                     Begin Star <br />
                     Staking with BEGIN Stake Pool
                   </p>
-                  <p className="flex items-center h-16">
+                  <p className="flex items-center pb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
@@ -594,7 +594,7 @@ export default function Nft({ allPosts }: Props) {
                     Beginner <br />
                     Holder of any Begin NFT collection
                   </p>
-                  <p className="flex items-center h-16">
+                  <p className="flex items-center pb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
