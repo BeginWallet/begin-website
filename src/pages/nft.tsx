@@ -159,31 +159,31 @@ export default function Nft({ allPosts }: Props) {
                   {collection === 0 ? (
                     <>
                       <SwiperSlide>
-                        <img src="/nft/collections/og_sol_bg.png" />
+                        <img src="/nft/collections/og_sol_bg_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/og_sol_comics.png" />
+                        <img src="/nft/collections/og_sol_comics_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/og_sol_mona.png" />
+                        <img src="/nft/collections/og_sol_mona_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/og_sol_noun.png" />
+                        <img src="/nft/collections/og_sol_noun_512.png" />
                       </SwiperSlide>
                     </>
                   ) : (
                     <>
                       <SwiperSlide>
-                        <img src="/nft/collections/sol_bg.png" />
+                        <img src="/nft/collections/sol_bg_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/sol_comics.png" />
+                        <img src="/nft/collections/sol_comics_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/sol_mona.png" />
+                        <img src="/nft/collections/sol_mona_512.png" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/nft/collections/sol_noun.png" />
+                        <img src="/nft/collections/sol_noun_512.png" />
                       </SwiperSlide>
                     </>
                   )}
@@ -240,7 +240,9 @@ export default function Nft({ allPosts }: Props) {
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
               <div className="flex-1 nft-title text-left">
-                <h1 className="lg:text-9xl text-6xl">Begin OG Collection</h1>
+                <h1 className="lg:text-9xl text-6xl lg:pb-0 pb-6 text-center lg:text-left">
+                  Begin OG Collection
+                </h1>
               </div>
               <div className="flex flex-1 items-center">
                 <div className="flex flex-col">
@@ -258,29 +260,31 @@ export default function Nft({ allPosts }: Props) {
                 </div>
               </div>
             </div>
-            <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col-reverse">
-              <div className="flex-1 px-4">
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
+              <div className="flex-1 nft-title text-left">
+                <h1 className="lg:text-9xl text-6xl lg:pb-0 pb-6 text-center lg:text-left">
+                  About the NYC Drop
+                </h1>
+              </div>
+              <div className="flex flex-wrap content-center flex-1 px-4 text-lg">
                 <p>
-                  Welcome to our first #NFT drop and we're celebrating the
-                  Cardano community together with NFT.NYC.
+                  Welcome to our first NFT drop and we're celebrating the
+                  Cardano Community together with{" "}
+                  <a href="https://nft.nyc" target="_blank">
+                    NFT.NYC
+                  </a>
+                  !
                 </p>
                 <br />
                 <p>
-                  Begin NYC NFTs are minted on Cardano Blockchain, with a 2k max
-                  supply and utility already built in.
+                  Begin NYC NFTs are minted on Cardano Blockchain, with a 2.000
+                  MAX supply and utility already built-in.
                 </p>
                 <br />
                 <p>
-                  Buy, Sell, Collect and Unlock Begin Wallet #BADGES from our
+                  Buy, Sell, Collect and Unlock Begin Wallet BADGES from our
                   exclusive dashboard.
                 </p>
-                <br />
-                <p></p>
-              </div>
-              <div className="flex-1">
-                <div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
-                  <img className="" src={"/nft/collections/nyc_banner.png"} />
-                </div>
               </div>
 
               {/* <img className='' src='/nft/collections/OG_sol_bg.png'/> */}
@@ -297,70 +301,321 @@ export default function Nft({ allPosts }: Props) {
               )}
               {morePosts.length > 0 && <MoreStories posts={morePosts} baseURL='/guides/' />} */}
             </div>
-            <div className="p-6 lg:p-12 lg:pt-0">
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12">
               <div className="flex lg:flex-row flex-col">
-                <h1 className="lg:text-5xl text-2xl text-bold">
-                  UTILITY & REWARDS
-                </h1>
-              </div>
-              <div className="flex lg:flex-row flex-col">
-                <div className="flex-1 p-4">
-                  <h1 className="lg:text-5xl text-2xl text-bold">
-                    OG Collection
+                <div className="flex-1 p-6 m-4 bg-blue-over rounded-2xl">
+                  <h1 className="lg:text-5xl text-2xl text-bold text-center">
+                    OG
                   </h1>
-                  <p>Here's what you get for being an OG member</p>
-                  <br />
-                  <ul>
-                    <li>Exclusive OG Begin Bagde Free</li>
-                    <li>10% discount on in-app Fee swap</li>
-                    <li>1.5 extra change to win a NFT in next drop</li>
-                  </ul>
+                  <div className="p-6 text-xl">
+                    <p>Here's what you get from OG member</p>
+                    <br />
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      Exclusive OG Begin Bagde FREE
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      2x Giveaway Entry Next Drop
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      10% Discount On In-app Swap Fee <br />
+                      *Not Accumulative
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      NYC NFT AirDrop Giveaway Entry
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      Jpg.store Topia Ticket Giveaway Entry
+                    </p>
+                  </div>
+                  <a
+                    onClick={handleConnect}
+                    role="button"
+                    className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
+                  >
+                    50 ADA
+                  </a>
                 </div>
-                <div className="flex-1 p-4 lg:pl-6">
-                  <h1 className="lg:text-5xl text-2xl text-bold">
-                    STANDARD Collection
+                <div className="flex-1 p-6 m-4 bg-blue-over rounded-2xl">
+                  <h1 className="lg:text-5xl text-2xl text-bold text-center">
+                    STANDARD
                   </h1>
-                  <p>They're unclocked according to you levels achiveched:</p>
-                  <br />
-                  <ul>
-                    <li>BEGINNER - Holder of any Begin NFT collection</li>
-                    <li>1.5 extra change to win a NFT in next drop</li>
-                  </ul>
+                  <div className="p-6 text-xl">
+                    <p>Here's what you get from Standard member</p>
+                    <br />
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      Exclusive Beginner Bagde FREE
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                        />
+                      </svg>
+                      2x Giveaway Entry Next Drop
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 8.7070312 7.2929688 L 7.2929688 8.7070312 L 10.585938 12 L 7.2929688 15.292969 L 8.7070312 16.707031 L 12 13.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13.414062 12 L 16.707031 8.7070312 L 15.292969 7.2929688 L 12 10.585938 L 8.7070312 7.2929688 z"
+                        />
+                      </svg>
+                      10% Discount On In-app Swap Fee <br />
+                      *Not Accumulative
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 8.7070312 7.2929688 L 7.2929688 8.7070312 L 10.585938 12 L 7.2929688 15.292969 L 8.7070312 16.707031 L 12 13.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13.414062 12 L 16.707031 8.7070312 L 15.292969 7.2929688 L 12 10.585938 L 8.7070312 7.2929688 z"
+                        />
+                      </svg>
+                      NYC NFT AirDrop Giveaway Entry
+                    </p>
+                    <p className="flex items-center h-16">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="32px"
+                        height="32px"
+                        className="mr-4"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 8.7070312 7.2929688 L 7.2929688 8.7070312 L 10.585938 12 L 7.2929688 15.292969 L 8.7070312 16.707031 L 12 13.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13.414062 12 L 16.707031 8.7070312 L 15.292969 7.2929688 L 12 10.585938 L 8.7070312 7.2929688 z"
+                        />
+                      </svg>
+                      Jpg.store Topia Ticket Giveaway Entry
+                    </p>
+                  </div>
+                  <a
+                    onClick={handleConnect}
+                    role="button"
+                    className="flex p-4 w-full text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
+                  >
+                    60 ADA
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="pt-16 lg:pt-16 p-6 lg:p-12 flex lg:flex-row flex-col">
-              <div className="flex-1">
-                <div className="mb-4 md:mb-8 -mx-5 sm:mx-0">
-                  <img
-                    className=""
-                    src={"/nft/collections/badges_banner.png"}
-                  />
-                </div>
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex flex-col">
+              <div className="flex flex-1 pb-4" style={{justifyContent: 'center'}}>
+                <img
+                  className="lg:w-10/12"
+                  src={"/nft/collections/badges_banner.png"}
+                />
               </div>
-              <div className="flex-1 p-4 lg:pl-12">
-                <h1 className="lg:w-6/12 lg:text-5xl text-2xl text-bold">
-                  #BEGINBADGES
-                </h1>
-                <p>
-                  Begin Badges are free to claim, which will be a way for to get
+              <div className="flex-1 p-4">
+                <h1 className="lg:text-5xl text-2xl text-bold pb-4">BEGIN BADGES</h1>
+                <p className='text-xl'>
+                  Begin Badges are FREE to claim, which will be a way for to get
                   recognized in our community.
                 </p>
-                <br />
-                <p>They're unclocked according to you levels achiveched:</p>
-                <br />
-                <ul>
-                  <li>OG Begin - Holder of any Begin OG NFT collection</li>
-                  <li>BEGIN START - Staking with BEGIN Stake Pool</li>
-                  <li>BEGINNER - Holder of any Begin NFT collection</li>
-                  <li>THE BEGIN - Any one connected with Begin Wallet</li>
-                </ul>
-                <br />
-                <p>
+                <div className="p-6 pl-0 text-xl">
+                  <p>Unclock your BADGES</p>
+                  <br />
+                  <p className="flex items-center h-16">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      width="32px"
+                      height="32px"
+                      className="mr-4"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                      />
+                    </svg>
+                    OG Begin <br />
+                    Holder of any Begin OG NFT collection
+                  </p>
+                  <p className="flex items-center h-16">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      width="32px"
+                      height="32px"
+                      className="mr-4"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                      />
+                    </svg>
+                    Begin Star <br />
+                    Staking with BEGIN Stake Pool
+                  </p>
+                  <p className="flex items-center h-16">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      width="32px"
+                      height="32px"
+                      className="mr-4"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                      />
+                    </svg>
+                    Beginner <br />
+                    Holder of any Begin NFT collection
+                  </p>
+                  <p className="flex items-center h-16">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      width="32px"
+                      height="32px"
+                      className="mr-4"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
+                      />
+                    </svg>
+                    The Begin <br />
+                    Any one connected with Begin Wallet
+                  </p>
+                </div>
+                <p className='text-xl'>
                   You will be able to claim it from our exclusive dashboard for
-                  #FREE.
+                  FREE.
                 </p>
                 <br />
+              </div>
+            </div>
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 lg:pt-0">
+              <div className="flex lg:flex-row flex-col">
+                <h1 className="lg:text-5xl text-2xl text-bold">RARITY</h1>
+              </div>
+              <div className="flex lg:flex-row flex-col items-center p-6">
+                <div className="flex flex-col lg:flex-row items-center rounded-2xl w-full">
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_bg_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL 3D BW</h3>
+                    <p className="p-4">40% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_comics_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Comics</h3>
+                    <p className="p-4">30% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_mona_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Mona</h3>
+                    <p className="p-4">20% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_noun_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Noun</h3>
+                    <p className="p-4">10% chance</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="p-6 lg:p-12 lg:pt-0">
@@ -370,7 +625,7 @@ export default function Nft({ allPosts }: Props) {
                 </h1>
               </div>
               <div className="flex lg:flex-row flex-col items-center p-6">
-                <div className="h-8 flex flex-1 justify-center">
+                <div className="flex flex-1 justify-center">
                   <a
                     href="https://www.nmkr.io/"
                     target="_blank"
