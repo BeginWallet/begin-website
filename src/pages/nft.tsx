@@ -489,6 +489,47 @@ export default function Nft({ allPosts }: Props) {
                 </div>
               </div>
             </div>
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 lg:pt-0">
+              <div className="flex lg:flex-row flex-col">
+                <h1 className="lg:text-5xl text-2xl text-bold">RARITY</h1>
+              </div>
+              <div className="flex lg:flex-row flex-col items-center p-6">
+                <div className="flex flex-col lg:flex-row items-center rounded-2xl w-full">
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_bg_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL 3D BW</h3>
+                    <p className="p-4">40% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_comics_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Comics</h3>
+                    <p className="p-4">30% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_mona_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Mona</h3>
+                    <p className="p-4">20% chance</p>
+                  </div>
+                  <div className="flex-1 p-4 text-center">
+                    <img
+                      className="rounded-2xl"
+                      src="/nft/collections/og_sol_noun_512.png"
+                    />
+                    <h3 className="text-lg pt-4">Begin NYC SOL Noun</h3>
+                    <p className="p-4">10% chance</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex flex-col">
               <div className="flex flex-1 pb-4" style={{justifyContent: 'center'}}>
                 <img
@@ -575,47 +616,6 @@ export default function Nft({ allPosts }: Props) {
                   FREE.
                 </p>
                 <br />
-              </div>
-            </div>
-            <div className="pt-16 lg:pt-32 p-6 lg:p-12 lg:pt-0">
-              <div className="flex lg:flex-row flex-col">
-                <h1 className="lg:text-5xl text-2xl text-bold">RARITY</h1>
-              </div>
-              <div className="flex lg:flex-row flex-col items-center p-6">
-                <div className="flex flex-col lg:flex-row items-center rounded-2xl w-full">
-                  <div className="flex-1 p-4 text-center">
-                    <img
-                      className="rounded-2xl"
-                      src="/nft/collections/og_sol_bg_512.png"
-                    />
-                    <h3 className="text-lg pt-4">Begin NYC SOL 3D BW</h3>
-                    <p className="p-4">40% chance</p>
-                  </div>
-                  <div className="flex-1 p-4 text-center">
-                    <img
-                      className="rounded-2xl"
-                      src="/nft/collections/og_sol_comics_512.png"
-                    />
-                    <h3 className="text-lg pt-4">Begin NYC SOL Comics</h3>
-                    <p className="p-4">30% chance</p>
-                  </div>
-                  <div className="flex-1 p-4 text-center">
-                    <img
-                      className="rounded-2xl"
-                      src="/nft/collections/og_sol_mona_512.png"
-                    />
-                    <h3 className="text-lg pt-4">Begin NYC SOL Mona</h3>
-                    <p className="p-4">20% chance</p>
-                  </div>
-                  <div className="flex-1 p-4 text-center">
-                    <img
-                      className="rounded-2xl"
-                      src="/nft/collections/og_sol_noun_512.png"
-                    />
-                    <h3 className="text-lg pt-4">Begin NYC SOL Noun</h3>
-                    <p className="p-4">10% chance</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="p-6 lg:p-12 lg:pt-0">
