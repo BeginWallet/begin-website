@@ -191,8 +191,8 @@ export default function Nft({ allPosts }: Props) {
                 <div className="p-4">
                   {activeIndex === 0 && (
                     <div>
-                      <h3 className="text-2xl">Begin NYC SOL 3D BW</h3>
-                      <p>Statue of Liberty in 3D with black & white paint</p>
+                      <h3 className="text-2xl">Begin NYC SOL Graphite</h3>
+                      <p>Statue of Liberty in graphite paint</p>
                     </div>
                   )}
                   {activeIndex === 1 && (
@@ -261,29 +261,36 @@ export default function Nft({ allPosts }: Props) {
               </div>
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex lg:flex-row flex-col">
-              <div className="flex-1 nft-title text-left">
+              <div className="flex-1 nft-title text-left flex items-center">
                 <h1 className="lg:text-9xl text-6xl lg:pb-0 pb-6 text-center lg:text-left">
                   About the NYC Drop
                 </h1>
               </div>
               <div className="flex flex-wrap content-center flex-1 px-4 text-lg">
                 <p>
-                  Welcome to our first NFT drop and we're celebrating the
-                  Cardano Community together with{" "}
+                  Welcome to our first Digital Collectibles drop to show the
+                  power of the Cardano NFT Community at the{" "}
                   <a href="https://nft.nyc" target="_blank">
                     NFT.NYC
-                  </a>
-                  !
+                  </a>{" "}
+                  event!
                 </p>
                 <br />
                 <p>
-                  Begin NYC NFTs are minted on Cardano Blockchain, with a 2.000
-                  MAX supply and utility already built-in.
+                  Begin NYC NFTs are minted on Cardano Blockchain, based on 4
+                  unique Artworks with a 2 000 MAX supply and utility already
+                  built-in.
                 </p>
                 <br />
                 <p>
                   Buy, Sell, Collect and Unlock Begin Wallet BADGES from our
                   exclusive dashboard.
+                </p>
+                <br />
+                <p>
+                  The policy IDs of Begin NYC are:
+                  349153f99c85a44f87139c58edbaa979af5bf380818517d87a072530,
+                  12a7faac878f22f0f5b32bd8e116ba6c5f23ba9cba37fe27179dec59
                 </p>
               </div>
 
@@ -323,7 +330,7 @@ export default function Nft({ allPosts }: Props) {
                           d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
                         />
                       </svg>
-                      Exclusive OG Begin Bagde FREE
+                      Exclusive OG Begin Bagde FREE*
                     </p>
                     <p className="flex items-center pb-4">
                       <svg
@@ -415,7 +422,7 @@ export default function Nft({ allPosts }: Props) {
                           d="M 16 3 C 8.800781 3 3 8.800781 3 16 C 3 23.199219 8.800781 29 16 29 C 23.199219 29 29 23.199219 29 16 C 29 14.601563 28.8125 13.207031 28.3125 11.90625 L 26.6875 13.5 C 26.886719 14.300781 27 15.101563 27 16 C 27 22.101563 22.101563 27 16 27 C 9.898438 27 5 22.101563 5 16 C 5 9.898438 9.898438 5 16 5 C 19 5 21.695313 6.195313 23.59375 8.09375 L 25 6.6875 C 22.699219 4.386719 19.5 3 16 3 Z M 27.28125 7.28125 L 16 18.5625 L 11.71875 14.28125 L 10.28125 15.71875 L 15.28125 20.71875 L 16 21.40625 L 16.71875 20.71875 L 28.71875 8.71875 Z"
                         />
                       </svg>
-                      Exclusive Beginner Bagde FREE
+                      Exclusive Beginner Bagde FREE*
                     </p>
                     <p className="flex items-center pb-4">
                       <svg
@@ -500,7 +507,7 @@ export default function Nft({ allPosts }: Props) {
                       className="rounded-2xl"
                       src="/nft/collections/og_sol_bg_512.png"
                     />
-                    <h3 className="text-lg pt-4">Begin NYC SOL 3D BW</h3>
+                    <h3 className="text-lg pt-4">Begin NYC SOL Graphite</h3>
                     <p className="p-4">40% chance</p>
                   </div>
                   <div className="flex-1 p-4 text-center">
@@ -531,17 +538,22 @@ export default function Nft({ allPosts }: Props) {
               </div>
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex flex-col">
-              <div className="flex flex-1 pb-4" style={{justifyContent: 'center'}}>
+              <div
+                className="flex flex-1 pb-4"
+                style={{ justifyContent: "center" }}
+              >
                 <img
                   className="lg:w-10/12"
                   src={"/nft/collections/badges_banner.png"}
                 />
               </div>
               <div className="flex-1 p-4">
-                <h1 className="lg:text-5xl text-2xl text-bold pb-4">BEGIN BADGES</h1>
-                <p className='text-xl'>
-                  Begin Badges are FREE to claim, which will be a way for to get
-                  recognized in our community.
+                <h1 className="lg:text-5xl text-2xl text-bold pb-4">
+                  BEGIN BADGES
+                </h1>
+                <p className="text-xl">
+                  Begin Badges are FREE* to claim, which will be a way for to
+                  get recognized in our community.
                 </p>
                 <div className="lg:p-6 pl-0 lg:text-xl">
                   <p>Unclock your BADGES</p>
@@ -611,11 +623,28 @@ export default function Nft({ allPosts }: Props) {
                     Any one connected with Begin Wallet
                   </p>
                 </div>
-                <p className='text-xl'>
+                <p className="text-xl">
                   You will be able to claim it from our exclusive dashboard for
-                  FREE.
+                  FREE*.
                 </p>
-                <br />
+              </div>
+            </div>
+            <div className="p-6 lg:p-12 lg:pt-0">
+              <div className="flex">
+                <h1 className="lg:w-6/12 lg:text-5xl text-2xl text-bold">
+                  FAQ
+                </h1>
+              </div>
+              <div className="flex flex-col items-start p-6">
+                <div className="flex flex-1 text-xl text-left">
+                  <p>What FREE means?</p>
+                </div>
+                <div className="flex flex-1">
+                  <p>
+                    FREE* in the context of NFTs, means that mints will only have
+                    the Cardano Transaction fee.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="p-6 lg:p-12 lg:pt-0">
