@@ -20,7 +20,6 @@ export default async function handler(
         break;
     }
   } catch (error: any) {
-    console.log('error', error)
     return res.status(500).json({ ...error, message: error.message });
   }
 }
