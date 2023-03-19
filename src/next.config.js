@@ -4,20 +4,6 @@
 
 const debug = process.env.NODE_ENV !== 'production'
 
-module.exports = {
-  // assetPrefix: !debug ? '/b58.github.io/' : '',
-  assetPrefix: undefined,
-  i18n: {
-    locales: ['en', 'pt-BR', 'jp', 'cn'],
-    defaultLocale: 'en',
-  },
-  // target: 'serverless',
-  experimental: {
-    // appDir: true, 
-    // isrMemoryCacheSize: 0,
-  }
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -30,4 +16,17 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  // assetPrefix: !debug ? '/b58.github.io/' : '',
+  assetPrefix: undefined,
+  i18n: {
+    locales: ['en', 'pt-BR', 'jp', 'cn'],
+    defaultLocale: 'en',
+  },
+  // target: 'serverless',
+  experimental: {
+    // appDir: true, 
+    // isrMemoryCacheSize: 0,
+  },
+  nextConfig
+}
