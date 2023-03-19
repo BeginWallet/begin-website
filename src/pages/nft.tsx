@@ -18,6 +18,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
 import { useEffect, useState } from 'react'
+// import { BrowserWallet } from '@meshsdk/core'
+
 
 type Props = {
   allPosts: {
@@ -49,10 +51,56 @@ export default function Nft({ allPosts }: Props) {
   const handleConnect = async (event: any) => {
     event.persist()
     if (window['cardano'] && (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])) {
-      const wallet = window['cardano']['begin'] || window["cardano"]["begin-nightly"];
+      const wallet =
+        window["cardano"]["begin"] || 
+        window["cardano"]["begin-nightly"];
       const api =  await wallet.enable();
-      const addr = await api.getChangeAddress()
-      alert(addr)
+      console.log('api.getRewardAddresses()', await api.getRewardAddresses())
+      const addr = (await api.getRewardAddresses())[0]
+
+      const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
+      if (!registration) {
+        const nonce = await (await fetch('api/nonce', {
+          method: 'POST'
+        })).json()
+
+        const signature = await api.signData(addr, nonce);
+
+        console.log('signature', signature)
+
+        const bodyVerify = { userAddress: addr, nonce, signature }
+        const resVerify = await fetch("api/verify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(bodyVerify),
+            cache: 'no-cache'
+          });
+
+        console.log('resVerify', resVerify);
+
+        if(!resVerify.ok) return
+
+        const verify = await resVerify.json();
+
+        if (verify) {
+          const body = { userAddress: addr, nonce };
+          const res = await fetch("api/registrations", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          });
+
+          if (res.ok) {
+            alert("Registration done.");
+          } else {
+            alert("Ops! Something went wrong.");
+          }
+        } else {
+          alert("Ops! Not verified.");
+        }
+      } else if( registration && registration.userAddress) {
+        alert('Wallet already registered.')
+      }
     } else {
       alert('Download Begin Wallet.')
     }
