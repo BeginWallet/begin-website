@@ -114,7 +114,7 @@ export default function Nft({ allPosts }: Props) {
         window["cardano"] &&
         (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])
       ) {
-        const wallet = window["cardano"]["begin"] || window["cardano"]["begin-nightly"];
+        const wallet: any = window["cardano"]["begin"] || window["cardano"]["begin-nightly"];
         const isEnabled = await wallet.isEnabled();
         setConnected(isEnabled);
       }
