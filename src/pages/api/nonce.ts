@@ -20,6 +20,6 @@ export default async function handler(
         break;
     }
   } catch (error: any) {
-    return res.status(200).json({ ...error, message: error.message });
+    return res.status(500).json({ ...error, message: error.message });
   }
 }
