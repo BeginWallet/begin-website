@@ -14,13 +14,12 @@ export default async function handler(
     switch (req.method) {
       case "POST": {
         const nonce = await getNonce();
-        res.json({ nonce })
+        res.json(nonce)
       }
       default:
         break;
     }
   } catch (error: any) {
-    console.log('error', error)
-    return res.status(500).json({ ...error, message: error.message });
+    return res.status(200).json({ ...error, message: error.message });
   }
 }
