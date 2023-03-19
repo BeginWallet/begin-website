@@ -60,9 +60,11 @@ export default function Nft({ allPosts }: Props) {
 
       const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
       if (!registration) {
-        const nonce = await (await fetch('api/nonce', {
+        const nonce = (await (await fetch('api/nonce', {
           method: 'POST'
-        })).json()
+        })).json()).nonce
+
+        console.log('nonce', nonce)
 
         const signature = await api.signData(addr, nonce);
 

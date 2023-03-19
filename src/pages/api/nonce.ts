@@ -14,7 +14,7 @@ export default async function handler(
     switch (req.method) {
       case "POST": {
         const nonce = await getNonce();
-        res.json(nonce)
+        res.json({ nonce })
       }
       default:
         break;
