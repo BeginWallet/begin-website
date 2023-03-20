@@ -428,7 +428,7 @@ export default function Nft({ allPosts }: Props) {
                     <>
                       <p className="text-xl text-center">Download Begin</p>
 
-                      <div className="flex flex-col lg:flex-row w-11/12 justify-center p-6">
+                      <div className="flex flex-col lg:flex-row justify-center p-6">
                         <a
                           href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml"
                           target="_blank"
