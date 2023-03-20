@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
 import { useEffect, useState } from 'react'
+import { formatShortAddress, parseAddress } from '../lib/helpers'
 // import { BrowserWallet } from '@meshsdk/core'
 
 
@@ -47,6 +48,8 @@ export default function Nft({ allPosts }: Props) {
   const [ collection, setCollection] = useState(0);
   const [hasBegin, setHasBegin] = useState(false);
   const [connected, setConnected] = useState(false);
+  const [registered, setRegistered] = useState(false);
+  const [walletAddress, setWalletAddresss] = useState('');
 
   const handleConnect = async (event: any) => {
     event.persist()
@@ -94,7 +97,10 @@ export default function Nft({ allPosts }: Props) {
           });
 
           if (res.ok) {
-            alert("Registration done.");
+            setConnected(true);
+            setRegistered(true);
+            const paymentAddress = await api.getChangeAddress()
+            setWalletAddresss(parseAddress(paymentAddress))
           } else {
             alert("Ops! Something went wrong.");
           }
@@ -102,7 +108,10 @@ export default function Nft({ allPosts }: Props) {
           alert("Ops! Not verified.");
         }
       } else if( registration && registration.userAddress) {
-        alert('Wallet already registered.')
+        setConnected(true);
+        setRegistered(true);
+        const paymentAddress = await api.getChangeAddress();
+        setWalletAddresss(parseAddress(paymentAddress));
       }
     } else {
       alert('Download Begin Wallet.')
@@ -120,6 +129,17 @@ export default function Nft({ allPosts }: Props) {
         const wallet: any = window["cardano"]["begin"] || window["cardano"]["begin-nightly"];
         const isEnabled = await wallet.isEnabled();
         setConnected(isEnabled);
+        if (isEnabled) {
+          const api = await wallet.enable();
+          const addr = (await api.getRewardAddresses())[0]
+
+          const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
+          if (registration && registration.userAddress) {
+            setRegistered(true);
+            const paymentAddress = await api.getChangeAddress()
+            setWalletAddresss(parseAddress(paymentAddress))
+          }
+        }
       }
     }
     if (typeof window !== "undefined" && window['cardano'] && (window['cardano']['begin'] || window['cardano']['begin-nightly'])){
@@ -301,13 +321,59 @@ export default function Nft({ allPosts }: Props) {
                     Register NOW with <strong>Begin Wallet</strong> to became OG
                     member!
                   </h2>
-                  <a
-                    onClick={handleConnect}
-                    role="button"
-                    className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
-                  >
-                    Connect with Begin
-                  </a>
+                  {connected && registered && (
+                    <div className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium text-sm text-blue-dark text-center rounded-lg">
+                      <p>You're in! Happy Mint!</p>
+                      <span className="text-sm">{walletAddress}</span>
+                    </div>
+                  )}
+                  {!registered && hasBegin && (
+                    <a
+                      onClick={handleConnect}
+                      role="button"
+                      className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
+                    >
+                      Connect with Begin
+                    </a>
+                  )}
+                  {!connected && !registered && !hasBegin && (
+                    <>
+                      <p className="text-xl text-center">Download Begin</p>
+
+                      <div className="flex flex-col lg:flex-row w-11/12 justify-center p-6">
+                        <a
+                          href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml"
+                          target="_blank"
+                          role="button"
+                          className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center"
+                        >
+                          Install for Chrome
+                        </a>
+                        <a
+                          href="https://play.google.com/store/apps/details?id=is.begin.app"
+                          target="_blank"
+                          role="button"
+                          className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:ml-4 lg:mr-4 lg:w-34 justify-center inline-flex items-center"
+                        >
+                          <img
+                            src="/images/google_store.svg"
+                            className="inline-flex"
+                          />
+                        </a>
+                        <a
+                          href="https://apps.apple.com/app/begin-wallet-by-b58-labs/id1642488837"
+                          target="_blank"
+                          role="button"
+                          className="bg-white hover:border-gray-200 hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-black py-3 px-1 rounded-xl mb-2 lg:mb-0 lg:w-34 justify-center inline-flex items-center"
+                        >
+                          <img
+                            src="/images/apple_store.svg"
+                            className="inline-flex"
+                          />
+                        </a>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -445,13 +511,24 @@ export default function Nft({ allPosts }: Props) {
                       Jpg.store Topia Ticket Giveaway Entry
                     </p>
                   </div>
-                  <a
-                    onClick={handleConnect}
-                    role="button"
-                    className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
-                  >
-                    50 ADA
-                  </a>
+                  {registered && hasBegin && (
+                    <a
+                      onClick={handleConnect}
+                      role="button"
+                      className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
+                    >
+                      Buy Now - 50 ADA
+                    </a>
+                  )}
+                  {!registered && hasBegin && (
+                    <a
+                      onClick={handleConnect}
+                      role="button"
+                      className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
+                    >
+                      Connect with Begin
+                    </a>
+                  )}
                 </div>
                 <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
@@ -538,11 +615,11 @@ export default function Nft({ allPosts }: Props) {
                     </p>
                   </div>
                   <a
-                    onClick={handleConnect}
+                    onClick={() => {}}
                     role="button"
-                    className="flex p-4 w-full text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
+                    className="opacity-50 cursor-not-allowed flex p-4 w-full text-xl justify-center border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-bold text-center rounded-xl"
                   >
-                    60 ADA
+                    Mint Soon - 60 ADA
                   </a>
                 </div>
               </div>
@@ -687,13 +764,24 @@ export default function Nft({ allPosts }: Props) {
                 </h1>
               </div>
               <div className="flex flex-col items-start p-6">
-                <div className="flex flex-1 text-xl text-left">
+                <div className="flex flex-1 text-xl text-left pb-4">
+                  <p>Verified NFTs</p>
+                </div>
+                <div className="flex flex-col flex-1 pb-4">
+                  <p>
+                    Begin NYC Collections use vNFT which attachs a DID
+                    (Descentralized Identity) to it, making it even more
+                    verifiable.
+                  </p>
+                  <p>Provided by IAMX.</p>
+                </div>
+                <div className="flex flex-1 text-xl text-left pb-4">
                   <p>What FREE means?</p>
                 </div>
-                <div className="flex flex-1">
+                <div className="flex flex-1 pb-4">
                   <p>
-                    FREE* in the context of NFTs, means that mints will only have
-                    the Cardano Transaction fee.
+                    FREE* in the context of NFTs, means that mints will only
+                    have the Cardano Transaction fee.
                   </p>
                 </div>
               </div>
@@ -941,6 +1029,21 @@ export default function Nft({ allPosts }: Props) {
                         d="M280.188 435.098 251.66 540.317l98.124-31.088L409 361.985l-128.812 73.113zM165.306 449.661 183.996 559 78.63 514.304 31 358.629l134.306 91.032zM140.69 268.662l78.03 140.75 75.814-140.75L218.719 52 140.69 268.662z"
                       ></path>
                     </svg>
+                  </a>
+                </div>
+                <div className="flex flex-1 justify-center">
+                  <a
+                    href="https://iamx.id"
+                    target="_blank"
+                    className="flex items-center h-20"
+                  >
+                    <img width={32}
+                      className="rounded-full"
+                      src="/images/logo_iamx.jpeg"
+                    />
+                    <p className="pl-4 text-2xl">
+                      <strong>IAMX</strong>
+                    </p>
                   </a>
                 </div>
                 <div className="flex flex-1 justify-center">
