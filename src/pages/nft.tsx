@@ -123,21 +123,31 @@ export default function Nft({ allPosts }: Props) {
   //       window["cardano"]
   const [verifyWindow, setVerifyWindow] = useState(true);
   const [runInit, setRunInit] = useState(false);
-  const maxCount = 10;
-  const count = useRef(0);
+  // const maxCount = 10;
+  // const count = useRef(0);
 
-  useEffect(() => {
-    if (verifyWindow) {
-      if (typeof window !== "undefined" && window["cardano"]) {
-        setRunInit(true);
-        setVerifyWindow(false);
-      } else if (count.current <= maxCount) {
-        console.log(count.current)
-        setVerifyWindow(true);
-        count.current = count.current + 1;
-      }
-    }
-  }, [verifyWindow]);
+  // if (verifyWindow) {
+  if (!runInit && typeof window !== "undefined" && window["cardano"]) {
+    setRunInit(true);
+    // setVerifyWindow(false);
+  } 
+  //   else {
+  //     setVerifyWindow(true);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   if (verifyWindow) {
+  //     if (typeof window !== "undefined" && window["cardano"]) {
+  //       setRunInit(true);
+  //       setVerifyWindow(false);
+  //     } else if (count.current <= maxCount) {
+  //       console.log(count.current)
+  //       setVerifyWindow(true);
+  //       count.current = count.current + 1;
+  //     }
+  //   }
+  // }, [verifyWindow]);
 
 
   useEffect(() => {
@@ -213,7 +223,9 @@ export default function Nft({ allPosts }: Props) {
         </Head>
         <Navigation />
         <header className="video-header">
+          <img className="block lg:hidden" src="/nft/new_york_top_mobile.jpg" />
           <video
+            className="hidden lg:block"
             src="/nft/new_york_top.mp4"
             autoPlay={true}
             loop={true}
@@ -240,48 +252,99 @@ export default function Nft({ allPosts }: Props) {
               className="flex items-center justify-center"
               style={{ marginTop: "-30vh" }}
             >
-              <div className="flex-0 lg:w-4/12 w-75p text-center">
-                <Swiper
-                  effect={"cards"}
-                  grabCursor={true}
-                  pagination={false}
-                  navigation={true}
-                  modules={[EffectCards, Pagination, NavSwiper]}
-                  className="mySwiper"
-                  onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                >
-                  {collection === 0 ? (
-                    <>
-                      <SwiperSlide>
-                        <img src="/nft/collections/og_sol_bg_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/og_sol_comics_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/og_sol_mona_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/og_sol_noun_512.png" />
-                      </SwiperSlide>
-                    </>
-                  ) : (
-                    <>
-                      <SwiperSlide>
-                        <img src="/nft/collections/sol_bg_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/sol_comics_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/sol_mona_512.png" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <img src="/nft/collections/sol_noun_512.png" />
-                      </SwiperSlide>
-                    </>
-                  )}
-                </Swiper>
+              <div className="flex-0 lg:w-4/12 w-full text-center">
+              <div className="block lg:hidden">
+                  <Swiper
+                    slidesPerView={"auto"}
+                    centeredSlides={true}
+                    spaceBetween={30}
+                    grabCursor={true}
+                    pagination={false}
+                    navigation={true}
+                    modules={[Pagination, NavSwiper]}
+                    className="mobile-slides"
+                    onSlideChange={(swiper) =>
+                      setActiveIndex(swiper.activeIndex)
+                    }
+                  >
+                    {collection === 0 ? (
+                      <>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_bg_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_comics_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_mona_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_noun_512.png" />
+                        </SwiperSlide>
+                      </>
+                    ) : (
+                      <>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_bg_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_comics_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_mona_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_noun_512.png" />
+                        </SwiperSlide>
+                      </>
+                    )}
+                  </Swiper>
+                </div>
+                <div className="hidden lg:block">
+                  <Swiper
+                    effect={"cards"}
+                    grabCursor={true}
+                    pagination={false}
+                    navigation={true}
+                    modules={[EffectCards, Pagination, NavSwiper]}
+                    className="mySwiper"
+                    onSlideChange={(swiper) =>
+                      setActiveIndex(swiper.activeIndex)
+                    }
+                  >
+                    {collection === 0 ? (
+                      <>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_bg_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_comics_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_mona_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/og_sol_noun_512.png" />
+                        </SwiperSlide>
+                      </>
+                    ) : (
+                      <>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_bg_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_comics_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_mona_512.png" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img src="/nft/collections/sol_noun_512.png" />
+                        </SwiperSlide>
+                      </>
+                    )}
+                  </Swiper>
+                </div>
                 <div className="p-4">
                   {activeIndex === 0 && (
                     <div>
@@ -427,10 +490,13 @@ export default function Nft({ allPosts }: Props) {
                   exclusive dashboard.
                 </p>
                 <br />
-                <p>
+                <p className="break-all">
                   The policy IDs of Begin NYC are:
-                  349153f99c85a44f87139c58edbaa979af5bf380818517d87a072530,
-                  12a7faac878f22f0f5b32bd8e116ba6c5f23ba9cba37fe27179dec59
+                  <br />
+                  * 349153f99c85a44f87139c58edbaa979af5bf380818517d87a072530{" "}
+                  <br />
+                  * 12a7faac878f22f0f5b32bd8e116ba6c5f23ba9cba37fe27179dec59{" "}
+                  <br />
                 </p>
               </div>
 
@@ -1060,7 +1126,8 @@ export default function Nft({ allPosts }: Props) {
                     target="_blank"
                     className="flex items-center h-20"
                   >
-                    <img width={32}
+                    <img
+                      width={32}
                       className="rounded-full"
                       src="/images/logo_iamx.jpeg"
                     />
