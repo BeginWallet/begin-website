@@ -17,7 +17,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
-import { useCallback, useEffect, useLayoutEffect, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { formatShortAddress, parseAddress } from '../lib/helpers'
 // import { BrowserWallet } from '@meshsdk/core'
 
@@ -118,7 +118,29 @@ export default function Nft({ allPosts }: Props) {
     }
   }
 
-  useLayoutEffect(() => {
+  //CREATE A SMALL LOOP
+  // typeof window !== "undefined" &&
+  //       window["cardano"]
+  const [verifyWindow, setVerifyWindow] = useState(true);
+  const [runInit, setRunInit] = useState(false);
+  const maxCount = 10;
+  const count = useRef(0);
+
+  useEffect(() => {
+    if (verifyWindow) {
+      if (typeof window !== "undefined" && window["cardano"]) {
+        setRunInit(true);
+        setVerifyWindow(false);
+      } else if (count.current <= maxCount) {
+        console.log(count.current)
+        setVerifyWindow(true);
+        count.current = count.current + 1;
+      }
+    }
+  }, [verifyWindow]);
+
+
+  useEffect(() => {
     const init = async () => {
       if (
         typeof window !== "undefined" &&
@@ -146,8 +168,8 @@ export default function Nft({ allPosts }: Props) {
       }
     };
 
-    init();
-  }, [])
+    runInit && init();
+  }, [runInit])
 
   return (
     <>
@@ -196,7 +218,7 @@ export default function Nft({ allPosts }: Props) {
             autoPlay={true}
             loop={true}
             playsInline={true}
-            webkit-playsinline
+            webkit-playsinline="true"
             muted={true}
             controls={false}
             data-autoplay=""
