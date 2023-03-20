@@ -196,6 +196,7 @@ export default function Nft({ allPosts }: Props) {
             autoPlay={true}
             loop={true}
             playsInline={true}
+            webkit-playsinline
             muted={true}
             controls={false}
             data-autoplay=""
