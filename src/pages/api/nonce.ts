@@ -13,7 +13,8 @@ export default async function handler(
   try {
     switch (req.method) {
       case "POST": {
-        const nonce = await getNonce();
+        const { msg } = req.body;
+        const nonce = await getNonce(msg);
         res.json(nonce)
       }
       default:

@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { formatShortAddress, parseAddress } from '../lib/helpers'
+import { addressToBech32, formatShortAddress, parseAddress } from '../lib/helpers'
 // import { BrowserWallet } from '@meshsdk/core'
 
 
@@ -50,21 +50,25 @@ export default function Nft({ allPosts }: Props) {
   const [connected, setConnected] = useState(false);
   const [registered, setRegistered] = useState(false);
   const [walletAddress, setWalletAddresss] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleConnect = async (event: any) => {
     event.persist()
+    setIsLoading(true);
     if (window['cardano'] && (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])) {
       const wallet =
         window["cardano"]["begin"] || 
         window["cardano"]["begin-nightly"];
       const api =  await wallet.enable();
-      console.log('api.getRewardAddresses()', await api.getRewardAddresses())
       const addr = (await api.getRewardAddresses())[0]
 
       const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
       if (!registration) {
+        const bodyNonce = {msg : "Sign & Confirm Registration on Begin NYC Mint: "}
         const nonce = await (await fetch('api/nonce', {
           method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(bodyNonce),
           cache: 'no-cache'
         })).json()
 
@@ -84,12 +88,18 @@ export default function Nft({ allPosts }: Props) {
 
         console.log('resVerify', resVerify);
 
-        if(!resVerify.ok) return
+        if(!resVerify.ok){
+          setIsLoading(false);
+          setConnected(false);
+          setRegistered(false);
+          return 
+        }
 
         const verify = await resVerify.json();
 
         if (verify) {
-          const body = { userAddress: addr, nonce };
+          const paymentAddress = addressToBech32(await api.getChangeAddress());
+          const body = { userAddress: addr, walletAddress: paymentAddress, nonce };
           const res = await fetch("api/registrations", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -99,8 +109,7 @@ export default function Nft({ allPosts }: Props) {
           if (res.ok) {
             setConnected(true);
             setRegistered(true);
-            const paymentAddress = await api.getChangeAddress()
-            setWalletAddresss(parseAddress(paymentAddress))
+            setWalletAddresss(formatShortAddress(paymentAddress));
           } else {
             alert("Ops! Something went wrong.");
           }
@@ -116,6 +125,7 @@ export default function Nft({ allPosts }: Props) {
     } else {
       alert('Download Begin Wallet.')
     }
+    setIsLoading(false);
   }
 
   //CREATE A SMALL LOOP
@@ -421,7 +431,7 @@ export default function Nft({ allPosts }: Props) {
                       role="button"
                       className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-blue-dark text-center rounded-xl"
                     >
-                      Connect with Begin
+                      {isLoading ? 'Connecting...' : 'Connect with Begin'}
                     </a>
                   )}
                   {!connected && !registered && !hasBegin && (
@@ -516,7 +526,7 @@ export default function Nft({ allPosts }: Props) {
               )}
               {morePosts.length > 0 && <MoreStories posts={morePosts} baseURL='/guides/' />} */}
             </div>
-            <div className="pt-16 lg:pt-32 p-6 lg:p-12">
+            <div className="pt-16 lg:pt-32 p-6 lg:p-12 text-white">
               <div className="flex lg:flex-row flex-col">
                 <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
@@ -604,11 +614,11 @@ export default function Nft({ allPosts }: Props) {
                   </div>
                   {registered && hasBegin && (
                     <a
-                      onClick={handleConnect}
+                      onClick={() => {}}
                       role="button"
-                      className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
+                      className="opacity-50 cursor-not-allowed flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
                     >
-                      Buy Now - 50 ADA
+                      Mint Soon - 50 ADA
                     </a>
                   )}
                   {!registered && hasBegin && (
@@ -617,7 +627,7 @@ export default function Nft({ allPosts }: Props) {
                       role="button"
                       className="flex p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
                     >
-                      Connect with Begin
+                       {isLoading ? 'Connecting...' : 'Connect with Begin'}
                     </a>
                   )}
                 </div>

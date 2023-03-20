@@ -1,8 +1,8 @@
 import { checkSignature, generateNonce } from "@meshsdk/core";
 import { Address } from "@emurgo/cardano-serialization-lib-browser";
 
-async function getNonce() {
-  const nonce = generateNonce("Sign to login in to Begin: ");
+async function getNonce(msg: string) {
+  const nonce = generateNonce(msg);
   return nonce;
 }
 

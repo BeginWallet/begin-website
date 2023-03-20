@@ -23,20 +23,21 @@ export default async function handler(
           // Get a single user if id is provided is the query
           // api/registrations?userAddress=addr
           const registration = await getRegistration(req.query.userAddress);
-          return res.status(200).json(registration);
+          return res.status(200).json(registration ? {userAddress: registration.userAddress} : null);
         } else {
           // Otherwise, fetch all users
-          const registration = await getAllRegistrations();
-          return res.json(registration);
+          // const registration = await getAllRegistrations();
+          // return res.json(registration);
+          return res.json([]);
         }
       }
       case "POST": {
         // Create a new user
-        const { userAddress, nonce } = req.body;
+        const { userAddress, walletAddress, nonce } = req.body;
         const registration = await getRegistration(userAddress);
         if (!registration) {
-          const newRegistration = await createRegistration(userAddress, nonce);
-          return res.json(newRegistration);
+          const newRegistration = await createRegistration(userAddress, walletAddress, nonce);
+          return res.json({userAddress: newRegistration.userAddress});
         } else {
           return res.status(302).json(registration);
         }
@@ -45,7 +46,7 @@ export default async function handler(
         // Update an existing user
         const { id, ...updateData } = req.body;
         const registration = await updateRegistration(id, updateData);
-        return res.json(registration);
+        return res.json({userAddress: registration.userAddress});
       }
       // case 'DELETE': {
       //   // Delete an existing user

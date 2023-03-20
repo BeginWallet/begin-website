@@ -15,4 +15,5 @@ model registration {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   nonce       String
   userAddress String
+  walletAddress String
 }

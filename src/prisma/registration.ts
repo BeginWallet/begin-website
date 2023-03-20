@@ -15,10 +15,11 @@ export const getAllRegistrations = async () => {
   }
   
   // CREATE
-  export const createRegistration = async (userAddress, nonce) => {
+  export const createRegistration = async (userAddress, walletAddress, nonce) => {
     const registration = await prisma.registration.create({
       data: {
         userAddress,
+        walletAddress,
         nonce
       }
     })
