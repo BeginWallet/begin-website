@@ -223,8 +223,10 @@ export default function Nft({ allPosts }: Props) {
         </Head>
         <Navigation />
         <header className="video-header">
-          <img className="block lg:hidden" src="/nft/new_york_top_mobile.jpg" />
-          <video
+          <img 
+          // className="block lg:hidden" 
+          src="/nft/new_york_top_mobile.jpg" />
+          {/* <video
             className="hidden lg:block"
             src="/nft/new_york_top.mp4"
             autoPlay={true}
@@ -234,7 +236,7 @@ export default function Nft({ allPosts }: Props) {
             muted={true}
             controls={false}
             data-autoplay=""
-          ></video>
+          ></video> */}
           <div className="lg:viewport-header viewport-header-mobile">
             <h1>
               Digital <br /> Collectibles
