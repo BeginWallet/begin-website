@@ -17,7 +17,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 import { formatShortAddress, parseAddress } from '../lib/helpers'
 // import { BrowserWallet } from '@meshsdk/core'
 
@@ -118,7 +118,7 @@ export default function Nft({ allPosts }: Props) {
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const init = async () => {
       if (
         typeof window !== "undefined" &&
@@ -145,7 +145,7 @@ export default function Nft({ allPosts }: Props) {
         }
       }
     };
-    
+
     init();
   }, [])
 
