@@ -119,34 +119,34 @@ export default function Nft({ allPosts }: Props) {
   }
 
   useEffect(() => {
-    console.log(window['cardano'])
     const init = async () => {
       if (
         typeof window !== "undefined" &&
         window["cardano"] &&
         (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])
       ) {
-        const wallet: any = window["cardano"]["begin"] || window["cardano"]["begin-nightly"];
+        setHasBegin(true);
+        const wallet: any =
+          window["cardano"]["begin"] || window["cardano"]["begin-nightly"];
         const isEnabled = await wallet.isEnabled();
         setConnected(isEnabled);
         if (isEnabled) {
           const api = await wallet.enable();
-          const addr = (await api.getRewardAddresses())[0]
+          const addr = (await api.getRewardAddresses())[0];
 
-          const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
+          const registration = await (
+            await fetch(`/api/registrations?userAddress=${addr}`)
+          ).json();
           if (registration && registration.userAddress) {
             setRegistered(true);
-            const paymentAddress = await api.getChangeAddress()
-            setWalletAddresss(parseAddress(paymentAddress))
+            const paymentAddress = await api.getChangeAddress();
+            setWalletAddresss(parseAddress(paymentAddress));
           }
         }
       }
-    }
-    if (typeof window !== "undefined" && window['cardano'] && (window['cardano']['begin'] || window['cardano']['begin-nightly'])){
-      setHasBegin(true);
-
-      init()
-    }
+    };
+    
+    init();
   }, [])
 
   return (
