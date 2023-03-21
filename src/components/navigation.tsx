@@ -106,7 +106,7 @@ const Navigation = () => {
         <div className={ "w-full block flex-grow lg:flex items-left lg:items-center lg:w-auto" +
               (navbarOpen ? " flex" : " hidden") }>
           <div className="lg:flex-grow pl-6 lg:pl-0 lg:text-center text-white">
-            <Menu hover="text-blue-dark" onClick={() => navbarOpen ? setNavbarOpen(false) : false} />
+            <Menu hover="text-gray-500" onClick={() => navbarOpen ? setNavbarOpen(false) : false} />
           </div>          
         </div>
         <div className="text-white hidden lg:block lg:w-40">

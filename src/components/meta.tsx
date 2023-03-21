@@ -4,6 +4,10 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
 const Meta = () => {
   return (
     <Head>
+      <meta
+        name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover'"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -34,92 +38,114 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="apple-mobile-web-app-title" content="B58 Finance"></meta>
       <meta name="apple-mobile-web-app-capable" content="yes"></meta>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      ></meta>
       {/*iOS Splashscreen Light */}
-      <link 
-        href="splashscreens-light/iphone5_splash.png" 
-        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/iphone6_splash.png" 
-        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/iphoneplus_splash.png" 
-        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/iphonex_splash.png" 
-        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/iphonexr_splash.png" 
-        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/iphonexsmax_splash.png" 
-        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/ipad_splash.png" 
-        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/ipadpro1_splash.png" 
-        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/ipadpro3_splash.png" 
-        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-light/ipadpro2_splash.png" 
-        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)" 
-        rel="apple-touch-startup-image" />
+      <link
+        href="splashscreens-light/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-light/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: light)"
+        rel="apple-touch-startup-image"
+      />
       {/*iOS Splashscreen Dark */}
-      <link 
-        href="splashscreens-dark/iphone5_splash.png" 
-        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/iphone6_splash.png" 
-        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/iphoneplus_splash.png" 
-        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/iphonex_splash.png" 
-        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/iphonexr_splash.png" 
-        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/iphonexsmax_splash.png" 
-        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/ipad_splash.png" 
-        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/ipadpro1_splash.png" 
-        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/ipadpro3_splash.png" 
-        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-      <link 
-        href="splashscreens-dark/ipadpro2_splash.png" 
-        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)" 
-        rel="apple-touch-startup-image" />
-
+      <link
+        href="splashscreens-dark/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/ipad_splash.png"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/ipadpro1_splash.png"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/ipadpro3_splash.png"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
+      <link
+        href="splashscreens-dark/ipadpro2_splash.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (prefers-color-scheme: dark)"
+        rel="apple-touch-startup-image"
+      />
     </Head>
-  )
+  );
 }
 
 export default Meta
