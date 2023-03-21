@@ -55,77 +55,83 @@ export default function Nft({ allPosts }: Props) {
   const handleConnect = async (event: any) => {
     event.persist()
     setIsLoading(true);
-    if (window['cardano'] && (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])) {
-      const wallet =
-        window["cardano"]["begin"] || 
-        window["cardano"]["begin-nightly"];
-      const api =  await wallet.enable();
-      const addr = (await api.getRewardAddresses())[0]
-
-      const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
-      if (!registration) {
-        const bodyNonce = {msg : "Sign & Confirm Registration on Begin NYC Mint: "}
-        const nonce = await (await fetch('api/nonce', {
-          method: 'POST',
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(bodyNonce),
-          cache: 'no-cache'
-        })).json()
-
-        console.log('nonce', nonce)
-
-        const signature = await api.signData(addr, nonce);
-
-        console.log('signature', signature)
-
-        const bodyVerify = { userAddress: addr, nonce, signature }
-        const resVerify = await fetch("api/verify", {
-            method: "POST",
+    try {
+      if (window['cardano'] && (window["cardano"]["begin"] || window["cardano"]["begin-nightly"])) {
+        const wallet =
+          window["cardano"]["begin"] || 
+          window["cardano"]["begin-nightly"];
+        const api =  await wallet.enable();
+        const addr = (await api.getRewardAddresses())[0]
+  
+        const registration = await (await fetch(`/api/registrations?userAddress=${addr}`)).json();
+        if (!registration) {
+          const bodyNonce = {msg : "Sign & Confirm Registration on Begin NYC Mint: "}
+          const nonce = await (await fetch('api/nonce', {
+            method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(bodyVerify),
+            body: JSON.stringify(bodyNonce),
             cache: 'no-cache'
-          });
-
-        console.log('resVerify', resVerify);
-
-        if(!resVerify.ok){
-          setIsLoading(false);
-          setConnected(false);
-          setRegistered(false);
-          return 
-        }
-
-        const verify = await resVerify.json();
-
-        if (verify) {
-          const paymentAddress = addressToBech32(await api.getChangeAddress());
-          const body = { userAddress: addr, walletAddress: paymentAddress, nonce };
-          const res = await fetch("api/registrations", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
-          });
-
-          if (res.ok) {
-            setConnected(true);
-            setRegistered(true);
-            setWalletAddresss(formatShortAddress(paymentAddress));
-          } else {
-            alert("Ops! Something went wrong.");
+          })).json()
+  
+          console.log('nonce', nonce)
+  
+          const signature = await api.signData(addr, nonce);
+  
+          console.log('signature', signature)
+  
+          const bodyVerify = { userAddress: addr, nonce, signature }
+          const resVerify = await fetch("api/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(bodyVerify),
+              cache: 'no-cache'
+            });
+  
+          console.log('resVerify', resVerify);
+  
+          if(!resVerify.ok){
+            setIsLoading(false);
+            setConnected(false);
+            setRegistered(false);
+            return 
           }
-        } else {
-          alert("Ops! Not verified.");
+  
+          const verify = await resVerify.json();
+  
+          if (verify) {
+            const paymentAddress = addressToBech32(await api.getChangeAddress());
+            const body = { userAddress: addr, walletAddress: paymentAddress, nonce };
+            const res = await fetch("api/registrations", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(body),
+            });
+  
+            if (res.ok) {
+              setConnected(true);
+              setRegistered(true);
+              setWalletAddresss(formatShortAddress(paymentAddress));
+            } else {
+              alert("Ops! Something went wrong.");
+            }
+          } else {
+            alert("Ops! Not verified.");
+          }
+        } else if( registration && registration.userAddress) {
+          setConnected(true);
+          setRegistered(true);
+          const paymentAddress = await api.getChangeAddress();
+          setWalletAddresss(parseAddress(paymentAddress));
         }
-      } else if( registration && registration.userAddress) {
-        setConnected(true);
-        setRegistered(true);
-        const paymentAddress = await api.getChangeAddress();
-        setWalletAddresss(parseAddress(paymentAddress));
+      } else {
+        alert('Download Begin Wallet.')
       }
-    } else {
-      alert('Download Begin Wallet.')
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
     }
-    setIsLoading(false);
+    
+    
   }
 
   //CREATE A SMALL LOOP
