@@ -144,17 +144,18 @@ export default function Nft({ allPosts }: Props) {
 
   // if (verifyWindow) {
   useEffect(() => {
-    setTimeout(() => {
-      if (!runInit && typeof window !== "undefined" && window["cardano"]) {
+    const interval = setInterval(() => {
+      if (typeof window !== "undefined" && window["cardano"]) {
         setRunInit(true);
-        console.log('found...')
+        console.log('found...');
+        clearInterval(interval);
         // setVerifyWindow(false);
       }
       //   else {
       //     setVerifyWindow(true);
       //   }
       // }
-    }, 0);
+    }, 500);
   }, [])
 
 
@@ -476,7 +477,7 @@ export default function Nft({ allPosts }: Props) {
                       {isLoading ? "Connecting..." : "Connect with Begin"}
                     </a>
                   )}
-                  {!connected && !registered && !hasBegin && (
+                  {runInit && !connected && !registered && !hasBegin && (
                     <>
                       <p className="text-xl text-center">Download Begin</p>
 
