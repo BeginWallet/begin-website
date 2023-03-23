@@ -14,7 +14,7 @@ const NavigationFooter = () => {
           </a>
         </div>
         <div className="flex lg:items-center lg:w-auto">
-          <div className="flex items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center">
             <Menu hover="text-blue-light lg:mb-4" onClick={() => false} />
           </div>
         </div>
