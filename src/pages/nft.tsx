@@ -463,10 +463,10 @@ export default function Nft({ allPosts }: Props) {
                     member!
                   </h2>
                   {connected && registered && (
-                    <div className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium text-sm text-blue-dark text-center rounded-lg">
+                    <a onClick={()=> {}} className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium text-sm text-blue-dark text-center rounded-lg">
                       <p>You're in! Happy Mint!</p>
                       <span className="text-sm">{walletAddress}</span>
-                    </div>
+                    </a>
                   )}
                   {!registered && hasBegin && (
                     <a
@@ -571,7 +571,7 @@ export default function Nft({ allPosts }: Props) {
             </div>
             <div className="pt-16 lg:pt-32 p-6 lg:p-12 text-white">
               <div className="flex lg:flex-row flex-col">
-                <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
+                <div className="flex-1 lg:p-6 p-2 lg:m-4 mb-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
                     OG
                   </h1>
@@ -667,7 +667,7 @@ export default function Nft({ allPosts }: Props) {
                       <a
                         onClick={openPaymentWindow}
                         role="button"
-                        className="flex items-center h-20 p-4 w-full og-style text-xl justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
+                        className="flex items-center h-16 p-4 w-full og-style text-lg justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
                       >
                         Buy with
                         <svg
@@ -724,7 +724,7 @@ export default function Nft({ allPosts }: Props) {
                     )}
                   </div>
                 </div>
-                <div className="flex-1 lg:p-6 p-4 m-4 bg-blue-over rounded-2xl">
+                <div className="flex-1 lg:p-6 p-2 lg:m-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
                     STANDARD
                   </h1>
@@ -813,7 +813,7 @@ export default function Nft({ allPosts }: Props) {
                     <a
                       onClick={() => {}}
                       role="button"
-                      className="opacity-50 cursor-not-allowed flex items-center h-20 p-4 w-full text-xl justify-center border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-bold text-center rounded-xl"
+                      className="opacity-50 cursor-not-allowed flex items-center h-16 p-4 w-full text-lg justify-center border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-bold text-center rounded-xl"
                     >
                       Mint Soon
                     </a>
