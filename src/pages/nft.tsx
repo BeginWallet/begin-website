@@ -17,7 +17,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCards, Pagination, Navigation as NavSwiper } from "swiper";
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { ChangeEvent, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { addressToBech32, formatShortAddress, parseAddress } from '../lib/helpers'
 // import { BrowserWallet } from '@meshsdk/core'
 
@@ -172,8 +172,10 @@ export default function Nft({ allPosts }: Props) {
   //   }
   // }, [verifyWindow]);
 
+  const [NFTQtd, setNFTQtd] = useState(1);
+
   const openPaymentWindow = () => {
-    const paymentUrl = "https://pay.nmkr.io/?p=bdf2105f819c408e94f609ce6136c880&c=1";
+    const paymentUrl = `https://pay.nmkr.io/?p=bdf2105f819c408e94f609ce6136c880&c=${NFTQtd}`;
 
     // Specify the popup width and height
     const popupWidth = 500;
@@ -463,7 +465,10 @@ export default function Nft({ allPosts }: Props) {
                     member!
                   </h2>
                   {connected && registered && (
-                    <a onClick={()=> {}} className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium text-sm text-blue-dark text-center rounded-lg">
+                    <a
+                      onClick={() => {}}
+                      className="p-4 w-full og-style lg:text-2xl text-2xl border-2 border-gray-700 bg-blue-medium text-sm text-blue-dark text-center rounded-lg"
+                    >
                       <p>You're in! Happy Mint!</p>
                       <span className="text-sm">{walletAddress}</span>
                     </a>
@@ -657,6 +662,17 @@ export default function Nft({ allPosts }: Props) {
                   </div>
                   <div className="text-center">
                     <p className="text-2xl p-4">50₳ per NFT</p>
+                    <p className='text-lg pb-4'>
+                      Select Quantity {' '}
+                      <select 
+                      className='text-lg p-2 rounded-xl text-blue-dark py-3 px-4'
+                      id="NFT" onChange={(event: ChangeEvent<HTMLSelectElement>) => { setNFTQtd(Number(event.target.value))}}
+                      >
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                      </select>
+                    </p>
                     {registered && hasBegin && (
                       // <img
                       //   role="button"
@@ -672,7 +688,7 @@ export default function Nft({ allPosts }: Props) {
                         Buy with
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="180"
+                          width="160"
                           className="-ml-4"
                           viewBox="0 0 285 120"
                           fill="none"
@@ -810,6 +826,18 @@ export default function Nft({ allPosts }: Props) {
                   </div>
                   <div className="text-center">
                     <p className="text-2xl p-4">60₳ per NFT</p>
+                    <p className='text-lg pb-4 opacity-50 cursor-not-allowed'>
+                      Select Quantity {' '}
+                      <select 
+                      disabled
+                      className='text-lg p-2 rounded-xl text-blue-dark py-3 px-4'
+                      id="NFT" onChange={(event: ChangeEvent<HTMLSelectElement>) => { setNFTQtd(Number(event.target.value))}}
+                      >
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                      </select>
+                    </p>
                     <a
                       onClick={() => {}}
                       role="button"
