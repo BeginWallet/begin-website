@@ -740,7 +740,7 @@ export default function Nft({ allPosts }: Props) {
                     )}
                   </div>
                 </div>
-                <div className="flex-1 lg:p-6 p-2 lg:m-4 bg-blue-over rounded-2xl">
+                <div className="flex-1 lg:p-6 p-2 lg:m-4 mb-4 bg-blue-over rounded-2xl">
                   <h1 className="lg:text-5xl text-2xl text-bold text-center">
                     STANDARD
                   </h1>
