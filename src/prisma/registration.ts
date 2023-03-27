@@ -20,7 +20,7 @@ export const getAllRegistrations = async () => {
       data: {
         userAddress,
         walletAddress,
-        nonce
+        nonce,
       }
     })
     return registration
