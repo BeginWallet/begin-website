@@ -108,6 +108,21 @@ export default createYoga({
   schema,
   // Needed to be defined explicitly because our endpoint lives at a different path other than `/graphql`
   graphqlEndpoint: "/api/graphql",
+  cors: {
+    origin: '*',
+    credentials: true,
+    allowedHeaders: ['*'],
+    methods: ['POST']
+  },
+//   cors: (request) => {
+//     // const requestOrigin = request.headers.get('origin') || '*'
+//     return {
+//       origin: ['*'],
+//       credentials: true,
+//       allowedHeaders: ['X-Custom-Header'],
+//       methods: ['POST']
+//     }
+//   },
   context: async ({request}) => {
     const apiKey = request.headers.get('api-key');
 
