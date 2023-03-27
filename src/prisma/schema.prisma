@@ -7,13 +7,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model collections {
+  id       Int     @id @map("_id")
+  id_      Int     @map("id")
+  name     String?
+  policies String?
+}
+
 model pools {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+  id              String  @id @map("_id")
+  blocks_epoch    String
+  blocks_lifetime String
+  delegators      String
+  homepage        String?
+  img             String
+  last_block_date String?
+  name            String
+  pledge          String
+  pool_id         String
+  pool_id_hash    String
+  roa_lifetime    String
+  roa_short       String
+  /// Multiple data types found: Float: 84.5%, Int: 15.5% out of 1000 sampled entries
+  saturation      Float
+  stake           String
+  tax_fix         String
+  tax_ratio       String
+  url             String
 }
 
 model registration {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
-  nonce       String
-  userAddress String
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  nonce         String
+  sync          Boolean?
+  userAddress   String
   walletAddress String
 }
