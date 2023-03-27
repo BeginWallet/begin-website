@@ -111,7 +111,7 @@ export default createYoga({
   cors: {
     origin: '*',
     credentials: true,
-    allowedHeaders: ['X-Custom-Header'],
+    allowedHeaders: ['*'],
     methods: ['POST']
   },
 //   cors: (request) => {
