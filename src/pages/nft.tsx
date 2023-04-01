@@ -175,7 +175,7 @@ export default function Nft({ allPosts }: Props) {
   const [NFTQtd, setNFTQtd] = useState(1);
 
   const openPaymentWindow = () => {
-    const paymentUrl = `https://pay.nmkr.io/?p=bdf2105f819c408e94f609ce6136c880&c=${NFTQtd}`;
+    const paymentUrl = `https://pay.nmkr.io/?p=6b546e2543f4449cafc40942c0d4f886&c=${NFTQtd}`;
 
     // Specify the popup width and height
     const popupWidth = 500;
@@ -665,8 +665,9 @@ export default function Nft({ allPosts }: Props) {
                     <p className='text-lg pb-4'>
                       Select Quantity {' '}
                       <select 
+                      disabled
                       className='text-lg p-2 rounded-xl text-blue-dark py-3 px-4'
-                      id="NFT" onChange={(event: ChangeEvent<HTMLSelectElement>) => { setNFTQtd(Number(event.target.value))}}
+                      id="" onChange={(event: ChangeEvent<HTMLSelectElement>) => { setNFTQtd(Number(event.target.value))}}
                       >
                         <option value="1">1</option>
                         <option value="5">5</option>
@@ -681,52 +682,11 @@ export default function Nft({ allPosts }: Props) {
                       //   onClick={openPaymentWindow}
                       // />
                       <a
-                        onClick={openPaymentWindow}
+                        onClick={() => {}}
                         role="button"
-                        className="flex items-center h-16 p-4 w-full og-style text-lg justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
+                        className="opacity-50 cursor-not-allowed flex items-center h-16 p-4 w-full og-style text-lg justify-center border-2 border-gray-700 bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-bold text-blue-dark text-center rounded-xl"
                       >
-                        Buy with
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="160"
-                          className="-ml-4"
-                          viewBox="0 0 285 120"
-                          fill="none"
-                        >
-                          <path
-                            d="M80.176 72.012V54.612L92.704 72.012H97.1932V48.012H93.052V65.4L80.4196 48.012H76V72.012H80.176Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M125.576 53.742H125.681V72.012H129.857V48.012H123.697L116.702 67.2792L109.603 48.012H103.374V72.012H107.55V53.742L114.336 72.0468H118.895L125.576 53.742Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M136.049 48.012V72.012H140.26V64.7388L143.844 60.876L150.909 72.012H155.92L146.767 57.5352L154.98 48.012H149.656L143.496 55.4472L140.26 59.5188V48.012H136.049Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M177.794 55.2384C177.794 49.8096 174.28 48 169.373 48L159.107 48.012V72.012H163.318V62.5464H168.746L173.41 72.012H178.038V71.7684L172.992 62.0244C175.741 61.224 177.794 59.0664 177.794 55.2384ZM163.318 51.5496H169.373C171.983 51.5496 173.514 52.8372 173.514 55.2732C173.514 57.7092 171.913 58.9968 169.373 58.9968H163.318V51.5496Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M193.265 72V63.7105H200.231C204.41 63.7105 208.067 60.5758 208.067 55.7344C208.067 50.9975 205.211 47.9673 200.231 47.9673H191.279V72H193.265ZM200.196 49.7785C204.131 49.7785 206.012 51.9728 206.012 55.7344C205.943 59.4264 203.47 61.8645 200.231 61.8645H193.265V49.7785H200.196Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M209.615 66.8452C209.615 70.4675 212.367 72.3135 215.641 72.3135C218.392 72.3135 220.9 71.2337 222.189 68.726H222.293V72H224.035V59.6005C224.035 55.003 220.831 53.4704 217.348 53.4704C214.84 53.4704 210.974 53.7839 210.277 58.4163L211.844 58.7994H211.949C212.541 55.4558 214.735 55.0726 217.208 55.0726C220.413 55.0726 222.189 56.3613 222.189 59.705V61.2724H217.034C213.238 61.2724 209.615 62.3521 209.615 66.8452ZM222.189 64.4767C222.189 68.6215 218.845 70.7113 216.024 70.7113C213.307 70.7113 211.566 69.2833 211.566 66.8103C211.566 63.5015 213.969 62.8049 217.208 62.8049H222.189V64.4767Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M233.243 69.5967L227.705 53.8884H225.754L232.268 71.7562L231.223 74.4033C230.805 75.483 230.038 77.1897 227.775 77.1897H225.824V78.9312H227.809C231.188 78.9312 232.581 76.1796 234.044 72.209L240.836 53.8884H238.92L233.243 69.5967Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M44 58L44 48H66V58H62V61L56 58V61L50 58V61L44 58Z"
-                            fill="currentColor"
-                          />
-                          <path d="M44 68V72H66V68H44Z" fill="currentColor" />
-                        </svg>
+                        Closed
                       </a>
                     )}
                     {!registered && hasBegin && (
@@ -826,10 +786,9 @@ export default function Nft({ allPosts }: Props) {
                   </div>
                   <div className="text-center">
                     <p className="text-2xl p-4">60₳ per NFT</p>
-                    <p className='text-lg pb-4 opacity-50 cursor-not-allowed'>
+                    <p className='text-lg pb-4'>
                       Select Quantity {' '}
                       <select 
-                      disabled
                       className='text-lg p-2 rounded-xl text-blue-dark py-3 px-4'
                       id="NFT" onChange={(event: ChangeEvent<HTMLSelectElement>) => { setNFTQtd(Number(event.target.value))}}
                       >
@@ -839,11 +798,52 @@ export default function Nft({ allPosts }: Props) {
                       </select>
                     </p>
                     <a
-                      onClick={() => {}}
+                      onClick={openPaymentWindow}
                       role="button"
-                      className="opacity-50 cursor-not-allowed flex items-center h-16 p-4 w-full text-lg justify-center border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-bold text-center rounded-xl"
+                      className="flex items-center h-16 p-4 w-full text-lg justify-center border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-bold text-center rounded-xl"
                     >
-                      Mint Soon
+                      Buy with
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="160"
+                          className="-ml-4"
+                          viewBox="0 0 285 120"
+                          fill="none"
+                        >
+                          <path
+                            d="M80.176 72.012V54.612L92.704 72.012H97.1932V48.012H93.052V65.4L80.4196 48.012H76V72.012H80.176Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M125.576 53.742H125.681V72.012H129.857V48.012H123.697L116.702 67.2792L109.603 48.012H103.374V72.012H107.55V53.742L114.336 72.0468H118.895L125.576 53.742Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M136.049 48.012V72.012H140.26V64.7388L143.844 60.876L150.909 72.012H155.92L146.767 57.5352L154.98 48.012H149.656L143.496 55.4472L140.26 59.5188V48.012H136.049Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M177.794 55.2384C177.794 49.8096 174.28 48 169.373 48L159.107 48.012V72.012H163.318V62.5464H168.746L173.41 72.012H178.038V71.7684L172.992 62.0244C175.741 61.224 177.794 59.0664 177.794 55.2384ZM163.318 51.5496H169.373C171.983 51.5496 173.514 52.8372 173.514 55.2732C173.514 57.7092 171.913 58.9968 169.373 58.9968H163.318V51.5496Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M193.265 72V63.7105H200.231C204.41 63.7105 208.067 60.5758 208.067 55.7344C208.067 50.9975 205.211 47.9673 200.231 47.9673H191.279V72H193.265ZM200.196 49.7785C204.131 49.7785 206.012 51.9728 206.012 55.7344C205.943 59.4264 203.47 61.8645 200.231 61.8645H193.265V49.7785H200.196Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M209.615 66.8452C209.615 70.4675 212.367 72.3135 215.641 72.3135C218.392 72.3135 220.9 71.2337 222.189 68.726H222.293V72H224.035V59.6005C224.035 55.003 220.831 53.4704 217.348 53.4704C214.84 53.4704 210.974 53.7839 210.277 58.4163L211.844 58.7994H211.949C212.541 55.4558 214.735 55.0726 217.208 55.0726C220.413 55.0726 222.189 56.3613 222.189 59.705V61.2724H217.034C213.238 61.2724 209.615 62.3521 209.615 66.8452ZM222.189 64.4767C222.189 68.6215 218.845 70.7113 216.024 70.7113C213.307 70.7113 211.566 69.2833 211.566 66.8103C211.566 63.5015 213.969 62.8049 217.208 62.8049H222.189V64.4767Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M233.243 69.5967L227.705 53.8884H225.754L232.268 71.7562L231.223 74.4033C230.805 75.483 230.038 77.1897 227.775 77.1897H225.824V78.9312H227.809C231.188 78.9312 232.581 76.1796 234.044 72.209L240.836 53.8884H238.92L233.243 69.5967Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M44 58L44 48H66V58H62V61L56 58V61L50 58V61L44 58Z"
+                            fill="currentColor"
+                          />
+                          <path d="M44 68V72H66V68H44Z" fill="currentColor" />
+                        </svg>
                     </a>
                   </div>
                 </div>
