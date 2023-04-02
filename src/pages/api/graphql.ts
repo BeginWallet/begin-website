@@ -74,17 +74,48 @@ const resolvers = {
         const where = filterPool
           ? {
               OR: [
-                { id: { contains: filterPool, mode: Prisma.QueryMode.insensitive } },
-                { name: { contains: filterPool, mode:  Prisma.QueryMode.insensitive } },
+                {
+                  id: {
+                    contains: filterPool,
+                    mode: Prisma.QueryMode.insensitive,
+                  },
+                },
+                {
+                  name: {
+                    contains: filterPool,
+                    mode: Prisma.QueryMode.insensitive,
+                  },
+                },
               ],
             }
-          : {};
+          : {
+            AND: [
+                {
+                    name : { not: ''},
+                },
+                {
+                   name : { not: '[] '},
+                },
+                { roa_lifetime: { gt: '0'}}
+                ]
+            };
 
         const pools = await prisma.pools.findMany({
-            where,
-            skip,
-            take,
-        })
+          where,
+          skip,
+          take,
+          orderBy: [
+            {
+                tax_ratio: "asc"
+            },
+            {
+              roa_short: "desc"
+            },
+            {
+                roa_lifetime: "desc"
+            },
+          ],
+        });
         return pools;
     }
   },
