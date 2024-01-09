@@ -19,7 +19,7 @@ const typeDefs = /* GraphQL */ gql`
   type Query {
     apps: [App!]!,
     pools(filterPool: String, skip: Int, take: Int): [Pool!]!,
-    collections(filterPolicy: String[]): Collection, 
+    collections(filterPolicy: String[]): [Collection!]!, 
   }
 
   type App {
@@ -67,10 +67,10 @@ const resolvers = {
             }
           : {};
 
-        const collection = await prisma.collections.findFirst({
+        const collections = await prisma.collections.findMany({
             where,
         })
-        return collection;
+        return collections;
     },
     pools:async (parent, {filterPool, skip, take}, context) => {
         const where = filterPool
