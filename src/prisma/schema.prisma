@@ -11,7 +11,9 @@ model collections {
   id       Int     @id @map("_id")
   id_      Int     @map("id")
   name     String?
-  policies String?
+  policyid String
+  floor    String?
+  url      String
 }
 
 model pools {

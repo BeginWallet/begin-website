@@ -29,7 +29,9 @@ const typeDefs = /* GraphQL */ gql`
   type Collection {
     id: Int
     name: String
-    policies: String
+    policyid: String
+    floor: String
+    url: String
   }
 
   type Pool {
@@ -61,7 +63,7 @@ const resolvers = {
     collections:async (parent, {filterPolicy}, context) => {
         const where = filterPolicy
           ? { 
-                policies: { contains: filterPolicy, mode: Prisma.QueryMode.insensitive }
+             policyid: { in: filterPolicy, mode: Prisma.QueryMode.insensitive }
             }
           : {};
 
