@@ -19,7 +19,7 @@ const typeDefs = /* GraphQL */ gql`
   type Query {
     apps: [App!]!,
     pools(filterPool: String, skip: Int, take: Int): [Pool!]!,
-    collections(filterPolicy: [String]): [Collection!]!, 
+    collections(filterPolicy: String): [Collection!]!, 
   }
 
   type App {
@@ -27,11 +27,11 @@ const typeDefs = /* GraphQL */ gql`
   }
 
   type Collection {
-    id: String
-    name: String
+    id:       String
+    name:     String
     policyid: String
-    floor: String
-    url: String
+    floor:    String
+    url:      String
   }
 
   type Pool {
@@ -61,9 +61,10 @@ const resolvers = {
         return [{ name: "Begin" }];
     },
     collections:async (parent, {filterPolicy}, context) => {
+      const ids = filterPolicy.split(',')
         const where = filterPolicy
           ? { 
-             id: { in: filterPolicy, mode: Prisma.QueryMode.insensitive }
+             id: { in: ids, mode: Prisma.QueryMode.insensitive }
             }
           : {};
 
