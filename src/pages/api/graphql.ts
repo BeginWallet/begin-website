@@ -19,7 +19,7 @@ const typeDefs = /* GraphQL */ gql`
   type Query {
     apps: [App!]!,
     pools(filterPool: String, skip: Int, take: Int): [Pool!]!,
-    collections(filterPolicy: String[]): [Collection!]!, 
+    collections(filterPolicy: [String]): [Collection!]!, 
   }
 
   type App {
