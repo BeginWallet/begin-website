@@ -8,8 +8,7 @@ datasource db {
 }
 
 model collections {
-  id       Int     @id @map("_id")
-  id_      Int     @map("id")
+  id       String     @id @map("_id")
   name     String?
   policyid String
   floor    String?
