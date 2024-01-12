@@ -6,6 +6,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { GraphQLError } from "graphql";
 import prisma from "../../prisma/prisma";
 import { Prisma } from '@prisma/client'
+import { error } from "console";
 
 
 export const config = {
@@ -84,45 +85,52 @@ const resolvers = {
             .then((res) => (res.ok ? res : Promise.reject(res)))
             .then((res) => res.json());
 
-          const searchCollectionItem = searchCollectionApi.length > 0 
-            ? searchCollectionApi[0]
-            : {project: filterPolicy}
           console.log('searchCollectionApi', searchCollectionApi);
 
-          //Get Floor Price
-          const url = `https://api.opencnft.io/2/collection/${filterPolicy}/floor_price`;
-          // const url = `https://api.opencnft.io/2/collection/${filterPolicy}?expand=collection`
-          const collectionApi = await fetch(url, {
-            headers: {
-              'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
-            },
-          })
-            .then((res) => (res.ok ? res : Promise.reject(res)))
-            .then((res) => res.json());
+          const searchCollectionItem = searchCollectionApi.find( c => 
+            c.project && c.policies.some( p => p === filterPolicy) 
+            && c.project !== filterPolicy
+          )
+          console.log('searchCollectionItem', searchCollectionItem);
 
-          // https://api.opencnft.io/2/collection/search
-          console.log('collectionApi',collectionApi);
+          if (searchCollectionItem) {
+            //Get Floor Price
+            const url = `https://api.opencnft.io/2/collection/${filterPolicy}/floor_price`;
+            // const url = `https://api.opencnft.io/2/collection/${filterPolicy}?expand=collection`
+            const collectionApi = await fetch(url, {
+              headers: {
+                'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
+              },
+            })
+              .then((res) => (res.ok ? res : Promise.reject(res)))
+              .then((res) => res.json())
+              .catch((error) => console.log('Floor price error', error));
 
-          const createCollection = {
-            id: collectionApi.policy,
-            policy: collectionApi.policy,
-            name: searchCollectionItem.project,
-            floor_price: collectionApi.floor_price ? collectionApi.floor_price.toString() : '0',
-            last_updated: new Date(),
-            last_sync: new Date().getTime()
-          }
+            console.log('collectionApi',collectionApi);
+          
 
-          const updateCollection = {
-            policy: collectionApi.policy,
-            name: searchCollectionItem.project,
-            floor_price: collectionApi.floor_price ? collectionApi.floor_price.toString() : '0',
-            last_updated: new Date(),
-            last_sync: new Date().getTime()
-          }
+            const defaultCollection = {
+              policy: filterPolicy,
+              name: searchCollectionItem.project,
+              floor_price: '0',
+              last_updated: new Date(),
+              last_sync: new Date().getTime()
+            }
 
-          if (collectionApi) {
+            const createCollection = {
+              id: filterPolicy,
+              ...defaultCollection
+            }
+
+            const updateCollection = defaultCollection
+
+            if (collectionApi && collectionApi.floor_price) {
+              createCollection.floor_price = collectionApi.floor_price.toString()
+              updateCollection.floor_price = collectionApi.floor_price.toString()
+            }
+
             collections = await prisma.collections.upsert({
-              where: {id: collectionApi.policy},
+              where: {id: filterPolicy},
               update: updateCollection,
               create: createCollection
             });
