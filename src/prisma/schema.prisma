@@ -8,11 +8,10 @@ datasource db {
 }
 
 model collections {
-  id       String     @id @map("_id")
-  name     String?
-  policyid String
-  floor    String?
-  url      String
+  id              String     @id @map("_id")
+  policy          String
+  name            String
+  floor_price     String?
 }
 
 model pools {

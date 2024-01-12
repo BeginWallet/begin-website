@@ -18,8 +18,8 @@ export const config = {
 const typeDefs = /* GraphQL */ gql`
   type Query {
     apps: [App!]!,
-    pools(filterPool: String, skip: Int, take: Int): [Pool!]!,
-    collections(filterPolicy: [String]): [Collection!]!, 
+    pools(filterPool: String, skip: Int, take: Int): [Pool],
+    collections(filterPolicy: String): Collection, 
   }
 
   type App {
@@ -27,11 +27,10 @@ const typeDefs = /* GraphQL */ gql`
   }
 
   type Collection {
-    id:       String
-    name:     String
-    policyid: String
-    floor:    String
-    url:      String
+    id:             String
+    policy:         String
+    name:           String
+    floor_price:    String
   }
 
   type Pool {
@@ -68,9 +67,63 @@ const resolvers = {
             }
           : {};
 
-        const collections = await prisma.collections.findMany({
+        let collections = await prisma.collections.findFirst({
             where,
         })
+
+        if (!collections) {
+          // Search Collection
+          const urlSearch = `https://api.opencnft.io/2/collection/search?q=${filterPolicy}`
+          const searchCollectionApi = await fetch(urlSearch, {
+            headers: {
+              'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
+            },
+          })
+            .then((res) => (res.ok ? res : Promise.reject(res)))
+            .then((res) => res.json());
+
+          console.log('searchCollectionApi', searchCollectionApi);
+
+          //Get Floor Price
+          const url = `https://api.opencnft.io/2/collection/${filterPolicy}/floor_price`;
+          // const url = `https://api.opencnft.io/2/collection/${filterPolicy}?expand=collection`
+          const collectionApi = await fetch(url, {
+            headers: {
+              'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
+            },
+          })
+            .then((res) => (res.ok ? res : Promise.reject(res)))
+            .then((res) => res.json());
+
+          // https://api.opencnft.io/2/collection/search
+          console.log('collectionApi',collectionApi);
+
+          const createCollection = {
+            id: collectionApi.policy,
+            policy: collectionApi.policy,
+            name: searchCollectionApi.project,
+            floor_price: collectionApi.floor_price
+          }
+
+          const updateCollection = {
+            policy: collectionApi.policy,
+            name: searchCollectionApi.project,
+            floor_price: collectionApi.floor_price
+          }
+
+          // if (collectionApi) {
+          //   collections = await prisma.collections.upsert({
+          //     where: {id: collectionApi.policy},
+          //     update: updateCollection,
+          //     create: createCollection
+          //   });
+          // } else {
+          //   console.log('Collection not found on api.')
+          // }
+        }
+
+        console.log('collections from DB', collections);
+
         return collections;
     },
     pools:async (parent, {filterPool, skip, take}, context) => {
