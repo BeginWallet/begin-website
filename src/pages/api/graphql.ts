@@ -31,6 +31,8 @@ const typeDefs = /* GraphQL */ gql`
     policy:         String
     name:           String
     floor_price:    String
+    last_updated:   String
+    last_sync:      Float
   }
 
   type Pool {
@@ -82,6 +84,9 @@ const resolvers = {
             .then((res) => (res.ok ? res : Promise.reject(res)))
             .then((res) => res.json());
 
+          const searchCollectionItem = searchCollectionApi.length > 0 
+            ? searchCollectionApi[0]
+            : {project: filterPolicy}
           console.log('searchCollectionApi', searchCollectionApi);
 
           //Get Floor Price
@@ -101,25 +106,29 @@ const resolvers = {
           const createCollection = {
             id: collectionApi.policy,
             policy: collectionApi.policy,
-            name: searchCollectionApi.project,
-            floor_price: collectionApi.floor_price
+            name: searchCollectionItem.project,
+            floor_price: collectionApi.floor_price ? collectionApi.floor_price.toString() : '0',
+            last_updated: new Date(),
+            last_sync: new Date().getTime()
           }
 
           const updateCollection = {
             policy: collectionApi.policy,
-            name: searchCollectionApi.project,
-            floor_price: collectionApi.floor_price
+            name: searchCollectionItem.project,
+            floor_price: collectionApi.floor_price ? collectionApi.floor_price.toString() : '0',
+            last_updated: new Date(),
+            last_sync: new Date().getTime()
           }
 
-          // if (collectionApi) {
-          //   collections = await prisma.collections.upsert({
-          //     where: {id: collectionApi.policy},
-          //     update: updateCollection,
-          //     create: createCollection
-          //   });
-          // } else {
-          //   console.log('Collection not found on api.')
-          // }
+          if (collectionApi) {
+            collections = await prisma.collections.upsert({
+              where: {id: collectionApi.policy},
+              update: updateCollection,
+              create: createCollection
+            });
+          } else {
+            console.log('Collection not found on api.')
+          }
         }
 
         console.log('collections from DB', collections);

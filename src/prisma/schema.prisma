@@ -12,6 +12,8 @@ model collections {
   policy          String
   name            String
   floor_price     String?
+  last_updated    DateTime
+  last_sync       Int
 }
 
 model pools {
