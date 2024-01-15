@@ -65,6 +65,10 @@ const getCollection =async (policy_id:string) => {
   const result = await fetch(collectionUrl);
   const html = await result.text();
 
+  if(!result.ok){
+    return null
+  }
+
   const dom = new JSDOM(html);
   const document = dom.window.document;
   const collection = () => {
@@ -72,17 +76,19 @@ const getCollection =async (policy_id:string) => {
       let policy = ''
       let name = ''
       let floor_price = ''
-      if (meta && meta.props) {
-          policy = meta.props.pageProps.collection.policy_id;
-          name = meta.props.pageProps.collection.display_name;
-          floor_price = meta.props.pageProps.collection.global_floor_lovelace;
-      }
+      if (meta && meta.props && meta.props.pageProps && meta.props.pageProps.collection) {
+        policy = meta.props.pageProps.collection.policy_id;
+        name = meta.props.pageProps.collection.display_name;
+        floor_price = meta.props.pageProps.collection.global_floor_lovelace;
 
-      return {
-          id: policy,
-          policy,
-          name,
-          floor_price,
+        return {
+            id: policy,
+            policy,
+            name,
+            floor_price,
+        }
+      } else {
+        return null
       }
   }
   
