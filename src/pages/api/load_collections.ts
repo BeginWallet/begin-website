@@ -91,16 +91,6 @@ export default async function handler(
             const dom = new JSDOM(html);
             const document = dom.window.document;
             const collection = () => {
-                // const name = document.querySelector('#app > main > div > section > div > div > div > div > h1')?.textContent?.trim();
-                // const floorRaw = document.querySelector('#app > main > div > section > div > div > div > div > div:nth-child(1) > span')?.textContent?.trim()
-                // console.log('floorRaw', floorRaw)
-
-                // const floor = (Number((floorRaw?.toLowerCase()
-                //     .replace('-', '0')
-                //     .replace('₳', '')
-                //     .replace('k', '')
-                //     .replace('m', '')
-                //     .trim()) || 0 ) * 1000000).toString()
                 const meta = JSON.parse(document.getElementById('__NEXT_DATA__')?.textContent || '')
                 let policy_id = ''
                 let name = ''
