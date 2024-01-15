@@ -7,6 +7,7 @@ import { GraphQLError } from "graphql";
 import prisma from "../../prisma/prisma";
 import { Prisma } from '@prisma/client'
 import { error } from "console";
+import { JSDOM } from 'jsdom';
 
 
 export const config = {
@@ -16,6 +17,8 @@ export const config = {
   },
 };
 
+// last_updated:   String
+// last_sync:      Float
 const typeDefs = /* GraphQL */ gql`
   type Query {
     apps: [App!]!,
@@ -32,8 +35,6 @@ const typeDefs = /* GraphQL */ gql`
     policy:         String
     name:           String
     floor_price:    String
-    last_updated:   String
-    last_sync:      Float
   }
 
   type Pool {
@@ -57,91 +58,125 @@ const typeDefs = /* GraphQL */ gql`
   }
 `;
 
+const getCollection =async (policy_id:string) => {
+  // Fetch
+  const baseUrl = 'https://www.jpg.store';
+  const collectionUrl = `${baseUrl}/collection/${policy_id}`
+  const result = await fetch(collectionUrl);
+  const html = await result.text();
+
+  const dom = new JSDOM(html);
+  const document = dom.window.document;
+  const collection = () => {
+      const meta = JSON.parse(document.getElementById('__NEXT_DATA__')?.textContent || '')
+      let policy = ''
+      let name = ''
+      let floor_price = ''
+      if (meta && meta.props) {
+          policy = meta.props.pageProps.collection.policy_id;
+          name = meta.props.pageProps.collection.display_name;
+          floor_price = meta.props.pageProps.collection.global_floor_lovelace;
+      }
+
+      return {
+          id: policy,
+          policy,
+          name,
+          floor_price,
+      }
+  }
+  
+  return collection()
+}
+
 const resolvers = {
   Query: {
     apps() {
         return [{ name: "Begin" }];
     },
     collections:async (parent, {filterPolicy}, context) => {
+      return getCollection(filterPolicy);
       // const ids = filterPolicy.split(',')
-        const where = filterPolicy
-          ? { 
-             id: { in: filterPolicy }
-            }
-          : {};
+        // const where = filterPolicy
+        //   ? { 
+        //      id: { in: filterPolicy }
+        //     }
+        //   : {};
 
-        let collections = await prisma.collections.findFirst({
-            where,
-        })
+        // let collections = await prisma.collections.findFirst({
+        //     where,
+        // })
 
-        if (!collections) {
-          // Search Collection
-          const urlSearch = `https://api.opencnft.io/2/collection/search?q=${filterPolicy}`
-          const searchCollectionApi = await fetch(urlSearch, {
-            headers: {
-              'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
-            },
-          })
-            .then((res) => (res.ok ? res : Promise.reject(res)))
-            .then((res) => res.json());
+        // console.log('prisma db', collections)
 
-          console.log('searchCollectionApi', searchCollectionApi);
+        // if (!collections) {
+        //   // Search Collection
+        //   const urlSearch = `https://api.opencnft.io/2/collection/search?q=${filterPolicy}`
+        //   const searchCollectionApi = await fetch(urlSearch, {
+        //     headers: {
+        //       'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
+        //     },
+        //   })
+        //     .then((res) => (res.ok ? res : Promise.reject(res)))
+        //     .then((res) => res.json());
 
-          const searchCollectionItem = searchCollectionApi.find( c => 
-            c.project && c.policies.some( p => p === filterPolicy) 
-            && c.project !== filterPolicy
-          )
-          console.log('searchCollectionItem', searchCollectionItem);
+        //   console.log('searchCollectionApi', searchCollectionApi);
 
-          if (searchCollectionItem) {
-            //Get Floor Price
-            const url = `https://api.opencnft.io/2/collection/${filterPolicy}/floor_price`;
-            // const url = `https://api.opencnft.io/2/collection/${filterPolicy}?expand=collection`
-            const collectionApi = await fetch(url, {
-              headers: {
-                'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
-              },
-            })
-              .then((res) => (res.ok ? res : Promise.reject(res)))
-              .then((res) => res.json())
-              .catch((error) => console.log('Floor price error', error));
+        //   const searchCollectionItem = searchCollectionApi.find( c => 
+        //     c.project && c.policies.some( p => p === filterPolicy) 
+        //     && c.project !== filterPolicy
+        //   )
+        //   console.log('searchCollectionItem', searchCollectionItem);
 
-            console.log('collectionApi',collectionApi);
+        //   if (searchCollectionItem) {
+        //     //Get Floor Price
+        //     const url = `https://api.opencnft.io/2/collection/${filterPolicy}/floor_price`;
+        //     // const url = `https://api.opencnft.io/2/collection/${filterPolicy}?expand=collection`
+        //     const collectionApi = await fetch(url, {
+        //       headers: {
+        //         'X-Api-Key': 'ocnft_657fa5328b878e43adc9f0fb',
+        //       },
+        //     })
+        //       .then((res) => (res.ok ? res : Promise.reject(res)))
+        //       .then((res) => res.json())
+        //       .catch((error) => console.log('Floor price error', error));
+
+        //     console.log('collectionApi',collectionApi);
           
 
-            const defaultCollection = {
-              policy: filterPolicy,
-              name: searchCollectionItem.project,
-              floor_price: '0',
-              last_updated: new Date(),
-              last_sync: new Date().getTime()
-            }
+        //     const defaultCollection = {
+        //       policy: filterPolicy,
+        //       name: searchCollectionItem.project,
+        //       floor_price: '0',
+        //       last_updated: new Date(),
+        //       last_sync: new Date().getTime()
+        //     }
 
-            const createCollection = {
-              id: filterPolicy,
-              ...defaultCollection
-            }
+        //     const createCollection = {
+        //       id: filterPolicy,
+        //       ...defaultCollection
+        //     }
 
-            const updateCollection = defaultCollection
+        //     const updateCollection = defaultCollection
 
-            if (collectionApi && collectionApi.floor_price) {
-              createCollection.floor_price = collectionApi.floor_price.toString()
-              updateCollection.floor_price = collectionApi.floor_price.toString()
-            }
+        //     if (collectionApi && collectionApi.floor_price) {
+        //       createCollection.floor_price = collectionApi.floor_price.toString()
+        //       updateCollection.floor_price = collectionApi.floor_price.toString()
+        //     }
 
-            collections = await prisma.collections.upsert({
-              where: {id: filterPolicy},
-              update: updateCollection,
-              create: createCollection
-            });
-          } else {
-            console.log('Collection not found on api.')
-          }
-        }
+        //     collections = await prisma.collections.upsert({
+        //       where: {id: filterPolicy},
+        //       update: updateCollection,
+        //       create: createCollection
+        //     });
+        //   } else {
+        //     console.log('Collection not found on api.')
+        //   }
+        // }
 
-        console.log('collections from DB', collections);
+        // console.log('collections from DB', collections);
 
-        return collections;
+        // return collections;
     },
     pools:async (parent, {filterPool, skip, take}, context) => {
         const where = filterPool
