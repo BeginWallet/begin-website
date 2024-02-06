@@ -38,9 +38,9 @@ type Props = {
 const Menu = ( {hover, onClick}: Props ) => {
   return (
     <>
-     <a href="/nft" onClick={onClick} className={"pl-2 pr-2 block mt-4 border-2 rounded-lg lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+     {/* <a href="/nft" onClick={onClick} className={"pl-2 pr-2 block mt-4 border-2 rounded-lg lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       NFT <span className="bg-teal-200 hover:bg-white text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">Live</span>
-    </a>
+    </a> */}
     <a href="/#features" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.features)}
     </a>
