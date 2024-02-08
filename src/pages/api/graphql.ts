@@ -64,6 +64,7 @@ const getCollection =async (policy_id:string) => {
   const collectionUrl = `${baseUrl}/collection/${policy_id}`
   const result = await fetch(collectionUrl);
   const html = await result.text();
+  console.log(result)
 
   if(!result.ok){
     return null
