@@ -6,7 +6,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { GraphQLError } from "graphql";
 import prisma from "../../prisma/prisma";
 import { Prisma } from '@prisma/client'
-import { error } from "console";
 import { JSDOM } from 'jsdom';
 
 
