@@ -61,11 +61,21 @@ const getCollection =async (policy_id:string) => {
   // Fetch
   const baseUrl = 'https://www.jpg.store';
   const collectionUrl = `${baseUrl}/collection/${policy_id}`
-  const result = await fetch(collectionUrl);
-  const html = await result.text();
-  console.log(result)
+  console.log({collectionUrl})
 
-  if(!result.ok){
+  let result;
+
+  try {
+    result = await fetch(collectionUrl)
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+  
+  const html = await result.text();
+  // console.log(result)
+
+  if(!result?.ok){
     return null
   }
 
@@ -73,13 +83,14 @@ const getCollection =async (policy_id:string) => {
   const document = dom.window.document;
   const collection = () => {
       const meta = JSON.parse(document.getElementById('__NEXT_DATA__')?.textContent || '')
+      console.log({meta})
       let policy = ''
       let name = ''
       let floor_price = ''
-      if (meta && meta.props && meta.props.pageProps && meta.props.pageProps.collection) {
-        policy = meta.props.pageProps.collection.policy_id;
-        name = meta.props.pageProps.collection.display_name;
-        floor_price = meta.props.pageProps.collection.global_floor_lovelace;
+      if (meta && meta.props && meta.props.pageProps && meta.props.pageProps.staticCollection) {
+        policy = meta.props.pageProps.staticCollection.policy_id;
+        name = meta.props.pageProps.staticCollection.display_name;
+        floor_price = meta.props.pageProps.staticCollection.global_floor_lovelace;
 
         return {
             id: policy,

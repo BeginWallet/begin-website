@@ -218,6 +218,11 @@ ol, ul {
 .items-center {
     align-items: center;
 }
+
+
+:root {
+    --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/10px 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) calc(50% + 5px) 100%/10px 51% repeat-x
+}
 /* main {
     background: white;
     position: relative;
