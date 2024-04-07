@@ -57,6 +57,25 @@ const typeDefs = /* GraphQL */ gql`
   }
 `;
 
+// const getFiatCurrencies = async () => {
+//   // Fetch
+//   const url = 'https://api.transak.com/api/v2/currencies/fiat-currencies'
+
+//   let result
+//   try {
+//     result = await fetch(url)
+//   } catch (error) {
+//     console.error(error)
+//     return null
+//   }
+
+//   if(!result?.ok){
+//     return null;
+//   } else {
+//     return result.json();
+//   }
+// }
+
 const getCollection =async (policy_id:string) => {
   // Fetch
   const baseUrl = 'https://www.jpg.store';
@@ -111,6 +130,7 @@ const resolvers = {
     apps() {
         return [{ name: "Begin" }];
     },
+    // fiatCurrencies: getFiatCurrencies,
     collections:async (parent, {filterPolicy}, context) => {
       return getCollection(filterPolicy);
       // const ids = filterPolicy.split(',')
