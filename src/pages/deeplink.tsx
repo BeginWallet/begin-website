@@ -160,6 +160,7 @@ export default function DeepLink() {
               removeQrCodeBehindLogo={true}
             />
           </section>
+          <section><a href='web+cardano://claim/v1?faucet_url=https%3A%2F%2Fonboarding.click%2Fapi%2Fclaim%2Fv1%2F01hb6w00f90rbc0gw72gd8mphy&code=e9501bd6c30c4821'>Test Claim</a></section>
         </Container>
       </Layout>
     </>
