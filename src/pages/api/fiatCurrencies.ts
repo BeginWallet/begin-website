@@ -10,7 +10,8 @@ export default async function handler(
     res.setHeader('Content-Type','application/json')
     res.setHeader(
       'Cache-Control',
-      'public, s-maxage=10, stale-while-revalidate=10'
+      // 'public, s-maxage=10, stale-while-revalidate=10'
+       'public, max-age=0, must-revalidate',
     )
 
     // Run the middleware
