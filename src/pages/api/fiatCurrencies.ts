@@ -10,8 +10,8 @@ export default async function handler(
     res.setHeader('Content-Type','application/json')
     res.setHeader(
       'Cache-Control',
-      // 'public, s-maxage=10, stale-while-revalidate=10'
-       'public, max-age=0, must-revalidate',
+      'public, s-maxage=10, stale-while-revalidate=10'
+      //  'public, max-age=0, must-revalidate',
     )
 
     // Run the middleware
@@ -19,7 +19,7 @@ export default async function handler(
   
     // Rest of the API logic
     const url = 'https://api.transak.com/api/v2/currencies/fiat-currencies?apiKey=24ddd66b-a1f5-4666-bf9f-a9fa848a460a'
-    const response = await fetch(url) //{next: {revalidate: 10}}
+    const response = await fetch(url, {next: {revalidate: 10}})
 
     // Recommendation: handle errors
     if (!response.ok) {
@@ -27,5 +27,7 @@ export default async function handler(
         throw new Error('Failed to fetch data');
     }
 
-    res.status(200).json((await response.json()));
+    const json = await response.json()
+
+    res.status(200).json(json);
   }
