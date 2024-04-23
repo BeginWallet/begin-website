@@ -51,6 +51,7 @@ const Index = ({ allPosts }: Props) => {
       <Layout>
         <Head>
           <title>{f(messages.pageTitle)}</title>
+          <meta http-equiv="Content-Security-Policy" content="default-src https:; frame-ancestors 'none'" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@BeginWallet" />
           <meta name="twitter:title" content={f(messages.pageTitle)} />
