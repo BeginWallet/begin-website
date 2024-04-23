@@ -58,6 +58,16 @@ const Index = ({ allPosts }: Props) => {
           <meta name="twitter:description" content={`${f(messages.pageDescription)}`} />
           {/* TODO: Change cover page */}
           <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
+          <meta name="twitter:card" content="app" />
+          <meta name="twitter:app:name:iphone" content="Begin Wallet"/>
+          <meta name="twitter:app:id:iphone" content="1642488837"/>
+          <meta name="twitter:app:url:iphone" content="beginwallet://browse?dappUrl=https://begin.is"/>
+          <meta name="twitter:app:name:ipad" content="Begin Wallet" />
+          <meta name="twitter:app:id:ipad" content="1642488837" />
+          <meta name="twitter:app:url:ipad" content="beginwallet://browse?dappUrl=https://begin.is" />
+          <meta name="twitter:app:name:googleplay" content="Begin Wallet" />
+          <meta name="twitter:app:id:googleplay" content="is.begin.app" />
+          <meta name="twitter:app:url:googleplay" content="beginwallet://browse?dappUrl=https://begin.is" />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
