@@ -52,13 +52,11 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>{f(messages.pageTitle)}</title>
           <meta http-equiv="Content-Security-Policy" content="default-src https:; frame-ancestors 'none'" />
-          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content="app" />
+          {/* <meta name="twitter:card" content="summary_large_image" /> */}
           <meta name="twitter:site" content="@BeginWallet" />
           <meta name="twitter:title" content={f(messages.pageTitle)} />
           <meta name="twitter:description" content={`${f(messages.pageDescription)}`} />
-          {/* TODO: Change cover page */}
-          <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
-          <meta name="twitter:card" content="app" />
           <meta name="twitter:app:name:iphone" content="Begin Wallet"/>
           <meta name="twitter:app:id:iphone" content="1642488837"/>
           <meta name="twitter:app:url:iphone" content="beginwallet://browse?dappUrl=https://begin.is"/>
@@ -68,6 +66,8 @@ const Index = ({ allPosts }: Props) => {
           <meta name="twitter:app:name:googleplay" content="Begin Wallet" />
           <meta name="twitter:app:id:googleplay" content="is.begin.app" />
           <meta name="twitter:app:url:googleplay" content="beginwallet://browse?dappUrl=https://begin.is" />
+          {/* TODO: Change cover page */}
+          <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
