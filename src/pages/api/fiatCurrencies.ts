@@ -27,7 +27,9 @@ export default async function handler(
         throw new Error('Failed to fetch data');
     }
 
-    const json = await response.json()
+    const json = await response.json();
 
-    res.status(200).json(json);
+    console.log({json})
+
+    res.status(200).send(json);
   }
