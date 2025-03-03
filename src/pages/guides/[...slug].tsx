@@ -24,13 +24,13 @@ type Props = {
 
 const messages = defineMessages({
   pageTitle: {
-      id: 'page.title',
-      defaultMessage: 'Begin Wallet - Web3, NFTs and Crypto wallet on Cardano ADA'
+    id: 'page.title',
+    defaultMessage: 'Begin Wallet - Buy Bitcoin BTC, Cardano ADA, Crypto Wallet'
   },
   pageDescription: {
-      id: 'page.description',
-      defaultMessage: 'With Begin you can collect NFTs, earn yeld, send, and participate in our growing digital world. ' +
-          'Where everyone is welcome on Begin DeFi Wallet on Cardano, that you are in control of your finances.'
+    id: 'page.description',
+    defaultMessage: 'With Begin you can Buy Bitcoin, BTC, Cardano, ADA, collect NFTs, earn yeld, send, and participate in our growing digital world. '+
+    'Where everyone is welcome on Begin DeFi Wallet on Cardano, that you are in control of your finances.'
   }
 })
 

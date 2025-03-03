@@ -18,6 +18,7 @@ import Home from '../components/home'
 import Features from '../components/features'
 import MoreFeatures from '../components/more-features'
 import Mission from '../components/mission'
+import Script from 'next/script'
 
 import Team from '../components/team'
 
@@ -25,11 +26,11 @@ import Team from '../components/team'
 const messages = defineMessages({
   pageTitle: {
     id: 'page.title',
-    defaultMessage: 'Begin Wallet - Web3, NFTs and Crypto wallet on Cardano ADA'
+    defaultMessage: 'Begin Wallet - Buy Bitcoin BTC, Cardano ADA, Crypto Wallet'
   },
   pageDescription: {
     id: 'page.description',
-    defaultMessage: 'With Begin you can collect NFTs, earn yeld, send, and participate in our growing digital world. '+
+    defaultMessage: 'With Begin you can Buy Bitcoin, BTC, Cardano, ADA, collect NFTs, earn yeld, send, and participate in our growing digital world. '+
     'Where everyone is welcome on Begin DeFi Wallet on Cardano, that you are in control of your finances.'
   }
 })
@@ -51,7 +52,7 @@ const Index = ({ allPosts }: Props) => {
       <Layout>
         <Head>
           <title>{f(messages.pageTitle)}</title>
-          <meta http-equiv="Content-Security-Policy" content="default-src https:; frame-ancestors 'none'" />
+          <meta httpEquiv="Content-Security-Policy" content="default-src https:; frame-ancestors 'none'" />
           <meta name="twitter:card" content="app" />
           {/* <meta name="twitter:card" content="summary_large_image" /> */}
           <meta name="twitter:site" content="@BeginWallet" />
@@ -74,11 +75,11 @@ const Index = ({ allPosts }: Props) => {
           />
           <meta property="og:image" content="/images/cover.jpeg" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
+          {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
+          /> */}
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -89,7 +90,7 @@ const Index = ({ allPosts }: Props) => {
               });
             `,
             }}
-          />
+          /> */}
         </Head>
         <Navigation />
         <Home />

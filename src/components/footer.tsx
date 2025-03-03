@@ -123,7 +123,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center p-6">
-          <small>© 2022, Developed by <a href="https://b58.finance" target="_blank" className='underline font-bold'>B58 Finance</a></small>
+          <small>Copyright © 2025 Begin Wallet. All rights reserved. <a href="/terms/privacy" className='ml-4 mr-2 underline font-bold'>Privacy Policy</a> | <a href="/terms/service" className='ml-2 underline font-bold'>Terms of Service</a></small>
         </div>
       </Container>
     </footer>
