@@ -19,7 +19,7 @@
     "@icons-pack/react-simple-icons": "^12.7.0",
     "@meshsdk/core": "1.5.1",
     "@meshsdk/react": "1.1.6",
-    "@netlify/plugin-nextjs": "5.10.7",
+    "@netlify/plugin-nextjs": "5.2.2",
     "@prisma/client": "^4.11.0",
     "@tailwindcss/postcss": "^4.1.4",
     "apexcharts": "^3.25.0",
