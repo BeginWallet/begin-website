@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { SiApple, SiGooglechrome, SiAndroid } from '@icons-pack/react-simple-icons';
+import { FaChrome as Chrome } from "react-icons/fa";
+import { FaGooglePlay as Android } from "react-icons/fa";
+import { FaApple as Apple } from "react-icons/fa";
 
 export default function DownloadCTA() {
   return (
@@ -24,21 +26,21 @@ export default function DownloadCTA() {
             href="https://apps.apple.com/app/begin-wallet"
             className="flex items-center gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
-            <SiApple fr={''} className="w-5 h-5" />
+            <Apple className="w-5 h-5" />
             Download on iOS
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=wallet.begin"
             className="flex items-center gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
-            <SiAndroid fr={''} className="w-5 h-5" />
+            <Android className="w-5 h-5" />
             Download on Android
           </a>
           <a
             href="https://chrome.google.com/webstore/detail/begin-wallet/..."
             className="flex items-center gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
-            <SiGooglechrome fr={''} className="w-5 h-5" />
+            <Chrome className="w-5 h-5" />
             Add to Chrome
           </a>
         </div>

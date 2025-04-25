@@ -6,9 +6,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-
 #[[redirects]]
 #  from = "/*"
 #  to = "https://begin.is/:splat"
