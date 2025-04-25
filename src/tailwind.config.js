@@ -35,6 +35,7 @@ module.exports = {
         },
       },
       spacing: {
+        0: "0",
         28: "7rem",
         34: "8.35rem", //'8.125rem',
         "317px": "317px",
@@ -68,6 +69,17 @@ module.exports = {
         "9xl": "4.5rem",
         "10xl": "6.25rem",
       },
+      fontWeight: {
+        thin: 100,
+        extralight: 200,
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+        black: 900,
+      },
       boxShadow: {
         small: "0 5px 10px rgba(0, 0, 0, 0.25)",
         medium: "4px 4px 10px rgba(0, 0, 0, 0.40)",
@@ -84,6 +96,13 @@ module.exports = {
         green: theme("colors.green.500"),
         blue: theme("colors.blue.500"),
       }),
+      textUnderlineOffset: {
+        6: '6px',
+        8: '8px',
+      },
+      textDecorationThickness: {
+        4: '4px',
+      }
     },
   },
   variants: {

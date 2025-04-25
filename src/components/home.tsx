@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 import screens from '../public/images/hero-begin-wallet-screens.png';
+import mobile_screens from '../public/images/hero-mobile-app-screens.png';
 import { FaChrome as Chrome } from "react-icons/fa";
 import { FaGooglePlay as Android } from "react-icons/fa";
 import { FaApple as Apple } from "react-icons/fa";
@@ -58,10 +59,10 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 pt-10"
+        className="relative z-10 sm:pt-0 md:pt-10 lg:pt-10"
       >
-        <h1 className="text-4xl md:text-7xl font-bold leading-tight mt-12 mb-6">
-          Your Crypto Journey <br/><span className="font-extrabold">Begins</span> Here
+        <h1 className="text-4xl md:text-7xl leading-tight mt-12 mb-8">
+          Your Crypto Journey <br/><span className="font-extrabold underline decoration-2 underline-offset-8">Begins</span> Here
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
           The all-in-one crypto wallet for Cardano and Bitcoin — self-custodial, open-source, and packed with staking, lending, governance, and real dApp discovery.
@@ -75,10 +76,30 @@ const Home = () => {
 
       <motion.div
         style={{ y }}
-        className="relative mx-auto mt-12 w-[90%] max-w-[1000px] z-0 pointer-events-none aspect-[1000/537]"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeIn' }}
+        className="relative mx-auto mt-12 w-[90%] max-w-[1000px] z-0 pointer-events-none aspect-[1000/537] hidden sm:hidden lg:block"
       >
         <Image
           src={screens}
+          alt="Begin Wallet Screens"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 90vw"
+          className="object-contain"
+        />
+      </motion.div>
+
+      <motion.div
+        style={{ y }}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeIn' }}
+        className="relative mx-auto mt-12 w-[90%] max-w-[578px] z-0 pointer-events-none aspect-[578/537] block sm:block lg:hidden"
+      >
+        <Image
+          src={mobile_screens}
           alt="Begin Wallet Screens"
           fill
           priority
@@ -97,21 +118,21 @@ const Home = () => {
         <div className="relative flex justify-center flex-wrap gap-4 py-20">
           <a
             href="https://apps.apple.com/app/begin-wallet"
-            className="flex w-full lg:w-auto text-center items-center gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
             <Apple className="w-5 h-5" />
             Download on iOS
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=wallet.begin"
-            className="flex items-center gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
             <Android className="w-5 h-5" />
             Download on Android
           </a>
           <a
             href="https://chrome.google.com/webstore/detail/begin-wallet/..."
-            className="flex items-center gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
           >
             <Chrome className="w-5 h-5" />
             Add to Chrome
