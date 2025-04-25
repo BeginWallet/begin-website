@@ -1,5 +1,5 @@
 import { checkSignature, generateNonce } from "@meshsdk/core";
-import { Address } from "@emurgo/cardano-serialization-lib-browser";
+// import { Address } from "@emurgo/cardano-serialization-lib-browser";
 
 async function getNonce(msg: string) {
   const nonce = generateNonce(msg);
@@ -7,9 +7,10 @@ async function getNonce(msg: string) {
 }
 
 async function verifySignature(userAddress, nonce, signature) {
-  const addressBech32 = Address.from_bytes(
-    Buffer.from(userAddress, "hex")
-  ).to_bech32();
+  const addressBech32 = "" as any
+  // Address.from_bytes(
+  //   Buffer.from(userAddress, "hex")
+  // ).to_bech32();
 
   const result = checkSignature(nonce, addressBech32, signature);
   if (result) {
