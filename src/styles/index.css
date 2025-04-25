@@ -1,5 +1,6 @@
-@import 'font-alagard.css';
-@import 'open-sauce-one.css';
+@import './font-alagard.css';
+@import './open-sauce-one.css';
+/* @import 'tailwindcss'; */
 
 @tailwind base;
 
@@ -23,6 +24,24 @@
     padding: 10;
 } */
 
+
+:root {
+    /* --color-background-light: #ffffff;
+    --color-background-dark: #141414; */
+    --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/10px 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) calc(50% + 5px) 100%/10px 51% repeat-x
+}
+
+/* @theme {
+    --color-black: #141414;
+    --color-background: var(--color-background-light);
+} */
+
+/* @layer base {
+    @variant dark {
+      --color-background: var(--color-background-dark);
+    }
+} */
+
 body {
     font-family: 'OpenSauceOneRegular', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -38,8 +57,8 @@ ol, ul {
 }
 
 .home-container {
-    background-color: #3414FC;
-    height: 662px;
+    /* background-color: #3414FC; */
+    /* height: 662px; */
 }
 
 .border-gradient {
@@ -75,13 +94,13 @@ ol, ul {
     }
 }
 
-.bg-home {
+/* .bg-home {
     @apply bg-gradient-to-b from-blue-light to-blue-medium;
 }
 
 .bg-home.dark-theme {
     @apply bg-gradient-to-b from-blue-light to-blue-dark;
-}
+} */
 
 .img-light {
     @apply block;
@@ -220,9 +239,8 @@ ol, ul {
 }
 
 
-:root {
-    --mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/10px 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) calc(50% + 5px) 100%/10px 51% repeat-x
-}
+
+
 /* main {
     background: white;
     position: relative;

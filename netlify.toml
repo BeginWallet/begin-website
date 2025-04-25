@@ -1,7 +1,13 @@
 [build]
   base = "src/"
-  command = "npm run build"
+  command = "npm run build && npm run postbuild"
   publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "https://begin.is/:splat"
+  status = 301
+  force = true

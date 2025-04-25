@@ -4,6 +4,7 @@ import 'highlight.js/styles/hybrid.css'
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
 import translate, { setLanguage, messages } from "../lib/translate";
+import { CookiesProvider } from 'react-cookie';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -11,12 +12,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   setLanguage(locale || 'en')
 
   return (
-    <IntlProvider 
-      locale={locale || 'en'}
-      defaultLocale={defaultLocale}
-      messages={messages}
-    >
-      <Component {...pageProps} />
-    </IntlProvider>
+    <CookiesProvider>
+      <IntlProvider 
+        locale={locale || 'en'}
+        defaultLocale={defaultLocale}
+        messages={messages}
+      >
+        <Component {...pageProps} />
+      </IntlProvider>
+    </CookiesProvider>
     );
 }

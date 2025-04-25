@@ -1,7 +1,13 @@
 const plugin = require("tailwindcss/plugin");
+const colors = require('tailwindcss/colors');
+
+// global.structuredClone = val => {
+//   return JSON.parse(JSON.stringify(val))
+// }
 
 module.exports = {
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  // darkMode: ['selector', '[data-mode="dark"]'],
   theme: {
     extend: {
       screens: {
@@ -9,18 +15,20 @@ module.exports = {
         dark: { raw: "(prefers-color-scheme: dark)" },
       },
       colors: {
+        ...colors,
         "accent-1": "#FAFAFA",
         "accent-2": "#F5F5F5",
         "accent-1-dark": "#000000",
         "accent-2-dark": "#333333",
         "accent-7": "#333",
         success: "#0070f3",
-        cyan: "#79FFE1",
+        cyan: "#00E5FF",
+        black: "#141414",
         blue: {
           light: "#3414FC",
           medium: "#3414FC",
           dark: "#14192C",
-          over: "#252527",
+          over: "#18181b",
           ultra: "#00101E",
           twitter: "#1CA1F1",
           discord: "#5865F2",
@@ -87,20 +95,20 @@ module.exports = {
       addBase({
         body: {
           color: config("theme.colors.black"),
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "#FFFFFF",
         },
         "body.dark-theme": {
           color: config("theme.colors.white"),
-          backgroundColor: "#000000",
+          backgroundColor: "#141414",
         },
         "@screen dark": {
           body: {
             color: config("theme.colors.white"),
-            backgroundColor: "#000000",
+            backgroundColor: "#141414",
           },
           "body.light-theme": {
             color: config("theme.colors.black"),
-            backgroundColor: "#F5F5F5",
+            backgroundColor: "#FFFFFF",
           },
         },
       });

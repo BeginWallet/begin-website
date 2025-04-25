@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import Menu from "./menu";
 import SelectTranslation from "./select-translation";
+import Logo from "../public/images/logo.svg";
+
 
 const Navigation = () => {
   const [navbar, setNavbar]  = useState(false);
@@ -79,39 +81,51 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={ navbar 
-      ? "bg-blue-light bg-opacity-75 dark:bg-opacity-75 fixed top-0 z-50 backdrop-filter firefox:bg-opacity-95 transition easy-in-out duration-200 w-full "
-      : "bg-blue-light lg:bg-transparent fixed top-0 z-50 transition easy-in-out duration-200 w-full"
+    <nav className={ 
+      "bg-opacity-75 dark:bg-opacity-75 fixed top-0 z-50 backdrop-filter firefox:bg-opacity-95 transition easy-in-out duration-200 w-full "
+      // navbar 
+      // ? "bg-opacity-75 dark:bg-opacity-75 fixed top-0 z-50 backdrop-filter firefox:bg-opacity-95 transition easy-in-out duration-200 w-full "
+      // : "fixed top-0 z-50 transition easy-in-out duration-200 w-full"
       }>
       <div className="flex flex-wrap container px-5 p-2 lg:p-6 mx-auto flex items-center justify-between">
-        <div className="flex items-center flex-shrink-0 text-white lg:w-40">
-          <a href="/#home" title="Home" onClick={() => navbarOpen ? setNavbarOpen(false) : false}>
-            <img src="/images/logo.svg" alt="Begin Wallet Logo" className={ (navbar ? "h-4 md:h-6 float-left" : "pt-1 h-8 md:h-10 float-left") + " transition-all transform duration-300 easy-in-out"} />
+        <div className="flex items-center flex-shrink-0 lg:w-40">
+          <a href="/#home" title="Home" onClick={() => navbarOpen ? setNavbarOpen(false) : false}> 
+            <Logo className={ (navbar ? "h-4 md:h-6 float-left" : "pt-1 h-8 md:h-10 float-left") + " transition-all transform duration-300 easy-in-out"} />
+            {/* <img src="/images/logo.svg" alt="Begin Wallet Logo" className={ (navbar ? "h-4 md:h-6 float-left" : "pt-1 h-8 md:h-10 float-left") + " transition-all transform duration-300 easy-in-out"} /> */}
           </a>
         </div>
         <div className={"flex-grow" + (navbarOpen ? " block" : " hidden")}>
-          <div className="text-right text-white">
+          <div className="text-right">
             <SelectTranslation/>
           </div>
         </div>
         <div className="block lg:hidden">
-          <button className="flex items-center py-2"
+          <button className="flex items-center py-2 "
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
         </div>
         <div className={ "w-full block flex-grow lg:flex items-left lg:items-center lg:w-auto" +
               (navbarOpen ? " flex" : " hidden") }>
-          <div className="lg:flex-grow pl-6 lg:pl-0 lg:text-center text-white">
+          <div className="lg:flex-grow pl-6 lg:pl-0 lg:text-center -mr-[75px]">
             <Menu hover="text-gray-500" onClick={() => navbarOpen ? setNavbarOpen(false) : false} />
           </div>          
         </div>
-        <div className="text-white hidden lg:block lg:w-40">
+        <div className="hidden lg:flex">
           <SelectTranslation/>
         </div>
+        <div className={"block lg:w-auto lg:flex" + (navbarOpen ? " flex" : " hidden")}>
+          <a
+            href="/#download"
+            className="flex w-full md:w-auto items-center gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg transition"
+          >
+            Get Started
+          </a>
+        </div>
+        
         {/* <div>
           <a href="#" role="button" className="flex items-center py-2" onClick={handleClick}>
             <svg className={ isDarkMode ? "hidden" : "fill-current h-8 w-8 rounded-full hover:bg-black hover:text-white p-1"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
