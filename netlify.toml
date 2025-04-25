@@ -6,8 +6,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-  from = "/*"
-  to = "https://begin.is/:splat"
-  status = 301
-  force = true
+#[[redirects]]
+#  from = "/*"
+#  to = "https://begin.is/:splat"
+#  status = 301
+#  force = true
