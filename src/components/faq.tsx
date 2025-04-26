@@ -77,7 +77,7 @@ export default function FAQSection() {
                   />
                 </button>
                 <div
-                  className={`mt-3 text-lg text-gray-600 transition-all duration-300 overflow-hidden ${
+                  className={`mt-3 text-lg text-gray-500 transition-all duration-300 overflow-hidden ${
                     openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >

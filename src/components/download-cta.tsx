@@ -23,21 +23,27 @@ export default function DownloadCTA() {
 
         <div className="flex justify-center flex-wrap gap-4">
           <a
-            href="https://apps.apple.com/app/begin-wallet"
+            target='_blank'
+            rel="noopener noreferrer"
+            href="https://apps.apple.com/app/begin-bitcoin-cardano-wallet/id1642488837"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
           >
             <Apple className="w-5 h-5" />
             Download on iOS
           </a>
           <a
-            href="https://play.google.com/store/apps/details?id=wallet.begin"
+            target='_blank'
+            rel="noopener noreferrer"
+            href="https://play.google.com/store/apps/details?id=is.begin.app"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
           >
             <Android className="w-5 h-5" />
             Download on Android
           </a>
           <a
-            href="https://chrome.google.com/webstore/detail/begin-wallet/..."
+            target='_blank'
+            rel="noopener noreferrer"
+            href="https://chromewebstore.google.com/detail/begin-bitcoin-cardano-wal/nhbicdelgedinnbcidconlnfeionhbml"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
           >
             <Chrome className="w-5 h-5" />

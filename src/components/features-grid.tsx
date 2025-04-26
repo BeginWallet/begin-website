@@ -88,7 +88,7 @@ export default function FeaturesGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-gray-600 text-lg max-w-2xl mx-auto mb-12"
+          className="text-gray-500 text-lg max-w-2xl mx-auto mb-12"
         >
           Begin Wallet puts powerful crypto tools at your fingertips — no
           compromises, just crypto your way.
@@ -107,7 +107,7 @@ export default function FeaturesGrid() {
             >
               <feature.icon className="w-6 h-6 text-cyan mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-500">{feature.description}</p>
             </motion.div>
           ))}
         </div>

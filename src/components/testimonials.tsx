@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
     {
-      name: 'Alex M.',
-      title: 'ADA Staker',
-      quote: 'Begin is the first wallet that actually makes governance simple. I love how I can delegate to a DRep and still explore new dApps all in one place.',
+      name: ' Cardano Whale (@cardano_whale)',
+      title: 'Bitcoin and Cardano user',
+      quote: 'Cardano and Bitcoin are the perfect pairing. Every Cardano component a decentralised Lego block. Wallets as the storefront set bringing it all together',
     },
     {
-      name: 'Sophia R.',
-      title: 'Bitcoin Holder',
-      quote: 'Having both Bitcoin and Cardano under the same seed is genius. The wallet is smooth, fast, and I trust it more than any other.',
+      name: 'Sri Charran (Founder of Nucast.io)',
+      title: 'Cardano and eSIM user',
+      quote: 'Just got an eSIM using Begin Wallet for Japan 🇯🇵 Three simple clicks and purchased with ADA! Begin Wallet is leading real-world use cases definitely the best wallet out there.',
     },
     {
-      name: 'Daniel T.',
+      name: 'Florian Volery (Co-founder of Liqwid.finance)',
       title: 'DeFi User',
-      quote: 'I staked, I lent ADA with Liqwid, and I rated dApps — all within 10 minutes. Begin Wallet is the best UX in crypto right now.',
+      quote: 'Cardano DeFi is entering a new era of integration. Innovative wallets like @BeginWallet now let users supply stablecoins to @liqwidfinance in just one click.',
     },
   ];
   
@@ -53,7 +53,7 @@ const testimonials = [
                 className="bg-gray-50 dark:bg-[#18181b] p-6 rounded-lg shadow-sm"
               >
                 <p className="text-lg italic mb-4">“{t.quote}”</p>
-                <p className="text-sm font-semibold text-gray-200">
+                <p className="text-sm font-semibold text-gray-600">
                   — {t.name}, <span className="text-gray-500">{t.title}</span>
                 </p>
               </motion.div>

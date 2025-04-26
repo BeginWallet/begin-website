@@ -25,6 +25,7 @@ import FeaturesGrid from '../components/features-grid'
 import Testimonials from '../components/testimonials'
 import FAQSection from '../components/faq'
 import DownloadCTA from '../components/download-cta'
+import FeaturesExtra from '../components/features-extra'
 
 const messages = defineMessages({
   pageTitle: {
@@ -141,6 +142,7 @@ const Index = ({ allPosts }: Props) => {
         <Home />
         <FeaturesGrid />
         <Testimonials />
+        <FeaturesExtra />
         <FAQSection />
         <DownloadCTA />
         {/* <Container> */}
