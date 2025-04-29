@@ -27,7 +27,13 @@ export default function BitcoinWalletPage() {
         <meta name="description" content="Secure your Bitcoin with Begin Wallet. Self-custody, open-source, easy to use. Available on iOS, Android, and Chrome Extension." />
         <meta property="og:title" content="Secure Bitcoin Wallet - Begin Wallet" />
         <meta property="og:description" content="Secure your Bitcoin with Begin Wallet. Self-custody, open-source, available on mobile and browser." />
-        <meta property="og:image" content="/og-bitcoin-wallet.png" />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:url" content="https://begin.is/bitcoin-wallet" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Secure Bitcoin Wallet - Begin Wallet" />
+        <meta name="twitter:description" content="Secure your Bitcoin with Begin Wallet. Self-custody, open-source, easy to use. Available on iOS, Android, and Chrome Extension." />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <link rel="canonical" href="https://begin.is/bitcoin-wallet" />
       </Head>
 
       <Navigation />

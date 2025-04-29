@@ -37,6 +37,30 @@ export default function CardanoWalletPage() {
           property="og:description"
           content="Manage your ADA securely with Begin Wallet. Stake, delegate, lend, and explore dApps — all in one self-custodial open-source wallet for Cardano."
         />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:image:alt" content="Begin Wallet" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Cardano Wallet - Secure and Open-Source | Begin Wallet"
+        />
+        <meta
+          name="twitter:description"
+          content="Manage your ADA securely with Begin Wallet. Stake, delegate, lend, and explore dApps — all in one self-custodial open-source wallet for Cardano."
+        />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <meta name="twitter:image:alt" content="Begin Wallet" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:site" content="@beginwallet" />
+        <meta name="twitter:creator" content="@beginwallet" />
+        <meta name="twitter:domain" content="begin.is" />
+        <meta name="twitter:site" content="https://begin.is" />
+        <meta name="twitter:creator" content="@beginwallet" />
         <meta property="og:url" content="https://begin.is/cardano-wallet" />
         <link rel="canonical" href="https://begin.is/cardano-wallet" />
       </Head>

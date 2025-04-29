@@ -82,7 +82,7 @@ export default function BuySwapExchangePage() {
           property="og:description"
           content="Buy ADA and BTC with Apple Pay, swap Cardano tokens, and exchange crypto instantly with Begin Wallet. 130+ payment methods, 145+ countries supported."
         />
-        <meta property="og:image" content="https://begin.is/og-image.png" />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
         <meta property="og:url" content="https://begin.is/buy-swap-exchange" />
         <meta property="og:type" content="website" />
 
@@ -96,7 +96,17 @@ export default function BuySwapExchangePage() {
           name="twitter:description"
           content="Buy ADA and BTC with Apple Pay, swap Cardano tokens, and exchange crypto instantly with Begin Wallet. 130+ payment methods, 145+ countries supported."
         />
-        <meta name="twitter:image" content="https://begin.is/og-image.png" />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <meta name="twitter:image:alt" content="Begin Wallet" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:site" content="@beginwallet" />
+        <meta name="twitter:creator" content="@beginwallet" />
+        <meta name="twitter:domain" content="begin.is" />
+        <meta name="twitter:site" content="https://begin.is" />
+        <meta name="twitter:creator" content="@beginwallet" />
+        <link rel="canonical" href="https://begin.is/buy-swap-exchange" />
 
         {/* FAQ SEO Schema */}
         <script

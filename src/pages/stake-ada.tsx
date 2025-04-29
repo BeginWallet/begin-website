@@ -30,6 +30,27 @@ export default function StakeAda() {
           name="description"
           content="Stake your ADA effortlessly with Begin Wallet. Secure, self-custodial, and rewarding — earn up to 3% APY while supporting Cardano decentralization."
         />
+        <meta
+          property="og:title"
+          content="Stake ADA Easily with Begin Wallet | Begin"
+        />
+        <meta
+          property="og:description"
+          content="Stake your ADA effortlessly with Begin Wallet. Secure, self-custodial, and rewarding — earn up to 3% APY while supporting Cardano decentralization."
+        />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:url" content="https://begin.is/stake-ada" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Stake ADA Easily with Begin Wallet | Begin"
+        />
+        <meta
+          name="twitter:description"
+          content="Stake your ADA effortlessly with Begin Wallet. Secure, self-custodial, and rewarding — earn up to 3% APY while supporting Cardano decentralization."
+        />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <link rel="canonical" href="https://begin.is/stake-ada" />
       </Head>
 
       <Navigation />

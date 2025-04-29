@@ -30,6 +30,27 @@ export default function BestDappExplorer() {
           name="description"
           content="Discover, explore, and rate Cardano dApps seamlessly with Begin Wallet’s decentralized dApp Explorer. Real ratings, secured on-chain."
         />
+        <meta
+          property="og:title"
+          content="Best dApp Explorer for Cardano | Begin Wallet"
+        />
+        <meta
+          property="og:description"
+          content="Discover, explore, and rate Cardano dApps seamlessly with Begin Wallet’s decentralized dApp Explorer. Real ratings, secured on-chain."
+        />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:url" content="https://begin.is/best-dapp-explorer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Best dApp Explorer for Cardano | Begin Wallet"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover, explore, and rate Cardano dApps seamlessly with Begin Wallet’s decentralized dApp Explorer. Real ratings, secured on-chain."
+        />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <link rel="canonical" href="https://begin.is/best-dapp-explorer" />
       </Head>
 
       <Navigation />

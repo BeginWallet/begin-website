@@ -30,6 +30,28 @@ export default function GovernanceVoteDelegation() {
           name="description"
           content="Participate in Cardano governance effortlessly. Delegate your voting power to a DRep with Begin Wallet — secure, transparent, and decentralized."
         />
+        <meta
+          property="og:title"
+          content="Governance Vote Delegation for Cardano | Begin Wallet"
+        />
+        <meta
+          property="og:description"
+          content="Participate in Cardano governance effortlessly. Delegate your voting power to a DRep with Begin Wallet — secure, transparent, and decentralized."
+        />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:url" content="https://begin.is/governance-vote-delegation" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Governance Vote Delegation for Cardano | Begin Wallet"
+        />
+        <meta
+          name="twitter:description"
+          content="Participate in Cardano governance effortlessly. Delegate your voting power to a DRep with Begin Wallet — secure, transparent, and decentralized."
+        />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <link rel="canonical" href="https://begin.is/governance-vote-delegation" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navigation />

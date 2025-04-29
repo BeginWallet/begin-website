@@ -30,6 +30,27 @@ export default function LendEarnAda() {
           name="description"
           content="Boost your crypto portfolio with Begin Wallet. Lend ADA and stablecoins easily through Liqwid Protocol and earn over 20% APY — fully self-custodial."
         />
+        <meta
+          property="og:title"
+          content="Lend and Earn ADA with High Yields | Begin"
+        />
+        <meta
+          property="og:description"
+          content="Boost your crypto portfolio with Begin Wallet. Lend ADA and stablecoins easily through Liqwid Protocol and earn over 20% APY — fully self-custodial."
+        />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
+        <meta property="og:url" content="https://begin.is/lend-earn-ada" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Lend and Earn ADA with High Yields | Begin"
+        />
+        <meta
+          name="twitter:description"
+          content="Boost your crypto portfolio with Begin Wallet. Lend ADA and stablecoins easily through Liqwid Protocol and earn over 20% APY — fully self-custodial."
+        />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+        <link rel="canonical" href="https://begin.is/lend-earn-ada" />
       </Head>
 
       <Navigation />

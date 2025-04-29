@@ -37,7 +37,7 @@ export default function BuySwapPage() {
           property="og:description"
           content="Use Begin Wallet to buy ADA and BTC with Apple Pay, Google Pay, and 130+ payment methods. Swap tokens effortlessly. Get started today."
         />
-        <meta property="og:image" content="https://begin.is/og-image.png" />
+        <meta property="og:image" content="https://begin.is/images/begin_cover.png" />
         <meta property="og:url" content="https://begin.is/buy-swap" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -48,7 +48,7 @@ export default function BuySwapPage() {
           name="twitter:description"
           content="Buy ADA and Bitcoin instantly. Swap Cardano tokens with ease. All inside Begin Wallet."
         />
-        <meta name="twitter:image" content="https://begin.is/og-image.png" />
+        <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
         <link rel="canonical" href="https://begin.is/buy-swap" />
       </Head>
 
