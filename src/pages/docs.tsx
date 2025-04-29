@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HeroPost from '../components/hero-post'
 import MoreStories from '../components/more-stories'
-import { getGuides, getPosts } from '../lib/api'
+import { getDocs, getGuides, getPosts } from '../lib/api'
 import Post from '../types/post'
 import Container from '../components/container'
 import Navigation from '../components/navigation'
@@ -72,7 +72,7 @@ export default function Help({ allPosts }: Props) {
         <Container>
           <section id="features" className="mx-auto">
             <div className='pt-16 lg:pt-32 p-6 lg:p-12'>
-              <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>Blog</h2>
+              <h2 className='lg:w-6/12 lg:text-5xl text-2xl'>Docs</h2>
               {heroPost.title !== undefined && (
                 <HeroPost
                   title={heroPost.title}
@@ -81,10 +81,10 @@ export default function Help({ allPosts }: Props) {
                   author={heroPost.author}
                   slug={heroPost.slug}
                   excerpt={heroPost.excerpt}
-                  baseURL='/blog/'
+                  baseURL='/docs/'
                 />
               )}
-              {morePosts.length > 0 && <MoreStories posts={morePosts} baseURL='/blog/' />}
+              {morePosts.length > 0 && <MoreStories posts={morePosts} baseURL='/docs/' />}
             </div>
           </section>
         </Container>
@@ -94,7 +94,7 @@ export default function Help({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getPosts([
+  const allPosts = getDocs([
     'title',
     'date',
     'slug',

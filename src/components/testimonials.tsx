@@ -2,11 +2,6 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
     {
-      name: ' Cardano Whale (@cardano_whale)',
-      title: 'Bitcoin and Cardano user',
-      quote: 'Cardano and Bitcoin are the perfect pairing. Every Cardano component a decentralised Lego block. Wallets as the storefront set bringing it all together',
-    },
-    {
       name: 'Sri Charran (Founder of Nucast.io)',
       title: 'Cardano and eSIM user',
       quote: 'Just got an eSIM using Begin Wallet for Japan 🇯🇵 Three simple clicks and purchased with ADA! Begin Wallet is leading real-world use cases definitely the best wallet out there.',
@@ -16,6 +11,11 @@ const testimonials = [
       title: 'DeFi User',
       quote: 'Cardano DeFi is entering a new era of integration. Innovative wallets like @BeginWallet now let users supply stablecoins to @liqwidfinance in just one click.',
     },
+    {
+      name: ' Cardano Whale (@cardano_whale)',
+      title: 'Bitcoin and Cardano user',
+      quote: 'Cardano and Bitcoin are the perfect pairing. Every Cardano component a decentralised Lego block. Wallets as the storefront set bringing it all together',
+    }
   ];
   
   const testimonialVariants = {

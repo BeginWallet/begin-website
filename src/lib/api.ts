@@ -5,6 +5,7 @@ import React from 'react'
 
 const postsDirectory = join(process.cwd(), '_posts')
 const guidesDirectory = join(process.cwd(), '_guides')
+const docsDirectory = join(process.cwd(), '_docs')
 
 
 let Posts: any[]  = [];
@@ -158,6 +159,78 @@ export function getGuides(fields: string[] = []) {
   return posts
 }
 
+//DOCS
+export function getDocsSlugs(dir) {
+  let fullPath = ''
+  if (!dir)  fullPath = docsDirectory
+  else fullPath = docsDirectory +'/'+ dir
+  if(fs.statSync(fullPath).isFile()) return Posts.push(dir);
+  fs.readdirSync(fullPath).forEach(file => {
+    const absolute = join(dir, file);
+    console.log(absolute)
+    if (fs.statSync(fullPath).isDirectory()) return getDocsSlugs(absolute);
+    else return Posts.push(absolute);
+  });
+}
+
+export function getDocBySlug(slug: string[], fields: string[] = []) {
+  let realSlug = slug.toString().replace(/,/g, '/').replace(/\.md$/, '')
+  const fullPath = join(docsDirectory, `${realSlug}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+
+  const items: Items = {}
+
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (field === 'slug') {
+      items[field] = realSlug
+    }
+    if (field === 'content') {
+      items[field] = content
+    }
+
+    if (data[field]) {
+      items[field] = data[field]
+    }
+  })
+
+  return items
+}
+
+export function getAllDocs(fields: string[] = []) {
+  Posts = []
+  getDocsSlugs('')
+  const slugs = Posts
+  const posts = slugs
+    .map((slug) => getDocBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+
+  console.log(posts)
+  
+  return posts
+}
+
+export function getDocs(fields: string[] = []) {
+  Posts = []
+  getDocsSlugs('')
+  const slugs = Posts
+  const allPosts = slugs
+    .map((slug) => getDocBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  
+  const posts = {
+    hero: {},
+    stories: {}
+  }
+
+  posts.hero = allPosts.filter((post) => (Boolean(post.hero) === true)).shift() || {}
+  posts.stories = allPosts.filter((post) => (Boolean(post.hero) === false)) || []
+
+  return posts
+}
 
 //Price API
 export async function getADAPrice() {

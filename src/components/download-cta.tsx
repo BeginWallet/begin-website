@@ -26,7 +26,7 @@ export default function DownloadCTA() {
             target='_blank'
             rel="noopener noreferrer"
             href="https://apps.apple.com/app/begin-bitcoin-cardano-wallet/id1642488837"
-            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
           >
             <Apple className="w-5 h-5" />
             Download on iOS
@@ -35,7 +35,7 @@ export default function DownloadCTA() {
             target='_blank'
             rel="noopener noreferrer"
             href="https://play.google.com/store/apps/details?id=is.begin.app"
-            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
           >
             <Android className="w-5 h-5" />
             Download on Android
@@ -44,7 +44,7 @@ export default function DownloadCTA() {
             target='_blank'
             rel="noopener noreferrer"
             href="https://chromewebstore.google.com/detail/begin-bitcoin-cardano-wal/nhbicdelgedinnbcidconlnfeionhbml"
-            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-xl shadow hover:shadow-lg transition"
+            className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-black text-cyan font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
           >
             <Chrome className="w-5 h-5" />
             Add to Chrome

@@ -76,12 +76,12 @@ const Index = ({ allPosts }: Props) => {
           <meta name="twitter:app:id:googleplay" content="is.begin.app" />
           <meta name="twitter:app:url:googleplay" content="beginwallet://browse?dappUrl=https://begin.is" />
           {/* TODO: Change cover page */}
-          <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
+          <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
           />
-          <meta property="og:image" content="/images/cover.jpeg" />
+          <meta property="og:image" content="/images/begin_cover.png" />
           
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
@@ -110,7 +110,7 @@ const Index = ({ allPosts }: Props) => {
             "operatingSystem": "iOS, Android, Chrome",
             "applicationCategory": "FinanceApplication",
             "url": "https://begin.is",
-            "image": "https://begin.is/images/cover.jpeg",
+            "image": "https://begin.is/images/begin_cover.png",
             "inLanguage": ["en", "pt-BR"],
             "offers": {
               "@type": "Offer",
@@ -144,7 +144,6 @@ const Index = ({ allPosts }: Props) => {
         <Testimonials />
         <FeaturesExtra />
         <FAQSection />
-        <DownloadCTA />
         {/* <Container> */}
           {/* <Features /> */}
           {/* <MoreFeatures /> */}

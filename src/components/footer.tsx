@@ -3,6 +3,7 @@ import NavigationFooter from './navigation-footer'
 import { EXAMPLE_PATH } from '../lib/constants'
 import { defineMessages } from 'react-intl'
 import f from "../lib/translate";
+import Link from 'next/link';
 
 const messages = defineMessages({
   footerSocial: {
@@ -44,7 +45,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-xl inline-flex items-center justify-center">
+              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Discord
               </a>
             </div>
@@ -61,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-xl inline-flex items-center justify-center">
+              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Twitter
               </a>
             </div>
@@ -122,6 +123,20 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <section className="px-6 py-6 md:py-16 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-6">Explore More</h2>
+            <div className="flex justify-center space-x-4 flex-col lg:flex-row">
+              <Link href="/bitcoin-wallet" legacyBehavior><a className="hover:underline pt-2">Bitcoin Wallet</a></Link>
+              <Link href="/cardano-wallet" legacyBehavior><a className="hover:underline pt-2">Cardano Wallet</a></Link>
+              <Link href="/stake-ada" legacyBehavior><a className="hover:underline pt-2">Staking & Delegation</a></Link>
+              <Link href="/buy-swap-exchange" legacyBehavior><a className="hover:underline pt-2">Buy, Swap & Exchange</a></Link>
+              <Link href="/lend-earn-ada" legacyBehavior><a className="hover:underline pt-2">Lend & Earn</a></Link>
+              <Link href="/governance-vote-delegation" legacyBehavior><a className="hover:underline pt-2">Governance & Voting</a></Link>
+              <Link href="/best-dapp-explorer" legacyBehavior><a className="hover:underline pt-2">Best DApp Explorer</a></Link>
+            </div>
+          </div>
+        </section>
         <div className="text-center p-6">
           <small>Copyright © 2025 Begin Wallet. All rights reserved. <a href="/terms/privacy" className='ml-4 mr-2 underline font-bold'>Privacy Policy</a> | <a href="/terms/service" className='ml-2 underline font-bold'>Terms of Service</a></small>
         </div>

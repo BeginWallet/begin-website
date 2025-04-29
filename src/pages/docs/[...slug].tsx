@@ -5,7 +5,7 @@ import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { getPostBySlug, getAllPosts, getAllDocs, getDocBySlug } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
@@ -89,7 +89,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
-                baseURL="/blog/"
+                baseURL="/docs/"
               />
               <PostBody content={post.content} />
             </article>
@@ -109,7 +109,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const post = getDocBySlug(params.slug, [
     "title",
     "date",
     "slug",
@@ -132,7 +132,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllDocs(["slug"]);
 
   return {
     paths: posts.map((posts) => {
