@@ -19,6 +19,9 @@ const Layout = ({ preview, disableHeader=false, children }: Props) => {
       </div>
       <DownloadCTA />
       <Footer />
+      {/* <!-- Start of HubSpot Embed Code --> */}
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/146118625.js"></script>
+      {/* <!-- End of HubSpot Embed Code --> */}
     </>
   )
 }

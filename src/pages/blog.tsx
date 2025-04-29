@@ -72,7 +72,7 @@ export default function Help({ allPosts }: Props) {
         <Container>
           <section id="features" className="mx-auto">
             <div className='pt-16 lg:pt-32 p-6 lg:p-12'>
-              <h2 className='lg:w-6/12 lg:text-5xl text-2xl inline-flex'>Begin Blog</h2>
+              <h1 className='lg:text-5xl text-2xl p-6 text-center w-full'>Begin Blog</h1>
               {heroPost.title !== undefined && (
                 <HeroPost
                   title={heroPost.title}

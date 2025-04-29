@@ -38,12 +38,12 @@ const HeroPost = ({
               {title}
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-4 md:mb-0 text-gray-500">
             <DateFormater dateString={date} />
           </div>
         </div>
         <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <p className="text-gray-400 leading-relaxed mb-4">{excerpt}</p>
           {/* <Avatar name={author.name} picture={author.picture} /> */}
         </div>
       </div>
