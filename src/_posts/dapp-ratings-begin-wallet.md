@@ -1,13 +1,13 @@
 ---
 title: 'How dApp Ratings Work in Begin Wallet'
 excerpt: 'Begin Wallet introduces an on-chain rating system for Cardano dApps. Learn how it works, why it matters, and how your feedback helps build a stronger ecosystem.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/dapp_rate.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '//images/begin_cover.png'
+  url: '/assets/blog/dapp_rate.png'
 hero: false
 tags: ['Cardano', 'dApps', 'Ratings', 'Governance', 'Begin Wallet']
 ---

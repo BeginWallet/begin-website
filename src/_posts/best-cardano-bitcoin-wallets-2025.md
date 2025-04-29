@@ -1,14 +1,14 @@
 ---
 title: "The Best Cardano and Bitcoin Wallets in 2025"
 excerpt: "Discover the top Cardano and Bitcoin wallets for 2025. Compare features, security, staking, and more to find the best wallet for your crypto journey."
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/best_wallet.png'
 date: "2025-04-29"
 author:
   name: '"Begin Wallet Team'
   picture: '/images/logo-begin.png'
 tags: ["Cardano", "Bitcoin", "Wallet", "Crypto", "ADA", "Self-Custody"]
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/best_wallet.png'
 hero: true
 ---
 

@@ -54,6 +54,7 @@
     "remark": "^15.0.1",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^16.0.1",
+    "remark-iframes": "^4.1.1",
     "swiper": "^9.1.0",
     "typescript": "^4.3.2"
   },

@@ -1,14 +1,14 @@
 ---
 title: 'Open Source Crypto Wallets: Why It Matters'
 excerpt: 'Transparency and trust are critical in crypto. Learn why open source components — like Begin Wallet’s crypto core — are essential for security, innovation, and decentralization.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/open_source.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
-hero: true
+  url: '/assets/blog/open_source.png'
+hero: false
 tags: ['Open Source', 'Crypto Wallets', 'Security', 'Transparency', 'Cardano', 'Bitcoin']
 ---
 

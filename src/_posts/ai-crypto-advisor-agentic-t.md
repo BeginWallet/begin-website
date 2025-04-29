@@ -1,13 +1,13 @@
 ---
 title: 'Introducing Agent T: Your AI-Powered Crypto Advisor in Begin Wallet'
 excerpt: 'Meet Agent T, the new AI advisor in Begin Wallet that analyzes on-chain, marketing, and Xerberus risk data to help you make smarter crypto decisions — including buy/sell recommendations.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/agent_t.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/agent_t.png'
 hero: false
 tags: ['AI', 'Crypto Advisor', 'Begin Wallet', 'Trading', 'On-Chain Analysis', 'Xerberus', 'Agent T']
 ---

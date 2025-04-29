@@ -1,14 +1,14 @@
 ---
 title: 'Crypto Travel Hacks: Spend ADA on Flights, Hotels & More'
 excerpt: 'Travel the world using Cardano (ADA). Learn how to book flights, hotels, and more using crypto — including tips, platforms, and tools for seamless travel with Begin Wallet.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/crypto_travel.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
-hero: true
+  url: '/assets/blog/crypto_travel.png'
+hero: false
 tags: ['Travel', 'Cardano', 'ADA', 'Payments', 'Crypto Lifestyle']
 ---
 

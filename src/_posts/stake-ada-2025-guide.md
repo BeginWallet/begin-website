@@ -1,14 +1,14 @@
 ---
 title: 'How to Stake ADA in 2025: A Complete Guide'
 excerpt: 'Staking ADA has never been easier. Discover how to earn rewards while securing the Cardano network using Begin Wallet.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/stake_ada.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/begin_cover.png'
 tags: ["Cardano", "staking", "ADA", "passive income", "delegation", "Begin Wallet", "self-custody"]
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/stake_ada.png'
 hero: false
 ---
 

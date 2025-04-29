@@ -1,14 +1,14 @@
 ---
 title: 'How to Lend and Earn ADA with Liqwid in 2025'
 excerpt: 'Discover how to earn passive income with ADA lending using the Liqwid protocol. Learn how to access high-yield DeFi directly from Begin Wallet.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/lend_earn.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/assets/authors/begin.png'
 tags: ["Cardano", "ADA", "DeFi", "Liqwid", "crypto lending", "earn yield", "passive income"]
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/lend_earn.png'
 hero: false
 ---
 <!-- Put images here /assets/blog/lend-earn-ada-2025-cover.png -->

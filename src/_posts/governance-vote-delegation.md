@@ -1,14 +1,14 @@
 ---
 title: 'What Is Governance Vote Delegation in Cardano?'
 excerpt: 'Learn how Cardano’s governance system empowers users to delegate their voting power to DReps and shape the future of the network.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/gov_vote.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/begin_cover.png'
 tags: ["Cardano", "governance", "vote delegation", "DRep", "decentralization", "ADA", "Begin Wallet"]
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/gov_vote.png'
 hero: false
 ---
 <!-- Image here: /assets/blog/governance-vote-delegation-cover.png -->

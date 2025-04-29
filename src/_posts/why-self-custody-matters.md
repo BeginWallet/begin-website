@@ -1,13 +1,13 @@
 ---
 title: 'Why Self-Custody Matters: Your Keys, Your Crypto'
 excerpt: 'Self-custody is the foundation of financial sovereignty in crypto. Learn why controlling your own private keys matters and how Begin Wallet helps you do it securely.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/begin_self.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/begin_self.png'
 hero: false
 tags: ['Crypto', 'Self-Custody', 'Wallets', 'Security', 'Decentralization']
 ---

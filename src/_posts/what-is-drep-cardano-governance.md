@@ -1,13 +1,13 @@
 ---
 title: 'What Is a DRep? Understanding Governance on Cardano'
 excerpt: 'Learn about DReps and how they play a key role in Cardano’s decentralized governance system.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/what_drep.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/what_drep.png'
 hero: false
 tags: ['Cardano', 'Governance', 'DRep', 'Crypto']
 ---

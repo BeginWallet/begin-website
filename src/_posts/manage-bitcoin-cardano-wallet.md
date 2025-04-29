@@ -1,13 +1,13 @@
 ---
 title: 'Bitcoin + Cardano: Managing Both with One Wallet'
 excerpt: 'Discover how to manage both Bitcoin and Cardano wallets under a single seed phrase with Begin Wallet.'
-coverImage: '/images/begin_cover.png'
+coverImage: '/assets/blog/cardano_bitcoin.png'
 date: '2025-04-29'
 author:
   name: 'Begin Wallet Team'
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
-  url: '/images/begin_cover.png'
+  url: '/assets/blog/cardano_bitcoin.png'
 hero: false
 tags: ['Bitcoin', 'Cardano', 'Wallet', 'Crypto']
 ---
