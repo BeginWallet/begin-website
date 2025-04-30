@@ -238,7 +238,10 @@ ol, ul {
     align-items: center;
 }
 
-
+ol {
+    list-style: decimal;
+    padding-left: 2rem;
+}
 
 
 /* main {

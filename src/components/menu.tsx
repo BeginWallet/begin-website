@@ -32,9 +32,9 @@ const messages = defineMessages({
     id: 'menu.blog',
     defaultMessage: 'Blog'
   },
-  academy: {
-    id: 'menu.academy',
-    defaultMessage: 'Academy'
+  learn: {
+    id: 'menu.learn',
+    defaultMessage: 'Learn'
   }
 })
 
@@ -55,14 +55,14 @@ const Menu = ( {hover, onClick}: Props ) => {
     <a href="/guides" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.guides)}
     </a>
+    <a href="/docs" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+      {f(messages.learn)}
+    </a>
     <a href="/blog" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.blog)}
     </a>
     <a href="https://discord.gg/QQVPuYBZHg" target="_blank" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.support)}
-    </a>
-    <a href="/#academy" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
-      {f(messages.academy)}
     </a>
     {/* <a href="/#download" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.download)}

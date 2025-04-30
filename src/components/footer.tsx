@@ -126,7 +126,7 @@ const Footer = () => {
         <section className="px-6 py-6 md:py-16 relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-6">Explore More</h2>
-            <div className="flex justify-center space-x-4 flex-col lg:flex-row">
+            <div className="flex justify-center lg:space-x-4 flex-col lg:flex-row">
               <Link href="/bitcoin-wallet" legacyBehavior><a className="hover:underline pt-2">Bitcoin Wallet</a></Link>
               <Link href="/cardano-wallet" legacyBehavior><a className="hover:underline pt-2">Cardano Wallet</a></Link>
               <Link href="/stake-ada" legacyBehavior><a className="hover:underline pt-2">Staking & Delegation</a></Link>

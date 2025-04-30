@@ -12,6 +12,8 @@ type PostType = {
   }
   content: string
   hero: boolean
+  group: string
+  index: number
 }
 
 export default PostType

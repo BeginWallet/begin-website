@@ -223,7 +223,8 @@ export function getDocs(fields: string[] = []) {
   
   const posts = {
     hero: {},
-    stories: {}
+    stories: {},
+    menu: {}
   }
 
   posts.hero = allPosts.filter((post) => (Boolean(post.hero) === true)).shift() || {}

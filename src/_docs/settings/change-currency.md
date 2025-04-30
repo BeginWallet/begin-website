@@ -1,5 +1,5 @@
 ---
-title: 'Begin 101'
+title: 'Change Currency'
 excerpt: 'The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.'
 coverImage: '/images/begin_cover.png'
 date: '2021-08-08T10:40:00.000Z'
@@ -8,7 +8,8 @@ author:
   picture: '/images/logo-64x64.png'
 ogImage:
   url: '/images/begin_cover.png'
-hero: true
+hero: false
+group: 'Your Begin (Global Settings)'
 ---
 
 The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.
