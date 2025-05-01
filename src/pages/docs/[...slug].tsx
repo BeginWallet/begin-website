@@ -75,7 +75,7 @@ const DocPost = ({ post, morePosts, preview, allPosts }: Props) => {
           <div className="pt-16 lg:pt-32 p-6 lg:p-12">
             <div className="flex flex-col md:flex-row">
               {/* Mobile Header */}
-              <header className="flex items-center justify-between p-4 md:hidden">
+              <header className="flex items-center justify-between p-2 md:hidden">
               <div className="text-xl font-semibold">Learn Content</div>
                 <button
                   onClick={() => setIsOpen(true)}
@@ -148,7 +148,7 @@ const DocPost = ({ post, morePosts, preview, allPosts }: Props) => {
               </aside>
 
               {/* Main Content */}
-              <main className="flex-1 p-6">
+              <main className="flex-1 p-2 md:p-6">
                 {router.isFallback ? (
                   <PostTitle>Loading…</PostTitle>
                 ) : (
