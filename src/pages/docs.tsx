@@ -91,10 +91,10 @@ export default function Docs({ allPosts }: Props) {
         <Container>
           <section id="features" className="mx-auto">
             <div className="pt-16 lg:pt-32 p-6 lg:p-12">
-              <div className="flex">
+              <div className="flex flex-col md:flex-row">
                 {/* Mobile Header */}
-                <header className="flex items-center justify-between p-4 shadow-md md:hidden">
-                  <div className="text-xl font-semibold">My App</div>
+                <header className="flex items-center justify-between p-4 md:hidden">
+                  <div className="text-xl font-semibold">Learn Content</div>
                   <button
                     onClick={() => setIsOpen(true)}
                     className="p-2 rounded focus:outline-none focus:ring"
@@ -114,7 +114,7 @@ export default function Docs({ allPosts }: Props) {
 
                 <aside
                   className={clsx(
-                    "fixed inset-y-0 left-0 w-72 z-40 bg-black shadow-md transform transition-transform duration-300 md:static md:translate-x-0",
+                    "fixed inset-y-0 left-0 w-72 z-40 bg-white dark:bg-[#141414] transform transition-transform duration-300 md:static md:translate-x-0",
                     {
                       "-translate-x-full": !isOpen,
                       "translate-x-0": isOpen,
@@ -122,8 +122,8 @@ export default function Docs({ allPosts }: Props) {
                   )}
                 >
                   {/* Mobile Drawer Header */}
-                  <div className="flex justify-between items-center p-4 border-b md:hidden">
-                    <div className="text-xl font-semibold">Menu</div>
+                  <div className="pt-16 lg:pt-32 p-6 lg:p-12 flex justify-between items-center p-4 border-b md:hidden">
+                    <div className="text-xl font-semibold">Learn Content</div>
                     <button
                       onClick={() => setIsOpen(false)}
                       className="p-2 focus:outline-none"
@@ -168,7 +168,7 @@ export default function Docs({ allPosts }: Props) {
                 {/* Main Content */}
                 <main className="flex-1 p-6">
                   <h1 className="lg:text-3xl text-2xl">
-                    Learn about Begin: Help & Support
+                    Learn, Help & Support
                   </h1>
                   {heroPost.title !== undefined && (
                     <HeroPost
