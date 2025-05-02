@@ -1,19 +1,51 @@
 ---
 title: 'App Notifications'
-excerpt: 'The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.'
+excerpt: 'Enable or disable push notifications for transactions, dApp activity, and governance events — with more controls coming soon.'
 coverImage: '/images/begin_cover.png'
-date: '2021-08-08T10:40:00.000Z'
+date: '2025-05-01'
 author:
-  name: B58 Team
-  picture: '/images/logo-64x64.png'
+  name: Begin Wallet Team
+  picture: '/images/logo_begin.png'
 ogImage:
   url: '/images/begin_cover.png'
 hero: false
 group: 'Your Begin (Global Settings)'
+index: 3
 ---
 
-The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.
+# Manage App Notifications
 
-Get access to global payments where transactions are borderless and low fees using it with friends and family or your business.
+Stay in the loop or keep things quiet — the choice is yours. Begin lets you control whether or not you receive real-time push notifications.
 
-Build up your wealth by earning rewards on your savings. At the same time, you're free to use your balance whenever you need.
+Jamie shows you how to toggle it on in a flash.
+
+---
+
+## 🔔 Step-by-step: Enable notifications
+
+1. **Select “Notifications”**  
+   Inside the Settings menu, tap the **Notifications** option.
+
+2. **Tap the switch to enable**  
+   This will activate push notifications for the entire app.
+
+---
+
+## ✅ Jamie’s Notes
+
+- Right now, this setting controls **all notifications** at once.
+- You’ll get alerts for important events like:
+  - Incoming/outgoing transactions
+  - Price Alerts
+  - dApp activity
+  - Governance participation and updates
+
+> 🧩 **Coming soon**: We’re working on adding more granular controls, so you’ll be able to fine-tune which alerts you receive (or don’t).
+
+---
+
+## What’s next?
+
+- 👉 [Set up biometrics for extra security](#)  
+- 👉 [Customize your Begin ID and profile](#)  
+- 👉 [Explore your transaction activity](#)

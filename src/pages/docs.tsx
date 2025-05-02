@@ -194,6 +194,23 @@ export default function Docs({ allPosts }: Props) {
   );
 }
 
+
+export const groupIndexMap = {
+  bitcoin: 0,
+  cardano: 1,
+  start: 2,
+  settings: 3,
+  wallet: 4,
+  payment: 5,
+  onramp: 6,
+  assets: 7,
+  explore: 8,
+  invest: 9,
+  travel: 10,
+  general: 11,
+  advanced: 12
+}
+
 export const getStaticProps = async () => {
   const allPosts = getDocs([
     "title",
@@ -207,27 +224,36 @@ export const getStaticProps = async () => {
     "index"
   ]);
 
+// * General
+//   - Activity
+//   - Miscellaneous
   
   const menuMap = {};
   
   [allPosts.hero, ...(allPosts.stories as any[])].forEach((post:Post) => {
     const groupKey = post?.slug?.split('/')[0] || 'general'
+    const groupIndex = groupIndexMap[groupKey]
     const groupLabel = post?.group || 'General information'
+    console.log({groupKey})
+    console.log({post})
 
-    if (!menuMap[groupKey]) {
-      menuMap[groupKey] = {
-        group: groupLabel,
-        key: groupKey,
-        children: [],
+    if(post?.slug) {
+      if (!menuMap[groupKey]) {
+        menuMap[groupKey] = {
+          group: groupLabel,
+          key: groupKey,
+          index: groupIndex,
+          children: [],
+        }
       }
-    }
 
-    menuMap[groupKey].children.push(post)
+      menuMap[groupKey].children.push(post)
+    }
   });
 
 
   const menu = Object.values(menuMap);
-  allPosts.menu = menu;
+  allPosts.menu = menu.sort((a: any, b: any) => a.index - b.index);
 
   return {
     props: { allPosts },

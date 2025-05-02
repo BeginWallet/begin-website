@@ -258,7 +258,7 @@ export default function BuySwapExchangePage() {
               href="https://docs.transak.com/docs/fiat-currency-country-payment-method-coverage-plus-fees-and-limits"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 text-cyan hover:underline"
+              className="inline-block mt-4 text-cyan-light dark:text-cyan-dark hover:underline"
             >
               See supported countries →
             </a>
@@ -307,31 +307,31 @@ export default function BuySwapExchangePage() {
           <h2 className="text-3xl font-bold mb-8">Why Choose Begin Wallet?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto text-left">
             <div className="flex items-center space-x-4">
-              <ShieldCheck className="text-cyan w-8 h-8" />
+              <ShieldCheck className="text-cyan-light dark:text-cyan-dark w-8 h-8" />
               <span className="text-lg text-gray-500">
                 Secure & Non-Custodial: You control your private keys.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Globe className="text-cyan w-8 h-8" />
+              <Globe className="text-cyan-light dark:text-cyan-dark w-8 h-8" />
               <span className="text-lg text-gray-500">
                 Global Access: 130+ payment methods, 145+ countries supported.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Zap className="text-cyan w-8 h-8" />
+              <Zap className="text-cyan-light dark:text-cyan-dark w-8 h-8" />
               <span className="text-lg text-gray-500">
                 Fast Transactions: Instant buy, sell, and swap.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Layers className="text-cyan w-8 h-8" />
+              <Layers className="text-cyan-light dark:text-cyan-dark w-8 h-8" />
               <span className="text-lg text-gray-500">
                 All-in-One: Cardano and Bitcoin under one roof.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Target className="text-cyan w-8 h-8" />
+              <Target className="text-cyan-light dark:text-cyan-dark w-8 h-8" />
               <span className="text-lg text-gray-500">
                 Designed for Everyone: Beginner-friendly, expert-powerful.
               </span>

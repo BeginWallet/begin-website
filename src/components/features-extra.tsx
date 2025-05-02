@@ -30,7 +30,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <Wallet className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <Wallet className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Manage Your Crypto Seamlessly
           </h3>
@@ -55,7 +55,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <TrendingUp className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <TrendingUp className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Invest Smartly with Begin
           </h3>
@@ -77,7 +77,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <Globe className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <Globe className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Travel Effortlessly with Crypto
           </h3>
@@ -99,7 +99,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <Music className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <Music className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Entertainment at Your Fingertips
           </h3>
@@ -121,7 +121,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <ShieldCheck className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <ShieldCheck className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Security and Trust at the Core
           </h3>
@@ -143,7 +143,7 @@ export default function FeaturesExtra() {
           viewport={{ once: true }}
           className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
         >
-          <Rocket className="h-12 w-12 text-primary mb-6 text-cyan" />
+          <Rocket className="h-12 w-12 text-primary mb-6 text-cyan-light dark:text-cyan-dark" />
           <h3 className="text-2xl font-semibold mb-4">
             Become Part of the Future of Crypto
           </h3>

@@ -120,7 +120,7 @@ const Navigation = () => {
         <div className={"block lg:w-auto lg:flex" + (navbarOpen ? " flex" : " hidden")}>
           <a
             href="/#download"
-            className="flex w-full md:w-auto items-center gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
+            className="flex w-full md:w-auto items-center gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
           >
             Get Started
           </a>

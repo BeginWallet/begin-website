@@ -45,7 +45,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
+              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-cyan-light dark:bg-cyan-dark text-white dark:text-black hover:shadow-lg hover:bg-[#18181b] hover:text-cyan-light dark:hover:text-cyan-dark text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Discord
               </a>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-cyan text-[#18181b] hover:shadow-lg hover:bg-[#18181b] hover:text-cyan text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
+              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-cyan-light dark:bg-cyan-dark text-white dark:text-black hover:shadow-lg hover:bg-[#18181b] hover:text-cyan-light dark:hover:text-cyan-dark text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Twitter
               </a>
             </div>

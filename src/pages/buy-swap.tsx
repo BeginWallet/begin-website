@@ -119,7 +119,7 @@ export default function BuySwapPage() {
           <div className="relative flex justify-center flex-wrap gap-4">
             <a
               href="/buy-swap-exchange"
-              className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
+              className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan-light text-whit dark:text-black dark:bg-cyan-dark font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
             >
               Learn More
             </a>

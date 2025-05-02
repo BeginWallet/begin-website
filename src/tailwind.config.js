@@ -22,7 +22,10 @@ module.exports = {
         "accent-2-dark": "#333333",
         "accent-7": "#333",
         success: "#0070f3",
-        cyan: "#00E5FF",
+        cyan: {
+          light: '#0ABAB5',
+          dark: '#00E5FF',
+        },
         black: "#141414",
         blue: {
           light: "#3414FC",

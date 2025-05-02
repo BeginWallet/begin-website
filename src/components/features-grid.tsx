@@ -105,7 +105,7 @@ export default function FeaturesGrid() {
               variants={featureItemVariants}
               className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
             >
-              <feature.icon className="w-6 h-6 text-cyan mb-4" />
+              <feature.icon className="w-6 h-6 text-cyan-light dark:text-cyan-dark mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-500">{feature.description}</p>
             </motion.div>

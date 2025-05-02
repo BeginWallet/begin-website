@@ -27,6 +27,7 @@ import clsx from "clsx";
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 import DateFormater from "../../components/date-formater";
 import DocPostBody from "../../components/doc-post-body";
+import { groupIndexMap } from "../docs";
 
 type Props = {
   post: PostType;
@@ -261,22 +262,26 @@ export async function getStaticProps({ params }: Params) {
   [allPosts.hero, ...(allPosts.stories as any[])].forEach((post:Post) => {
     console.log({post})
     const groupKey = post?.slug?.split('/')[0] || 'general'
+    const groupIndex = groupIndexMap[groupKey]
     const groupLabel = post?.group || 'General information'
 
-    if (!menuMap[groupKey]) {
-      menuMap[groupKey] = {
-        group: groupLabel,
-        key: groupKey,
-        children: [],
+    if(post?.slug) {
+      if (!menuMap[groupKey]) {
+        menuMap[groupKey] = {
+          group: groupLabel,
+          key: groupKey,
+          index: groupIndex,
+          children: [],
+        }
       }
+    
+      menuMap[groupKey].children.push(post)
     }
-
-    menuMap[groupKey].children.push(post)
   });
 
 
   const menu = Object.values(menuMap);
-  allPosts.menu = menu;
+  allPosts.menu = menu.sort((a: any, b: any) => a.index - b.index);
 
   return {
     props: {

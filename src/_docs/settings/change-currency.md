@@ -1,19 +1,49 @@
 ---
 title: 'Change Currency'
-excerpt: 'The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.'
+excerpt: 'Choose your preferred fiat currency to view your portfolio and token values the way you’re used to.'
 coverImage: '/images/begin_cover.png'
-date: '2021-08-08T10:40:00.000Z'
+date: '2025-05-01'
 author:
-  name: B58 Team
-  picture: '/images/logo-64x64.png'
+  name: Begin Wallet Team
+  picture: '/images/logo_begin.png'
 ogImage:
   url: '/images/begin_cover.png'
 hero: false
 group: 'Your Begin (Global Settings)'
+index: 5
 ---
 
-The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.
+# Change Your Display Currency
 
-Get access to global payments where transactions are borderless and low fees using it with friends and family or your business.
+Want to view your crypto balances in USD, EUR, JPY, or something else? Begin makes it easy to switch the default fiat currency used across your wallet.
 
-Build up your wealth by earning rewards on your savings. At the same time, you're free to use your balance whenever you need.
+Jamie shows you how to make the switch in seconds.
+
+---
+
+## 💱 Step-by-step: Change your currency
+
+1. **Select “Language & Currency”**  
+   Open the Settings menu and tap on **Language & Currency**.
+
+2. **Tap on the currency dropdown**  
+   This will show a list of available fiat currencies.
+
+3. **Select your preferred currency**  
+   Once selected, all balances, token values, and yield displays will update instantly.
+
+---
+
+## ✅ Jamie’s Notes
+
+- This setting only affects how prices are displayed — it doesn’t convert or swap your crypto.
+- Your selected currency will be remembered across sessions and devices (if logged into your Begin ID).
+- Exchange rates are updated in real-time from trusted price oracles.
+
+---
+
+## What’s next?
+
+- 👉 [Change your wallet language](#)  
+- 👉 [Explore portfolio performance](#)  
+- 👉 [Learn how token values are calculated](#)
