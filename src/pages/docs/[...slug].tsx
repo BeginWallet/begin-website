@@ -97,7 +97,7 @@ const DocPost = ({ post, morePosts, preview, allPosts }: Props) => {
 
               <aside
                 className={clsx(
-                  "fixed inset-y-0 left-0 w-72 z-40 bg-white dark:bg-[#141414] shadow-md transform transition-transform duration-300 md:static md:translate-x-0",
+                  "fixed inset-y-0 left-0 w-72 z-40 bg-white dark:bg-[#141414] transform transition-transform duration-300 md:static md:translate-x-0",
                   {
                     "-translate-x-full": !isOpen,
                     "translate-x-0": isOpen,
@@ -121,7 +121,7 @@ const DocPost = ({ post, morePosts, preview, allPosts }: Props) => {
                       <div key={section.key}>
                         <button
                           onClick={() => toggleGroup(section.key)}
-                          className="flex items-center justify-between w-full px-2 py-2 text-left font-medium text-gray-600 hover:bg-gray-100  dark:hover:bg-[#18181b] rounded"
+                          className="flex items-center justify-between w-full px-2 py-2 text-left font-medium text-gray-500 hover:bg-gray-100  dark:hover:bg-[#18181b] rounded"
                         >
                           <span>{section.group}</span>
                           {expanded === section.key ? (

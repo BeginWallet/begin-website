@@ -138,7 +138,7 @@ export default function Docs({ allPosts }: Props) {
                         <div key={section.key}>
                           <button
                             onClick={() => toggleGroup(section.key)}
-                            className="flex items-center justify-between w-full px-2 py-2 text-left font-medium text-gray-600 hover:bg-gray-100  dark:hover:bg-[#18181b] rounded"
+                            className="flex items-center justify-between w-full px-2 py-2 text-left font-medium text-gray-500 hover:bg-gray-100  dark:hover:bg-[#18181b] rounded"
                           >
                             <span>{section.group}</span>
                             {expanded === section.key ? (
@@ -200,15 +200,16 @@ export const groupIndexMap = {
   cardano: 1,
   start: 2,
   settings: 3,
-  wallet: 4,
-  payment: 5,
-  onramp: 6,
-  assets: 7,
-  explore: 8,
-  invest: 9,
-  travel: 10,
-  general: 11,
-  advanced: 12
+  begin_id: 4,
+  wallet: 5,
+  payment: 6,
+  exchange: 7,
+  assets: 8,
+  explore: 9,
+  invest: 10,
+  travel: 11,
+  general: 12,
+  advanced: 13
 }
 
 export const getStaticProps = async () => {

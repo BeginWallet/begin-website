@@ -14,6 +14,7 @@ List of groups
 - Your Begin (Global Settings)
 - Wallet Settings
 - Send, Receive & Swap
+- Using Begin ID
 - Buy & Sell
 - Activity
 - Tokens & Collectibles
