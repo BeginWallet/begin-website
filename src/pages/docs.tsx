@@ -13,6 +13,7 @@ import f from "../lib/translate";
 import { Children, useState } from "react";
 import clsx from "clsx";
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import DocsMoreStories from "../components/docs-more-stories";
 
 type Props = {
   allPosts: {
@@ -182,7 +183,7 @@ export default function Docs({ allPosts }: Props) {
                     />
                   )}
                   {morePosts.length > 0 && (
-                    <MoreStories posts={morePosts} baseURL="/docs/" />
+                    <DocsMoreStories posts={morePosts} baseURL="/docs/" />
                   )}
                 </main>
               </div>
@@ -209,7 +210,9 @@ export const groupIndexMap = {
   invest: 10,
   travel: 11,
   general: 12,
-  advanced: 13
+  activity: 13,
+  miscellaneous: 14,
+  advanced: 15
 }
 
 export const getStaticProps = async () => {

@@ -10,6 +10,7 @@ ogImage:
   url: '/images/begin_cover.png'
 hero: false
 group: 'Cardano 101'
+index: 2
 ---
 
 # Types of Wallets on Cardano
