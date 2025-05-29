@@ -52,12 +52,16 @@
     "react-lottie": "^1.2.3",
     "react-mailchimp-subscribe": "^2.1.3",
     "react-qrcode-logo": "^2.9.0",
+    "rehype-raw": "^7.0.0",
     "remark": "^15.0.1",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^16.0.1",
     "remark-iframes": "^4.1.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "swiper": "^9.1.0",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@formatjs/cli": "^4.2.27",

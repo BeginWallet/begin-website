@@ -11,7 +11,7 @@ ogImage:
 hero: true
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/bdGzwVi2Cic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/bdGzwVi2Cic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px"></iframe>
 
 Welcome to Begin Wallet your new favorite Cardano Wallet.
 
