@@ -92,7 +92,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 baseURL="/blog/"
               />
               {/* <div id="resemble-audio-player" data-widget-uuid="a1fb0f94-4382-4a40-8ffd-3399599f076e" data-primary-color="#00ffee"></div> */}
-              <div id="resemble-audio-player" data-widget-uuid="16cccf73-ea49-4c90-ba06-538b10bface7" data-primary-color="#3fcfa4"></div>
+              <div id="resemble-audio-player" data-widget-uuid="a1672d12-95b6-4ed7-835e-9ef24ed75e54" data-primary-color="#3fcfa4"></div>
               <PostBody content={post.content} />
             </article>
           </>
