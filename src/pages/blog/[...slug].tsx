@@ -91,14 +91,11 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 author={post.author}
                 baseURL="/blog/"
               />
-              {/* <div id="resemble-audio-player" data-widget-uuid="a1fb0f94-4382-4a40-8ffd-3399599f076e" data-primary-color="#00ffee"></div> */}
-              <div id="resemble-audio-player" data-widget-uuid="a1672d12-95b6-4ed7-835e-9ef24ed75e54" data-primary-color="#3fcfa4"></div>
               <PostBody content={post.content} />
             </article>
           </>
         )}
       </Container>
-      <script src="https://storage.googleapis.com/run-sources-prj-resembletron-prod-c164-us-east4/services/resemble-widgets/reader-widget.minified.js"></script>
     </Layout>
   );
 };
