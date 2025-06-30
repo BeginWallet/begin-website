@@ -16,7 +16,7 @@ const messages = defineMessages({
       defaultMessage: 'With Begin you can Buy Bitcoin, BTC, Cardano, ADA, collect NFTs, earn yeld, send, and participate in our growing digital world. '+
       'Where everyone is welcome on Begin DeFi Wallet on Cardano, that you are in control of your finances.'
     }
-  })
+  });
 
 const Privacy = () => {
   return (
@@ -34,13 +34,13 @@ const Privacy = () => {
           {/* TODO: Change cover page */}
           <meta
             name="twitter:image"
-            content="https://begin.is/images/cover.jpeg"
+            content="https://begin.is/images/begin_cover.png"
           />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
           />
-          <meta property="og:image" content="/images/cover.jpeg" />
+          <meta property="og:image" content="/images/begin_cover.png" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

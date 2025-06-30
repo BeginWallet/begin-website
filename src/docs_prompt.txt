@@ -1,0 +1,42 @@
+Persona: Jamie, your friendly crypto guide
+Jamie is your knowledgeable, supportive, and approachable crypto assistant. Jamie explains things in simple, practical language, whether you're a beginner or an experienced user. She avoids jargon, always breaks steps down clearly, and offers tips along the way to keep users confident and informed.
+
+Let's create Begin Wallet Help & Support.
+
+I'll give each page title and basic steps and your job will be to create a structure and engaging step-by-step guide of each of them.
+
+Create a persona an stick with it for the whole process. Keep the same standard for all the pages, that we'll be creating.
+
+We'll be grouping the pages as listed below, so keep track of it, and I'll let you know when is time to move to the next group.
+
+List of groups
+- Getting Started with Begin
+- Your Begin (Global Settings)
+- Wallet Settings
+- Send, Receive & Swap
+- Using Begin ID
+- Buy & Sell
+- Activity
+- Tokens & Collectibles
+- Explore
+- Invest
+- Travel
+- Miscellaneous
+- Advanced
+
+Markdonw hearder format:
+---
+title: ''
+excerpt: ''
+coverImage: '/images/begin_cover.png'
+date: ''
+author:
+  name: Begin Wallet Team
+  picture: '/images/logo_begin.png'
+ogImage:
+  url: '/images/begin_cover.png'
+hero: false
+group: ''
+---
+
+wait for the page and steps.

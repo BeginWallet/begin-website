@@ -10,7 +10,7 @@ const Translate = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const container = useRef<HTMLDivElement>(null);
-  const [cookies, setCookie] = useCookies(['b58.finance']);
+  const [cookies, setCookie] = useCookies(['NEXT_LOCALE']);
 
 
   // Allow for outside click

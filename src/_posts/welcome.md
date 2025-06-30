@@ -1,13 +1,13 @@
 ---
 title: 'Welcome to B58 Finance your Cardano Wallet'
 excerpt: 'The easiest way of being part of a decentralized financial world. Where everyone is welcome on B58 DeFi Wallet on Cardano, that you are in control of your finances.'
-coverImage: '/images/cover.jpeg'
+coverImage: '/images/begin_cover.png'
 date: '2021-08-08T10:40:00.000Z'
 author:
   name: B58 Team
   picture: '/images/logo-64x64.png'
 ogImage:
-  url: '/images/cover.jpeg'
+  url: '/images/begin_cover.png'
 hero: true
 ---
 
