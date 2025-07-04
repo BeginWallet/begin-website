@@ -26,6 +26,8 @@ import Testimonials from '../components/testimonials'
 import FAQSection from '../components/faq'
 import DownloadCTA from '../components/download-cta'
 import FeaturesExtra from '../components/features-extra'
+import { Ban } from 'lucide-react'
+import BankVsWalletSection from '../components/bank-wallet'
 
 const messages = defineMessages({
   pageTitle: {
@@ -143,6 +145,7 @@ const Index = ({ allPosts }: Props) => {
         <FeaturesGrid />
         <Testimonials />
         <FeaturesExtra />
+        <BankVsWalletSection />
         <FAQSection />
         {/* <Container> */}
           {/* <Features /> */}
