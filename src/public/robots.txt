@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://begin.is
+
+# Sitemaps
+Sitemap: https://begin.is/sitemap.xml

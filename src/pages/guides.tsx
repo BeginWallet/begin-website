@@ -44,12 +44,12 @@ export default function Help({ allPosts }: Props) {
           <meta name="twitter:title" content={f(messages.pageTitle)} />
           <meta name="twitter:description" content={`${f(messages.pageDescription)}`} />
           {/* TODO: Change cover page */}
-          <meta name="twitter:image" content="https://begin.is/images/cover.jpeg" />
+          <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
           <meta
             name="og:description"
             content={`${f(messages.pageDescription)}`}
           />
-          <meta property="og:image" content="/images/cover.jpeg" />
+          <meta property="og:image" content="/images/begin_cover.png" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

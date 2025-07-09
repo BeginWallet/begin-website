@@ -1,7 +1,13 @@
 const plugin = require("tailwindcss/plugin");
+const colors = require('tailwindcss/colors');
+
+// global.structuredClone = val => {
+//   return JSON.parse(JSON.stringify(val))
+// }
 
 module.exports = {
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  // darkMode: ['selector', '[data-mode="dark"]'],
   theme: {
     extend: {
       screens: {
@@ -9,24 +15,30 @@ module.exports = {
         dark: { raw: "(prefers-color-scheme: dark)" },
       },
       colors: {
+        ...colors,
         "accent-1": "#FAFAFA",
         "accent-2": "#F5F5F5",
         "accent-1-dark": "#000000",
         "accent-2-dark": "#333333",
         "accent-7": "#333",
         success: "#0070f3",
-        cyan: "#79FFE1",
+        cyan: {
+          light: '#0ABAB5',
+          dark: '#00E5FF',
+        },
+        black: "#141414",
         blue: {
           light: "#3414FC",
           medium: "#3414FC",
           dark: "#14192C",
-          over: "#252527",
+          over: "#18181b",
           ultra: "#00101E",
           twitter: "#1CA1F1",
           discord: "#5865F2",
         },
       },
       spacing: {
+        0: "0",
         28: "7rem",
         34: "8.35rem", //'8.125rem',
         "317px": "317px",
@@ -60,6 +72,17 @@ module.exports = {
         "9xl": "4.5rem",
         "10xl": "6.25rem",
       },
+      fontWeight: {
+        thin: 100,
+        extralight: 200,
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+        black: 900,
+      },
       boxShadow: {
         small: "0 5px 10px rgba(0, 0, 0, 0.25)",
         medium: "4px 4px 10px rgba(0, 0, 0, 0.40)",
@@ -76,6 +99,13 @@ module.exports = {
         green: theme("colors.green.500"),
         blue: theme("colors.blue.500"),
       }),
+      textUnderlineOffset: {
+        6: '6px',
+        8: '8px',
+      },
+      textDecorationThickness: {
+        4: '4px',
+      }
     },
   },
   variants: {
@@ -87,20 +117,20 @@ module.exports = {
       addBase({
         body: {
           color: config("theme.colors.black"),
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "#FFFFFF",
         },
         "body.dark-theme": {
           color: config("theme.colors.white"),
-          backgroundColor: "#000000",
+          backgroundColor: "#141414",
         },
         "@screen dark": {
           body: {
             color: config("theme.colors.white"),
-            backgroundColor: "#000000",
+            backgroundColor: "#141414",
           },
           "body.light-theme": {
             color: config("theme.colors.black"),
-            backgroundColor: "#F5F5F5",
+            backgroundColor: "#FFFFFF",
           },
         },
       });

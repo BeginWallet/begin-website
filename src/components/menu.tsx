@@ -27,6 +27,14 @@ const messages = defineMessages({
   guides: {
     id: 'menu.guides',
     defaultMessage: 'User Guides'
+  },
+  blog: {
+    id: 'menu.blog',
+    defaultMessage: 'Blog'
+  },
+  learn: {
+    id: 'menu.learn',
+    defaultMessage: 'Learn'
   }
 })
 
@@ -47,12 +55,18 @@ const Menu = ( {hover, onClick}: Props ) => {
     <a href="/guides" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.guides)}
     </a>
+    <a href="/docs" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+      {f(messages.learn)}
+    </a>
+    <a href="/blog" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+      {f(messages.blog)}
+    </a>
     <a href="https://discord.gg/QQVPuYBZHg" target="_blank" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.support)}
     </a>
-    <a href="/#download" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
+    {/* <a href="/#download" className={"block mt-4 lg:inline-block lg:mt-0 mr-4 hover:"+hover}>
       {f(messages.download)}
-    </a>
+    </a> */}
     {/* <a href="/assets/docs/whitepaper_v1_062021.pdf" target="_blank" onClick={onClick} className={"block mt-4 lg:inline-block lg:mt-0 dark:text-white mr-4 hover:"+hover}>
       {f(messages.whitepaper)}
     </a> */}

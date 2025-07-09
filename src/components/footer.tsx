@@ -3,6 +3,7 @@ import NavigationFooter from './navigation-footer'
 import { EXAMPLE_PATH } from '../lib/constants'
 import { defineMessages } from 'react-intl'
 import f from "../lib/translate";
+import Link from 'next/link';
 
 const messages = defineMessages({
   footerSocial: {
@@ -32,10 +33,10 @@ const Footer = () => {
     // className="bg-blue-over text-white border-t border-accent-2 dark:border-accent-2-dark"
     <footer>
       <Container>
-        <div className="p-2 pt-0 lg:p-6 lg:pt-4 lg:-mt-16 flex flex-col flex-wrap justify-center w-full">
-          <div className='p-4 lg:p-12 mb-6 flex flex-col items-center lg:items-left lg:flex-row bg-blue-over text-white rounded-2xl w-full'>
+        <div className="p-2 pt-0 lg:p-6 lg:pt-10 flex flex-col flex-wrap justify-center w-full">
+          <div className='p-4 lg:p-12 mb-6 flex flex-col items-center lg:items-left lg:flex-row bg-gray-100 dark:bg-blue-over rounded-2xl w-full'>
             <div className='flex-grow'>
-              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" className="text-xl lg:text-5xl hover:text-blue-light sm:p-6 lg:p-0">
+              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" className="text-xl lg:text-5xl hover:text-cyan sm:p-6 lg:p-0">
                 <svg role="img" className="fill-current inline-block h-12 w-12" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                   <title>Begin Wallet Discord</title>
                   <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
@@ -44,13 +45,13 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-blue-discord hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white w-full lg:w-40 h-12 rounded-xl inline-flex items-center justify-center">
+              <a href="https://discord.gg/QQVPuYBZHg" target="_blank" role="button" className="bg-cyan-light dark:bg-cyan-dark text-white dark:text-black hover:shadow-lg hover:bg-[#18181b] hover:text-cyan-light dark:hover:text-cyan-dark text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Discord
               </a>
             </div>
           </div>
 
-          <div className='p-4 lg:p-12 mb-6 flex flex-col items-center lg:items-left lg:flex-row bg-blue-over text-white rounded-2xl w-full'>
+          <div className='p-4 lg:p-12 mb-6 flex flex-col items-center lg:items-left lg:flex-row bg-gray-100 dark:bg-[#18181b] rounded-2xl w-full'>
             <div className='flex-grow'>
               <a href="https://twitter.com/BeginWallet" target="_blank" className="text-xl lg:text-5xl hover:text-blue-light sm:p-6 lg:p-0">
                 <svg role="img" className="fill-current inline-block h-12 w-12" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
             <div className='w-full lg:w-1/3 lg:text-right'>
-              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-blue-twitter hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white w-full lg:w-40 h-12 rounded-xl inline-flex items-center justify-center">
+              <a href="https://twitter.com/BeginWallet" target="_blank" role="button" className="bg-cyan-light dark:bg-cyan-dark text-white dark:text-black hover:shadow-lg hover:bg-[#18181b] hover:text-cyan-light dark:hover:text-cyan-dark text-sm w-full lg:w-40 h-12 rounded-full inline-flex items-center justify-center">
                 Twitter
               </a>
             </div>
@@ -113,15 +114,29 @@ const Footer = () => {
           </div>
           <div className="flex-grow justify-center items-center p-2 w-full lg:w-1/3">
             <div className="flex flex-col justify-center">
-              <a href="#download" role="button" className="border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center py-4 px-6 rounded-xl">
+              {/* <a href="#download" role="button" className="border-2 border-blue-medium bg-blue-medium hover:border-white hover:shadow-lg hover:bg-white hover:text-blue-light text-sm text-white text-center py-4 px-6 rounded-xl">
                 {f(messages.footerBtnDownload)}
-              </a>
-              <p className="text-lg mt-10 text-center">
-                <a href="mailto:web3@begin.is" className="underline hover:text-blue-light">{f(messages.footerContact)}</a>
+              </a> */}
+              <p className="text-lg text-center">
+                <a href="mailto:web3@begin.is" className="underline hover:text-cyan">{f(messages.footerContact)}</a>
               </p>
             </div>
           </div>
         </div>
+        <section className="px-6 py-6 md:py-16 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-6">Explore More</h2>
+            <div className="flex justify-center lg:space-x-4 flex-col lg:flex-row">
+              <Link href="/bitcoin-wallet" legacyBehavior><a className="hover:underline pt-2">Bitcoin Wallet</a></Link>
+              <Link href="/cardano-wallet" legacyBehavior><a className="hover:underline pt-2">Cardano Wallet</a></Link>
+              <Link href="/stake-ada" legacyBehavior><a className="hover:underline pt-2">Staking & Delegation</a></Link>
+              <Link href="/buy-swap-exchange" legacyBehavior><a className="hover:underline pt-2">Buy, Swap & Exchange</a></Link>
+              <Link href="/lend-earn-ada" legacyBehavior><a className="hover:underline pt-2">Lend & Earn</a></Link>
+              <Link href="/governance-vote-delegation" legacyBehavior><a className="hover:underline pt-2">Governance & Voting</a></Link>
+              <Link href="/best-dapp-explorer" legacyBehavior><a className="hover:underline pt-2">Best DApp Explorer</a></Link>
+            </div>
+          </div>
+        </section>
         <div className="text-center p-6">
           <small>Copyright © 2025 Begin Wallet. All rights reserved. <a href="/terms/privacy" className='ml-4 mr-2 underline font-bold'>Privacy Policy</a> | <a href="/terms/service" className='ml-2 underline font-bold'>Terms of Service</a></small>
         </div>
