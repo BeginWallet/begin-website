@@ -12,7 +12,7 @@ async function verifySignature(userAddress, nonce, signature) {
   //   Buffer.from(userAddress, "hex")
   // ).to_bech32();
 
-  const result = checkSignature(nonce, addressBech32, signature);
+  const result = await checkSignature(nonce, addressBech32, signature);
   if (result) {
     // create JWT or approve certain process
   } else {
