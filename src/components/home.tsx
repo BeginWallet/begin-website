@@ -58,19 +58,29 @@ const Home = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 sm:pt-0 md:pt-10 lg:pt-10"
       >
         <h1 className="text-4xl md:text-7xl leading-tight mt-12 mb-8">
-          Your Crypto Journey <br/><span className="font-extrabold underline decoration-2 underline-offset-8">Begins</span> Here
+          Your Crypto Journey <br />
+          <span className="font-extrabold underline decoration-2 underline-offset-8">
+            Begins
+          </span>{" "}
+          Here
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          The all-in-one crypto wallet for Cardano and Bitcoin — self-custodial, open-source, and packed with staking, lending, governance, and real dApp discovery.
+          The all-in-one crypto wallet for Cardano and Bitcoin — self-custodial,
+          open-source, and packed with staking, lending, governance, and real
+          dApp discovery.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mt-10 text-sm text-gray-600">
-          <span className="bg-gray-100 px-3 py-1 rounded-full">iOS · Android · Chrome Extension</span>
-          <span className="bg-gray-100 px-3 py-1 rounded-full">Open-source & Transparent</span>
+          <span className="bg-gray-100 px-3 py-1 rounded-full">
+            iOS · Android · Chrome Extension
+          </span>
+          <span className="bg-gray-100 px-3 py-1 rounded-full">
+            Open-source & Transparent
+          </span>
         </div>
       </motion.div>
 
@@ -78,7 +88,7 @@ const Home = () => {
         style={{ y }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeIn' }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
         className="relative mx-auto mt-12 w-[90%] max-w-[1000px] z-0 pointer-events-none aspect-[1000/537] hidden sm:hidden lg:block"
       >
         <Image
@@ -95,7 +105,7 @@ const Home = () => {
         style={{ y }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeIn' }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
         className="relative mx-auto mt-12 w-[90%] max-w-[578px] z-0 pointer-events-none aspect-[578/537] block sm:block lg:hidden"
       >
         <Image
@@ -109,15 +119,15 @@ const Home = () => {
       </motion.div>
 
       <motion.div
-        id='download'
+        id="download"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 pt-10"
       >
         <div className="relative flex justify-center flex-wrap gap-4 py-20">
           <a
-            target='_blank'
+            target="_blank"
             rel="noopener noreferrer"
             href="https://apps.apple.com/app/begin-bitcoin-cardano-wallet/id1642488837"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
@@ -126,7 +136,7 @@ const Home = () => {
             Download on iOS
           </a>
           <a
-            target='_blank'
+            target="_blank"
             rel="noopener noreferrer"
             href="https://play.google.com/store/apps/details?id=is.begin.app"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black  font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
@@ -135,7 +145,7 @@ const Home = () => {
             Download on Android
           </a>
           <a
-            target='_blank'
+            target="_blank"
             rel="noopener noreferrer"
             href="https://chromewebstore.google.com/detail/begin-bitcoin-cardano-wal/nhbicdelgedinnbcidconlnfeionhbml"
             className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
@@ -181,7 +191,7 @@ const Home = () => {
     //     </div>
     //   </section>
     // </div>
-  )
+  );
 }
 
 export default Home
