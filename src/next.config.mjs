@@ -7,6 +7,29 @@ const debug = process.env.NODE_ENV !== 'production'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // assetPrefix: !debug ? '/b58.github.io/' : '',
+  headers: async () => [
+    {
+      source: "/(.*)",
+      headers: [
+        {
+          key: 'X-Frame-Options',
+          value: 'DENY',
+        },
+        {
+          key: 'Content-Security-Policy',
+          value: "default-src 'self' https:; frame-ancestors 'none';",
+        },
+        {
+          key: 'Referrer-Policy',
+          value: 'no-referrer',
+        },
+        {
+          key: 'Permissions-Policy',
+          value: 'camera=(), microphone=(), geolocation=()',
+        },  
+      ],
+    },
+  ],
   assetPrefix: undefined,
   i18n: {
     locales: ['en', 'pt-BR', 'jp', 'cn'],

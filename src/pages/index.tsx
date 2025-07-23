@@ -62,7 +62,7 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>{f(messages.pageTitle)}</title>
           <meta name="description" content={`${f(messages.pageDescription)}`} />
-          <meta httpEquiv="Content-Security-Policy" content="default-src https:; frame-ancestors 'none'" />
+          {/* <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'" /> */}
           <meta name="twitter:card" content="app" />
           {/* <meta name="twitter:card" content="summary_large_image" /> */}
           <meta name="twitter:site" content="@BeginWallet" />
