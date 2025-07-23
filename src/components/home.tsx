@@ -145,7 +145,6 @@ const Home = () => {
           </a>
         </div>
       </motion.div>
-
     </section>
     // <div id="home">
     //   <section className="mx-auto">
