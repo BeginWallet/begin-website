@@ -17,7 +17,7 @@ const nextConfig = {
         },
         {
           key: 'Content-Security-Policy',
-          value: "default-src 'self' https:; frame-ancestors 'none';",
+          value: "default-src 'unsafe-inline' https:; script-src 'unsafe-inline' https:; frame-ancestors 'none';",
         },
         {
           key: 'Referrer-Policy',
