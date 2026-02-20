@@ -6,30 +6,35 @@ const debug = process.env.NODE_ENV !== 'production'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/download', destination: '/#download', permanent: false },
+    ];
+  },
   // assetPrefix: !debug ? '/b58.github.io/' : '',
-  headers: async () => [
-    {
-      source: "/(.*)",
-      headers: [
-        {
-          key: 'X-Frame-Options',
-          value: 'DENY',
-        },
-        {
-          key: 'Content-Security-Policy',
-          value: "default-src 'unsafe-inline' https:; script-src 'unsafe-inline' https:; frame-ancestors 'none';",
-        },
-        {
-          key: 'Referrer-Policy',
-          value: 'no-referrer',
-        },
-        {
-          key: 'Permissions-Policy',
-          value: 'camera=(), microphone=(), geolocation=()',
-        },  
-      ],
-    },
-  ],
+  // headers: async () => [
+  //   {
+  //     source: "/(.*)",
+  //     headers: [
+  //       {
+  //         key: 'X-Frame-Options',
+  //         value: 'DENY',
+  //       },
+  //       {
+  //         key: 'Content-Security-Policy',
+  //         value: "default-src 'unsafe-inline' https:; script-src 'unsafe-inline' https:; frame-ancestors 'none';",
+  //       },
+  //       {
+  //         key: 'Referrer-Policy',
+  //         value: 'no-referrer',
+  //       },
+  //       {
+  //         key: 'Permissions-Policy',
+  //         value: 'camera=(), microphone=(), geolocation=()',
+  //       },  
+  //     ],
+  //   },
+  // ],
   assetPrefix: undefined,
   i18n: {
     locales: ['en', 'pt-BR', 'jp', 'cn'],
@@ -41,6 +46,7 @@ const nextConfig = {
     // isrMemoryCacheSize: 0,
   },
   reactStrictMode: true,
+
   webpack: function (config, { isServer, dev }) {
     config.experiments = {
       asyncWebAssembly: true,
