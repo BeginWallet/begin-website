@@ -9,6 +9,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/download', destination: '/#download', permanent: false },
+      { source: '/p/:handle', destination: '/pay/:handle', permanent: false },
     ];
   },
   // assetPrefix: !debug ? '/b58.github.io/' : '',
