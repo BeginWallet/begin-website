@@ -150,14 +150,14 @@ export default function AgentsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-24 md:py-32 relative overflow-hidden bg-[#141414]">
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-24 md:py-32 relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
             Give your AI agent a wallet
           </h1>
           <p className="text-lg md:text-xl text-gray-400 mb-12">
@@ -173,7 +173,7 @@ export default function AgentsPage() {
           >
             <div
               onClick={copyToClipboard}
-              className="inline-flex items-center gap-3 bg-[#1a1a1a] border border-gray-800 rounded-lg px-5 py-4 cursor-pointer hover:border-gray-700 transition-colors group"
+              className="inline-flex items-center gap-3 bg-gray-100 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 rounded-lg px-5 py-4 cursor-pointer hover:border-gray-300 dark:hover:border-gray-700 transition-colors group"
             >
               <Terminal className="w-5 h-5 text-gray-500" />
               <code className="text-cyan-light dark:text-cyan-dark font-mono text-sm md:text-base">
@@ -216,7 +216,7 @@ export default function AgentsPage() {
                   href={assistant.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] border border-gray-800 rounded-full text-sm text-gray-300 hover:text-white hover:border-gray-600 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 rounded-full text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-300 dark:hover:border-gray-600 transition-colors"
                 >
                   <assistant.Icon />
                   {assistant.name}
@@ -233,7 +233,7 @@ export default function AgentsPage() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <div className="w-6 h-10 border-2 border-gray-700 rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-gray-300 dark:border-gray-700 rounded-full flex justify-center">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -244,14 +244,14 @@ export default function AgentsPage() {
       </section>
 
       {/* Features Section */}
-      <section className="px-6 py-20 md:py-28 bg-[#141414]">
+      <section className="px-6 py-20 md:py-28">
         <div className="max-w-5xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl font-bold text-white text-center mb-16"
+            className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-16"
           >
             Built for the agentic era
           </motion.h2>
@@ -264,15 +264,15 @@ export default function AgentsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#1a1a1a] border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-colors"
+                className="bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#141414] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-[#141414] flex items-center justify-center">
                     <feature.Icon className="w-5 h-5 text-cyan-light dark:text-cyan-dark" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
                 </div>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -280,26 +280,26 @@ export default function AgentsPage() {
       </section>
 
       {/* Footer Links Section */}
-      <section className="px-6 py-16 bg-[#141414] border-t border-gray-800">
+      <section className="px-6 py-16 border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <a
               href="https://github.com/nicholasgasior/begin-cli"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               GitHub
             </a>
             <Link
               href="https://begin.is/docs"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Documentation
             </Link>
             <Link
               href="/terms"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Terms
             </Link>
