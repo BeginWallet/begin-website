@@ -15,6 +15,10 @@ import {
   Smartphone,
   CreditCard,
   Link as LinkIcon,
+  Paintbrush,
+  Store,
+  Users,
+  Bot,
 } from 'lucide-react'
 
 const features = [
@@ -58,22 +62,22 @@ const features = [
 
 const useCases = [
   {
-    emoji: '🎨',
+    emoji: <Paintbrush className="w-10 h-10 text-cyan-light dark:text-cyan-dark" />,
     title: 'Creators',
     description: 'Accept tips, sell digital art, get paid for commissions',
   },
   {
-    emoji: '🏪',
+    emoji: <Store className="w-10 h-10 text-cyan-light dark:text-cyan-dark" />,
     title: 'Small Business',
     description: 'Add crypto payments to your checkout in minutes',
   },
   {
-    emoji: '👥',
+    emoji: <Users className="w-10 h-10 text-cyan-light dark:text-cyan-dark" />,
     title: 'Friends & Family',
     description: 'Split bills, send money, pay back loans — across borders',
   },
   {
-    emoji: '🤖',
+    emoji: <Bot className="w-10 h-10 text-cyan-light dark:text-cyan-dark" />,
     title: 'AI Agents',
     description: 'Programmatic payments via begin-cli and MCP integration',
   },
@@ -119,14 +123,14 @@ export default function PayLanding() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 lg:pt-36 lg:pb-24 text-center">
-          <div className="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 rounded-full px-4 py-1.5 text-sm font-medium mb-8 border border-cyan-500/20">
+          <div className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-full px-4 py-1.5 text-sm font-medium mb-8 border border-gray-300 dark:border-gray-700">
             <Send className="w-4 h-4" />
             Payment Links for Crypto
           </div>
 
           <h1 className="text-4xl lg:text-7xl font-bold tracking-tight mb-6">
             Get paid with a{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-light dark:from-cyan-dark to-cyan-dark dark:to-cyan-light bg-clip-text text-transparent">
               simple link
             </span>
           </h1>
@@ -138,7 +142,7 @@ export default function PayLanding() {
 
           {/* Interactive Link Builder */}
           <div className="max-w-lg mx-auto mb-12">
-            <div className="flex items-center bg-gray-900 border border-gray-700 rounded-xl overflow-hidden focus-within:border-cyan-500 transition-colors">
+            <div className="p-1 flex items-center border border-gray-300 dark:border-gray-700 rounded-xl overflow-hidden focus-within:border-cyan-light dark:focus-within:border-cyan-dark transition-colors bg-gray-100 dark:bg-[#18181b] rounded-xl shadow hover:shadow-md text-center">
               <span className="text-gray-500 pl-4 pr-1 text-sm lg:text-base whitespace-nowrap">
                 begin.is/pay/@
               </span>
@@ -147,17 +151,17 @@ export default function PayLanding() {
                 placeholder="yourname"
                 value={username}
                 onChange={(e) => setUsername(e.target.value.replace(/[^a-zA-Z0-9_-]/g, ''))}
-                className="flex-1 bg-transparent text-white py-3.5 pr-2 outline-none text-sm lg:text-base"
+                className="flex-1 bg-transparent py-3 pr-2 outline-none text-sm lg:text-base"
               />
               <button
                 onClick={copyLink}
-                className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-5 py-3.5 transition-colors text-sm"
+                className="flex rounded-md items-center gap-2 bg-cyan-light dark:bg-cyan-dark hover:bg-cyan-light/80 dark:hover:bg-cyan-dark/80 text-white dark:text-black font-semibold px-5 py-3.5 transition-colors text-sm"
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {copied ? 'Copied!' : 'Copy'}
               </button>
             </div>
-            <p className="text-gray-600 text-xs mt-2">
+            <p className="text-gray-500 dark:text-gray-400 text-xs mt-2">
               Share this link anywhere — social media, invoices, websites, messages.
             </p>
           </div>
@@ -165,15 +169,15 @@ export default function PayLanding() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml"
-              className="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold px-8 py-3.5 rounded-xl hover:bg-gray-100 transition-colors"
+              href="/download"
+              className="inline-flex items-center justify-center w-full lg:w-auto gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
             >
               Get Begin Wallet
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="#how-it-works"
-              className="inline-flex items-center justify-center gap-2 border border-gray-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-gray-900 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold px-8 py-3.5 hover:bg-gray-100 transition-colors rounded-full shadow hover:shadow-lg transition"
             >
               How it works
             </Link>
@@ -182,7 +186,7 @@ export default function PayLanding() {
       </section>
 
       {/* Supported Chains */}
-      <section className="border-y border-gray-800">
+      <section>
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-wrap items-center justify-center gap-8 lg:gap-16 text-gray-500 text-sm">
           <span className="font-medium text-gray-400">Supported chains:</span>
           <span className="flex items-center gap-2">
@@ -238,25 +242,25 @@ export default function PayLanding() {
           ].map((item) => (
             <div
               key={item.step}
-              className="relative p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors"
+              className="relative p-8 bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
             >
               <span className="text-5xl font-bold text-gray-800 absolute top-6 right-6">
                 {item.step}
               </span>
               <h3 className="text-xl font-semibold mb-3 mt-4">{item.title}</h3>
-              <p className="text-gray-400">{item.description}</p>
+              <p className="text-gray-500 dark:text-gray-400">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Features */}
-      <section className="bg-gray-950 border-y border-gray-800">
+      <section>
         <div className="max-w-6xl mx-auto px-6 py-20 lg:py-28">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">
             Built for the multi-chain era
           </h2>
-          <p className="text-gray-400 text-center mb-16 max-w-lg mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-center mb-16 max-w-lg mx-auto">
             One link, every chain. No compromises.
           </p>
 
@@ -264,9 +268,9 @@ export default function PayLanding() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="p-6 rounded-xl border border-gray-800 hover:border-cyan-900 transition-colors group"
+                className="bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
               >
-                <div className="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                <div className="w-8 h-8 text-cyan-light dark:text-cyan-dark">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
@@ -287,36 +291,29 @@ export default function PayLanding() {
           {useCases.map((useCase) => (
             <div
               key={useCase.title}
-              className="text-center p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors"
+              className="text-center p-6 bg-gray-100 dark:bg-[#18181b] p-6 rounded-xl shadow hover:shadow-md"
             >
-              <span className="text-4xl mb-4 block">{useCase.emoji}</span>
+              <span className="text-4xl mb-4 block flex items-center justify-center">{useCase.emoji}</span>
               <h3 className="font-semibold mb-2">{useCase.title}</h3>
-              <p className="text-gray-400 text-sm">{useCase.description}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">{useCase.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="border-t border-gray-800">
+      <section>
         <div className="max-w-3xl mx-auto px-6 py-20 lg:py-28 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to get paid?
+            Begin Pay for AI Agents
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-            Download Begin Wallet, create your payment link, and start accepting crypto in
-            under a minute.
+          <p className="text-gray-500 dark:text-gray-400 mb-8 max-w-lg mx-auto">
+            Begin Pay is built for AI Agents. No wallet address needed. No chain selection. Just your wallet and a link.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://chrome.google.com/webstore/detail/begin-wallet/nhbicdelgedinnbcidconlnfeionhbml"
-              className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-8 py-3.5 rounded-xl transition-colors"
-            >
-              Download Begin Wallet
-            </Link>
-            <Link
               href="/agents"
-              className="inline-flex items-center justify-center gap-2 border border-gray-600 text-white px-8 py-3.5 rounded-xl hover:bg-gray-900 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-cyan-light dark:bg-cyan-dark text-white dark:text-black font-semibold px-5 py-3 rounded-full shadow hover:shadow-lg transition"
             >
               For AI Agents →
             </Link>
