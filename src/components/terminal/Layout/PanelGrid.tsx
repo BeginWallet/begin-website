@@ -3,18 +3,12 @@ import { GridLayout, Layout } from 'react-grid-layout'
 import { useTerminalStore, type PanelType } from '../../../hooks/terminal/useTerminalStore'
 import Panel from './Panel'
 import { PortfolioDashboard } from '../Portfolio/PortfolioDashboard'
-<<<<<<< HEAD
 import { SwapPanel } from '../Trade/SwapPanel'
-=======
->>>>>>> 5dbc1f7 (feat(terminal): add portfolio dashboard with multi-chain balances)
 import 'react-grid-layout/css/styles.css'
 
 const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
   portfolio: () => <PortfolioDashboard />,
-<<<<<<< HEAD
   swap: () => <SwapPanel />,
-=======
->>>>>>> 5dbc1f7 (feat(terminal): add portfolio dashboard with multi-chain balances)
 }
 
 const PanelGrid = () => {
