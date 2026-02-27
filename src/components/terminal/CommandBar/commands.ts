@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import {
   Bitcoin,
   CircleDollarSign,
@@ -39,7 +40,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'BTC',
     chain: 'Bitcoin',
-    action: () => console.log('Navigate to BTC'),
+    action: () => Router.push('/terminal/BTC'),
   },
   {
     id: 'eth',
@@ -49,7 +50,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'ETH',
     chain: 'Ethereum',
-    action: () => console.log('Navigate to ETH'),
+    action: () => Router.push('/terminal/ETH'),
   },
   {
     id: 'sol',
@@ -59,7 +60,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'SOL',
     chain: 'Solana',
-    action: () => console.log('Navigate to SOL'),
+    action: () => Router.push('/terminal/SOL'),
   },
   {
     id: 'ada',
@@ -69,7 +70,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'ADA',
     chain: 'Cardano',
-    action: () => console.log('Navigate to ADA'),
+    action: () => Router.push('/terminal/ADA'),
   },
   {
     id: 'usdc',
@@ -79,7 +80,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'USDC',
     chain: 'Multi-chain',
-    action: () => console.log('Navigate to USDC'),
+    action: () => Router.push('/terminal/USDC'),
   },
   {
     id: 'usdt',
@@ -89,7 +90,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'USDT',
     chain: 'Multi-chain',
-    action: () => console.log('Navigate to USDT'),
+    action: () => Router.push('/terminal/USDT'),
   },
   {
     id: 'bnb',
@@ -99,7 +100,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'BNB',
     chain: 'BNB Chain',
-    action: () => console.log('Navigate to BNB'),
+    action: () => Router.push('/terminal/BNB'),
   },
   {
     id: 'xrp',
@@ -109,7 +110,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'XRP',
     chain: 'XRP Ledger',
-    action: () => console.log('Navigate to XRP'),
+    action: () => Router.push('/terminal/XRP'),
   },
   {
     id: 'doge',
@@ -119,7 +120,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'DOGE',
     chain: 'Dogecoin',
-    action: () => console.log('Navigate to DOGE'),
+    action: () => Router.push('/terminal/DOGE'),
   },
   {
     id: 'avax',
@@ -129,7 +130,7 @@ const tokenCommands: Command[] = [
     group: 'tokens',
     symbol: 'AVAX',
     chain: 'Avalanche',
-    action: () => console.log('Navigate to AVAX'),
+    action: () => Router.push('/terminal/AVAX'),
   },
 ];
 
