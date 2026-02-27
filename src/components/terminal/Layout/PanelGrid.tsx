@@ -6,6 +6,9 @@ import { PortfolioDashboard } from '../Portfolio/PortfolioDashboard'
 import { SwapPanel } from '../Trade/SwapPanel'
 import { BridgePanel } from '../Trade/BridgePanel'
 import { PerpsPanel } from '../Trade/PerpsPanel'
+import { Watchlist } from '../Market/Watchlist'
+import { NewsFeed } from '../News/NewsFeed'
+import PriceChart from '../Chart/PriceChart'
 import 'react-grid-layout/css/styles.css'
 
 const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
@@ -13,6 +16,9 @@ const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
   swap: () => <SwapPanel />,
   bridge: () => <BridgePanel />,
   perps: () => <PerpsPanel />,
+  watchlist: () => <Watchlist />,
+  news: () => <NewsFeed />,
+  chart: () => <PriceChart tokenId="bitcoin" />,
 }
 
 const PanelGrid = () => {
