@@ -4,11 +4,13 @@ import { useTerminalStore, type PanelType } from '../../../hooks/terminal/useTer
 import Panel from './Panel'
 import { PortfolioDashboard } from '../Portfolio/PortfolioDashboard'
 import { SwapPanel } from '../Trade/SwapPanel'
+import { BridgePanel } from '../Trade/BridgePanel'
 import 'react-grid-layout/css/styles.css'
 
 const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
   portfolio: () => <PortfolioDashboard />,
   swap: () => <SwapPanel />,
+  bridge: () => <BridgePanel />,
 }
 
 const PanelGrid = () => {

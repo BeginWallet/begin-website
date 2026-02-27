@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type PanelType = 'chart' | 'orderbook' | 'trades' | 'portfolio' | 'watchlist' | 'news' | 'swap' | 'empty'
+export type PanelType = 'chart' | 'orderbook' | 'trades' | 'portfolio' | 'watchlist' | 'news' | 'swap' | 'bridge' | 'empty'
 
 export interface PanelConfig {
   id: string
