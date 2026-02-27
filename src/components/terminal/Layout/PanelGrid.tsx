@@ -3,10 +3,12 @@ import { GridLayout, Layout } from 'react-grid-layout'
 import { useTerminalStore, type PanelType } from '../../../hooks/terminal/useTerminalStore'
 import Panel from './Panel'
 import { PortfolioDashboard } from '../Portfolio/PortfolioDashboard'
+import { SwapPanel } from '../Trade/SwapPanel'
 import 'react-grid-layout/css/styles.css'
 
 const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
   portfolio: () => <PortfolioDashboard />,
+  swap: () => <SwapPanel />,
 }
 
 const PanelGrid = () => {
