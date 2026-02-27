@@ -1,8 +1,13 @@
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, type ReactNode } from 'react'
 import { GridLayout, Layout } from 'react-grid-layout'
-import { useTerminalStore } from '../../../hooks/terminal/useTerminalStore'
+import { useTerminalStore, type PanelType } from '../../../hooks/terminal/useTerminalStore'
 import Panel from './Panel'
+import { PortfolioDashboard } from '../Portfolio/PortfolioDashboard'
 import 'react-grid-layout/css/styles.css'
+
+const PANEL_CONTENT: Partial<Record<PanelType, () => ReactNode>> = {
+  portfolio: () => <PortfolioDashboard />,
+}
 
 const PanelGrid = () => {
   const { panels, layouts, layoutConfig, updateLayouts } = useTerminalStore()
@@ -71,15 +76,20 @@ const PanelGrid = () => {
         }}
         onLayoutChange={handleLayoutChange}
       >
-        {panels.map((panel) => (
-          <div key={panel.id}>
-            <Panel
-              id={panel.id}
-              title={panel.title}
-              isMaximized={isMaximized}
-            />
-          </div>
-        ))}
+        {panels.map((panel) => {
+          const renderContent = PANEL_CONTENT[panel.type]
+          return (
+            <div key={panel.id}>
+              <Panel
+                id={panel.id}
+                title={panel.title}
+                isMaximized={isMaximized}
+              >
+                {renderContent ? renderContent() : undefined}
+              </Panel>
+            </div>
+          )
+        })}
       </GridLayout>
     </div>
   )
