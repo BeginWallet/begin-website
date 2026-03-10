@@ -1,4 +1,5 @@
 import * as remark from 'remark'
+import remarkGfm from 'remark-gfm'
 import html from 'remark-html'
 import highlight from 'remark-highlight.js';
 import {visit} from 'unist-util-visit';
@@ -20,6 +21,7 @@ export default async function markdownToHtml(markdown: string) {
   };
 
   const result = await remark.remark()
+                        .use(remarkGfm)
                         .use(html, { sanitize: false }) // Allow raw HTML like iframes
                         // .use(youtubeLinkParser)
                         .use(highlight)
