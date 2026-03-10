@@ -56,6 +56,7 @@
     "rehype-raw": "^7.0.0",
     "remark": "^15.0.1",
     "remark-highlight.js": "^6.0.0",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "remark-iframes": "^4.1.1",
     "remark-parse": "^11.0.0",
