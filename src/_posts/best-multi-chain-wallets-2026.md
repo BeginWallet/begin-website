@@ -9,7 +9,7 @@ author:
 tags: ["Wallets", "Multi-Chain", "Comparison", "2026"]
 ogImage:
   url: '/assets/blog/best-multi-chain-wallets-2026.png'
-hero: false
+hero: true
 ---
 
 # The Best Multi-Chain Crypto Wallets in 2026
@@ -96,7 +96,7 @@ Advanced users will find it limiting. No stablecoin yield features, limited stak
 
 Full disclosure — we built this one. But we'll try to be fair about the trade-offs.
 
-**What it does well:** Bitcoin, Cardano, and Solana in one non-custodial wallet. Cross-chain swaps powered by Jupiter (Solana) and Minswap (Cardano) with DEX-native routing, not third-party exchanges. Stablecoin yield through Liqwid at 5-12% variable APY on USDC. Cardano staking built in. Biometric authentication. Payment links that let you send crypto via URL.
+**What it does well:** Bitcoin, Cardano, and Solana in one non-custodial wallet. Cross-chain swaps powered by Jupiter (Solana), XO Swaps (Bitcoin/Solana/Cardano) and Minswap (Cardano) with DEX-native routing, not third-party exchanges. Stablecoin yield through Liqwid at 5-12% variable APY on USDC. Cardano staking built in. Biometric authentication. Payment links that let you send crypto via URL.
 
 The Cardano support is the deepest in any multi-chain wallet. Native tokens, staking, DeFi, governance delegation — it's all there.
 

@@ -8,7 +8,7 @@ author:
   picture: '/images/authors/begin-wallet-team.jpg'
 ogImage:
   url: '/assets/blog/crypto_wallet.png'
-hero: true
+hero: false
 tags: ['DeFi', 'Wallets', 'Lending', 'Cardano', 'Bitcoin', 'Stablecoins']
 ---
 
