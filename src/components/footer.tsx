@@ -129,6 +129,7 @@ const Footer = () => {
             <div className="flex justify-center lg:space-x-4 flex-col lg:flex-row">
               <Link href="/bitcoin-wallet" legacyBehavior><a className="hover:underline pt-2">Bitcoin Wallet</a></Link>
               <Link href="/cardano-wallet" legacyBehavior><a className="hover:underline pt-2">Cardano Wallet</a></Link>
+              <Link href="/solana-wallet" legacyBehavior><a className="hover:underline pt-2">Solana Wallet</a></Link>
               <Link href="/stake-ada" legacyBehavior><a className="hover:underline pt-2">Staking & Delegation</a></Link>
               <Link href="/buy-swap-exchange" legacyBehavior><a className="hover:underline pt-2">Buy, Swap & Exchange</a></Link>
               <Link href="/lend-earn-ada" legacyBehavior><a className="hover:underline pt-2">Lend & Earn</a></Link>
