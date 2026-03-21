@@ -32,7 +32,7 @@ import BankVsWalletSection from '../components/bank-wallet'
 const messages = defineMessages({
   pageTitle: {
     id: 'page.title',
-    defaultMessage: 'Begin Wallet — Your Crypto Journey Begins Here'
+    defaultMessage: 'Begin Wallet — Secure Wallet for Bitcoin, Cardano, and Solana'
   },
   pageDescription: {
     id: 'page.description',
@@ -79,8 +79,9 @@ const Index = ({ allPosts }: Props) => {
           <meta name="twitter:app:url:googleplay" content="beginwallet://browse?dappUrl=https://begin.is" />
           {/* TODO: Change cover page */}
           <meta name="twitter:image" content="https://begin.is/images/begin_cover.png" />
+          <meta property="og:title" content={f(messages.pageTitle)} />
           <meta
-            name="og:description"
+            property="og:description"
             content={`${f(messages.pageDescription)}`}
           />
           <meta property="og:image" content="/images/begin_cover.png" />
