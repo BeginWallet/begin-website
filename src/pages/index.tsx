@@ -36,11 +36,11 @@ const messages = defineMessages({
   },
   pageDescription: {
     id: 'page.description',
-    defaultMessage: 'Secure, open-source wallet for Bitcoin and Cardano. Stake, lend, and participate in governance. Available on iOS, Android, and Chrome.'
+    defaultMessage: 'Secure, open-source wallet for Bitcoin, Cardano, and Solana. Stake, lend, and participate in governance. Available on iOS, Android, and Chrome.'
   },
   pageDescriptionExtra: {
     id: 'page.description.extra',
-    defaultMessage: 'Begin Wallet is an open-source crypto wallet supporting Bitcoin and Cardano. Stake ADA, delegate governance votes, lend with Liqwid, and explore dApps.'
+    defaultMessage: 'Begin Wallet is an open-source crypto wallet supporting Bitcoin, Cardano, and Solana. Stake ADA, delegate governance votes, lend with Liqwid, and explore dApps.'
   }
 })
 

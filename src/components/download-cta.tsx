@@ -18,7 +18,7 @@ export default function DownloadCTA() {
           Get Started with Begin Wallet
         </h2>
         <p className="text-lg mb-8">
-          Begin is available on iOS, Android, and as a browser extension. Self-custodial, open-source, and ready for everything Cardano and Bitcoin.
+          Begin is available on iOS, Android, and as a browser extension. Self-custodial, open-source, and ready for everything Cardano, Bitcoin, and Solana.
         </p>
 
         <div className="flex justify-center flex-wrap gap-4">

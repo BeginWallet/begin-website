@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Bitcoin,
-    title: "Bitcoin + Cardano",
-    description: "Manage both chains under one wallet and seed phrase.",
+    title: "Bitcoin + Cardano + Solana",
+    description: "Manage multiple chains under one wallet and seed phrase.",
   },
   {
     icon: Activity,

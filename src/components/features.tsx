@@ -13,7 +13,7 @@ const messages = defineMessages({
   },
   featuresWalletTitle: {
     id: 'features.wallet.title',
-    defaultMessage: 'Your new favorite Cardano Wallet'
+    defaultMessage: 'Your new favorite multi-chain wallet'
   },
   featuresStakeTitle: {
     id: 'features.stake.title',
@@ -25,7 +25,7 @@ const messages = defineMessages({
   },
   featuresWallet: {
     id: 'features.wallet',
-    defaultMessage: 'Begin is the next-generation of Cardano Wallets, that enables you to enter the new era of finance. Enjoy an easy onboarding process that guides you step-by-step. Welcome!'
+    defaultMessage: 'Begin is a next-generation multi-chain wallet for Cardano, Bitcoin, and Solana that enables you to enter the new era of finance. Enjoy an easy onboarding process that guides you step-by-step. Welcome!'
   },
   featuresStake: {
     id: 'features.stake',

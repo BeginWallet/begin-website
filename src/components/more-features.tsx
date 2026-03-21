@@ -14,7 +14,7 @@ const messages = defineMessages({
     '{br}'+
     '<b>Collectible library</b> where you can view all of your <babbr>NFT</babbr> & Tokens in one place.'+
     '{br}'+
-    '<b>Cardano native tokens</b> can be transacted through the Begin Wallet.'
+    '<b>Cardano native tokens and Solana SPL tokens</b> can be transacted through the Begin Wallet.'
   },
   moreAbbr: {
     id: 'more.abbr',

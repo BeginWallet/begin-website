@@ -8,8 +8,8 @@ const faqs = [
     answer: 'Yes! Your private keys never leave your device. You’re always in full control of your funds.',
   },
   {
-    question: 'Can I manage both Bitcoin and Cardano?',
-    answer: 'Absolutely. Begin supports both chains under a single recovery phrase and UI.',
+    question: 'Which blockchains does Begin support?',
+    answer: 'Begin supports Bitcoin, Cardano, and Solana — all under a single recovery phrase and UI.',
   },
   {
     question: 'How do I delegate to a DRep?',
