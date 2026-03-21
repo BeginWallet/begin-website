@@ -199,20 +199,21 @@ export default function Docs({ allPosts }: Props) {
 export const groupIndexMap = {
   bitcoin: 0,
   cardano: 1,
-  start: 2,
-  settings: 3,
-  begin_id: 4,
-  wallet: 5,
-  payment: 6,
-  exchange: 7,
-  assets: 8,
-  explore: 9,
-  invest: 10,
-  travel: 11,
-  general: 12,
-  activity: 13,
-  miscellaneous: 14,
-  advanced: 15
+  solana: 2,
+  start: 3,
+  settings: 4,
+  begin_id: 5,
+  wallet: 6,
+  payment: 7,
+  exchange: 8,
+  assets: 9,
+  explore: 10,
+  invest: 11,
+  travel: 12,
+  general: 13,
+  activity: 14,
+  miscellaneous: 15,
+  advanced: 16
 }
 
 export const getStaticProps = async () => {
