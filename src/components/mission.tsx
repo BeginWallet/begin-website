@@ -8,11 +8,11 @@ const messages = defineMessages({
   },
   walletBody: {
     id: 'wallet.body',
-    defaultMessage: 'Our mission is to delivery the Next-Generation of <b>Cardano</b> wallets to you.'+
+    defaultMessage: 'Our mission is to deliver the next generation of multi-chain wallets to you, supporting <b>Cardano</b>, <b>Bitcoin</b>, and <b>Solana</b>.'+
     '{br}'+
     'With an easy and secure on-boarding process, that guides you to every important part of B58.' +
     '{br}'+
-    'We\'re also commited to build features that the <b>Cardano Community</b> needs.'
+    'We\'re also committed to build features that our growing community needs.'
   },
   walletAbbr: {
     id: 'wallet.abbr',

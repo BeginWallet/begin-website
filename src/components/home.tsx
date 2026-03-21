@@ -69,7 +69,7 @@ const Home = () => {
           Here
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          The all-in-one crypto wallet for Cardano and Bitcoin — self-custodial,
+          The all-in-one crypto wallet for Cardano, Bitcoin, and Solana — self-custodial,
           open-source, and packed with staking, lending, governance, and real
           dApp discovery.
         </p>

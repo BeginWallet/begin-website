@@ -8,7 +8,7 @@ const messages = defineMessages({
   },
   aboutBody: {
     id: 'about.body',
-    defaultMessage: '<b>B58 Finance</b> is a decentralized finance multi-feature wallet built on top of Cardano Blockchain. That provides the operational financial system infrastructure to our services.' +
+    defaultMessage: '<b>B58 Finance</b> is a decentralized finance multi-feature wallet built on top of Cardano, Bitcoin, and Solana. It provides the operational financial system infrastructure to our services.' +
     '{br}' +
     'This allows us to build features that empower you to be your own bank, using Peer-to-Peer communication with no need for middle agents.' +
     '{br}' +

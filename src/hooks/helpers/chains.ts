@@ -1,5 +1,6 @@
 import cardanoIcon from 'images/cardano-ada-blue.svg';
 import bitcoinIcon from 'images/bitcoin-btc-logo.svg';
+import solanaIcon from 'images/solana-sol-logo.svg';
 
 export const chains = {
   cardano: {
@@ -11,6 +12,11 @@ export const chains = {
     name: 'Bitcoin',
     value: 'bitcoin',
     icon: bitcoinIcon,
+  },
+  solana: {
+    name: 'Solana',
+    value: 'solana',
+    icon: solanaIcon,
   },
 };
 
