@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "nextjs",
+  "build": {
+    "mode": "dockerfile",
+    "context": "src",
+    "dockerfile": "src/Dockerfile"
+  },
+  "runtime": {
+    "healthcheckPath": "/api/healthz"
+  },
+  "secrets": [
+    "API_KEY",
+    "BEGIN_API_KEY",
+    "BLOCKFROST_API_KEY",
+    "NEXT_PUBLIC_GA_ID"
+  ]
+}
