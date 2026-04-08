@@ -4,8 +4,8 @@ import { createYoga, createSchema } from "graphql-yoga";
 import { gql } from 'graphql-tag';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { GraphQLError } from "graphql";
+import type { Prisma } from "@prisma/client";
 import prisma from "../../prisma/prisma";
-import { Prisma } from '@prisma/client'
 import { JSDOM } from 'jsdom';
 
 
@@ -15,6 +15,8 @@ export const config = {
     bodyParser: false,
   },
 };
+
+const insensitiveQueryMode: Prisma.QueryMode = "insensitive";
 
 // last_updated:   String
 // last_sync:      Float
@@ -222,13 +224,13 @@ const resolvers = {
                 {
                   id: {
                     contains: filterPool,
-                    mode: Prisma.QueryMode.insensitive,
+                    mode: insensitiveQueryMode,
                   },
                 },
                 {
                   name: {
                     contains: filterPool,
-                    mode: Prisma.QueryMode.insensitive,
+                    mode: insensitiveQueryMode,
                   },
                 },
               ],
