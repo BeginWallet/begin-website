@@ -17,7 +17,6 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
-ENV PORT=8080
 ENV HOSTNAME=0.0.0.0
 ENV NEXT_TELEMETRY_DISABLED=1
 
@@ -25,4 +24,4 @@ COPY --from=builder /app ./
 
 EXPOSE 8080
 
-CMD ["npm", "run", "start", "--", "-p", "8080", "-H", "0.0.0.0"]
+CMD ["sh", "-c", "npm run start -- -p ${PORT:-8080} -H 0.0.0.0"]
