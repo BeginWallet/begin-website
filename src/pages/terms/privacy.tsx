@@ -68,7 +68,7 @@ const Privacy = () => {
                   Privacy Policy for Begin Wallet
                 </h1>
                 <p className="text-sm text-gray-600 mb-8">
-                  Effective Date: February 08, 2025
+                  Effective Date: July 08, 2026
                 </p>
 
                 <section className="mb-8">
@@ -96,10 +96,8 @@ const Privacy = () => {
                     <li>Your private keys</li>
                     <li>Your wallet's transaction history</li>
                     <li>
-                      Your personal identification details like name, address,
-                      or email unless you provide them voluntarily for customer
-                      support or for third-party services like Fiat on/off ramp
-                      and swap or any service that requires KYC
+                      Your personal identification details unless you choose to
+                      provide them when using specific features (see Section 3)
                     </li>
                   </ul>
                 </section>
@@ -127,6 +125,28 @@ const Privacy = () => {
                       cookies to recognize you when you return to our service.
                       You can control cookies through your browser settings.
                     </li>
+                    <li>
+                      <span className="font-medium">Account Information:</span>{" "}
+                      When you use certain features or purchase in-app products
+                      and services (such as creating an order for integrated
+                      offerings), we may collect account information you provide
+                      voluntarily, including your email address and account
+                      credentials (such as a password). This data is collected
+                      only when you choose to use these features and is
+                      necessary to process your request, fulfill your order, or
+                      enable the service you selected.
+                    </li>
+                    <li>
+                      <span className="font-medium">
+                        Third-Party Service Data:
+                      </span>{" "}
+                      When you use integrated third-party services (such as
+                      fiat on/off ramps, swaps, or other offerings that require
+                      identity verification), we or our partners may collect
+                      additional information, including name, address, or email,
+                      as required by those services or applicable KYC
+                      regulations.
+                    </li>
                   </ul>
                 </section>
 
@@ -145,6 +165,11 @@ const Privacy = () => {
                       incidents or fraudulent activities.
                     </li>
                     <li>
+                      <span className="font-medium">Order Fulfillment:</span> To
+                      process orders, activate purchased services, and deliver
+                      in-app products you request.
+                    </li>
+                    <li>
                       <span className="font-medium">Legal Compliance:</span> To
                       comply with legal obligations, respond to lawful requests,
                       or protect rights and property.
@@ -158,9 +183,18 @@ const Privacy = () => {
                   </h2>
                   <ul className="list-disc pl-6 mb-4  space-y-2">
                     <li>
-                      <span className="font-medium">Third-Party Services:</span>{" "}
-                      We might share anonymized, aggregated data with third
-                      parties for analytics, but we do not share personal data.
+                      <span className="font-medium">Service Providers:</span>{" "}
+                      We may share account information and order-related data
+                      with trusted third-party service providers and partners
+                      when necessary to fulfill your order, activate a
+                      purchased service, or operate integrated features. These
+                      providers are permitted to use your data only to perform
+                      services on our behalf.
+                    </li>
+                    <li>
+                      <span className="font-medium">Analytics:</span> We might
+                      share anonymized, aggregated data with third parties for
+                      analytics. We do not sell your personal data.
                     </li>
                     <li>
                       <span className="font-medium">Legal Requirements:</span>{" "}
@@ -177,9 +211,13 @@ const Privacy = () => {
                   <p className=" mb-4">
                     We implement appropriate technical and organizational
                     measures to protect your data against unauthorized access,
-                    alteration, disclosure, or destruction. However, no method
-                    of transmission over the internet or electronic storage is
-                    100% secure, so we cannot guarantee absolute security.
+                    alteration, disclosure, or destruction. Account credentials
+                    you provide for order processing or service activation are
+                    handled with additional safeguards and are retained only for
+                    as long as needed to complete the requested transaction or
+                    as required by law. However, no method of transmission over
+                    the internet or electronic storage is 100% secure, so we
+                    cannot guarantee absolute security.
                   </p>
                 </section>
 
