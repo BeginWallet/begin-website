@@ -41,15 +41,15 @@ const PhoneScreen = () => (
       </span>
     </div>
     <div style={{ padding: '22px 26px 0', display: 'flex', flexDirection: 'column' }}>
-      <span style={{ fontSize: 15, color: muted }}>Balance</span>
+      <span style={{ fontSize: 15, color: muted }}>Your stablecoin account</span>
       <span style={{ fontSize: 62, fontWeight: 300, letterSpacing: '-0.05em', lineHeight: 1.1 }}>
         $8,420<span style={{ color: '#8E8E93' }}>.00</span>
       </span>
-      <span style={{ marginTop: 4, fontSize: 14, color: muted }}>USD account ••4821 · @ana</span>
+      <span style={{ marginTop: 4, fontSize: 14, color: muted }}>Dollars · USDC · @ana</span>
     </div>
     <div style={{ display: 'flex', gap: 8, padding: '22px 20px 0' }}>
       <span style={{ flex: 1, height: 54, borderRadius: 27, background: ink, color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 500 }}>Add money</span>
-      <span style={{ flex: 1, height: 54, borderRadius: 27, background: soft, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 500 }}>Send home</span>
+      <span style={{ flex: 1, height: 54, borderRadius: 27, background: soft, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, fontWeight: 500 }}>Send</span>
     </div>
     <div style={{ margin: '22px 20px 0', padding: 16, borderRadius: 22, border: `1px solid ${line}`, display: 'flex', flexDirection: 'column', gap: 10 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 15, fontWeight: 500 }}>
@@ -101,7 +101,7 @@ const PhoneScreen = () => (
       <span style={{ color: ink, fontWeight: 500 }}>Home</span>
       <span>Send</span>
       <span>Get paid</span>
-      <span>Activity</span>
+      <span>Crypto</span>
     </div>
   </div>
 )

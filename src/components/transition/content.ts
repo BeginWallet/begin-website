@@ -110,11 +110,17 @@ export const DOWNLOADS = [
   { t: 'Begin Wallet extension', s: 'Chrome, Brave and Edge', href: LINKS.chromeStore, icon: ICONS.ext, filled: false },
 ]
 
+export const GET_LINKS = [
+  { t: 'Begin for iPhone', s: 'App Store', href: LINKS.appStore, icon: ICONS.apple, filled: true },
+  { t: 'Begin for Android', s: 'Google Play', href: LINKS.googlePlay, icon: ICONS.android, filled: true },
+  { t: 'Begin for your browser', s: 'Chrome, Brave and Edge', href: LINKS.chromeStore, icon: ICONS.ext, filled: false },
+]
+
 export const JOBS = [
   {
     label: 'Get paid',
-    h: 'Your own US and EU account details.',
-    b: 'Clients in the US pay by bank transfer to your account and routing number. Clients in Europe pay by SEPA to your own IBAN. Or send a pay link and they pay by card.',
+    h: 'Dollars and euros, held as USDC and EURC.',
+    b: 'Get paid with your pay link or your @name. Add money by card, Apple Pay or bank transfer, and withdraw to your own bank when you need to.',
     phone: true,
     src: '/images/transition/phone-cafe.jpg',
     alt: 'Hands holding a phone showing the Begin app, over a café table',
@@ -123,14 +129,14 @@ export const JOBS = [
     cap: 'Lumen Labs paid Ana',
   },
   {
-    label: 'Send home',
-    h: 'Money home, cost up front.',
-    b: 'See what your family gets, the total fee and when it arrives, before you send. Set it once and repeat it every month.',
+    label: 'Send',
+    h: 'Send to anyone, fee up front.',
+    b: 'Send dollars to family and friends in seconds, and see the fee before you send. They keep it in their own Begin account or withdraw to their bank.',
     phone: false,
     src: '/images/transition/mom-kitchen.jpg',
     alt: 'Ana’s mom in her kitchen, smiling at her phone',
     pos: '50% 35%',
-    amt: '₱17,220.00',
+    amt: '$300.00',
     cap: 'Mom received it',
   },
 ]
@@ -139,7 +145,7 @@ export const PROOF = [
   { d: ICONS.receipt, t: 'Every fee up front', b: 'The total cost before you send' },
   { d: ICONS.chat, t: 'Help at any hour', b: 'Ask Begin answers 24/7, and our team steps in' },
   { d: ICONS.lock, t: 'Only you control it', b: 'Begin never holds your money' },
-  { d: ICONS.globe, t: 'Clients pay like any local account', b: 'In the US or Europe. They don’t need Begin' },
+  { d: ICONS.globe, t: 'Your crypto, one tab away', b: 'Everything Begin Wallet does, in the Crypto tab' },
 ]
 
 export const SAME = [
@@ -150,22 +156,24 @@ export const SAME = [
 ]
 
 export const CHANGES = [
-  { t: 'A new app is coming, iPhone first', b: 'The new Begin is built for getting paid and sending money home. Android follows.' },
-  { t: 'New features go to the new Begin', b: 'Begin Wallet gets fixes and security updates, not new features.' },
+  { t: 'A new app is coming, iPhone first', b: 'The new Begin is a stablecoin account for getting paid and sending money. Android follows.' },
+  { t: 'New features go to the new Begin', b: 'Begin Wallet gets fixes and security updates. The new Begin’s Crypto tab carries what Begin Wallet does today.' },
   { t: 'You choose when to move', b: 'When the new Begin arrives, you decide if and when to bring your wallet in. Nothing moves on its own.' },
   { t: 'A new way to get help', b: 'Ask Begin answers 24/7, and our team steps in. It helps with Begin Wallet too.' },
 ]
 
 export const TIMELINE = [
   { when: 'Now', t: 'Nothing to do', b: 'Begin Wallet works on iPhone, Android and in your browser, as it always has.', current: true, upcoming: false },
-  { when: 'Coming soon', t: 'The new Begin on iPhone', b: 'Join the waitlist and we’ll tell you the day it’s ready.', current: false, upcoming: false },
+  { when: 'Coming soon', t: 'The new Begin on iPhone', b: 'It arrives as an update to Begin. Keep automatic updates on.', current: false, upcoming: false },
   { when: 'After that', t: 'The new Begin on Android', b: 'Begin Wallet stays installed and working until you decide otherwise.', current: false, upcoming: true },
 ]
 
 export const FAQ = [
   { q: 'Do I have to move to the new Begin?', a: 'No. Begin Wallet keeps working on iPhone, Android and as a browser extension. Move when you want to, or not at all.' },
   { q: 'Is anything happening to what’s in my wallet?', a: 'No. Nothing moves and nothing converts. Your wallet only answers to you, and that hasn’t changed.' },
-  { q: 'When does the new Begin launch?', a: 'Soon, on iPhone first, then Android. We don’t have a date to share yet. Join the waitlist and we’ll email you the day it’s ready.' },
+  { q: 'What is a stablecoin account?', a: 'Your balance is held as USDC (digital dollars) and EURC (digital euros), issued by Circle, in a wallet only you control. Begin never holds your money.' },
+  { q: 'Can I still use my crypto in the new Begin?', a: 'Yes. The Crypto tab shows your other assets and lets you convert, send and receive them, using decentralized services straight from your wallet.' },
+  { q: 'When does the new Begin launch?', a: 'Soon, on iPhone first, then Android. We don’t have a date to share yet. Get Begin now and it updates itself when the new Begin is ready.' },
   { q: 'Will Begin Wallet keep getting updates?', a: 'Yes, security fixes and updates to keep it working. New features go to the new Begin.' },
   { q: 'Someone says they’re from Begin and asks for my recovery phrase.', a: 'It’s a scam. Begin will never ask for it, by email, chat, phone or DM. Don’t share it with anyone.' },
   { q: 'How do I get help?', a: 'Ask Begin answers 24/7, in the app and on our website. When something needs a person, it passes you to our team with the details, so you never explain twice.' },
