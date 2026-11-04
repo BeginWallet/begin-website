@@ -101,7 +101,7 @@ const PhoneScreen = () => (
       <span style={{ color: ink, fontWeight: 500 }}>Home</span>
       <span>Send</span>
       <span>Get paid</span>
-      <span>Activity</span>
+      <span>Crypto</span>
     </div>
   </div>
 )
