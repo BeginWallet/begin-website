@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { useState } from 'react'
 import Wordmark from './wordmark'
 import { openCookieSettings } from '../cookie-consent'
 import { COMPANY } from '../../lib/company'
@@ -9,6 +9,7 @@ import {
   DOWNLOADS,
   FAQ,
   FOOTER_LINKS,
+  GET_LINKS,
   ICONS,
   JOBS,
   PLATFORMS,
@@ -44,82 +45,6 @@ const Dot = () => <span className={styles.dot}>.</span>
 
 const cx = (...c: (string | false | undefined)[]) => c.filter(Boolean).join(' ')
 
-// Netlify Forms: the matching static form lives in public/__forms.html.
-const WAITLIST_FORM = 'waitlist'
-
-const Waitlist = () => {
-  const [email, setEmail] = useState('')
-  const [state, setState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
-
-  const submit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const form = e.currentTarget
-    if (!form.checkValidity()) {
-      form.reportValidity()
-      return
-    }
-    setState('sending')
-    try {
-      const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString()
-      const res = await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
-      })
-      if (!res.ok) throw new Error(String(res.status))
-      setState('done')
-    } catch {
-      setState('error')
-    }
-  }
-
-  if (state === 'done') {
-    return (
-      <span role="status" className={styles.status}>
-        <span className={styles.statusDot} />
-        You’re on the list. We’ll email you the day the new Begin is ready.
-      </span>
-    )
-  }
-
-  return (
-    <form name={WAITLIST_FORM} onSubmit={submit} className={styles.form} noValidate>
-      <input type="hidden" name="form-name" value={WAITLIST_FORM} />
-      <p hidden>
-        <label>
-          Leave this empty <input name="bot-field" tabIndex={-1} autoComplete="off" />
-        </label>
-      </p>
-      <label htmlFor="wl-email" className={styles.label}>
-        Email
-      </label>
-      <div className={styles.formRow}>
-        <input
-          id="wl-email"
-          name="email"
-          type="email"
-          required
-          autoComplete="email"
-          placeholder="you@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={styles.input}
-        />
-        <button type="submit" disabled={state === 'sending'} className={cx(styles.btn, styles.btnPrimary, styles.btnTall)}>
-          {state === 'sending' ? 'Joining…' : 'Join the waitlist'}
-        </button>
-      </div>
-      {state === 'error' ? (
-        <span role="alert" className={styles.error}>
-          That didn’t go through. Please try again in a moment.
-        </span>
-      ) : (
-        <span className={styles.small}>One email when it’s ready. No spam.</span>
-      )}
-    </form>
-  )
-}
-
 const TransitionLanding = () => {
   const [tab, setTab] = useState<Platform>('ios')
   const cur = PLATFORMS[tab]
@@ -146,7 +71,7 @@ const TransitionLanding = () => {
           <a href="#faq">Help</a>
         </nav>
         <a href="#get" className={cx(styles.btn, styles.btnSm, styles.btnPrimary)}>
-          Join the waitlist
+          Get Begin
         </a>
       </header>
 
@@ -179,7 +104,7 @@ const TransitionLanding = () => {
                 </p>
                 <div className={styles.btnRow} style={{ paddingTop: 4 }}>
                   <a href="#get" className={cx(styles.btn, styles.btnPrimary)}>
-                    Join the waitlist
+                    Get Begin
                   </a>
                   <a href="#new" className={cx(styles.btn, styles.btnSoft)}>
                     See what’s new
@@ -437,17 +362,27 @@ const TransitionLanding = () => {
           <div className={styles.getCard}>
             <div className={styles.getText}>
               <h2 id="getH" className={styles.h2}>
-                Be first in line<Dot />
+                Get Begin<Dot />
               </h2>
               <p className={styles.lead} style={{ maxWidth: 420 }}>
-                The new Begin is coming to iPhone first. Leave your email and we’ll tell you the day it’s ready.
+                Download Begin on iPhone, Android or in your browser. The new Begin arrives as an update, iPhone first.
               </p>
-              <Waitlist />
+              <div className={styles.downloads}>
+                {GET_LINKS.map((d) => (
+                  <a key={d.t} href={d.href} target="_blank" rel="noopener noreferrer" className={styles.download}>
+                    <span className={styles.downloadIcon}>
+                      <Icon d={d.icon} size={22} width={1.6} filled={d.filled} />
+                    </span>
+                    <span className={styles.downloadText}>
+                      <span className={styles.downloadTitle}>{d.t}</span>
+                      <span className={styles.small}>{d.s}</span>
+                    </span>
+                    <Icon d={ICONS.download} size={18} />
+                  </a>
+                ))}
+              </div>
               <span className={styles.note14} style={{ color: '#6E6E73' }}>
-                Android follows. Begin Wallet keeps working in the meantime.{' '}
-                <a href="#wallet" style={{ fontWeight: 500 }}>
-                  Get Begin Wallet
-                </a>
+                Only download Begin from the App Store, Google Play, the Chrome Web Store or this website.
               </span>
             </div>
             <div className={styles.getArt}>

@@ -110,6 +110,12 @@ export const DOWNLOADS = [
   { t: 'Begin Wallet extension', s: 'Chrome, Brave and Edge', href: LINKS.chromeStore, icon: ICONS.ext, filled: false },
 ]
 
+export const GET_LINKS = [
+  { t: 'Begin for iPhone', s: 'App Store', href: LINKS.appStore, icon: ICONS.apple, filled: true },
+  { t: 'Begin for Android', s: 'Google Play', href: LINKS.googlePlay, icon: ICONS.android, filled: true },
+  { t: 'Begin for your browser', s: 'Chrome, Brave and Edge', href: LINKS.chromeStore, icon: ICONS.ext, filled: false },
+]
+
 export const JOBS = [
   {
     label: 'Get paid',
@@ -158,7 +164,7 @@ export const CHANGES = [
 
 export const TIMELINE = [
   { when: 'Now', t: 'Nothing to do', b: 'Begin Wallet works on iPhone, Android and in your browser, as it always has.', current: true, upcoming: false },
-  { when: 'Coming soon', t: 'The new Begin on iPhone', b: 'Join the waitlist and we’ll tell you the day it’s ready.', current: false, upcoming: false },
+  { when: 'Coming soon', t: 'The new Begin on iPhone', b: 'It arrives as an update to Begin. Keep automatic updates on.', current: false, upcoming: false },
   { when: 'After that', t: 'The new Begin on Android', b: 'Begin Wallet stays installed and working until you decide otherwise.', current: false, upcoming: true },
 ]
 
@@ -167,7 +173,7 @@ export const FAQ = [
   { q: 'Is anything happening to what’s in my wallet?', a: 'No. Nothing moves and nothing converts. Your wallet only answers to you, and that hasn’t changed.' },
   { q: 'What is a stablecoin account?', a: 'Your balance is held as USDC (digital dollars) and EURC (digital euros), issued by Circle, in a wallet only you control. Begin never holds your money.' },
   { q: 'Can I still use my crypto in the new Begin?', a: 'Yes. The Crypto tab shows your other assets and lets you convert, send and receive them, using decentralized services straight from your wallet.' },
-  { q: 'When does the new Begin launch?', a: 'Soon, on iPhone first, then Android. We don’t have a date to share yet. Join the waitlist and we’ll email you the day it’s ready.' },
+  { q: 'When does the new Begin launch?', a: 'Soon, on iPhone first, then Android. We don’t have a date to share yet. Get Begin now and it updates itself when the new Begin is ready.' },
   { q: 'Will Begin Wallet keep getting updates?', a: 'Yes, security fixes and updates to keep it working. New features go to the new Begin.' },
   { q: 'Someone says they’re from Begin and asks for my recovery phrase.', a: 'It’s a scam. Begin will never ask for it, by email, chat, phone or DM. Don’t share it with anyone.' },
   { q: 'How do I get help?', a: 'Ask Begin answers 24/7, in the app and on our website. When something needs a person, it passes you to our team with the details, so you never explain twice.' },
