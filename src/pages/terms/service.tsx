@@ -74,9 +74,7 @@ const Service = () => {
                   </h2>
                   <p className=" mb-4">
                     Welcome to Begin Wallet, a non-custodial wallet service
-                    provided by Begin W UG, registered under HRB 107581 in
-                    Germany, with its address at Luegallee 12, 49545 Düsseldorf.
-                    By accessing or using our service, you agree to be bound by
+                    provided by Neuralspark Limited. By accessing or using our service, you agree to be bound by
                     these Terms of Service.
                   </p>
                 </section>
@@ -145,7 +143,7 @@ const Service = () => {
                   </h2>
                   <p className=" mb-4">
                     All rights to the software, content, and other materials on
-                    or used in Begin Wallet are owned by Begin W UG. You are
+                    or used in Begin Wallet are owned by Neuralspark Limited. You are
                     granted a limited, non-exclusive, non-transferable license
                     to access and use the service for personal or internal
                     business use only.
@@ -168,7 +166,7 @@ const Service = () => {
                       <span className="font-medium">
                         Limitation of Liability:
                       </span>{" "}
-                      Begin W UG shall not be liable for any indirect,
+                      Neuralspark Limited shall not be liable for any indirect,
                       incidental, special, consequential, or punitive damages,
                       including loss of profits, data, use, goodwill, or other
                       intangible losses, resulting from (i) your access to or
@@ -203,7 +201,7 @@ const Service = () => {
                     8. Changes to Terms
                   </h2>
                   <p className=" mb-4">
-                    Begin W UG reserves the right, at our sole discretion, to
+                    Neuralspark Limited reserves the right, at our sole discretion, to
                     modify or replace these Terms at any time. If a revision is
                     material we will provide at least 30 days' notice prior to
                     any new terms taking effect. What constitutes a material
@@ -230,9 +228,8 @@ const Service = () => {
                     For any questions about these Terms, please contact us at:
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
-                    <p className="">
-                      Address: Luegallee 12, 49545 Düsseldorf, Germany
-                    </p>
+                    {/* TODO: add Neuralspark Limited's registered office address and company number. */}
+                    <p className="">Company: Neuralspark Limited</p>
                     <p className="">Email: web3@begin.is</p>
                   </div>
                 </section>

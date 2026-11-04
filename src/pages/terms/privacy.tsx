@@ -76,7 +76,7 @@ const Privacy = () => {
                     1. Introduction
                   </h2>
                   <p className=" mb-4">
-                    Begin Wallet, operated by Begin W UG, respects your privacy
+                    Begin Wallet, operated by Neuralspark Limited, respects your privacy
                     and is committed to protecting your personal data. This
                     Privacy Policy explains how we collect, use, disclose, and
                     safeguard your information when you use our non-custodial
@@ -294,9 +294,8 @@ const Privacy = () => {
                     contact us at:
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
-                    <p className="">
-                      Address: Luegallee 12, 49545 Düsseldorf, Germany
-                    </p>
+                    {/* TODO: add Neuralspark Limited's registered office address and company number. */}
+                    <p className="">Company: Neuralspark Limited</p>
                     <p className="">Email: web3@begin.is</p>
                   </div>
                 </section>
