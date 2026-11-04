@@ -1,10 +1,10 @@
 // Legal entity behind Begin, used by the terms, privacy policy and footers.
-// TODO: fill in croNumber (CRO company number). Empty fields don't render.
+// Empty fields don't render.
 export const COMPANY = {
   name: 'Neuralspark Limited',
   type: 'a private company limited by shares',
   country: 'Ireland',
-  croNumber: '', // Companies Registration Office number, e.g. '123456'
+  croNumber: '794530', // Companies Registration Office number
   registeredOffice: '59 Shieling Square, Dublin, Ireland',
   vatNumber: 'IE4456083OH',
   email: 'web3@begin.is',

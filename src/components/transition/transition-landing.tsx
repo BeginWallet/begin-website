@@ -480,7 +480,7 @@ const TransitionLanding = () => {
               can’t see or move what’s in it. Begin is a product of Neuralspark Limited.
             </span>
             <span>
-              © {new Date().getFullYear()} {COMPANY.name} · {COMPANY.registeredOffice} · VAT {COMPANY.vatNumber}
+              © {new Date().getFullYear()} {COMPANY.name} · {COMPANY.registeredOffice} · Registered in Ireland, no. {COMPANY.croNumber} · VAT {COMPANY.vatNumber}
             </span>
           </div>
         </div>
