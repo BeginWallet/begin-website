@@ -7,7 +7,7 @@ import TransitionLanding from '../components/transition/transition-landing'
 
 const TITLE = 'Begin is changing — the new Begin is coming, Begin Wallet keeps working'
 const DESCRIPTION =
-  'The new Begin is a dollar account for people who earn across borders and send money home, coming to iPhone first. Begin Wallet keeps working on iPhone, Android and in your browser.'
+  'The new Begin is a stablecoin account: dollars and euros, held as USDC and EURC, that only you control. Coming to iPhone first. Begin Wallet keeps working on iPhone, Android and in your browser.'
 const IMAGE = 'https://begin.is/images/begin_cover.png'
 
 const Index = () => (

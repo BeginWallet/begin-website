@@ -157,8 +157,8 @@ const TransitionLanding = () => {
               Begin is changing<Dot />
             </h1>
             <p className={styles.heroLead}>
-              Begin started as a wallet. Soon it becomes a dollar account for people who earn across borders and send
-              money home, starting on iPhone. Begin Wallet keeps working, everywhere you use it today.
+              Begin started as a wallet. The new Begin is a stablecoin account: dollars and euros, held as USDC and EURC,
+              that only you control. It’s coming to iPhone first, and Begin Wallet keeps working everywhere you use it today.
             </p>
           </div>
 
@@ -172,10 +172,10 @@ const TransitionLanding = () => {
               <div className={styles.heroPanel}>
                 <span className={styles.eyebrow}>Coming soon · iPhone first</span>
                 <h2 className={styles.h2Card}>
-                  Earn anywhere. Send home<Dot />
+                  Dollars and euros. Send to anyone<Dot />
                 </h2>
                 <p className={styles.body}>
-                  US and EU account details for your clients, and the full cost up front when you send money to family.
+                  Hold USDC and EURC in your own account, send to anyone in seconds, and keep your crypto in the Crypto tab.
                 </p>
                 <div className={styles.btnRow} style={{ paddingTop: 4 }}>
                   <a href="#get" className={cx(styles.btn, styles.btnPrimary)}>
@@ -233,7 +233,7 @@ const TransitionLanding = () => {
             </div>
             <p className={styles.lead} style={{ maxWidth: 440 }}>
               We listened to how people used Begin. Most of you were getting paid from abroad and sending money to
-              family. So that’s what the new Begin does best.
+              family. So the new Begin starts there, with your crypto one tab away.
             </p>
           </div>
           <div className={styles.jobs}>
@@ -475,8 +475,8 @@ const TransitionLanding = () => {
           </div>
           <div className={styles.footerLegal}>
             <span>
-              Begin is not a bank and does not hold customer funds. Balances in the new Begin are USDC, a digital dollar
-              issued by Circle, in wallets that only customers control. Begin Wallet is self-custodial software; Begin
+              Begin is not a bank and does not hold customer funds. Balances in the new Begin are USDC and EURC, digital
+              dollars and euros issued by Circle, in wallets that only customers control. Begin Wallet is self-custodial software; Begin
               can’t see or move what’s in it. Begin is a product of Neuralspark Limited.
             </span>
             <span>
