@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Meta from '../components/meta'
 import TransitionLanding from '../components/transition/transition-landing'
-import { GA_TRACKING_ID } from '../lib/gtag'
 
 // Temporary homepage for the move from Begin Wallet to the new Begin.
 // The previous Begin Wallet homepage is in git history (pages/index.tsx).
@@ -35,17 +34,6 @@ const Index = () => (
 
       <meta name="apple-itunes-app" content="app-id=1642488837" />
 
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}', { page_path: window.location.pathname });
-        `,
-        }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

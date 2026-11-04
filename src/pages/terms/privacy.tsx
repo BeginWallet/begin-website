@@ -2,10 +2,10 @@ import Container from "../../components/container";
 import Navigation from "../../components/navigation";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import { GA_TRACKING_ID } from "../../lib/gtag";
 import { defineMessages } from "react-intl";
 import f from "../../lib/translate";
 import { COMPANY, companyRegistration } from "../../lib/company";
+import { openCookieSettings } from "../../components/cookie-consent";
 import { CompanyDetails, Item, LegalSection, List, P } from "../../components/legal";
 
 const EFFECTIVE_DATE = "November 4, 2026";
@@ -45,23 +45,6 @@ const Privacy = () => {
             content={`${f(messages.pageDescription)}`}
           />
           <meta property="og:image" content="/images/begin_cover.png" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-            }}
-          />
         </Head>
         <Navigation />
         <Container>
@@ -179,8 +162,13 @@ const Privacy = () => {
                   <P>
                     We use cookies and similar technologies that are strictly necessary for the website to work,
                     such as remembering your language. We only use analytics or other non-essential cookies with
-                    your consent, in line with the Irish ePrivacy Regulations (S.I. No. 336 of 2011). You can change
-                    your choice at any time and control cookies through your browser settings.
+                    your consent, in line with the Irish ePrivacy Regulations (S.I. No. 336 of 2011). Google Analytics
+                    only loads if you choose &quot;Accept analytics&quot; in our cookie banner. We remember your choice
+                    on your device for six months. You can change it at any time with{' '}
+                    <button type="button" onClick={openCookieSettings} className="underline font-medium">
+                      Cookie settings
+                    </button>
+                    , and control cookies through your browser settings.
                   </P>
                 </LegalSection>
 

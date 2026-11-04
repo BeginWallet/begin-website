@@ -1,5 +1,7 @@
 import { FormEvent, useState } from 'react'
 import Wordmark from './wordmark'
+import { openCookieSettings } from '../cookie-consent'
+import { COMPANY } from '../../lib/company'
 import PhonePhoto from './phone-photo'
 import styles from './transition.module.css'
 import {
@@ -466,6 +468,9 @@ const TransitionLanding = () => {
                   {l.t}
                 </a>
               ))}
+              <button type="button" onClick={openCookieSettings} className={styles.footerButton}>
+                Cookie settings
+              </button>
             </nav>
           </div>
           <div className={styles.footerLegal}>
@@ -474,7 +479,9 @@ const TransitionLanding = () => {
               issued by Circle, in wallets that only customers control. Begin Wallet is self-custodial software; Begin
               can’t see or move what’s in it. Begin is a product of Neuralspark Limited.
             </span>
-            <span>© {new Date().getFullYear()} Neuralspark Limited</span>
+            <span>
+              © {new Date().getFullYear()} {COMPANY.name} · {COMPANY.registeredOffice} · VAT {COMPANY.vatNumber}
+            </span>
           </div>
         </div>
       </footer>

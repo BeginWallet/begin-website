@@ -29,6 +29,7 @@ export const CompanyDetails = () => (
     <p>{COMPANY.name}</p>
     {COMPANY.registeredOffice ? <p>Registered office: {COMPANY.registeredOffice}</p> : <p>{COMPANY.country}</p>}
     {COMPANY.croNumber && <p>Company number: {COMPANY.croNumber}</p>}
+    {COMPANY.vatNumber && <p>VAT number: {COMPANY.vatNumber}</p>}
     <p>
       Email: <a href={`mailto:${COMPANY.email}`} className="underline">{COMPANY.email}</a>
     </p>
