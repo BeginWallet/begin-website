@@ -8,7 +8,7 @@ Begin used to be a crypto wallet. The new Begin is **a dollar account that only 
 
 - Tagline: **Earn anywhere. Send home.** (later phase; for now lead with "A dollar account that is only yours.")
 - Two jobs: **Get paid** (US account details, a pay link) and **Send home** (fee and arrival time shown up front).
-- **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today money in and out is buying and selling digital dollars only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
+- **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today money in and out is adding money and cashing out only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
 - Direction: **Mono + Human**. Black and white do the work, real people bring the warmth.
 - Crypto is built in, but it is an option, never the headline. The old wallet tools live under Me › Advanced.
 
@@ -88,7 +88,7 @@ One family: **Open Sauce One**. Size and weight make the hierarchy, not boxes. B
 
 - **Amounts:** Light and tight, with the cents in `ink-3` (24 px and up only): $8,420.00 (the ".00" in grey).
 - **The Begin full stop:** one cyan full stop on a short display headline ("Sent home."). Never on body text, never twice on a screen.
-- **Sentence case, always.** No all caps, no title case. Buttons are verbs: Get paid · Send home · Add money · Withdraw.
+- **Sentence case, always.** No all caps, no title case. Buttons are verbs: Add money · Cash out · Send (later: Get paid · Send home).
 
 ## 5 · System (Begin Mono v1)
 
@@ -108,19 +108,19 @@ Few parts, used well. The same tokens drive the app, web checkout and the websit
 
 | | **Now: dollar account** | **Later: send money home** |
 | --- | --- | --- |
-| When | Today, while money in and out is buying and selling digital dollars | Once a payout partner lets people send to family (bank, mobile wallet, cash pickup) |
-| What we are | A dollar account that only you control, in digital dollars (USDC) you buy and sell with your card or bank | A dollar account for people who earn across borders and send money home |
+| When | Today, while money in and out is adding money and cashing out | Once a payout partner lets people send to family (bank, mobile wallet, cash pickup) |
+| What we are | A dollar account that only you control, in digital dollars (USDC). Add money with your card or bank, cash out to your bank | A dollar account for people who earn across borders and send money home |
 | Lead line | A dollar account that is only yours. | Earn anywhere. Send home. |
-| Jobs we promise | Buy dollars · Hold them · Send to another wallet · Sell back to your bank | Get paid · Send home |
+| Jobs we promise | Add money · Hold dollars · Send to another wallet · Cash out to your bank | Get paid · Send home |
 | Stablecoin words | Allowed, explained in plain words the first time ("USDC, a digital dollar") | Back to Me › Advanced, FAQ and legal only |
 
 Rules for **now**:
 
 - Never promise sending money to family, payouts to GCash, banks or cash pickup, or arrival times, until it ships. "Send home" and the Mom examples below are for the later phase.
 - Stablecoin, USDC and wallet are fine to say. Explain each once, in plain words, and keep the sentence about what the person gets: "USDC is a digital dollar. One USDC is meant to be worth one US dollar."
-- Show the full fee before people buy or sell. Don't name the provider in copy.
+- Show the full fee before people add money or cash out. Don't name the provider in copy.
 - Be honest about risk: USDC is issued by Circle, not a bank deposit, and not insured by Begin.
-- Still no crypto language: no on-ramp, off-ramp, fiat, gas, bridge, on-chain, degen, moon, APY hype, token prices or charts. Say buy, sell, add money, withdraw.
+- Still no crypto language: no on-ramp, off-ramp, fiat, gas, bridge, on-chain, degen, moon, APY hype, token prices or charts. Say add money and cash out (the words the app uses).
 - Still never say Begin holds or keeps your money. Only you can move it.
 
 The four voice rules below hold in both phases.
@@ -140,7 +140,7 @@ Examples for **now**:
 | --- | --- |
 | Buy dollars with your card. You see the fee before you pay. | Ape into stablecoins with zero fees. |
 | USDC, a digital dollar. Only you can move it. | Your funds are safe with us. |
-| Sell back to your bank whenever you want. | Instant off-ramp to fiat rails. |
+| Cash out to your bank whenever you want. | Instant off-ramp to fiat rails. |
 
 Examples for **later**:
 
@@ -152,7 +152,7 @@ Examples for **later**:
 | We'll text Mom when it lands. | A notification will be dispatched upon settlement. |
 | Only you can move your money. | Your funds are safe with us. |
 
-**Words we use (later phase):** dollars, account, account details, send, get paid, add money, withdraw, fee, arrives, only you.
+**Words we use (later phase):** dollars, account, account details, send, get paid, add money, cash out, fee, arrives, only you.
 
 **Words we keep out (later phase; see Now rules above):** crypto, token, wallet address, on-ramp, off-ramp, fiat, gas, bridge, on-chain, stablecoin, seed phrase, custody, held by Begin. Also **remittance** (and remit, remitting) in any user-facing copy: say "send money home", "send to family" or "send home".
 
