@@ -4,9 +4,9 @@ Version 1 · November 2026. The source of truth for how the new Begin looks and 
 
 ## 1 · Who Begin is now
 
-Begin used to be a crypto wallet. The new Begin is **a dollar account that only you control, for people who earn across borders and send money home.**
+Begin used to be a crypto wallet. The new Begin is **a dollar account that only you control.** Next, once payouts ship, it becomes the account for people who earn across borders and send money home.
 
-- Tagline: **Earn anywhere. Send home.**
+- Tagline: **Earn anywhere. Send home.** (later phase; for now lead with "A dollar account that is only yours.")
 - Two jobs: **Get paid** (US account details, a pay link) and **Send home** (fee and arrival time shown up front).
 - **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today our provider, Onramper, covers buying and selling digital dollars only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
 - Direction: **Mono + Human**. Black and white do the work, real people bring the warmth.
