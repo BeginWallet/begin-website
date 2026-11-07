@@ -8,6 +8,7 @@ Begin used to be a crypto wallet. The new Begin is **a dollar account that only 
 
 - Tagline: **Earn anywhere. Send home.**
 - Two jobs: **Get paid** (US account details, a pay link) and **Send home** (fee and arrival time shown up front).
+- **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today our provider, Onramper, covers buying and selling digital dollars only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
 - Direction: **Mono + Human**. Black and white do the work, real people bring the warmth.
 - Crypto is built in, but it is an option, never the headline. The old wallet tools live under Me › Advanced.
 
@@ -103,12 +104,45 @@ Few parts, used well. The same tokens drive the app, web checkout and the websit
 
 ## 6 · Voice
 
+### Two phases
+
+| | **Now: dollar account** | **Later: send money home** |
+| --- | --- | --- |
+| When | Today, while money in and out runs through Onramper | Once a payout partner lets people send to family (bank, mobile wallet, cash pickup) |
+| What we are | A dollar account that only you control, in digital dollars (USDC) you buy and sell with your card or bank | A dollar account for people who earn across borders and send money home |
+| Lead line | A dollar account that is only yours. | Earn anywhere. Send home. |
+| Jobs we promise | Buy dollars · Hold them · Send to another wallet · Sell back to your bank | Get paid · Send home |
+| Stablecoin words | Allowed, explained in plain words the first time ("USDC, a digital dollar") | Back to Me › Advanced, FAQ and legal only |
+
+Rules for **now**:
+
+- Never promise sending money to family, payouts to GCash, banks or cash pickup, or arrival times, until it ships. "Send home" and the Mom examples below are for the later phase.
+- Stablecoin, USDC and wallet are fine to say. Explain each once, in plain words, and keep the sentence about what the person gets: "USDC is a digital dollar. One USDC is meant to be worth one US dollar."
+- Name Onramper as the provider where people buy or sell, and say its fees are shown before you pay.
+- Be honest about risk: USDC is issued by Circle, not a bank deposit, and not insured by Begin.
+- Still no crypto culture: no gas, bridge, on-chain, degen, moon, APY hype, token prices or charts.
+- Still never say Begin holds or keeps your money. Only you can move it.
+
+The four voice rules below hold in both phases.
+
+### How we sound
+
 **We say what happens.** Plain words, the full cost up front, a quiet confidence that never sells too hard.
 
 1. **Plain-spoken.** Short sentences in everyday words. If a nurse in Dubai and a designer in Lisbon both get it on first read, it ships.
 2. **Say what happens, and when.** Who gets what, by when, for how much. The full cost before anyone commits.
 3. **Warm, not cute.** We talk about Mom and rent and clients. No jokes about money, no exclamation marks.
 4. **Begin is quiet.** We report what we did in one line. We never cheer and never push.
+
+Examples for **now**:
+
+| We say | We don't say |
+| --- | --- |
+| Buy dollars with your card. You see Onramper's fee before you pay. | Ape into stablecoins with zero fees. |
+| USDC, a digital dollar. Only you can move it. | Your funds are safe with us. |
+| Sell back to your bank whenever you want. | Instant off-ramp to fiat rails. |
+
+Examples for **later**:
 
 | We say | We don't say |
 | --- | --- |
@@ -118,9 +152,9 @@ Few parts, used well. The same tokens drive the app, web checkout and the websit
 | We'll text Mom when it lands. | A notification will be dispatched upon settlement. |
 | Only you can move your money. | Your funds are safe with us. |
 
-**Words we use:** dollars, account, account details, send, get paid, add money, withdraw, fee, arrives, only you.
+**Words we use (later phase):** dollars, account, account details, send, get paid, add money, withdraw, fee, arrives, only you.
 
-**Words we keep out:** crypto, token, wallet address, gas, bridge, on-chain, stablecoin, seed phrase, custody, held by Begin. Also **remittance** (and remit, remitting) in any user-facing copy: say "send money home", "send to family" or "send home".
+**Words we keep out (later phase; see Now rules above):** crypto, token, wallet address, gas, bridge, on-chain, stablecoin, seed phrase, custody, held by Begin. Also **remittance** (and remit, remitting) in any user-facing copy: say "send money home", "send to family" or "send home".
 
 Exceptions, kept small:
 
