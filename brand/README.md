@@ -8,7 +8,7 @@ Begin used to be a crypto wallet. The new Begin is **a dollar account that only 
 
 - Tagline: **Earn anywhere. Send home.** (later phase; for now lead with "A dollar account that is only yours.")
 - Two jobs: **Get paid** (US account details, a pay link) and **Send home** (fee and arrival time shown up front).
-- **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today our provider, Onramper, covers buying and selling digital dollars only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
+- **Today vs. later:** until Begin can actually move money to family (that needs a payout partner; today money in and out is buying and selling digital dollars only), we speak as a **dollar account** (built on USDC, a stablecoin). "Send home" is the target voice for when that ships. See [6 · Voice](#6--voice) for both.
 - Direction: **Mono + Human**. Black and white do the work, real people bring the warmth.
 - Crypto is built in, but it is an option, never the headline. The old wallet tools live under Me › Advanced.
 
@@ -108,7 +108,7 @@ Few parts, used well. The same tokens drive the app, web checkout and the websit
 
 | | **Now: dollar account** | **Later: send money home** |
 | --- | --- | --- |
-| When | Today, while money in and out runs through Onramper | Once a payout partner lets people send to family (bank, mobile wallet, cash pickup) |
+| When | Today, while money in and out is buying and selling digital dollars | Once a payout partner lets people send to family (bank, mobile wallet, cash pickup) |
 | What we are | A dollar account that only you control, in digital dollars (USDC) you buy and sell with your card or bank | A dollar account for people who earn across borders and send money home |
 | Lead line | A dollar account that is only yours. | Earn anywhere. Send home. |
 | Jobs we promise | Buy dollars · Hold them · Send to another wallet · Sell back to your bank | Get paid · Send home |
@@ -118,7 +118,7 @@ Rules for **now**:
 
 - Never promise sending money to family, payouts to GCash, banks or cash pickup, or arrival times, until it ships. "Send home" and the Mom examples below are for the later phase.
 - Stablecoin, USDC and wallet are fine to say. Explain each once, in plain words, and keep the sentence about what the person gets: "USDC is a digital dollar. One USDC is meant to be worth one US dollar."
-- Name Onramper as the provider where people buy or sell, and say its fees are shown before you pay.
+- Show the full fee before people buy or sell. Don't name the provider in copy.
 - Be honest about risk: USDC is issued by Circle, not a bank deposit, and not insured by Begin.
 - Still no crypto culture: no gas, bridge, on-chain, degen, moon, APY hype, token prices or charts.
 - Still never say Begin holds or keeps your money. Only you can move it.
@@ -138,7 +138,7 @@ Examples for **now**:
 
 | We say | We don't say |
 | --- | --- |
-| Buy dollars with your card. You see Onramper's fee before you pay. | Ape into stablecoins with zero fees. |
+| Buy dollars with your card. You see the fee before you pay. | Ape into stablecoins with zero fees. |
 | USDC, a digital dollar. Only you can move it. | Your funds are safe with us. |
 | Sell back to your bank whenever you want. | Instant off-ramp to fiat rails. |
 
