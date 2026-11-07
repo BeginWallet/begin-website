@@ -138,7 +138,7 @@ Examples for **now**:
 
 | We say | We don't say |
 | --- | --- |
-| Buy dollars with your card. You see the fee before you pay. | Ape into stablecoins with zero fees. |
+| Add money with your card. You see the fee before you pay. | Ape into stablecoins with zero fees. |
 | USDC, a digital dollar. Only you can move it. | Your funds are safe with us. |
 | Cash out to your bank whenever you want. | Instant off-ramp to fiat rails. |
 
