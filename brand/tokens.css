@@ -1,0 +1,47 @@
+/* Begin brand tokens (Begin Mono v1). Source: brand/README.md */
+:root {
+  --begin-bg: #FFFFFF;
+  --begin-surface: #F4F4F5;
+  --begin-line: #ECECEE;
+  --begin-ink: #0A0A0B;
+  --begin-ink-2: #6E6E73;      /* secondary text, 5.1:1 on white */
+  --begin-ink-3: #8E8E93;      /* cents + large quiet numbers, 24px and up only */
+  --begin-ink-soft: #3A3A3C;   /* the only text color besides ink allowed on mist */
+  --begin-mist: #E4E4E7;       /* behind photos and objects, background only */
+  --begin-signal: #1FD1E5;     /* Begin cyan: signal only, never text on white */
+  --begin-alert: #B42318;
+  --begin-tint-bg: #DDF6F9;    /* "New" / "Done by Begin" labels only */
+  --begin-tint-fg: #00505A;
+
+  --begin-font: "Open Sauce One", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --begin-radius-chip: 12px;
+  --begin-radius-input: 16px;
+  --begin-radius-tile: 20px;
+  --begin-radius-card: 28px;
+  --begin-radius-sheet: 40px;
+  --begin-radius-pill: 999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --begin-bg: #000000;
+    --begin-surface: #141416;
+    --begin-line: #232326;
+    --begin-ink: #FFFFFF;
+    --begin-ink-2: #9A9AA0;
+    --begin-ink-3: #68686D;
+    --begin-mist: #1C1C1F;
+    --begin-alert: #FF7A6B;
+  }
+}
+:root[data-theme="dark"] {
+  --begin-bg: #000000;
+  --begin-surface: #141416;
+  --begin-line: #232326;
+  --begin-ink: #FFFFFF;
+  --begin-ink-2: #9A9AA0;
+  --begin-ink-3: #68686D;
+  --begin-mist: #1C1C1F;
+  --begin-alert: #FF7A6B;
+}
