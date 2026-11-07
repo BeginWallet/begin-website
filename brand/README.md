@@ -120,7 +120,7 @@ Rules for **now**:
 - Stablecoin, USDC and wallet are fine to say. Explain each once, in plain words, and keep the sentence about what the person gets: "USDC is a digital dollar. One USDC is meant to be worth one US dollar."
 - Show the full fee before people buy or sell. Don't name the provider in copy.
 - Be honest about risk: USDC is issued by Circle, not a bank deposit, and not insured by Begin.
-- Still no crypto culture: no gas, bridge, on-chain, degen, moon, APY hype, token prices or charts.
+- Still no crypto language: no on-ramp, off-ramp, fiat, gas, bridge, on-chain, degen, moon, APY hype, token prices or charts. Say buy, sell, add money, withdraw.
 - Still never say Begin holds or keeps your money. Only you can move it.
 
 The four voice rules below hold in both phases.
@@ -154,7 +154,7 @@ Examples for **later**:
 
 **Words we use (later phase):** dollars, account, account details, send, get paid, add money, withdraw, fee, arrives, only you.
 
-**Words we keep out (later phase; see Now rules above):** crypto, token, wallet address, gas, bridge, on-chain, stablecoin, seed phrase, custody, held by Begin. Also **remittance** (and remit, remitting) in any user-facing copy: say "send money home", "send to family" or "send home".
+**Words we keep out (later phase; see Now rules above):** crypto, token, wallet address, on-ramp, off-ramp, fiat, gas, bridge, on-chain, stablecoin, seed phrase, custody, held by Begin. Also **remittance** (and remit, remitting) in any user-facing copy: say "send money home", "send to family" or "send home".
 
 Exceptions, kept small:
 
