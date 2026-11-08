@@ -2,12 +2,12 @@ import Head from 'next/head'
 import Meta from '../components/meta'
 import TransitionLanding from '../components/transition/transition-landing'
 
-// Temporary homepage for the move from Begin Wallet to the new Begin.
+// Homepage: Begin as a dollar account (USDC on Solana) that only the user can open.
 // The previous Begin Wallet homepage is in git history (pages/index.tsx).
 
-const TITLE = 'Begin is changing — the new Begin is coming, Begin Wallet keeps working'
+const TITLE = 'Begin: a dollar account only you can open'
 const DESCRIPTION =
-  'The new Begin is a stablecoin account: dollars and euros, held as USDC and EURC, that only you control. Coming to iPhone first. Begin Wallet keeps working on iPhone, Android and in your browser.'
+  'Hold digital dollars on your phone, send them free to anyone on Begin in about five seconds, and cash out to your bank. Begin can’t move your money. iPhone, Android and Chrome.'
 const IMAGE = 'https://begin.is/images/begin_cover.png'
 
 const Index = () => (
