@@ -4,7 +4,7 @@ import Wordmark from './wordmark'
 import { openCookieSettings } from '../cookie-consent'
 import { COMPANY } from '../../lib/company'
 import styles from './transition.module.css'
-import { Copy, LOCALES, LOCALE_NAMES, Locale, COPY, FILMS, SUGGEST, localeFromTag, toLocale } from './i18n'
+import { Copy, Film, LOCALES, LOCALE_NAMES, Locale, COPY, FILMS, SUGGEST, localeFromTag, toLocale } from './i18n'
 import {
   FACT_ICONS,
   FEE_STRONG,
@@ -58,6 +58,52 @@ const reducedMotion = () =>
 const BALANCE_TO = 2400
 const BALANCE_FROM = BALANCE_TO - 50
 const TOAST_AT_MS = 1700
+
+// The film starts as a cover image with a play button in the middle. The video and its
+// controls load only after a click, so the page doesn't download the film up front.
+const FilmPlayer = ({ film }: { film: Film }) => {
+  const ref = useRef<HTMLVideoElement>(null)
+  const [started, setStarted] = useState(false)
+
+  // A new language means a new film: go back to its cover.
+  useEffect(() => setStarted(false), [film.src])
+
+  const play = () => {
+    setStarted(true)
+    requestAnimationFrame(() => ref.current?.play().catch(() => undefined))
+  }
+
+  return (
+    <div className={cx(styles.player, styles.reveal)}>
+      <video
+        ref={ref}
+        className={styles.video}
+        src={film.src}
+        poster={film.poster}
+        controls={started}
+        playsInline
+        preload="none"
+        aria-label={film.label}
+        onEnded={() => setStarted(false)}
+      />
+      {!started && (
+        <button type="button" className={styles.playCover} onClick={play} aria-label={`${film.play}: ${film.label}`}>
+          <span className={styles.playButton} aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30">
+              <path
+                d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <span className={styles.playTime} aria-hidden="true">
+            0:33
+          </span>
+        </button>
+      )}
+    </div>
+  )
+}
 
 const useBalance = () => {
   const [value, setValue] = useState(BALANCE_FROM)
@@ -317,15 +363,7 @@ const TransitionLanding = () => {
               {film.lead}
             </p>
           </div>
-          <video
-            className={cx(styles.video, styles.reveal)}
-            src={film.src}
-            poster={film.poster}
-            controls
-            playsInline
-            preload="metadata"
-            aria-label={film.label}
-          />
+          <FilmPlayer film={film} />
         </section>
 
         <section id="how" aria-labelledby="howH" className={cx(styles.wrap, styles.section, styles.how)}>

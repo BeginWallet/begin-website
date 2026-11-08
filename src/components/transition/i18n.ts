@@ -1159,11 +1159,19 @@ export const COPY: Record<Locale, Copy> = {
 // Spanish gets "Hilo" (Maria), Portuguese gets "Na hora certa" (Rafael), and every other
 // language gets the global film "Rain or Shine" (Mei). The copy around each film still needs
 // Francis's check, and the non-English copy a native speaker's review.
-export type Film = { src: string; poster: string; eyebrow: string; h: string; lead: string; label: string }
+export type Film = {
+  src: string
+  poster: string
+  eyebrow: string
+  h: string
+  lead: string
+  label: string
+  play: string
+}
 
-const HILO = { src: '/videos/begin-hilo-es-16x9.mp4', poster: '/videos/begin-hilo-es-poster.jpg' }
-const NA_HORA_CERTA = { src: '/videos/begin-na-hora-certa-16x9.mp4', poster: '/videos/begin-na-hora-certa-poster.jpg' }
-const RAIN_OR_SHINE = { src: '/videos/begin-rain-or-shine-16x9.mp4', poster: '/videos/begin-rain-or-shine-poster.jpg' }
+const HILO = { src: '/videos/begin-hilo-es-16x9.mp4', poster: '/videos/begin-hilo-es-cover.jpg' }
+const NA_HORA_CERTA = { src: '/videos/begin-na-hora-certa-16x9.mp4', poster: '/videos/begin-na-hora-certa-cover.jpg' }
+const RAIN_OR_SHINE = { src: '/videos/begin-rain-or-shine-16x9.mp4', poster: '/videos/begin-rain-or-shine-cover.jpg' }
 
 export const FILMS: Record<Locale, Film> = {
   en: {
@@ -1172,6 +1180,7 @@ export const FILMS: Record<Locale, Film> = {
     h: 'Rain or shine, paid in seconds',
     lead: 'Mei draws in Manila. A client pays her on Begin and the dollars land in about 5 seconds, free between Begin accounts. Only she can open her account.',
     label: 'Begin film: Rain or Shine',
+    play: 'Play',
   },
   es: {
     ...HILO,
@@ -1179,6 +1188,7 @@ export const FILMS: Record<Locale, Film> = {
     h: 'Cobra de cualquiera en Begin',
     lead: 'María teje ñandutí en Asunción. Su cliente está en Lisboa. El pago le llega en unos 5 segundos, sin costo entre cuentas Begin. Y su cuenta solo la puede abrir ella.',
     label: 'Video de Begin: Hilo',
+    play: 'Reproducir',
   },
   'pt-BR': {
     ...NA_HORA_CERTA,
@@ -1186,6 +1196,7 @@ export const FILMS: Record<Locale, Film> = {
     h: 'Na hora certa',
     lead: 'Rafael recebe em dólares no Begin. Na praia de Boa Viagem, ele envia para um amigo e o dinheiro chega em cerca de 5 segundos, grátis entre contas Begin. E só ele pode abrir a conta dele.',
     label: 'Vídeo do Begin: Na hora certa',
+    play: 'Assistir',
   },
   id: {
     ...RAIN_OR_SHINE,
@@ -1193,6 +1204,7 @@ export const FILMS: Record<Locale, Film> = {
     h: 'Hujan atau cerah, dibayar dalam hitungan detik',
     lead: 'Mei menggambar di Manila. Kliennya membayar lewat Begin dan dolarnya masuk dalam sekitar 5 detik, gratis antar akun Begin. Hanya dia yang bisa membuka akunnya.',
     label: 'Film Begin: Rain or Shine',
+    play: 'Putar',
   },
   'zh-Hans': {
     ...RAIN_OR_SHINE,
@@ -1200,6 +1212,7 @@ export const FILMS: Record<Locale, Film> = {
     h: '无论晴雨，几秒到账',
     lead: 'Mei 在马尼拉画插画。客户通过 Begin 付款，美元约 5 秒到账，Begin 账户之间免费。她的账户只有她自己能打开。',
     label: 'Begin 影片：Rain or Shine',
+    play: '播放',
   },
   'zh-Hant': {
     ...RAIN_OR_SHINE,
@@ -1207,6 +1220,7 @@ export const FILMS: Record<Locale, Film> = {
     h: '無論晴雨，幾秒到帳',
     lead: 'Mei 在馬尼拉畫插畫。客戶透過 Begin 付款，美元約 5 秒到帳，Begin 帳戶之間免費。她的帳戶只有她自己能打開。',
     label: 'Begin 影片：Rain or Shine',
+    play: '播放',
   },
 }
 
