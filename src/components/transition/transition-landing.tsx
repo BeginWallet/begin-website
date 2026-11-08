@@ -91,7 +91,7 @@ const FilmPlayer = ({ film }: { film: Film }) => {
           <span className={styles.playButton} aria-hidden="true">
             <svg viewBox="0 0 24 24" width="30" height="30">
               <path
-                d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"
+                d="M7 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L8.5 4.64A1 1 0 0 0 7 5.5Z"
                 fill="currentColor"
               />
             </svg>

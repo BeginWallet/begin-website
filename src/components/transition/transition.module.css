@@ -1207,7 +1207,6 @@
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 12px 40px rgba(10, 10, 11, 0.28);
-  padding-left: 4px;
   transition:
     scale 0.25s ease,
     box-shadow 0.25s ease;
