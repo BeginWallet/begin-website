@@ -1073,3 +1073,96 @@
     translate: 0 0;
   }
 }
+
+/* Film */
+.film {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 28px;
+  background: var(--ink);
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 560px) {
+  .video {
+    border-radius: 20px;
+  }
+}
+
+/* Language links */
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.page .languages a {
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 8px 0;
+}
+.page .languages a:hover,
+.page .languages a[aria-current] {
+  color: var(--ink);
+}
+.page .languages a[aria-current] {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Chinese: Begin Sans has no CJK glyphs, so the system font takes over. Tight Latin tracking
+   squeezes Chinese characters, so headings use normal tracking and a little more leading. */
+.page:lang(zh) .h1,
+.page:lang(zh) .h2,
+.page:lang(zh) .h2Small,
+.page:lang(zh) .getTitle,
+.page:lang(zh) .stepTitle {
+  letter-spacing: 0;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+/* Language suggestion bar */
+.suggest {
+  background: var(--soft);
+  font-size: 14px;
+}
+.suggestInner {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.page .suggestLink {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.suggestClose {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.suggestClose:hover {
+  background: var(--stone);
+}

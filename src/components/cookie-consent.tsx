@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { loadAnalytics, pageview } from '../lib/gtag'
+import { COPY, toLocale } from './transition/i18n'
 
 // Cookie consent for the Irish ePrivacy Regulations (S.I. 336/2011):
 // analytics cookies are off until the visitor accepts them, and rejecting is
@@ -85,11 +86,15 @@ const CookieConsent = () => {
 
   if (!open) return null
 
+  const locale = toLocale(router.locale)
+  const t = COPY[locale].cookie
+  const period = locale.startsWith('zh') ? '。' : '.'
+
   return (
     <div
       role="dialog"
       aria-live="polite"
-      aria-label="Cookie choices"
+      aria-label={t.title}
       style={{
         position: 'fixed',
         left: 16,
@@ -108,29 +113,51 @@ const CookieConsent = () => {
         lineHeight: 1.5,
       }}
     >
-      <p style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 500 }}>Cookies on begin.is</p>
+      <p style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 500 }}>{t.title}</p>
       <p style={{ margin: '0 0 16px', color: '#3A3A3C' }}>
-        We use essential cookies to run the site. With your OK, we&apos;d also use analytics cookies to see how it&apos;s
-        used and make it better. See our{' '}
+        {t.body}
+        {locale.startsWith('zh') ? '' : ' '}
         <a href="/terms/privacy" style={{ color: '#0A0A0B', textDecoration: 'underline' }}>
-          privacy policy
+          {t.privacy}
         </a>
-        .
+        {period}
       </p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         <button
           type="button"
           onClick={() => choose('granted')}
-          style={{ flex: '1 1 140px', height: 48, border: 0, borderRadius: 24, background: '#0A0A0B', color: '#FFFFFF', fontSize: 15, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit' }}
+          style={{
+            flex: '1 1 140px',
+            height: 48,
+            border: 0,
+            borderRadius: 24,
+            background: '#0A0A0B',
+            color: '#FFFFFF',
+            fontSize: 15,
+            fontWeight: 500,
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+          }}
         >
-          Accept analytics
+          {t.accept}
         </button>
         <button
           type="button"
           onClick={() => choose('denied')}
-          style={{ flex: '1 1 140px', height: 48, border: 0, borderRadius: 24, background: '#F4F4F5', color: '#0A0A0B', fontSize: 15, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit' }}
+          style={{
+            flex: '1 1 140px',
+            height: 48,
+            border: 0,
+            borderRadius: 24,
+            background: '#F4F4F5',
+            color: '#0A0A0B',
+            fontSize: 15,
+            fontWeight: 500,
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+          }}
         >
-          Reject analytics
+          {t.reject}
         </button>
       </div>
     </div>
