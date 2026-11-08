@@ -13,18 +13,9 @@ const Meta = () => {
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
       />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon/favicon-16x16.png"
-      />
+      {/* Begin "b" app icon, from the Brand & Landing canvas. The SVG flips to white in dark mode. */}
+      <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="mask-icon"
@@ -32,11 +23,11 @@ const Meta = () => {
         color="#000000"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="msapplication-TileColor" content="#0A0A0B" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="apple-mobile-web-app-title" content="B58 Finance"></meta>
+      <meta name="apple-mobile-web-app-title" content="Begin"></meta>
       <meta name="apple-mobile-web-app-capable" content="yes"></meta>
       <meta
         name="apple-mobile-web-app-status-bar-style"
