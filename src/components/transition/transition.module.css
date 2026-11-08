@@ -894,3 +894,182 @@
 .footerLegal span:first-child {
   max-width: 860px;
 }
+
+/* Motion. Hero plays on load with CSS alone; sections below reveal on scroll (see useReveal).
+   Animations use the translate/scale properties so they don't fight the phone's transform. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes photoIn {
+  from {
+    opacity: 0;
+    scale: 1.06;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes phoneIn {
+  from {
+    opacity: 0;
+    translate: 0 64px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+@keyframes toastIn {
+  0% {
+    opacity: 0;
+    translate: 0 16px;
+    scale: 0.9;
+  }
+  60% {
+    opacity: 1;
+    translate: 0 -4px;
+    scale: 1.02;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 209, 229, 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(31, 209, 229, 0);
+  }
+}
+@keyframes ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 10, 11, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(10, 10, 11, 0);
+  }
+}
+
+.heroText > * {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.heroText > :nth-child(2) {
+  animation-delay: 0.1s;
+}
+.heroText > :nth-child(3) {
+  animation-delay: 0.2s;
+}
+.heroText > :nth-child(4) {
+  animation-delay: 0.3s;
+}
+.heroPhoto {
+  animation: photoIn 1.2s 0.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.phone {
+  animation: phoneIn 1s 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both, float 6s 1.6s ease-in-out infinite;
+}
+.toast {
+  transform-origin: left center;
+  animation: toastIn 0.7s 1.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.toastIcon {
+  animation: ring 1s 2.1s ease-out 2;
+}
+.balanceValue {
+  font-variant-numeric: tabular-nums;
+}
+.earnDot {
+  animation: pulse 2.4s 2.6s ease-out infinite;
+}
+
+/* Scroll reveal: only once JS has added .motion to the page. */
+.motion .reveal {
+  opacity: 0;
+  translate: 0 32px;
+}
+/* Transition only on the way in, so hiding on load is instant. */
+.motion .reveal.in {
+  opacity: 1;
+  translate: 0 0;
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), translate 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.motion .dark .reveal.in {
+  transition-delay: calc(0.15s + var(--i, 0) * 90ms);
+}
+
+/* Hover */
+.btn,
+.step,
+.moreCard,
+.getLink {
+  transition: translate 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+}
+.storeBtn:hover,
+.headerCta:hover {
+  translate: 0 -2px;
+}
+.step:hover,
+.moreCard:hover {
+  translate: 0 -4px;
+  box-shadow: 0 18px 40px -24px rgba(10, 10, 11, 0.3);
+}
+.motion .step.in:hover,
+.motion .moreCard.in:hover {
+  translate: 0 -4px;
+  transition-delay: 0s;
+}
+.stepArt img,
+.darkArt img {
+  transition: scale 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), rotate 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.step:hover .stepArt img {
+  scale: 1.08;
+  rotate: -4deg;
+}
+.dark:hover .darkArt img {
+  scale: 1.06;
+}
+.getLink > svg:last-child {
+  transition: translate 0.25s ease;
+}
+.getLink:hover > svg:last-child {
+  translate: 4px 0;
+}
+.faqList details[open] .faqAnswer {
+  animation: rise 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .page .reveal {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
