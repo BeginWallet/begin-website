@@ -298,10 +298,38 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-top: 46px;
+  padding-top: 0;
   box-sizing: border-box;
   position: relative;
   color: var(--ink);
+}
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 6px 24px 0 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 14px 12px;
+}
+.appAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
 }
 .balance {
   padding: 0 18px;
@@ -1255,4 +1283,9 @@
   .playButton {
     transition: none;
   }
+}
+
+/* Indonesian has the longest hero word ("membukanya."), so its headline steps down a size. */
+.page:lang(id) .h1 {
+  font-size: clamp(48px, 5.8vw, 92px);
 }

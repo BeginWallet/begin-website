@@ -217,6 +217,26 @@ const Phone = ({ c }: { c: Copy }) => {
   return (
     <div className={styles.phone} role="img" aria-label={c.hero.phoneLabel}>
       <div className={styles.screen} aria-hidden="true">
+        <div className={styles.statusBar}>
+          <span>9:41</span>
+          <svg viewBox="0 0 64 12" width="54" height="10" fill="currentColor">
+            <rect x="0" y="8" width="3" height="4" rx="1" />
+            <rect x="5" y="6" width="3" height="6" rx="1" />
+            <rect x="10" y="3.5" width="3" height="8.5" rx="1" />
+            <rect x="15" y="1" width="3" height="11" rx="1" />
+            <path d="M31 11.2 28.6 8.6a3.4 3.4 0 0 1 4.8 0L31 11.2Zm-4.3-4.6-1.5-1.6a8.2 8.2 0 0 1 11.6 0l-1.5 1.6a6 6 0 0 0-8.6 0ZM23.3 3l-1.5-1.6a13 13 0 0 1 18.4 0L38.7 3a10.8 10.8 0 0 0-15.4 0Z" />
+            <rect x="44.5" y="1" width="16" height="10" rx="3" fill="none" stroke="currentColor" strokeOpacity="0.4" />
+            <rect x="46.5" y="3" width="12" height="6" rx="1.5" />
+            <path d="M62 4.5v3a1.6 1.6 0 0 0 0-3Z" fillOpacity="0.4" />
+          </svg>
+        </div>
+        <div className={styles.appHeader}>
+          <span className={styles.appAvatar}>A</span>
+          <Wordmark height={15} />
+          <span className={styles.appAvatar}>
+            <Icon d={ICONS.scan} size={13} width={1.8} />
+          </span>
+        </div>
         <div className={styles.balance}>
           <span className={styles.balanceLabel}>{c.hero.yourDollars}</span>
           <span className={styles.balanceValue}>
