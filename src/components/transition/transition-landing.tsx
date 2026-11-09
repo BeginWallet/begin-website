@@ -231,7 +231,7 @@ const Phone = ({ c }: { c: Copy }) => {
           </svg>
         </div>
         <div className={styles.appHeader}>
-          <span className={styles.appAvatar}>A</span>
+          <img className={styles.appAvatar} src="/images/transition/ana-avatar.jpg" alt="" />
           <Wordmark height={15} />
           <span className={styles.appAvatar}>
             <Icon d={ICONS.scan} size={13} width={1.8} />

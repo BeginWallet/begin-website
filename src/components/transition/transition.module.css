@@ -330,6 +330,7 @@
   justify-content: center;
   font-size: 12px;
   font-weight: 500;
+  object-fit: cover;
 }
 .balance {
   padding: 0 18px;
