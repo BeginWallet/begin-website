@@ -1170,7 +1170,7 @@ export type Film = {
 }
 
 const HILO = { src: '/videos/begin-hilo-es-16x9.mp4', poster: '/videos/begin-hilo-es-cover.jpg' }
-const NA_HORA_CERTA = { src: '/videos/begin-na-hora-certa-16x9.mp4', poster: '/videos/begin-na-hora-certa-cover.jpg' }
+const NA_HORA_CERTA = { src: '/videos/begin-na-hora-certa-v2-16x9.mp4', poster: '/videos/begin-na-hora-certa-v2-cover.jpg' }
 const RAIN_OR_SHINE = { src: '/videos/begin-rain-or-shine-16x9.mp4', poster: '/videos/begin-rain-or-shine-cover.jpg' }
 
 export const FILMS: Record<Locale, Film> = {
