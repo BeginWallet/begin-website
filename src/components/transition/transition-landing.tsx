@@ -602,8 +602,8 @@ const TransitionLanding = () => {
           <div className={styles.footerLegal}>
             <span>{c.footer.legal}</span>
             <span>
-              © {new Date().getFullYear()} {COMPANY.name} · {COMPANY.registeredOffice} · {c.footer.registered}{' '}
-              {COMPANY.croNumber} · {c.footer.vat} {COMPANY.vatNumber}
+              © {new Date().getFullYear()} {COMPANY.name} · {c.footer.registered} {COMPANY.croNumber} · {c.footer.vat}{' '}
+              {COMPANY.vatNumber}
             </span>
           </div>
         </div>
