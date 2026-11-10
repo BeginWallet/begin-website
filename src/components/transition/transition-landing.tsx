@@ -253,9 +253,9 @@ const Phone = ({ c }: { c: Copy }) => {
         </div>
         <div className={styles.actions}>
           {c.hero.actions.map((label, i) => (
-            <span key={label} className={styles.action}>
-              <span className={cx(styles.actionIcon, i === 0 && styles.actionIconPrimary)}>
-                <Icon d={PHONE_ACTION_ICONS[i]} size={18} width={1.8} />
+            <span key={label} className={cx(styles.action, i === 0 && styles.actionPrimary)}>
+              <span className={styles.actionIcon}>
+                <Icon d={PHONE_ACTION_ICONS[i]} size={15} width={1.8} />
               </span>
               {label}
             </span>

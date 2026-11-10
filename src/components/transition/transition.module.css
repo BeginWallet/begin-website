@@ -350,31 +350,38 @@
 .balanceCents {
   color: #8e8e93;
 }
+/* Tile buttons, scaled from the Begin Pay canvas board S0Home (84px tiles at 390px wide). */
 .actions {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 4px;
-  padding: 18px 10px 0;
+  gap: 5px;
+  padding: 18px 12px 0;
 }
 .action {
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  background: var(--soft);
+  color: var(--ink);
+  padding: 9px 4px 8px 9px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 6px;
+  justify-content: space-between;
+  align-items: flex-start;
   font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .actionIcon {
-  width: 42px;
-  height: 42px;
-  border-radius: 21px;
-  background: var(--soft);
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.actionIconPrimary {
+.actionPrimary {
   background: var(--ink);
   color: #ffffff;
+}
+.actionPrimary .actionIcon {
+  color: #1fd1e5;
 }
 .coins {
   margin: 16px 12px 0;
