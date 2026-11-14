@@ -4,7 +4,7 @@
 // App terms (Home, Add, Cash out, Me, secret words…) follow the app's own translations
 // in b58-extension src/locale/messages so the site and the app say the same thing.
 
-export const LOCALES = ['en', 'es', 'pt-BR', 'id', 'zh-Hans', 'zh-Hant'] as const
+export const LOCALES = ['en', 'es', 'pt-BR', 'id', 'zh-Hans', 'zh-Hant', 'ja'] as const
 export type Locale = (typeof LOCALES)[number]
 
 export const LOCALE_NAMES: Record<Locale, string> = {
@@ -14,6 +14,7 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   id: 'Bahasa Indonesia',
   'zh-Hans': '简体中文',
   'zh-Hant': '繁體中文',
+  ja: '日本語',
 }
 
 // Open Graph locale tags.
@@ -24,6 +25,7 @@ export const OG_LOCALE: Record<Locale, string> = {
   id: 'id_ID',
   'zh-Hans': 'zh_CN',
   'zh-Hant': 'zh_TW',
+  ja: 'ja_JP',
 }
 
 export const toLocale = (l?: string): Locale =>
@@ -1146,6 +1148,188 @@ const zhHant: Copy = {
   },
 }
 
+const ja: Copy = {
+  meta: {
+    title: 'Begin：あなただけが開けるドル口座',
+    description:
+      'スマホでデジタルドルを持ち、Begin の相手なら誰にでも約5秒で無料送金。必要なときは銀行に出金できます。Begin があなたのお金を動かすことはできません。iPhone、Android、Chrome に対応。',
+  },
+  nav: {
+    home: 'Begin ホーム',
+    main: 'メイン',
+    how: '使い方',
+    yours: 'あなただけのもの',
+    fees: '手数料',
+    help: 'ヘルプ',
+    get: 'Begin を入手',
+  },
+  hero: {
+    h1: '開けるのは、あなただけ',
+    lead: 'スマホの中のドル口座。中身はデジタルドルです。持っておくことも、Begin の相手なら誰にでも約5秒で無料で送ることも、必要なときに銀行へ出金することもできます。Begin があなたのお金を動かすことはできません。',
+    note: '無料ダウンロード · iPhone、Android、Chrome',
+    photoAlt: '日の差し込む窓辺で、ノートパソコンを見てほほえむ若い女性',
+    phoneLabel: 'Begin アプリのホーム画面：あなたのドルは $2,400.00。入金、送る、受け取る、出金のボタン',
+    yourDollars: 'あなたのドル',
+    actions: ['入金', '送る', '受け取る', '出金'],
+    euros: 'ユーロ',
+    earn: 'ドルで運用',
+    earnOff: 'オンにするまではオフ',
+    tabs: ['ホーム', '両替', '運用', '履歴'],
+    toastTitle: '@maria から +$50.00',
+    toastSub: '5秒で着金 · 無料',
+  },
+  glance: {
+    label: 'ひと目でわかる Begin',
+    items: [
+      { t: 'Begin 内は無料', b: 'Begin の相手へのドル送金に手数料はかかりません' },
+      { t: '約5秒', b: 'あなたのスマホから相手のスマホへ' },
+      { t: '手数料はすべて事前に', b: '入金や出金の前に表示されます' },
+      { t: '開けるのはあなただけ', b: 'Begin があなたのお金を預かることはありません' },
+    ],
+  },
+  how: {
+    h: 'ドルを入れて、送って、出金する',
+    lead: '残高は USDC というデジタルドルです。1 USDC は1米ドルの価値を目指して設計されており、あなただけが管理する Solana 上のウォレットに入っています。',
+    step: 'ステップ',
+    steps: [
+      {
+        t: 'ドルを入金',
+        b: 'パートナーの決済画面でカードや銀行から購入するか、ほかのアプリや取引所から USDC を移せます。',
+        tag: 'ほかのアプリから：Begin では無料',
+      },
+      {
+        t: 'Begin の誰にでも送金',
+        b: '@ネームや連絡先を選ぶか、QR コードを読み取るだけ。ドルは約5秒で相手の Begin に届きます。',
+        tag: 'いつでも無料',
+      },
+      {
+        t: '銀行へ出金',
+        b: 'ドルを銀行口座のお金に戻せます。確定する前に、手数料の総額と受け取る額を確認できます。',
+        tag: '手数料は先に表示',
+      },
+    ],
+  },
+  yours: {
+    h: 'Begin はあなたのお金を動かせません',
+    lead: 'Begin は銀行ではなく、あなたのドルを預かりません。ドルはあなたのスマホのウォレットに入っています。たとえ企業が閉鎖したりアプリを凍結したりしても、ウォレットは開けます。開ける方法を持っているのはあなただけだからです。',
+    facts: [
+      {
+        t: '鍵を持つのはあなただけ',
+        b: '15個の秘密の単語でウォレットが開きます。Begin がそれを見ることはなく、あなたのお金を動かすこともできません。',
+      },
+      { t: 'スマホをなくしても、ドルは残る', b: '15個の単語があれば、新しいスマホでウォレットを復元できます。' },
+      {
+        t: 'ドルと1対1',
+        b: 'USDC は Circle が発行しています。1つが1米ドルの価値を目指して設計されており、現金と米国の短期国債で裏付けられています。',
+      },
+      {
+        t: 'リスクも正直に',
+        b: 'USDC は銀行預金ではなく、預金保険の対象外です。15個の単語は大切に保管してください。Begin も含め、誰もあなたの代わりに復元できません。',
+      },
+    ],
+  },
+  more: {
+    h: 'アプリでできること',
+    items: [
+      {
+        t: '両替',
+        b: 'ほかのコインをドルに、ドルをコインに、見つけられる最良の価格で両替。Face ID で承認します。',
+      },
+      {
+        t: '運用',
+        b: '自分のウォレットのまま、ドルやコインを運用できます。オンにするまではオフ。利率は変動し、保証されません。',
+      },
+      { t: '旅行用 eSIM', b: '海外のモバイルデータを、あなたのドルで支払い。「マイ」にあります。' },
+      { t: 'ほかのコイン', b: 'Cardano、Bitcoin、NFT、接続したアプリも、すべて「マイ」に残っています。' },
+    ],
+  },
+  invite: {
+    eyebrow: '友だちを招待',
+    h: '友だちに $2、あなたに $1',
+    body: '友だちが $20以上を入金し、7日間持ち続け、Begin で1回送金すると、ドルで支払われます。最大10人まで。',
+    small: 'あなたが友だちに送ったお金は、友だちの $20には含まれません。',
+    photoAlt: 'キッチンでスマートフォンを見てほほえむ女性',
+    chip: 'あなたのドルに追加されました',
+  },
+  fees: {
+    h: '支払う前に、手数料を',
+    lead: 'Begin の中でドルを動かすのは無料です。カードからの入金や銀行への出金ではパートナーが手数料をいただきますが、確定する前にすべて確認できます。',
+    rows: [
+      { k: 'Begin の相手へのドル送金', v: '無料' },
+      { k: 'ほかのアプリからのドルの移動', v: 'Begin では無料' },
+      { k: 'カードや銀行からの入金', v: 'パートナー手数料、事前に表示' },
+      { k: '銀行への出金', v: 'パートナー手数料、事前に表示' },
+      { k: 'ほかのコインからドルへの両替', v: 'レートに含む、事前に表示' },
+    ],
+  },
+  faq: {
+    h: 'よくある質問',
+    lead: 'いつでもサポート。Ask Begin が24時間365日お答えし、人の対応が必要なときはチームが引き継ぎます。',
+    help: 'ヘルプを見る',
+    items: [
+      {
+        q: 'Begin は銀行ですか？',
+        a: 'いいえ。Begin はデジタルドルを持ち、送るためのアプリです。あなたのドルは Begin が運営する口座ではなく、あなただけが管理するウォレットに入っています。そのため、預金保険もありません。',
+      },
+      {
+        q: 'USDC とは何ですか？',
+        a: 'USDC は Circle が発行するデジタルドルです。1つが1米ドルの価値を目指して設計されており、1米ドルに交換できます。公開ネットワークの Solana 上にあるので、すばやく、ほとんど費用をかけずに動かせます。',
+      },
+      {
+        q: '送金は本当に無料ですか？',
+        a: 'はい、Begin のアカウント間なら無料です。ネットワーク費用は Begin が負担します。カードでの入金と銀行への出金にはパートナー手数料がかかり、確定する前に必ず表示されます。',
+      },
+      {
+        q: 'スマホをなくしたら？',
+        a: '新しいスマホに Begin を入れて、15個の秘密の単語を入力してください。あなたのドルも一緒に戻ります。単語がなければ、私たちを含め誰もウォレットを復元できません。書き留めて、大切に保管してください。',
+      },
+      {
+        q: 'どこで入金・出金できますか？',
+        a: 'お住まいの国と、そこでパートナーが対応している方法によって異なります。始める前に、あなたの地域で使える方法と手数料がアプリに表示されます。',
+      },
+      {
+        q: 'すでに Begin Wallet を使っています。同じアプリですか？',
+        a: 'はい。アプリを更新しても、ウォレット、コイン、15個の単語はそのままです。これからはドルが最初に表示され、そのほかは「マイ」にあります。',
+      },
+      {
+        q: 'Begin を名乗る人に15個の単語を聞かれました。',
+        a: 'それは詐欺です。Begin がメール、チャット、電話、DM で単語を聞くことは絶対にありません。誰にも教えないでください。',
+      },
+      {
+        q: 'ヘルプを受けるには？',
+        a: 'いつでもサポート：アプリ内の Ask Begin が24時間365日お答えし、人の対応が必要なときはチームが引き継ぎます。',
+      },
+    ],
+  },
+  get: {
+    h: 'Begin を入手',
+    lead: 'あなただけが開けるドル口座を、スマホに。',
+    note: 'Begin は App Store、Google Play、Chrome ウェブストア、begin.is からのみダウンロードしてください。',
+    links: [
+      { t: 'iPhone 版 Begin', s: 'App Store' },
+      { t: 'Android 版 Begin', s: 'Google Play' },
+      { t: 'ブラウザ版 Begin', s: 'Chrome ウェブストア' },
+    ],
+  },
+  footer: {
+    nav: 'フッター',
+    links: ['使い方', '手数料', 'ヘルプセンター', 'セキュリティ', 'ブログ', '利用規約', 'プライバシー'],
+    cookies: 'Cookie の設定',
+    language: '言語',
+    legal:
+      'Begin は銀行ではなく、お客様の資金を預かりません。残高は Circle が発行するデジタルドル USDC で、あなただけが管理するウォレットに入っています。USDC は銀行預金ではなく、いかなる預金保険の対象にもならず、ドルとの連動が崩れる可能性があります。入金と出金は決済パートナーが提供し、国によって異なります。Begin は Neuralspark Limited の製品です。',
+    registered: 'アイルランドで登記、番号',
+    vat: 'VAT 番号',
+  },
+  cookie: {
+    title: 'begin.is の Cookie',
+    body: 'サイトの運営に必要な Cookie を使用しています。同意いただければ、利用状況を把握して改善するための分析 Cookie も使用します。詳しくは',
+    privacy: 'プライバシーポリシー',
+    accept: '分析を許可',
+    reject: '分析を拒否',
+  },
+}
+
 export const COPY: Record<Locale, Copy> = {
   en,
   es,
@@ -1153,6 +1337,7 @@ export const COPY: Record<Locale, Copy> = {
   id,
   'zh-Hans': zhHans,
   'zh-Hant': zhHant,
+  ja,
 }
 
 // The film section plays the film made for each language:
@@ -1222,6 +1407,14 @@ export const FILMS: Record<Locale, Film> = {
     label: 'Begin 影片：Rain or Shine',
     play: '播放',
   },
+  ja: {
+    ...RAIN_OR_SHINE,
+    eyebrow: '33秒でわかる Begin',
+    h: '雨の日も晴れの日も、数秒で受け取り',
+    lead: 'Mei はマニラでイラストを描いています。クライアントが Begin で支払うと、ドルは約5秒で届きます。Begin のアカウント間なら無料。彼女の口座を開けるのは彼女だけです。',
+    label: 'Begin の動画：Rain or Shine',
+    play: '再生',
+  },
 }
 
 // Language suggestion: the site never redirects (so search engines index every language
@@ -1234,6 +1427,7 @@ export const SUGGEST: Record<Locale, { text: string; cta: string; close: string 
   id: { text: 'Halaman ini tersedia dalam Bahasa Indonesia.', cta: 'Lihat dalam Bahasa Indonesia', close: 'Tutup' },
   'zh-Hans': { text: '本页面提供简体中文版。', cta: '查看简体中文版', close: '关闭' },
   'zh-Hant': { text: '本頁面提供繁體中文版。', cta: '查看繁體中文版', close: '關閉' },
+  ja: { text: 'このページは日本語でもご覧いただけます。', cta: '日本語で見る', close: '閉じる' },
 }
 
 // Maps a browser language tag (navigator.languages) to one of our languages, or null.
@@ -1245,5 +1439,6 @@ export const localeFromTag = (tag: string): Locale | null => {
   if (base === 'es') return 'es'
   if (base === 'pt') return 'pt-BR'
   if (base === 'id' || base === 'in' || base === 'ms') return 'id'
+  if (base === 'ja') return 'ja'
   return null
 }
