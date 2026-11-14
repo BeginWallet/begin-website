@@ -1,0 +1,1317 @@
+/* Landing page. Tokens from the Begin "Brand & Landing" canvas. */
+.page {
+  --ink: #0a0a0b;
+  --ink-2: #3a3a3c;
+  --muted: #6e6e73;
+  --soft: #f4f4f5;
+  --stone: #e4e4e7;
+  --line: #ececee;
+  --accent: #1fd1e5;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  background: #ffffff;
+  color: var(--ink);
+  font-family:
+    'Begin Sans',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.page a {
+  color: var(--ink);
+}
+.page a:hover {
+  color: var(--ink-2);
+}
+.page :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.page button {
+  font-family: inherit;
+}
+/* styles/index.css forces margin/padding on every ul/ol with !important. */
+.page ul,
+.page ol {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  box-sizing: border-box;
+}
+.section {
+  padding-top: clamp(64px, 9vw, 120px);
+}
+.dot {
+  color: var(--accent);
+}
+.icon {
+  flex-shrink: 0;
+}
+
+/* Header */
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  font-size: 15px;
+  order: 3;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+.nav a {
+  text-decoration: none;
+  padding: 10px 0;
+}
+.headerCta {
+  order: 4;
+}
+@media (max-width: 720px) {
+  .nav {
+    order: 5;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    gap: 4px 20px;
+  }
+}
+
+/* Buttons */
+.btn {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.page .btnPrimary,
+.page .btnPrimary:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+.btnPrimary:hover {
+  opacity: 0.88;
+}
+.page .btnSoft {
+  background: var(--soft);
+  color: var(--ink);
+}
+.page .btnSoft:hover {
+  background: var(--stone);
+  color: var(--ink);
+}
+.storeBtn {
+  height: 56px;
+  padding: 0 22px 0 18px;
+  border-radius: 28px;
+  font-size: 16px;
+}
+
+/* Type */
+.h2 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.lead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.small {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero {
+  padding-top: clamp(24px, 5vw, 64px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: center;
+}
+.heroText {
+  flex: 1 1 480px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.h1 {
+  margin: 0;
+  font-size: clamp(56px, 7.4vw, 120px);
+  font-weight: 300;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+}
+.heroLead {
+  margin: 0;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 520px;
+}
+.storeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.heroNote {
+  font-size: 14px;
+  color: var(--muted);
+}
+.heroArt {
+  flex: 1 1 460px;
+  min-width: 0;
+  position: relative;
+  height: 660px;
+}
+.heroPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 96px;
+  bottom: 60px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--stone);
+}
+.heroPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35% 40%;
+  display: block;
+}
+.toast {
+  position: absolute;
+  left: 24px;
+  bottom: 112px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 12px 16px 12px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 16px 40px -20px rgba(10, 10, 11, 0.35);
+  max-width: 260px;
+}
+.toastIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--ink);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.toastTitle {
+  font-size: 14px;
+  font-weight: 500;
+}
+.toastSub {
+  font-size: 12px;
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .heroArt {
+    height: 560px;
+  }
+  .heroPhoto {
+    right: 64px;
+  }
+  .toast {
+    left: 12px;
+    top: 16px;
+    bottom: auto;
+    max-width: none;
+    z-index: 2;
+    white-space: nowrap;
+  }
+}
+
+/* Phone mockup */
+.phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 610px;
+  border-radius: 48px;
+  background: var(--ink);
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 30px 60px -30px rgba(10, 10, 11, 0.45);
+}
+@media (max-width: 560px) {
+  .phone {
+    transform: scale(0.82);
+    transform-origin: bottom right;
+  }
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  box-sizing: border-box;
+  position: relative;
+  color: var(--ink);
+}
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 6px 24px 0 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 14px 12px;
+}
+.appAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  object-fit: cover;
+}
+.balance {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+}
+.balanceLabel {
+  font-size: 11px;
+  color: var(--muted);
+}
+.balanceValue {
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+.balanceCents {
+  color: #8e8e93;
+}
+/* Tile buttons, scaled from the Begin Pay canvas board S0Home (84px tiles at 390px wide). */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  padding: 18px 12px 0;
+}
+.action {
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  background: var(--soft);
+  color: var(--ink);
+  padding: 9px 4px 8px 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.actionIcon {
+  display: flex;
+}
+.actionPrimary {
+  background: var(--ink);
+  color: #ffffff;
+}
+.actionPrimary .actionIcon {
+  color: #1fd1e5;
+}
+.coins {
+  margin: 16px 12px 0;
+  border-radius: 18px;
+  background: var(--soft);
+  padding: 0 12px;
+}
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  border-bottom: 1px solid var(--stone);
+}
+.coin:last-child {
+  border-bottom-color: transparent;
+}
+.coinIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.coinText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 12px;
+}
+.coinNet {
+  font-size: 9px;
+  color: var(--muted);
+}
+.coinValue {
+  font-size: 12px;
+  font-weight: 500;
+}
+.earnRow {
+  margin: 10px 12px 0;
+  min-height: 44px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+.earnDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.tabBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 62px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 8px 6px 0;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.tabActive {
+  color: var(--ink);
+}
+
+/* At a glance */
+.glance {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.page .glanceGrid {
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.glanceItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.roundIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.itemTitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+.itemBody {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* How it works */
+.how {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px 48px;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.step {
+  border-radius: 32px;
+  background: var(--soft);
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.stepTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.stepArt {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 8px;
+  display: flex;
+}
+.stepArt img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+.stepTitle {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+.stepBody {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.stepTag {
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Only yours */
+.dark {
+  border-radius: 40px;
+  background: var(--ink);
+  color: #ffffff;
+  padding: clamp(28px, 5vw, 64px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.darkIntro {
+  flex: 1 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.darkArt {
+  align-self: flex-start;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 10px;
+  display: flex;
+}
+.darkArt img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.darkLead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #d4d4d8;
+  max-width: 460px;
+}
+.facts {
+  flex: 1 1 440px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.fact {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid #232326;
+}
+.factIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #1c1c1f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.factTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+.factBody {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #b4b4ba;
+}
+
+/* Also in the app */
+.more {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.h2Small {
+  margin: 0;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.moreCard {
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.moreIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: var(--soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moreTitle {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.moreBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+/* Invite */
+.invite {
+  border-radius: 40px;
+  background: var(--soft);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inviteText {
+  flex: 1 1 420px;
+  min-width: 0;
+  padding: clamp(28px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.invitePhoto {
+  flex: 1 1 380px;
+  min-width: 0;
+  min-height: 380px;
+  position: relative;
+  background: var(--stone);
+}
+.invitePhoto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+  display: block;
+}
+.inviteChip {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.inviteAmount {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+/* Fees and FAQ */
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+}
+.splitIntro {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.feeTable {
+  flex: 1.4 1 520px;
+  min-width: 0;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  padding: 4px clamp(16px, 2.4vw, 28px);
+}
+.feeRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px 24px;
+  min-height: 68px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+}
+.feeRow:last-child {
+  border-bottom-color: transparent;
+}
+.feeValue {
+  text-align: right;
+}
+.feeStrong {
+  font-weight: 500;
+}
+.faqList {
+  flex: 1.4 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.faqList details {
+  border-top: 1px solid var(--line);
+}
+.faqList summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+.faqList summary::-webkit-details-marker {
+  display: none;
+}
+.faqList summary svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faqList details[open] summary svg {
+  transform: rotate(45deg);
+}
+.faqAnswer {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 640px;
+}
+
+/* Get Begin */
+.get {
+  padding-bottom: clamp(64px, 9vw, 120px);
+}
+.getCard {
+  border-radius: 40px;
+  background: var(--soft);
+  padding: clamp(32px, 6vw, 80px) clamp(24px, 5vw, 64px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.getText {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.getTitle {
+  margin: 0;
+  font-size: clamp(44px, 6vw, 88px);
+  font-weight: 300;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+.getLinks {
+  flex: 0 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.getLink {
+  min-height: 64px;
+  padding: 10px 18px 10px 14px;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.getLink:hover {
+  box-shadow: inset 0 0 0 1px #d1d1d6;
+}
+.getLinkIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.getLinkText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--line);
+}
+.footerInner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+.page .footerNav a,
+.footerButton {
+  font-size: 14px;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 10px 0;
+}
+.footerButton {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.page .footerNav a:hover,
+.footerButton:hover {
+  color: var(--ink);
+}
+.footerLegal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.footerLegal span:first-child {
+  max-width: 860px;
+}
+
+/* Motion. Hero plays on load with CSS alone; sections below reveal on scroll (see useReveal).
+   Animations use the translate/scale properties so they don't fight the phone's transform. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes photoIn {
+  from {
+    opacity: 0;
+    scale: 1.06;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes phoneIn {
+  from {
+    opacity: 0;
+    translate: 0 64px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+@keyframes toastIn {
+  0% {
+    opacity: 0;
+    translate: 0 16px;
+    scale: 0.9;
+  }
+  60% {
+    opacity: 1;
+    translate: 0 -4px;
+    scale: 1.02;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 209, 229, 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(31, 209, 229, 0);
+  }
+}
+@keyframes ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 10, 11, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(10, 10, 11, 0);
+  }
+}
+
+.heroText > * {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.heroText > :nth-child(2) {
+  animation-delay: 0.1s;
+}
+.heroText > :nth-child(3) {
+  animation-delay: 0.2s;
+}
+.heroText > :nth-child(4) {
+  animation-delay: 0.3s;
+}
+.heroPhoto {
+  animation: photoIn 1.2s 0.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.phone {
+  animation:
+    phoneIn 1s 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both,
+    float 6s 1.6s ease-in-out infinite;
+}
+.toast {
+  transform-origin: left center;
+  animation: toastIn 0.7s 1.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.toastIcon {
+  animation: ring 1s 2.1s ease-out 2;
+}
+.balanceValue {
+  font-variant-numeric: tabular-nums;
+}
+.earnDot {
+  animation: pulse 2.4s 2.6s ease-out infinite;
+}
+
+/* Scroll reveal: only once JS has added .motion to the page. */
+.motion .reveal {
+  opacity: 0;
+  translate: 0 32px;
+}
+/* Transition only on the way in, so hiding on load is instant. */
+.motion .reveal.in {
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    translate 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.motion .dark .reveal.in {
+  transition-delay: calc(0.15s + var(--i, 0) * 90ms);
+}
+
+/* Hover */
+.btn,
+.step,
+.moreCard,
+.getLink {
+  transition:
+    translate 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.2s ease;
+}
+.storeBtn:hover,
+.headerCta:hover {
+  translate: 0 -2px;
+}
+.step:hover,
+.moreCard:hover {
+  translate: 0 -4px;
+  box-shadow: 0 18px 40px -24px rgba(10, 10, 11, 0.3);
+}
+.motion .step.in:hover,
+.motion .moreCard.in:hover {
+  translate: 0 -4px;
+  transition-delay: 0s;
+}
+.stepArt img,
+.darkArt img {
+  transition:
+    scale 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    rotate 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.step:hover .stepArt img {
+  scale: 1.08;
+  rotate: -4deg;
+}
+.dark:hover .darkArt img {
+  scale: 1.06;
+}
+.getLink > svg:last-child {
+  transition: translate 0.25s ease;
+}
+.getLink:hover > svg:last-child {
+  translate: 4px 0;
+}
+.faqList details[open] .faqAnswer {
+  animation: rise 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .page .reveal {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Film */
+.film {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.player {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--ink);
+}
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 28px;
+  background: var(--ink);
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 560px) {
+  .video,
+  .player {
+    border-radius: 20px;
+  }
+}
+
+/* Language links */
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.page .languages a {
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 8px 0;
+}
+.page .languages a:hover,
+.page .languages a[aria-current] {
+  color: var(--ink);
+}
+.page .languages a[aria-current] {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Chinese and Japanese: Begin Sans has no CJK glyphs, so the system font takes over. Tight Latin
+   tracking squeezes CJK characters, so headings use normal tracking and a little more leading. */
+.page:lang(zh) .h1,
+.page:lang(zh) .h2,
+.page:lang(zh) .h2Small,
+.page:lang(zh) .getTitle,
+.page:lang(zh) .stepTitle,
+.page:lang(ja) .h1,
+.page:lang(ja) .h2,
+.page:lang(ja) .h2Small,
+.page:lang(ja) .getTitle,
+.page:lang(ja) .stepTitle {
+  letter-spacing: 0;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+/* Japanese has no spaces between words, so lines may break inside a word ("デジタルド / ル").
+   Chrome and Edge keep phrases together; other browsers ignore this. */
+.page:lang(ja) {
+  word-break: auto-phrase;
+}
+/* The hero headline breaks only after 、 so "は、" never ends up alone on a line
+   (checked from 320 to 1920 px wide). */
+.page:lang(ja) .h1 {
+  word-break: keep-all;
+}
+
+/* Language suggestion bar */
+.suggest {
+  background: var(--soft);
+  font-size: 14px;
+}
+.suggestInner {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.page .suggestLink {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.suggestClose {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.suggestClose:hover {
+  background: var(--stone);
+}
+
+.playCover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(10, 10, 11, 0) 55%, rgba(10, 10, 11, 0.35) 100%);
+  color: var(--ink);
+}
+.playButton {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(10, 10, 11, 0.28);
+  transition:
+    scale 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.playCover:hover .playButton {
+  scale: 1.06;
+  box-shadow: 0 16px 48px rgba(10, 10, 11, 0.36);
+}
+.playCover:focus-visible {
+  outline: none;
+}
+.playCover:focus-visible .playButton {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
+}
+.playTime {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(10, 10, 11, 0.55);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+@media (max-width: 560px) {
+  .playButton {
+    width: 72px;
+    height: 72px;
+  }
+  .playButton svg {
+    width: 24px;
+    height: 24px;
+  }
+  .playTime {
+    left: 14px;
+    bottom: 12px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .playButton {
+    transition: none;
+  }
+}
+
+/* Indonesian has the longest hero word ("membukanya."), so its headline steps down a size.
+   Japanese too: at full size "開けるのは、" breaks and leaves "は、" alone on a line. */
+.page:lang(id) .h1,
+.page:lang(ja) .h1 {
+  font-size: clamp(48px, 5.8vw, 92px);
+}

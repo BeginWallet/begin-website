@@ -2,9 +2,12 @@ import Container from "../../components/container";
 import Navigation from "../../components/navigation";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import { GA_TRACKING_ID } from "../../lib/gtag";
 import { defineMessages } from "react-intl";
 import f from "../../lib/translate";
+import { COMPANY, companyRegistration } from "../../lib/company";
+import { CompanyDetails, Item, LegalSection, List, P } from "../../components/legal";
+
+const LAST_UPDATED = "November 4, 2026";
 
 const messages = defineMessages({
   pageTitle: {
@@ -41,224 +44,187 @@ const Service = () => {
             content={`${f(messages.pageDescription)}`}
           />
           <meta property="og:image" content="/images/begin_cover.png" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-            }}
-          />
         </Head>
         <Navigation />
         <Container>
           <section id="features" className="mx-auto">
             <div className="pt-16 lg:pt-32 p-4 lg:p-12 ">
               <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-bold  mb-6">
-                  Terms of Service for Begin Wallet
-                </h1>
+                <h1 className="text-3xl font-bold mb-6">Terms of Service for Begin Wallet</h1>
+                <p className="text-sm text-gray-600 mb-8">Last updated: {LAST_UPDATED}</p>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    1. Introduction
-                  </h2>
-                  <p className=" mb-4">
-                    Welcome to Begin Wallet, a non-custodial wallet service
-                    provided by Begin W UG, registered under HRB 107581 in
-                    Germany, with its address at Luegallee 12, 49545 Düsseldorf.
-                    By accessing or using our service, you agree to be bound by
-                    these Terms of Service.
-                  </p>
-                </section>
+                <LegalSection n={1} title="Who we are">
+                  <P>
+                    Begin Wallet is provided by {companyRegistration()} (&quot;Neuralspark&quot;, &quot;we&quot;,
+                    &quot;us&quot;). These Terms of Service (&quot;Terms&quot;) are a contract between you and us
+                    and apply when you use the Begin Wallet mobile apps, browser extension and website (together,
+                    the &quot;Service&quot;). By using the Service you agree to these Terms. If you don&apos;t agree,
+                    please don&apos;t use it.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    2. Definitions
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">User:</span> Any individual
-                      or entity using Begin Wallet.
-                    </li>
-                    <li>
-                      <span className="font-medium">Non-Custodial:</span> This
-                      service does not hold, manage, or have access to your
-                      private keys or funds. You are solely responsible for the
-                      security of your assets.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={2} title="What Begin Wallet is">
+                  <List>
+                    <Item label="Self-custodial software">
+                      Begin Wallet is software that lets you create and manage your own crypto wallets. Your
+                      private keys and recovery phrase are created and stored on your device. We never hold,
+                      see or have access to them, and we cannot move, freeze, recover or reverse anything in
+                      your wallet.
+                    </Item>
+                    <Item label="Not a financial service">
+                      We do not hold your crypto-assets or money, carry out transactions on your behalf, or
+                      provide investment, tax or legal advice. Begin Wallet is not a bank, payment institution,
+                      e-money institution or crypto-asset service provider in respect of your wallet.
+                    </Item>
+                    <Item label="Blockchain transactions">
+                      Transactions you sign are broadcast to public blockchain networks we do not control. Once
+                      confirmed they are generally permanent and public, and network fees are set by those
+                      networks.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    3. Eligibility
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      You must be at least 18 years old to use this service or
-                      have the legal authority to enter into this agreement.
-                    </li>
-                    <li>
-                      By using Begin Wallet, you represent and warrant that you
-                      are not barred from using the service under any applicable
-                      law.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={3} title="Eligibility">
+                  <List>
+                    <Item>You must be at least 18 years old and able to enter into a binding contract.</Item>
+                    <Item>
+                      You must not use the Service if doing so is prohibited by the laws that apply to you, or if
+                      you are subject to EU, UN or other applicable sanctions.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    4. User Responsibilities
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">Security:</span> You are
-                      responsible for safeguarding your private keys, passwords,
-                      and any other login information. Loss of private keys will
-                      result in loss of access to your assets.
-                    </li>
-                    <li>
-                      <span className="font-medium">Compliance:</span> You agree
-                      to comply with all applicable laws, rules, and regulations
-                      when using Begin Wallet.
-                    </li>
-                    <li>
-                      <span className="font-medium">Backups:</span> Regularly
-                      back up your wallet to prevent data loss.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={4} title="Your responsibilities">
+                  <List>
+                    <Item label="Your recovery phrase">
+                      Keep your recovery phrase, private keys and passcode secret and backed up. If you lose them,
+                      we cannot restore access to your wallet. We will never ask you for your recovery phrase.
+                    </Item>
+                    <Item label="Your device">
+                      Keep your device and the app up to date and protected with a passcode or biometrics.
+                    </Item>
+                    <Item label="Lawful use">
+                      Use the Service only for lawful purposes and in line with the laws that apply to you,
+                      including anti-money-laundering and sanctions laws.
+                    </Item>
+                    <Item label="Checking transactions">
+                      Check addresses, amounts and networks before you sign. You are responsible for
+                      transactions you authorise.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    5. Intellectual Property
-                  </h2>
-                  <p className=" mb-4">
-                    All rights to the software, content, and other materials on
-                    or used in Begin Wallet are owned by Begin W UG. You are
-                    granted a limited, non-exclusive, non-transferable license
-                    to access and use the service for personal or internal
-                    business use only.
-                  </p>
-                </section>
+                <LegalSection n={5} title="Third-party services">
+                  <P>
+                    Begin Wallet can connect you to services provided by others, such as buying or selling
+                    crypto, swaps, staking, decentralised apps and eSIMs. Those services are provided by the third
+                    party under its own terms and privacy policy, which you should read before using them. The
+                    third party, not us, is responsible for its service, including any identity checks it
+                    carries out. Prices, fees and availability are set by the provider and the networks involved.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    6. Liability
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">No Warranty:</span> Begin
-                      Wallet is provided "as is," without warranty of any kind,
-                      express or implied, including but not limited to the
-                      warranties of merchantability, fitness for a particular
-                      purpose, or non-infringement.
-                    </li>
-                    <li>
-                      <span className="font-medium">
-                        Limitation of Liability:
-                      </span>{" "}
-                      Begin W UG shall not be liable for any indirect,
-                      incidental, special, consequential, or punitive damages,
-                      including loss of profits, data, use, goodwill, or other
-                      intangible losses, resulting from (i) your access to or
-                      use of or inability to access or use Begin Wallet; (ii)
-                      any conduct or content of any third party on the service;
-                      or (iii) unauthorized access, use, or alteration of your
-                      transmissions or content.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={6} title="Fees">
+                  <P>
+                    Begin Wallet is free to download. Where we charge for a feature, or a third party charges a
+                    fee through the Service, the amount is shown to you before you confirm. Network fees go to
+                    the blockchain network, not to us.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    7. Termination
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      We may terminate or suspend your access to Begin Wallet
-                      immediately, without prior notice or liability, for any
-                      reason whatsoever, including without limitation if you
-                      breach the Terms.
-                    </li>
-                    <li>
-                      Upon termination, your right to use Begin Wallet will
-                      immediately cease.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={7} title="Intellectual property">
+                  <P>
+                    The Service, including its software, design, brand and content, belongs to {COMPANY.name} or
+                    its licensors. We grant you a personal, non-exclusive, non-transferable, revocable licence to
+                    use the Service in line with these Terms. Open-source components are licensed under their own
+                    licences, which take priority for those components.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    8. Changes to Terms
-                  </h2>
-                  <p className=" mb-4">
-                    Begin W UG reserves the right, at our sole discretion, to
-                    modify or replace these Terms at any time. If a revision is
-                    material we will provide at least 30 days' notice prior to
-                    any new terms taking effect. What constitutes a material
-                    change will be determined at our sole discretion.
-                  </p>
-                </section>
+                <LegalSection n={8} title="Availability and changes to the Service">
+                  <P>
+                    We work to keep the Service available and secure, but we don&apos;t guarantee it will be
+                    uninterrupted or error-free. We may change, update or stop features, for example to fix
+                    security issues or meet legal requirements. Because your keys are stored on your device, you
+                    can always restore your wallet with your recovery phrase in other compatible software,
+                    even if the Service is unavailable.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    9. Governing Law
-                  </h2>
-                  <p className=" mb-4">
-                    These Terms shall be governed and construed in accordance
-                    with the laws of Germany, without regard to its conflict of
-                    law provisions.
-                  </p>
-                </section>
+                <LegalSection n={9} title="Our liability to you">
+                  <List>
+                    <Item label="Service provided as is">
+                      To the extent permitted by law, the Service is provided &quot;as is&quot; and &quot;as
+                      available&quot;, without warranties beyond those that apply by law.
+                    </Item>
+                    <Item label="Limits">
+                      To the extent permitted by law, we are not liable for: losses caused by the loss,
+                      disclosure or theft of your recovery phrase, keys or device; transactions you authorise;
+                      the behaviour of blockchain networks, smart contracts or third-party services; changes in
+                      the value of crypto-assets; or losses that were not reasonably foreseeable. Where the
+                      Service is provided free of charge, our total liability to you is limited to €100.
+                    </Item>
+                    <Item label="What we don't exclude">
+                      Nothing in these Terms excludes or limits our liability for death or personal injury caused
+                      by our negligence, for fraud or fraudulent misrepresentation, or any other liability that
+                      cannot be excluded or limited under Irish law. If you are a consumer, nothing in these Terms
+                      affects your statutory rights, including under the Consumer Rights Act 2022.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    10. Contact Information
-                  </h2>
-                  <p className=" mb-4">
-                    For any questions about these Terms, please contact us at:
-                  </p>
-                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
-                    <p className="">
-                      Address: Luegallee 12, 49545 Düsseldorf, Germany
-                    </p>
-                    <p className="">Email: web3@begin.is</p>
-                  </div>
-                </section>
+                <LegalSection n={10} title="Suspension and ending these Terms">
+                  <List>
+                    <Item>You can stop using the Service at any time by uninstalling the app or extension.</Item>
+                    <Item>
+                      We may suspend or end your access to the Service if you seriously or repeatedly breach these
+                      Terms, if we have to for legal or regulatory reasons, or to protect the Service or other
+                      users. Where reasonable, we will tell you first and explain why.
+                    </Item>
+                    <Item>
+                      Ending your access never gives us control of your wallet. You keep your recovery phrase and
+                      can access your crypto-assets with other compatible software.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    11. Acceptance of Terms
-                  </h2>
-                  <p className=" mb-4">
-                    By using Begin Wallet, you acknowledge that you have read
-                    these Terms of Service, understand them, and agree to be
-                    bound by them. If you do not agree to these Terms, please do
-                    not use our service.
-                  </p>
-                </section>
+                <LegalSection n={11} title="Changes to these Terms">
+                  <P>
+                    We may update these Terms, for example to reflect changes to the Service or the law. If a
+                    change is material, we will tell you through the Service or by email at least 30 days before
+                    it takes effect. If you don&apos;t agree with the change, you can stop using the Service
+                    before it takes effect.
+                  </P>
+                </LegalSection>
 
-                <div className="mt-10 pt-6 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 mb-4">
-                    <strong>Last Updated</strong>: February 08, 2025
-                  </p>
-                  <p className=" italic">
-                    By continuing to use Begin Wallet, you agree to these Terms
-                    of Service. Remember, the security of your assets is solely
-                    your responsibility. Use this service wisely.
-                  </p>
-                </div>
+                <LegalSection n={12} title="Governing law and disputes">
+                  <P>
+                    These Terms are governed by the laws of Ireland. The courts of Ireland have jurisdiction over
+                    any dispute arising from them. If you are a consumer living in another EU country, you also
+                    keep the protection of the mandatory laws of that country and may bring proceedings in its
+                    courts.
+                  </P>
+                  <P>
+                    If you have a complaint, please contact us first at{' '}
+                    <a href={`mailto:${COMPANY.email}`} className="underline">{COMPANY.email}</a> and we will try to
+                    resolve it. Consumers in Ireland can also get help from the Competition and Consumer Protection
+                    Commission (<a href="https://www.ccpc.ie" className="underline" target="_blank" rel="noopener noreferrer">ccpc.ie</a>).
+                  </P>
+                </LegalSection>
+
+                <LegalSection n={13} title="General">
+                  <P>
+                    If any part of these Terms is found unenforceable, the rest stays in effect. If we don&apos;t
+                    enforce a right straight away, we can still enforce it later. You may not transfer your rights
+                    under these Terms without our consent. We may transfer ours to another company if Begin Wallet
+                    is transferred to it, without reducing your rights.
+                  </P>
+                </LegalSection>
+
+                <LegalSection n={14} title="Contact us">
+                  <P>For any questions about these Terms, contact us at:</P>
+                  <CompanyDetails />
+                </LegalSection>
               </div>
             </div>
           </section>

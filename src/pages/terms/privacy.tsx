@@ -2,9 +2,13 @@ import Container from "../../components/container";
 import Navigation from "../../components/navigation";
 import Layout from "../../components/layout";
 import Head from "next/head";
-import { GA_TRACKING_ID } from "../../lib/gtag";
 import { defineMessages } from "react-intl";
 import f from "../../lib/translate";
+import { COMPANY, companyRegistration } from "../../lib/company";
+import { openCookieSettings } from "../../components/cookie-consent";
+import { CompanyDetails, Item, LegalSection, List, P } from "../../components/legal";
+
+const EFFECTIVE_DATE = "November 4, 2026";
 
 const messages = defineMessages({
     pageTitle: {
@@ -41,274 +45,196 @@ const Privacy = () => {
             content={`${f(messages.pageDescription)}`}
           />
           <meta property="og:image" content="/images/begin_cover.png" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-            }}
-          />
         </Head>
         <Navigation />
         <Container>
           <section id="features" className="mx-auto">
             <div className="pt-16 lg:pt-32 p-4 lg:p-12 ">
               <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-bold mb-6">
-                  Privacy Policy for Begin Wallet
-                </h1>
-                <p className="text-sm text-gray-600 mb-8">
-                  Effective Date: July 08, 2026
-                </p>
+                <h1 className="text-3xl font-bold mb-6">Privacy Policy for Begin Wallet</h1>
+                <p className="text-sm text-gray-600 mb-8">Effective date: {EFFECTIVE_DATE}</p>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    1. Introduction
-                  </h2>
-                  <p className=" mb-4">
-                    Begin Wallet, operated by Begin W UG, respects your privacy
-                    and is committed to protecting your personal data. This
-                    Privacy Policy explains how we collect, use, disclose, and
-                    safeguard your information when you use our non-custodial
-                    wallet service.
-                  </p>
-                </section>
+                <LegalSection n={1} title="Who we are">
+                  <P>
+                    This policy explains how {companyRegistration()} (&quot;Neuralspark&quot;, &quot;we&quot;,
+                    &quot;us&quot;), handles personal data when you use the Begin Wallet apps, browser extension and
+                    website at begin.is (the &quot;Service&quot;). We are the data controller for that data under the
+                    EU General Data Protection Regulation (GDPR) and the Irish Data Protection Act 2018.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    2. Information We Do Not Collect
-                  </h2>
-                  <p className=" mb-4">
-                    Since Begin Wallet is a non-custodial service, we do not
-                    collect, store, or have access to:
-                  </p>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>Your private keys</li>
-                    <li>Your wallet's transaction history</li>
-                    <li>
-                      Your personal identification details unless you choose to
-                      provide them when using specific features (see Section 3)
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={2} title="What we don't collect">
+                  <P>Begin Wallet is self-custodial software. We do not collect, store or have access to:</P>
+                  <List>
+                    <Item>Your recovery phrase, private keys or passcode, which stay on your device</Item>
+                    <Item>The crypto-assets in your wallet, which we cannot see or move</Item>
+                  </List>
+                  <P>
+                    Your wallet addresses and transactions are recorded on public blockchains. That information is
+                    public by design and is not controlled by us.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    3. Information We Might Collect
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">Device Information:</span>{" "}
-                      We might collect information about the device you use to
-                      access our service, including the type of device,
-                      operating system, and certain identifiers (like IP
-                      address) for security and performance improvement.
-                    </li>
-                    <li>
-                      <span className="font-medium">Usage Data:</span> We
-                      collect data on how you interact with our app to enhance
-                      functionality and user experience. This includes which
-                      features are used, how often, and any error logs.
-                    </li>
-                    <li>
-                      <span className="font-medium">Cookies:</span> We use
-                      cookies to recognize you when you return to our service.
-                      You can control cookies through your browser settings.
-                    </li>
-                    <li>
-                      <span className="font-medium">Account Information:</span>{" "}
-                      When you use certain features or purchase in-app products
-                      and services (such as creating an order for integrated
-                      offerings), we may collect account information you provide
-                      voluntarily, including your email address and account
-                      credentials (such as a password). This data is collected
-                      only when you choose to use these features and is
-                      necessary to process your request, fulfill your order, or
-                      enable the service you selected.
-                    </li>
-                    <li>
-                      <span className="font-medium">
-                        Third-Party Service Data:
-                      </span>{" "}
-                      When you use integrated third-party services (such as
-                      fiat on/off ramps, swaps, or other offerings that require
-                      identity verification), we or our partners may collect
-                      additional information, including name, address, or email,
-                      as required by those services or applicable KYC
-                      regulations.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={3} title="What we collect">
+                  <List>
+                    <Item label="Device and technical data">
+                      Device type, operating system, app version, IP address and similar identifiers, used to keep
+                      the Service secure and working.
+                    </Item>
+                    <Item label="Usage data">
+                      How the Service is used, such as which features are opened, how often, and error and crash
+                      logs.
+                    </Item>
+                    <Item label="Contact and account data">
+                      Your email address and other details you give us, for example when you join a waitlist,
+                      contact support, or use features that need an account or order, such as in-app purchases.
+                    </Item>
+                    <Item label="Wallet addresses you share with us">
+                      Public addresses or usernames you choose to link to features such as Begin ID or payment
+                      links.
+                    </Item>
+                    <Item label="Cookies and similar technologies">
+                      See section 7.
+                    </Item>
+                  </List>
+                  <P>
+                    When you use a third-party service through Begin Wallet, such as buying crypto or swaps, that
+                    provider may collect data from you directly, including identity documents for
+                    know-your-customer checks. The provider handles that data as a separate controller under its
+                    own privacy policy.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    4. Use of Information
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">Service Operation:</span> To
-                      operate, maintain, and improve our service.
-                    </li>
-                    <li>
-                      <span className="font-medium">Security:</span> To detect,
-                      prevent, and respond to potential or actual security
-                      incidents or fraudulent activities.
-                    </li>
-                    <li>
-                      <span className="font-medium">Order Fulfillment:</span> To
-                      process orders, activate purchased services, and deliver
-                      in-app products you request.
-                    </li>
-                    <li>
-                      <span className="font-medium">Legal Compliance:</span> To
-                      comply with legal obligations, respond to lawful requests,
-                      or protect rights and property.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={4} title="Why we use it and our legal basis">
+                  <List>
+                    <Item label="To provide the Service">
+                      Running the features you ask for, fulfilling orders and answering support requests (to
+                      perform our contract with you).
+                    </Item>
+                    <Item label="To keep it secure and improve it">
+                      Preventing fraud and abuse, fixing errors and understanding how features are used (our
+                      legitimate interests in a secure, working product, balanced against your rights).
+                    </Item>
+                    <Item label="To keep you informed">
+                      Sending you updates you asked for, such as the waitlist email for the new Begin (your
+                      consent, which you can withdraw at any time).
+                    </Item>
+                    <Item label="Analytics cookies">
+                      Measuring how our website is used (your consent).
+                    </Item>
+                    <Item label="To meet legal obligations">
+                      Complying with laws that apply to us and responding to lawful requests from authorities.
+                    </Item>
+                  </List>
+                  <P>We do not sell your personal data, and we do not make decisions about you based solely on automated processing that have legal or similarly significant effects.</P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    5. Data Sharing
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">Service Providers:</span>{" "}
-                      We may share account information and order-related data
-                      with trusted third-party service providers and partners
-                      when necessary to fulfill your order, activate a
-                      purchased service, or operate integrated features. These
-                      providers are permitted to use your data only to perform
-                      services on our behalf.
-                    </li>
-                    <li>
-                      <span className="font-medium">Analytics:</span> We might
-                      share anonymized, aggregated data with third parties for
-                      analytics. We do not sell your personal data.
-                    </li>
-                    <li>
-                      <span className="font-medium">Legal Requirements:</span>{" "}
-                      We may disclose information if required by law or to
-                      protect our rights, property, or safety.
-                    </li>
-                  </ul>
-                </section>
+                <LegalSection n={5} title="Who we share it with">
+                  <List>
+                    <Item label="Service providers">
+                      Companies that host, analyse, support or send email for the Service on our behalf, such as
+                      our hosting and analytics providers (including Google Analytics). They act on our
+                      instructions under data processing agreements.
+                    </Item>
+                    <Item label="Third-party services you choose">
+                      When you start an order or use an integrated service, we pass it the details needed to
+                      complete your request.
+                    </Item>
+                    <Item label="Authorities and advisers">
+                      Where required by law, or to establish, exercise or defend legal claims.
+                    </Item>
+                    <Item label="A buyer of our business">
+                      If Begin Wallet is sold or transferred, under the same protections described here.
+                    </Item>
+                  </List>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    6. Data Security
-                  </h2>
-                  <p className=" mb-4">
-                    We implement appropriate technical and organizational
-                    measures to protect your data against unauthorized access,
-                    alteration, disclosure, or destruction. Account credentials
-                    you provide for order processing or service activation are
-                    handled with additional safeguards and are retained only for
-                    as long as needed to complete the requested transaction or
-                    as required by law. However, no method of transmission over
-                    the internet or electronic storage is 100% secure, so we
-                    cannot guarantee absolute security.
-                  </p>
-                </section>
+                <LegalSection n={6} title="International transfers">
+                  <P>
+                    Some of our providers process data outside the European Economic Area. When that happens, we
+                    rely on a European Commission adequacy decision, such as the EU-US Data Privacy Framework, or
+                    on the European Commission&apos;s Standard Contractual Clauses with additional safeguards where
+                    needed. You can ask us for a copy of the safeguards we use.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    7. Your Rights
-                  </h2>
-                  <ul className="list-disc pl-6 mb-4  space-y-2">
-                    <li>
-                      <span className="font-medium">Access:</span> You can
-                      request access to the data we hold about you.
-                    </li>
-                    <li>
-                      <span className="font-medium">Correction:</span> You can
-                      ask for inaccurate data to be corrected.
-                    </li>
-                    <li>
-                      <span className="font-medium">Deletion:</span> You can ask
-                      us to delete your data, though this might limit your use
-                      of our service.
-                    </li>
-                    <li>
-                      <span className="font-medium">Portability:</span> You have
-                      the right to data portability in certain circumstances.
-                    </li>
-                  </ul>
-                  <p className=" mb-4 italic">
-                    Please note, these rights might be limited due to the
-                    non-custodial nature of Begin Wallet where we do not hold
-                    personal data.
-                  </p>
-                </section>
+                <LegalSection n={7} title="Cookies">
+                  <P>
+                    We use cookies and similar technologies that are strictly necessary for the website to work,
+                    such as remembering your language. We only use analytics or other non-essential cookies with
+                    your consent, in line with the Irish ePrivacy Regulations (S.I. No. 336 of 2011). Google Analytics
+                    only loads if you choose &quot;Accept analytics&quot; in our cookie banner. We remember your choice
+                    on your device for six months. You can change it at any time with{' '}
+                    <button type="button" onClick={openCookieSettings} className="underline font-medium">
+                      Cookie settings
+                    </button>
+                    , and control cookies through your browser settings.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    8. Data Retention
-                  </h2>
-                  <p className=" mb-4">
-                    We retain your data for as long as necessary to provide our
-                    service and as required or permitted by law. We will delete
-                    or anonymize your data when it's no longer needed for the
-                    purposes outlined in this policy.
-                  </p>
-                </section>
+                <LegalSection n={8} title="How long we keep it">
+                  <P>
+                    We keep personal data only as long as we need it for the purposes above. Waitlist emails are
+                    kept until the new Begin launches or you unsubscribe. Support and order records are kept for as
+                    long as needed to deal with your request and to meet legal, tax and accounting obligations.
+                    Technical logs are kept for a limited period for security. When data is no longer needed we
+                    delete or anonymise it.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    9. International Data Transfers
-                  </h2>
-                  <p className=" mb-4">
-                    Your data may be processed in countries outside of where you
-                    live. We ensure that any transfer of data is done with
-                    appropriate safeguards in place.
-                  </p>
-                </section>
+                <LegalSection n={9} title="Security">
+                  <P>
+                    We use appropriate technical and organisational measures to protect personal data, including
+                    encryption in transit and access controls. No system is completely secure, so we can&apos;t
+                    guarantee absolute security. Keeping your recovery phrase safe is up to you, and we will never
+                    ask for it.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    10. Changes to This Privacy Policy
-                  </h2>
-                  <p className=" mb-4">
-                    We may update this Privacy Policy from time to time. Changes
-                    will be posted on this page, and if significant, we'll
-                    notify you through the service or by other means.
-                  </p>
-                </section>
+                <LegalSection n={10} title="Your rights">
+                  <P>Under the GDPR you have the right to:</P>
+                  <List>
+                    <Item>Access the personal data we hold about you</Item>
+                    <Item>Have inaccurate data corrected</Item>
+                    <Item>Have your data erased</Item>
+                    <Item>Restrict how we use your data</Item>
+                    <Item>Receive your data in a portable format</Item>
+                    <Item>Object to processing based on our legitimate interests</Item>
+                    <Item>Withdraw consent at any time, without affecting processing before you withdrew it</Item>
+                  </List>
+                  <P>
+                    To use these rights, email us at{' '}
+                    <a href={`mailto:${COMPANY.email}`} className="underline">{COMPANY.email}</a>. We will reply
+                    within one month. Because we don&apos;t hold your keys or wallet contents, some requests, such
+                    as deleting blockchain records, are outside our control.
+                  </P>
+                  <P>
+                    You can also complain to the Irish Data Protection Commission at{' '}
+                    <a href="https://www.dataprotection.ie" className="underline" target="_blank" rel="noopener noreferrer">dataprotection.ie</a>,
+                    or to the data protection authority in the EU country where you live or work.
+                  </P>
+                </LegalSection>
 
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold  mb-4">
-                    11. Contact Us
-                  </h2>
-                  <p className=" mb-4">
-                    If you have any questions about this Privacy Policy, please
-                    contact us at:
-                  </p>
-                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
-                    <p className="">
-                      Address: Luegallee 12, 49545 Düsseldorf, Germany
-                    </p>
-                    <p className="">Email: web3@begin.is</p>
-                  </div>
-                </section>
+                <LegalSection n={11} title="Children">
+                  <P>
+                    The Service is not intended for anyone under 18, and we do not knowingly collect data from
+                    children. If you think a child has given us personal data, please contact us and we will
+                    delete it.
+                  </P>
+                </LegalSection>
 
-                <div className="mt-10 pt-6 border-t border-gray-200">
-                  <p className=" italic">
-                    By using Begin Wallet, you consent to our practices as
-                    described in this Privacy Policy. Remember, the security of
-                    your assets is solely your responsibility; always practice
-                    safe computing habits.
-                  </p>
-                </div>
+                <LegalSection n={12} title="Changes to this policy">
+                  <P>
+                    We may update this policy from time to time. We will post changes on this page and update the
+                    effective date. If a change is significant, we will also tell you through the Service or by
+                    email.
+                  </P>
+                </LegalSection>
+
+                <LegalSection n={13} title="Contact us">
+                  <P>For questions about this policy or your personal data, contact us at:</P>
+                  <CompanyDetails />
+                </LegalSection>
               </div>
             </div>
           </section>
