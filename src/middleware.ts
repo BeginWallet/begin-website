@@ -9,7 +9,7 @@ export function middleware(req: NextRequest) {
   const old = new URL(req.url).pathname.match(/^\/(cn|jp)(\/.*)?$/)
   if (!old) return NextResponse.next()
   const url = req.nextUrl.clone()
-  url.locale = old[1] === 'cn' ? 'zh-Hans' : 'en'
+  url.locale = old[1] === 'cn' ? 'zh-Hans' : 'ja'
   url.pathname = old[2] || '/'
   return NextResponse.redirect(url, 308)
 }

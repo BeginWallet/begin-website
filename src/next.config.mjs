@@ -38,7 +38,7 @@ const nextConfig = {
   assetPrefix: undefined,
   i18n: {
     // Keep in step with LOCALES in components/transition/i18n.ts.
-    locales: ['en', 'es', 'pt-BR', 'id', 'zh-Hans', 'zh-Hant'],
+    locales: ['en', 'es', 'pt-BR', 'id', 'zh-Hans', 'zh-Hant', 'ja'],
     // No automatic redirects by browser language (keeps every language indexable); the landing
     // page suggests the visitor's language instead. See components/transition/i18n.ts.
     localeDetection: false,

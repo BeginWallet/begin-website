@@ -1176,16 +1176,32 @@
   text-underline-offset: 4px;
 }
 
-/* Chinese: Begin Sans has no CJK glyphs, so the system font takes over. Tight Latin tracking
-   squeezes Chinese characters, so headings use normal tracking and a little more leading. */
+/* Chinese and Japanese: Begin Sans has no CJK glyphs, so the system font takes over. Tight Latin
+   tracking squeezes CJK characters, so headings use normal tracking and a little more leading. */
 .page:lang(zh) .h1,
 .page:lang(zh) .h2,
 .page:lang(zh) .h2Small,
 .page:lang(zh) .getTitle,
-.page:lang(zh) .stepTitle {
+.page:lang(zh) .stepTitle,
+.page:lang(ja) .h1,
+.page:lang(ja) .h2,
+.page:lang(ja) .h2Small,
+.page:lang(ja) .getTitle,
+.page:lang(ja) .stepTitle {
   letter-spacing: 0;
   line-height: 1.15;
   font-weight: 400;
+}
+
+/* Japanese has no spaces between words, so lines may break inside a word ("デジタルド / ル").
+   Chrome and Edge keep phrases together; other browsers ignore this. */
+.page:lang(ja) {
+  word-break: auto-phrase;
+}
+/* The hero headline breaks only after 、 so "は、" never ends up alone on a line
+   (checked from 320 to 1920 px wide). */
+.page:lang(ja) .h1 {
+  word-break: keep-all;
 }
 
 /* Language suggestion bar */
@@ -1293,7 +1309,9 @@
   }
 }
 
-/* Indonesian has the longest hero word ("membukanya."), so its headline steps down a size. */
-.page:lang(id) .h1 {
+/* Indonesian has the longest hero word ("membukanya."), so its headline steps down a size.
+   Japanese too: at full size "開けるのは、" breaks and leaves "は、" alone on a line. */
+.page:lang(id) .h1,
+.page:lang(ja) .h1 {
   font-size: clamp(48px, 5.8vw, 92px);
 }
