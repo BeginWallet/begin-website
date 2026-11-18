@@ -11,3 +11,23 @@
 #  to = "https://begin.is/:splat"
 #  status = 301
 #  force = true
+
+# Universal links (iOS) and verified app links (Android) for https://go.begin.is.
+# go.begin.is is a domain alias of this site. The two files below must be served as JSON with no
+# redirect; the paths they list must match the wallet app (src/lib/universal-link.ts in b58-extension).
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+# Someone without the app who opens a go.begin.is link lands on the download section.
+# Not forced, so the .well-known files above (real files) are still served on go.begin.is.
+[[redirects]]
+  from = "https://go.begin.is/*"
+  to = "https://begin.is/download"
+  status = 302

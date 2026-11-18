@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AD2CUH83B4.is.begin.app", "27WBS2YU2D.is.begin.app"],
+        "components": [
+          { "/": "/tx/*", "comment": "Transaction: go.begin.is/tx/<chain>/<hash>" },
+          { "/": "/cashout*", "comment": "Onramper cash out return" },
+          { "/": "/bought*", "comment": "Onramper finished buy return" },
+          { "/": "/browse*", "comment": "Open a dApp in the in-app browser" }
+        ]
+      }
+    ]
+  }
+}
