@@ -1,21 +1,21 @@
 {
-  "name": "Begin Wallet",
-  "short_name": "Wallet",
+  "name": "Begin",
+  "short_name": "Begin",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#00E5FF",
-  "background_color": "#141414",
+  "theme_color": "#0A0A0B",
+  "background_color": "#FFFFFF",
   "display": "standalone"
 }

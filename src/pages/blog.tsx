@@ -7,7 +7,6 @@ import Container from '../components/container'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import Head from 'next/head'
-import { GA_TRACKING_ID } from '../lib/gtag'
 import { defineMessages } from 'react-intl'
 import f from "../lib/translate";
 
@@ -50,23 +49,6 @@ export default function Help({ allPosts }: Props) {
             content={`${f(messages.pageDescription)}`}
           />
           <meta property="og:image" content="/images/begin_cover.png" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-            }}
-          />
         </Head>
         <Navigation />
         <Container>

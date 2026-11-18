@@ -1,3 +1,4 @@
+import { openCookieSettings } from './cookie-consent'
 import Container from './container'
 import NavigationFooter from './navigation-footer'
 import { EXAMPLE_PATH } from '../lib/constants'
@@ -139,7 +140,7 @@ const Footer = () => {
           </div>
         </section>
         <div className="text-center p-6">
-          <small>Copyright © 2025 Begin Wallet. All rights reserved. <a href="/terms/privacy" className='ml-4 mr-2 underline font-bold'>Privacy Policy</a> | <a href="/terms/service" className='ml-2 underline font-bold'>Terms of Service</a></small>
+          <small>Copyright © 2026 Neuralspark Limited. All rights reserved. <a href="/terms/privacy" className='ml-4 mr-2 underline font-bold'>Privacy Policy</a> | <a href="/terms/service" className='ml-2 underline font-bold'>Terms of Service</a> | <button type="button" onClick={openCookieSettings} className='ml-2 underline font-bold'>Cookie settings</button></small>
         </div>
       </Container>
     </footer>

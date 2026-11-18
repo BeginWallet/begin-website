@@ -13,7 +13,6 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
 import { defineMessages } from 'react-intl'
 import f from "../../lib/translate";
-import { GA_TRACKING_ID } from '../../lib/gtag'
 import Navigation from '../../components/navigation'
 
 type Props = {
@@ -58,22 +57,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <meta property="og:image" content={post.ogImage.url} />
                 <meta property="og:title" content={f(messages.pageTitle) + " | " + post.title} />
                 <meta property="og:description" content={post.excerpt} />
-                <script
-                        async
-                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-                    />
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-                        }}
-                    />
               </Head>
               <PostHeader
                 title={post.title}
